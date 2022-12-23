@@ -5,7 +5,7 @@ namespace LeetCode
     class Program
     {
         
-        public double FindMedianSortedArrays(int[] nums1, int[] nums2)
+        public static double FindMedianSortedArrays(int[] nums1, int[] nums2)
         {
             int m = nums1.Length + nums2.Length;
             if (m % 2 == 1)
@@ -14,7 +14,7 @@ namespace LeetCode
                 return (FindKth(nums1, 0, nums2, 0, (m + 1) / 2) + FindKth(nums1, 0, nums2, 0, (m + 1) / 2 + 1)) / 2;
         }
 
-        double FindKth(int[] nums1, int startIndex1, int[] nums2, int startIndex2, int k)
+        static double FindKth(int[] nums1, int startIndex1, int[] nums2, int startIndex2, int k)
         {
             var nums1Left = nums1.Length - startIndex1;
             var nums2Left = nums2.Length - startIndex2;
@@ -39,7 +39,10 @@ namespace LeetCode
 
         public static void Main (string[] args)
         {
-            
+            int[] nums1 = { 1, 3 };
+            int[] nums2 = { 2 };
+            var result = FindMedianSortedArrays(nums1, nums2);
+            Console.WriteLine(result);
         }
     }
 }

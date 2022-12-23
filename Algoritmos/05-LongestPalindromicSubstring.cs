@@ -5,7 +5,7 @@ namespace LeetCode
     class Program
     {
         
-        public string LongestPalindrome(string s)
+        public static string LongestPalindrome(string s)
         {
             if (string.IsNullOrWhiteSpace(s) || s.Length == 1) return s;
 
@@ -46,6 +46,9 @@ namespace LeetCode
 
         public static void Main (string[] args)
         {
+            string s = "babad";
+            Console.WriteLine(LongestPalindrome(s));
+
         }
     }
 }
