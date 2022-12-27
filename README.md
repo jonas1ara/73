@@ -22,5 +22,5 @@ _Te llevo de la mano en los primeros 500 ejercicios de LeetCode usando C#_
 |021|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C#]()|Fácil|
 |026|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [C#]()|Fácil|
 |027|[Remove Element](https://leetcode.com/problems/remove-element/) | [C#]()|Fácil|
-|035|[Search Insert Position](https://leetcode.com/problems/search-insert-position/ | [C#]()|Fácil|
+|035|[Search Insert Position](https://leetcode.com/problems/search-insert-position/)| [C#]()|Fácil|
 |058|[Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | [C#]()|Fácil|
