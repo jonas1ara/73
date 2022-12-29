@@ -29,7 +29,6 @@ namespace LeetCode
                     break;
                 }
             }
-
             return firstString.Substring(0, index);
         }
         public static void Main (string[] args)
