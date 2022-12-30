@@ -8,9 +8,7 @@ static int[] TwoSum(int[] nums, int target)
     for (int i = 0; i < nums.Length; i++)
     {
 		int t = target - nums[i];
-
         if (dic.ContainsKey(t)) return new int[] { dic[t], i };
-    
         dic[nums[i]] = i;
     }
     return new int[] { };
