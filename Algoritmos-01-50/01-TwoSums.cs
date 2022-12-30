@@ -11,21 +11,27 @@ namespace LeetCode
 
             for (int i = 0; i < nums.Length; i++)
             {
-                if (dic.ContainsKey(nums[i]))
-                    return new int[] { dic[nums[i]], i };
-                else
-                    dic[target - nums[i]] = i;
+				int t = target - nums[i];
+
+                if (dic.ContainsKey(t)) return new int[] { dic[t], i };
+    
+                dic[nums[i]] = i;
             }
 
             return new int[] { };
         }
-        public static void Main (string[] args)
+    
+	    public static void Main (string[] args)
         {
-            int[] nums = { 2, 7, 11, 15 };
-            int target = 9;
-            int[] Result = TwoSum(nums, target);
-            
-            Console.WriteLine("[" + Result[0] + ", " + Result[1] + "]");
+            int[] nums = { 2, 1, 5, 3 };
+            int target = 4;
+	
+			Console.WriteLine("Input: nums = [" + String.Join(", ", nums) + "], target = " + target);
+
+    		int[] result = TwoSum(nums, target);	
+			Console.WriteLine("Output: [" + String.Join(", ",result) + "]");
+	
+
         }
     }
 }
