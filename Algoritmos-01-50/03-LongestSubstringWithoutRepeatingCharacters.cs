@@ -20,4 +20,5 @@ int LengthOfLongestSubstring(string s)
 }
 
 string s = "abcabcbb";
+Console.WriteLine("Input: s = \"{0}\"", s);
 Console.WriteLine("Longest Substring Without Repeating Characters: " + LengthOfLongestSubstring(s));
