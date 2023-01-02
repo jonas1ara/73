@@ -1,41 +1,31 @@
 using System;
 
-namespace LeetCode
+string LongestCommonPrefix(string[] strs)
 {
-    class Program
+    if (strs.Length == 0) { return string.Empty; }
+    if (strs.Length == 1) { return strs[0]; }
+
+    var index = 0;
+    bool isSame = true;
+    var firstString = strs[0];
+    for (index = 0; index < firstString.Length; index++)
     {
-        public static string LongestCommonPrefix(string[] strs)
+        for (int i = 1; i < strs.Length; i++)
         {
-            if (strs.Length == 0) { return string.Empty; }
-            if (strs.Length == 1) { return strs[0]; }
-
-            var index = 0;
-            bool isSame = true;
-            var firstString = strs[0];
-            for (index = 0; index < firstString.Length; index++)
+            if (strs[i].Length <= index || strs[i][index] != firstString[index])
             {
-                for (int i = 1; i < strs.Length; i++)
-                {
-                    if (strs[i].Length <= index ||
-                        strs[i][index] != firstString[index])
-                    {
-                        isSame = false;
-                        break;
-                    }
-                }
-
-                if (!isSame)
-                {
-                    break;
-                }
+                isSame = false;
+                break;
             }
-            return firstString.Substring(0, index);
         }
-        public static void Main (string[] args)
+        if (!isSame)
         {
-            string[] strs = new string[] { "flower", "flow", "flight" };
-            Console.WriteLine("Input: " + string.Join(", ", strs));
-            Console.WriteLine("Output: " + LongestCommonPrefix(strs));
+            break;
         }
     }
+    return firstString.Substring(0, index);
 }
+
+string[] strs = new string[] { "flower", "flow", "flight" };
+Console.WriteLine("Input: " + string.Join(", ", strs));
+Console.WriteLine("Output: " + LongestCommonPrefix(strs));
