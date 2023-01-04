@@ -1,4 +1,4 @@
-# CSharpGYM 🥊💪🏽
+# CSharpGYM 🥊
 
 ## Soluciones a problemas de LeetCode con CSharp explicadas en español
 
