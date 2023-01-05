@@ -1,6 +1,6 @@
 ﻿using System;
 
-public ListNode SwapPairs(ListNode head)
+ListNode SwapPairs(ListNode head)
 {
     var dummyHead = new ListNode(-1);
     dummyHead.next = head;

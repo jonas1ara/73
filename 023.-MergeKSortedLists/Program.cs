@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public ListNode MergeKLists(ListNode[] lists)
+ListNode MergeKLists(ListNode[] lists)
 {
     if (lists == null || lists.Length == 0) return null;
 
     return MergeKHelper(lists, 0, lists.Length - 1);
 }
 
-public ListNode MergeKHelper(ListNode[] lists, int i, int j)
+ListNode MergeKHelper(ListNode[] lists, int i, int j)
 {
     if (i == j) return lists[i];
 
