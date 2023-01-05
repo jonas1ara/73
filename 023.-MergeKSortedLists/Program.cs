@@ -18,7 +18,7 @@ ListNode MergeKHelper(ListNode[] lists, int i, int j)
     return MergeTwoLists(left, right);
 }
 
-private ListNode MergeTwoLists(ListNode l1, ListNode l2)
+ListNode MergeTwoLists(ListNode l1, ListNode l2)
 {
     var head = new ListNode(-1);
     var current = head;
