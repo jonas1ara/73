@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ===============================================
 
 Este script guarda tús cambios en git 
