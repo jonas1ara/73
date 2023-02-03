@@ -6,5 +6,5 @@ _Te llevo de la mano en los primeros 50 ejercicios de LeetCode usando C#, coloca
 
 ## Requisitos
 
-- [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) o superior
+- [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) o superior
 - VSCode o cualquier editor de texto que soporte C# (Visual Studio, Rider, etc)
