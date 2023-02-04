@@ -21,4 +21,4 @@ _Si quieres ver el indice del repositorio da click [acá](https://github.com/Jon
 
 ## Expresiones de Gratitud 🎁
 
-_Escrito con ❤️ por [Jonas Lara](https://twitter.com/Jonas_1ara) estudiante de ingeniería de IA en el  [IPN](https://www.ipn.mx/) y estudiante de la licenciatura en psicología en la [UNAM](https://www.unam.mx) para quien sea que este interesado_
+_Escrito con ❤️ por [Jonas Lara](https://twitter.com/Jonas_1ara) estudiante de ingeniería en IA en el  [IPN](https://www.ipn.mx/), para quien sea que este interesado_
