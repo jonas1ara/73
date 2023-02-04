@@ -1,8 +1,8 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="494" height="750">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="587" height="890">
 
-<g transform="matrix(0.7496206 0 0 0.75 0 0)">
+<g transform="matrix(1.1866667 0 0 1.1866667 0.7866809 -0)">
 	<g transform="matrix(0.1 0 -0 -0.1 0 750)">
         <path d="M692 7294C 668 7285 651 7276 653 7274C 655 7272 676 7277 700 7285C 754 7304 897 7304 968 7286C 997 7278 1042 7259 1068 7244C 1116 7216 1215 7122 1284 7040L1284 7040L1321 6995L1288 7043C 1233 7125 1106 7238 1032 7273C 971 7301 955 7304 850 7307C 764 7309 724 7306 692 7294z" stroke="none" fill="#000000" fill-rule="nonzero" />
         <path d="M572 7245C 506 7215 390 7139 370 7115C 362 7105 380 7115 410 7138C 441 7160 506 7199 555 7224C 650 7272 662 7287 572 7245z" stroke="none" fill="#000000" fill-rule="nonzero" />
