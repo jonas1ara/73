@@ -12,7 +12,7 @@ _Este es un repositorio que te llevará de la mano en los [inserte el número de
 
 ## Indice 📖
 
-_Si quieres ver el indice del repositorio da click [acá](https://github.com/Jonas-Lara/Rock-Lee/tree/master/Sources/README)_
+_Si quieres ver el indice del repositorio da click [acá](https://github.com/Jonas-Lara/Rock-Lee/tree/master/Sources/INDICE.md)_
 
 ## Construido con 🛠️
 
