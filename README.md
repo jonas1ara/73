@@ -1,6 +1,10 @@
-# CSharpGYM 🥊
+# Rock Lee 🥊
 
-## Soluciones a problemas de LeetCode con CSharp explicadas en español
+_"El trabajo duro derrota al talento natural"_
+
+![Rock Lee](/Sources/Rock-Lee.svg)
+
+## ¿Qué es esto?
 
 _Te llevo de la mano en los primeros 50 ejercicios de LeetCode usando C#, colocando la función y el resto del programa_
 
