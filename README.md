@@ -6,7 +6,7 @@ _"El trabajo duro derrota al talento natural"_
 
 [![Generic badge](https://img.shields.io/badge/Made%20with-C++-rgb(1,143,204).svg)](https://shields.io/)
 
-## ¿WTF con este otaku?
+## ¿Qué es esto?
 
 _Este es un repositorio que te llevará de la mano en los [inserte el número de problemas resueltos aquí] problemas de LeetCode usando C++, colocando la función, el resto del programa, un README y quizá un video de YT explicandolo, **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español** , C++ es un lenguaje díficil quiza el más díficil pero con paciencia y disciplina, ¡Lo puedes entender y escribir!_
 
