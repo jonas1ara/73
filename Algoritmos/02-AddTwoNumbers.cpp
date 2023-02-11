@@ -8,18 +8,6 @@ struct ListNode {
     ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
-
-void printList(ListNode* n)
-{
-    while (n != NULL)
-    {
-        std::cout << "[" << n->val << "] -> ";
-        n = n->next;
-    }
-
-    std::cout << "NULL";
-}
-
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     int carry = 0;
     ListNode dummy, *current = &dummy;
@@ -42,6 +30,17 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 
     //Return the next node of the dummy node, which is the head of the new list
     return dummy.next;
+}
+
+void printList(ListNode* n)
+{
+    while (n != NULL)
+    {
+        std::cout << "[" << n->val << "] -> ";
+        n = n->next;
+    }
+
+    std::cout << "NULL";
 }
 
 int main()
