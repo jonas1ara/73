@@ -8,6 +8,7 @@ struct ListNode {
     ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
+
 void printList(ListNode* n)
 {
     while (n != NULL)
@@ -19,28 +20,33 @@ void printList(ListNode* n)
     std::cout << "NULL";
 }
 
-ListNode* addTwoNumbers(ListNode* a, ListNode* b) {
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     int carry = 0;
-    ListNode dummy, * tail = &dummy;
-    while (a || b || carry) {
-        if (a) {
-            carry += a->val;
-            a = a->next;
+    ListNode dummy, *current = &dummy;
+    while (l1 || l2 || carry) {
+        if (l1) {
+            carry += l1->val;
+            l1 = l1->next;
         }
-        if (b) {
-            carry += b->val;
-            b = b->next;
+        if (l2) {
+            carry += l2->val;
+            l2 = l2->next;
         }
-        tail->next = new ListNode(carry % 10);
-        tail = tail->next;
+        //Insert a new node with the value of carry % 10
+        current->next = new ListNode(carry % 10);
+
+        //Move current to the next node and update carry
+        current = current->next;
         carry /= 10;
     }
+
+    //Return the next node of the dummy node, which is the head of the new list
     return dummy.next;
 }
 
 int main()
 {
-    //Construir primer lista enlazada
+    //Build the first linked list
     ListNode* l1 = new ListNode();
     ListNode* l2 = new ListNode();
     ListNode* l3 = new ListNode();
@@ -58,7 +64,7 @@ int main()
     printList(l1);
     std::cout << ", ";
 
-    //Construir segunda lista enlazada
+    //Build the second linked list
     ListNode* l4 = new ListNode();
     ListNode* l5 = new ListNode();
     ListNode* l6 = new ListNode();
@@ -74,7 +80,7 @@ int main()
     printList(l4);
     std::cout << "\n";
 
-    
+    //Add the two linked lists
     ListNode* l7 = addTwoNumbers(l1, l4);
 
     std::cout << "Output: ";
