@@ -2,7 +2,7 @@
 
 ===============================================
 
-Este script guarda tús cambios en git 
+echo "Este script guarda tús cambios en git "
 
 ===============================================
 
