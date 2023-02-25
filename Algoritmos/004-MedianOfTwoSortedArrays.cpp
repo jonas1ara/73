@@ -20,10 +20,11 @@ int main()
 
     std::cout << "Output: ";
     std::cout << findMedianSortedArrays(nums1, nums2) << std::endl;
+    std::cout <<"\n\n";
+
+    // std::cin.get();
+
 }
-
-
-
 
 double findMedianSortedArrays(std::vector<int> &nums1, std::vector<int> &nums2)
 {
