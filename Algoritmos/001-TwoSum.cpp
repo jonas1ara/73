@@ -34,7 +34,7 @@ std::vector<int> twoSum(std::vector<int>& array, int target)
     for (int i = 0; i < array.size(); ++i)
     {
         int t = target - array[i]; 
-        if (map.count(t)) return { map[t], i }; /
+        if (map.count(t)) return { map[t], i }; 
         map[array[i]] = i; 
     }
     return {}; 
