@@ -41,5 +41,7 @@ int main()
     std::cout << "Output: ";
     std::cout << findMedianSortedArrays(nums1, nums2) << std::endl;
     std::cout <<"\n\n";
+    
+    return 0;
 }
 

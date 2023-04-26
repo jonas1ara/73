@@ -1,5 +1,3 @@
-/* Linked */
-
 #include <iostream>
 
 struct ListNode {
@@ -88,6 +86,5 @@ int main()
     printList(l7);
     std::cout << "\n";
 
-    //std::cin.get();
-
+    return 0;
 }

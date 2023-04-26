@@ -26,7 +26,7 @@ int main()
 
     std::cout << "Output: " << lengthOfLongestSubstring(s) << std::endl;
 
-    std::cin.get();
+    return 0;
 }
 
 

@@ -2,8 +2,7 @@
 #include <string>
 #include <vector>
 
-
-string longestPalindrome(string s)
+std::string longestPalindrome(std::string s)
 {
     int N = s.size(), start = 0, len = 0;
     bool dp[1001][1001] = {};
@@ -27,5 +26,13 @@ string longestPalindrome(string s)
 
 int main()
 {
+    std::string s = "babad";
+
+    std::cout << "Input: s = " << s << std::endl;
+
+    std::string result = longestPalindrome(s);
+
+    std::cout << "Output: " << result << std::endl;
     
+    return 0;
 }

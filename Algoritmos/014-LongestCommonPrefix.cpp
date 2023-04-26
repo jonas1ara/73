@@ -1,27 +1,30 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
-string longestCommonPrefix(vector<string>& A)
+std::string longestCommonPrefix(std::vector<std::string> &A)
 {
-        int len = A[0].size();
-        
-		for (int i = 1; i < A.size() && len; ++i)
-		{
-            int j = 0, end = min(len, (int)A[i].size());
-        
-		    while (j < end && A[0][j] == A[i][j]) ++j;
-        
-		    len = j;
-        }
-        return A[0].substr(0, len);
+    int len = 0, N = A.size();
+    for (; len <= A[0].size(); ++len)
+    {
+        int i = 1;
+        for (; i < N && A[i].size() >= len && A[i][len] == A[0][len]; ++i)
+            ;
+        if (i < N)
+            break;
+    }
+    return A[0].substr(0, len);
 }
 
 int main()
 {
-    vector<string> A = {"flower","flow","flight"};
-    cout << longestCommonPrefix(A);
-    
+    std::vector<std::string> A = {"flower", "flow", "flight"};
+
+    std::cout << "Input: [";
+    for (int i = 0; i < A.size(); i++)
+        std::cout << (i == 0 ? "" : ", ") << A[i];  // Ternary operator (?:) is used as a shortcut for the if-else statement.
+    std::cout << "]" << std::endl;
+
+    std::cout << "Output: " << longestCommonPrefix(A) << std::endl;
+
     return 0;
 }
