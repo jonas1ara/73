@@ -4,10 +4,10 @@ _Te llevo de la mano en los primeros 500 ejercicios de LeetCode usando C++_
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C++](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
-|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [C++](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
-|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C++](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
-|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | [C++](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
+|001|[Two Sum](https://leetcode.com/problems/two-sum/)(Hash map) | [C++](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
+|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)(Linked list) | [C++](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
+|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)(Hash map) | [C++](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
+|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)(Binary search) | [C++](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
 |005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C++](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/05-LongestPalindromicSubstring.cpp)|Medio|
 |006|[Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | [C++]()|Medio|
 |007|[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [C++]()|Medio|
