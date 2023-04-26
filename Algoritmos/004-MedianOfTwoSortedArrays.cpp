@@ -1,28 +1,6 @@
-/* Binary Search */
-
 #include <iostream>
 #include <vector>
 #include <climits>
-
-double findMedianSortedArrays(std::vector<int> &nums1, std::vector<int> &nums2);
-
-int main()
-{
-    std::vector<int> nums1 = { 1, 3 };
-    std::vector<int> nums2 = { 2 ,4};
-
-    std::cout << "Input: nums1 = ";
-    for (int i = 0; i < nums1.size(); i++)
-        std::cout << "[" << nums1[i] << "]";
-    std::cout << ", nums2 = ";
-    for (int i = 0; i < nums2.size(); i++)
-        std::cout << "[" << nums2[i] << "]";
-    std::cout << std::endl;
-
-    std::cout << "Output: ";
-    std::cout << findMedianSortedArrays(nums1, nums2) << std::endl;
-    std::cout <<"\n\n";
-}
 
 double findMedianSortedArrays(std::vector<int> &nums1, std::vector<int> &nums2)
 {
@@ -46,3 +24,22 @@ double findMedianSortedArrays(std::vector<int> &nums1, std::vector<int> &nums2)
         }
     }
 }
+
+int main()
+{
+    std::vector<int> nums1 = { 1, 3 };
+    std::vector<int> nums2 = { 2 ,4};
+
+    std::cout << "Input: nums1 = ";
+    for (int i = 0; i < nums1.size(); i++)
+        std::cout << "[" << nums1[i] << "]";
+    std::cout << ", nums2 = ";
+    for (int i = 0; i < nums2.size(); i++)
+        std::cout << "[" << nums2[i] << "]";
+    std::cout << std::endl;
+
+    std::cout << "Output: ";
+    std::cout << findMedianSortedArrays(nums1, nums2) << std::endl;
+    std::cout <<"\n\n";
+}
+
