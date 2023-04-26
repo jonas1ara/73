@@ -2,7 +2,18 @@
 #include <vector>
 #include <map>
 
-std::vector<int> twoSum(std::vector<int>& array, int target);
+std::vector<int> twoSum(std::vector<int>& array, int target)
+{
+    std::map<int, int> map;
+    for (int i = 0; i < array.size(); ++i)
+    {
+        int t = target - array[i]; 
+        if (map.count(t)) return { map[t], i }; 
+        map[array[i]] = i; 
+    }
+    return {}; 
+}
+
 
 int main()
 {
@@ -28,17 +39,6 @@ int main()
     std::cout <<"\n";
 }
 
-std::vector<int> twoSum(std::vector<int>& array, int target)
-{
-    std::map<int, int> map;
-    for (int i = 0; i < array.size(); ++i)
-    {
-        int t = target - array[i]; 
-        if (map.count(t)) return { map[t], i }; 
-        map[array[i]] = i; 
-    }
-    return {}; 
-}
 
 
 

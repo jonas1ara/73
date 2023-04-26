@@ -1,20 +1,5 @@
-/* Hash Map*/
-
 #include <iostream>
 #include <vector>
-
-int lengthOfLongestSubstring(std::string s);
-
-int main()
-{
-    std::string s = "abba";
-
-    std::cout << "Input: '" << s << "'" << std::endl;
-
-    std::cout << "Output: " << lengthOfLongestSubstring(s) << std::endl;
-
-    std::cin.get();
-}
 
 int lengthOfLongestSubstring(std::string s)
 {
@@ -32,3 +17,16 @@ int lengthOfLongestSubstring(std::string s)
     } 
     return answer;
 }
+
+int main()
+{
+    std::string s = "abba";
+
+    std::cout << "Input: '" << s << "'" << std::endl;
+
+    std::cout << "Output: " << lengthOfLongestSubstring(s) << std::endl;
+
+    std::cin.get();
+}
+
+
