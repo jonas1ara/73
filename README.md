@@ -1,8 +1,9 @@
 # Rock Lee 🥊
 
-_"El trabajo duro derrota al talento natural"_
+"El trabajo duro derrota al talento natural"
 
 ![Rock Lee](/Sources/Rock-Lee.svg)
+_Naruto, Ep. 48; Rock Lee  vs Gaara_ 
 
 [![Generic badge](https://img.shields.io/badge/Made%20with-C++-rgb(1,143,204).svg)](https://shields.io/)
 
