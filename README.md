@@ -15,12 +15,19 @@ _Este es un repositorio que te llevará de la mano en N problemas de LeetCode us
 
 _Bueno pues esto es una decisión personal, pero te puedo dar algunas razones:_
 
-- _Es un lenguaje de alto nivel, pero no tanto como Python, asi que si vienes de a ver visto C en la escuela, será muy fácil entender la sintaxis básica de C#_
+- _Es un lenguaje de alto nivel, pero no tanto como Python, asi que si vienes de a ver visto C en la escuela, será muy fácil entender la sintaxis básica de C# y una vez que lo escribas también podrás entender lenguajes de muy alto nivel como Python o F#_
 
-- _Es un lenguaje que además de hacer algoritmos puedes usarlos para construir literalmente cualquier cosa_
+- _Es un lenguaje que además de hacer algoritmos puedes usarlos para **construir literalmente cualquier cosa**; webs, juegos, apps moviles, apps de nube, IoT, ML, etc._
 
-- _Es multiparadigma, así que puedes usarlo para hacer algoritmos funcionales, orientados a objetos, estructurado, etc._
+- _Multiparadigma: puedes usarlo para hacer algoritmos funcionales, orientados a objetos, estructurado, etc._
 
+- _Multiplaforma: puedes usarlo en Windows, Linux, Mac, de una manera muy eficaz._
+
+- _Soporte: C# tiene un gran soporte de la comunidad, así que si tienes dudas, puedes encontrar ayuda en [StackOverflow](https://www.youtube.com/watch?v=nZX13dVxnJw), LeetCode, GitHub, etc._
+
+- _Soy Mexicano y admiro a otros Mexicanos, y uno de ellos es Miguel de Icaza, quizá el segundo hombre más importante en la historia de este lenguaje_
+
+La primera opción para hacer estos ejercicios era C++, pero C# es más fácil de entender y más rápido de escribir, además de que esta más cuidado en su desarrollo que C++, porque C++ se empeña en meterse esteroides y no logra mantener una base de código unificada, ni arreglar sus problemas de seguridad(por ahora). Pero si empiezas a estudiar algoritmos para entrevistas técnicas y no aspiras a Microsoft, Google o alguna Big Tech Company, pues C# tiene un **AMPLIO mercado laboral** en México, y si no me crees, busca en [Linkedin](https://www.linkedin.com/jobs/search/?keywords=c%23&location=Mexico&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0)
 
 
 ## Indice 📖
