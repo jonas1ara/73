@@ -17,24 +17,6 @@ _Bueno pues esto es una decisión personal, pero te puedo dar algunas razones:_
 
 - _Es un lenguaje de alto nivel, pero no tanto como Python, asi que si vienes de a ver visto C en la escuela, será muy fácil entender la sintaxis básica de C#_
 
-```csharp
-int fib(int i)
-{
-    if (i <= 2)
-        return 1;
-    else
-        return fib(i - 2) + fib(i - 1);
-}
-```
-
-```csharp
-public static int fib(int i)
-{
-    if (i <= 2) return 1;
-            return fib(i - 2) + fib(i - 1);
-}
-```
-
 - _Es un lenguaje que además de hacer algoritmos puedes usarlos para construir literalmente cualquier cosa_
 
 - _Es multiparadigma, así que puedes usarlo para hacer algoritmos funcionales, orientados a objetos, estructurado, etc._
