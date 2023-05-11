@@ -11,6 +11,36 @@ _Naruto, Ep. 48; Rock Lee  vs Gaara_
 
 _Este es un repositorio que te llevará de la mano en N problemas de LeetCode usando C#, colocando la función, el resto del programa, un README y quizá un video de YT explicandolo 🤓, **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español**_
 
+## ¿Por qué C#?
+
+_Bueno pues esto es una decisión personal, pero te puedo dar algunas razones:_
+
+- _Es un lenguaje de alto nivel, pero no tanto como Python, asi que si vienes de a ver visto C en la escuela, será muy fácil entender la sintaxis básica de C#_
+
+```csharp
+int fib(int i)
+{
+    if (i <= 2)
+        return 1;
+    else
+        return fib(i - 2) + fib(i - 1);
+}
+```
+
+```csharp
+public static int fib(int i)
+{
+    if (i <= 2) return 1;
+            return fib(i - 2) + fib(i - 1);
+}
+```
+
+- _Es un lenguaje que además de hacer algoritmos puedes usarlos para construir literalmente cualquier cosa_
+
+- _Es multiparadigma, así que puedes usarlo para hacer algoritmos funcionales, orientados a objetos, estructurado, etc._
+
+
+
 ## Indice 📖
 
 | # | Titulo | Solución | Dificultad |
