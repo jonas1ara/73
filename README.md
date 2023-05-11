@@ -33,8 +33,8 @@ _Este es un repositorio que te llevará de la mano en N problemas de LeetCode us
 
 ## Construido con 🛠️
 
-- [VS Code](https://code.visualstudio.com/) (Opcional)
 - [.NET](https://dotnet.microsoft.com/download) (Obligatorio)
+- [VS Code](https://code.visualstudio.com/) (Opcional)
 
 ## Expresiones de Gratitud 🎁
 
