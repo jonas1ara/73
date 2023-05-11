@@ -29,7 +29,7 @@ Bueno pues esto es una **decisión personal**, pero te puedo dar algunas razones
 
 La primera opción para hacer estos ejercicios era C++, pero C# es más fácil de entender y más rápido de escribir, además de que esta más cuidado en su desarrollo que C++, porque C++ se empeña en meterse esteroides, no logra mantener una base de código unificada y no han tenido la intención de arreglar sus problemas de seguridad 🫣. Pero si empiezas a estudiar algoritmos para entrevistas técnicas y no aspiras a Microsoft, Google o alguna Big Tech Company, pues C# tiene un **AMPLIO mercado laboral** , y si no me crees, checa la oferta laboral que hay en [Linkedin](https://www.linkedin.com/jobs/search/?keywords=c%23&location=Mexico&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0)
 
-_Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-aplicaciones-en-windows-6077246c02da) a un post que escribí en Medium donde detalle los puntos anteriores_
+_**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-aplicaciones-en-windows-6077246c02da) a un post que escribí en Medium donde detalle los puntos anteriores**_
 
 
 ## Indice 📖
