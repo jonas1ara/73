@@ -27,7 +27,7 @@ Bueno pues esto es una **decisión personal**, pero te puedo dar algunas razones
 
 - **Soy Mexicano y admiro a otros Mexicanos**, y uno de ellos es Miguel de Icaza, quizá el segundo hombre más importante en la historia de este lenguaje.
 
-La primera opción para hacer estos ejercicios era C++, pero C# es más fácil de entender y más rápido de escribir, además de que esta más cuidado en su desarrollo que C++, porque C++ se empeña en meterse esteroides y no logra mantener una base de código unificada, ni arreglar sus problemas de seguridad(por ahora). Pero si empiezas a estudiar algoritmos para entrevistas técnicas y no aspiras a Microsoft, Google o alguna Big Tech Company, pues C# tiene un **AMPLIO mercado laboral** en México, y si no me crees, checa la oferta laboral en [Linkedin](https://www.linkedin.com/jobs/search/?keywords=c%23&location=Mexico&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0)
+La primera opción para hacer estos ejercicios era C++, pero C# es más fácil de entender y más rápido de escribir, además de que esta más cuidado en su desarrollo que C++, porque C++ se empeña en meterse esteroides, no logra mantener una base de código unificada y no han tenido la intención de arreglar sus problemas de seguridad 🫣. Pero si empiezas a estudiar algoritmos para entrevistas técnicas y no aspiras a Microsoft, Google o alguna Big Tech Company, pues C# tiene un **AMPLIO mercado laboral** , y si no me crees, checa la oferta laboral que hay en [Linkedin](https://www.linkedin.com/jobs/search/?keywords=c%23&location=Mexico&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0)
 
 
 ## Indice 📖
