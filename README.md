@@ -2,8 +2,6 @@
 
 "El trabajo duro derrota al talento natural"
 
-- Rock Lee
-
 ![Rock Lee](/Sources/Lee-Gaara.svg)
 _Naruto, Ep. 48; Rock Lee  vs Gaara_ 
 
