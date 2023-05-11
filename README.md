@@ -9,11 +9,11 @@ _Naruto, Ep. 48; Rock Lee  vs Gaara_
 
 ## ¿Qué es esto?
 
-Este es un repositorio que te llevará de la mano en N problemas de LeetCode usando C#, colocando la función, el resto del programa, un README y quizá un video de YT explicandolo 🤓, **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español**
+Este es un repositorio que te llevará de la mano en N problemas de LeetCode usando C#, colocando la función, el resto del programa, un README con notas del problema y un video de YT explicandolo 🤓, **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español**
 
 ## ¿Por qué C#?
 
-Bueno pues esto es una decisión personal, pero te puedo dar algunas razones:
+Bueno pues esto es una **decisión personal**, pero te puedo dar algunas razones:
 
 - Es un lenguaje de alto nivel, pero no tanto como Python, asi que si vienes de a ver visto C en la escuela, será muy fácil entender la sintaxis básica de C# y una vez que lo escribas también podrás entender lenguajes de muy alto nivel como Python o F#.
 
@@ -25,9 +25,9 @@ Bueno pues esto es una decisión personal, pero te puedo dar algunas razones:
 
 - Soporte: C# tiene un gran soporte de la comunidad, así que si tienes dudas, puedes encontrar ayuda en [StackOverflow](https://www.youtube.com/watch?v=nZX13dVxnJw), LeetCode, GitHub, etc.
 
-- Soy Mexicano y admiro a otros Mexicanos, y uno de ellos es Miguel de Icaza, quizá el segundo hombre más importante en la historia de este lenguaje.
+- **Soy Mexicano y admiro a otros Mexicanos**, y uno de ellos es Miguel de Icaza, quizá el segundo hombre más importante en la historia de este lenguaje.
 
-La primera opción para hacer estos ejercicios era C++, pero C# es más fácil de entender y más rápido de escribir, además de que esta más cuidado en su desarrollo que C++, porque C++ se empeña en meterse esteroides y no logra mantener una base de código unificada, ni arreglar sus problemas de seguridad(por ahora). Pero si empiezas a estudiar algoritmos para entrevistas técnicas y no aspiras a Microsoft, Google o alguna Big Tech Company, pues C# tiene un **AMPLIO mercado laboral** en México, y si no me crees, busca en [Linkedin](https://www.linkedin.com/jobs/search/?keywords=c%23&location=Mexico&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0)
+La primera opción para hacer estos ejercicios era C++, pero C# es más fácil de entender y más rápido de escribir, además de que esta más cuidado en su desarrollo que C++, porque C++ se empeña en meterse esteroides y no logra mantener una base de código unificada, ni arreglar sus problemas de seguridad(por ahora). Pero si empiezas a estudiar algoritmos para entrevistas técnicas y no aspiras a Microsoft, Google o alguna Big Tech Company, pues C# tiene un **AMPLIO mercado laboral** en México, y si no me crees, checa la oferta laboral en [Linkedin](https://www.linkedin.com/jobs/search/?keywords=c%23&location=Mexico&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0)
 
 
 ## Indice 📖
