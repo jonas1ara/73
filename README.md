@@ -9,7 +9,7 @@ _Naruto, Ep. 48; Rock Lee  vs Gaara_
 
 ## ¿Qué es esto?
 
-_Este es un repositorio que te llevará de la mano en N problemas de LeetCode usando C#, colocando la función, el resto del programa, un README y quizá un video de YT explicandolo 🤓, **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español** _
+_Este es un repositorio que te llevará de la mano en N problemas de LeetCode usando C#, colocando la función, el resto del programa, un README y quizá un video de YT explicandolo 🤓, **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español**_
 
 ## Indice 📖
 
