@@ -5,7 +5,7 @@
 ![Rock Lee](/Sources/Rock-Lee.svg)
 _Naruto, Ep. 48; Rock Lee  vs Gaara_ 
 
-[![Generic badge](https://img.shields.io/badge/Made%20with-C#-rgb(1,143,204).svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Made%20with-CSharp-rgb(1,143,204).svg)](https://shields.io/)
 
 ## ¿Qué es esto?
 
@@ -34,7 +34,7 @@ _Este es un repositorio que te llevará de la mano en N problemas de LeetCode us
 ## Construido con 🛠️
 
 - [VS Code](https://code.visualstudio.com/) (Opcional)
-- [dotnet](https://dotnet.microsoft.com/download) (Obligatorio)
+- [.NET](https://dotnet.microsoft.com/download) (Obligatorio)
 
 ## Expresiones de Gratitud 🎁
 
