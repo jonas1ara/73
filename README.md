@@ -1,4 +1,4 @@
-# Rock Lee 🥊
+# Rock Lee 🦾
 
 "El trabajo duro derrota al talento natural"
 
