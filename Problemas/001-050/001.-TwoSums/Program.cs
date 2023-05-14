@@ -5,7 +5,7 @@ namespace TwoSums
 {
     class Program
     {
-        public static int[] TwoSum(int[] nums, int target)
+        static int[] TwoSum(int[] nums, int target)
         {
             // Crear un diccionario para almacenar los valores y sus indices **Diccionario sirve para almacenar datos en forma de clave y valor**
             var dic = new Dictionary<int, int>();
