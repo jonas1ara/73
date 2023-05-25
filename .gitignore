@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# VS Code
+.vscode
+!.vscode/settings.json
+!.vscode/tasks.json
