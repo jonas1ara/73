@@ -33,7 +33,7 @@ Este es un repositorio que te llevará de la mano en N problemas de LeetCode usa
 
 ## Construido con 🛠️
 
-- [C++]() - Lenguaje de programación
+- [C++](https://es.wikipedia.org/wiki/C++) - (Obligatorio)
 - [VS Code](https://code.visualstudio.com/) (Opcional)
 
 ## Expresiones de Gratitud 🎁
