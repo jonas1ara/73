@@ -2,7 +2,7 @@
 
 "El trabajo duro derrota al talento natural"
 
-![Rock Lee](/Sources/Lee-Gaara.svg)
+![Rock Lee](/Sources/Kenichi.png)
 _Naruto, Ep. 48; Rock Lee  vs Gaara - El nombre de este repositorio es así en analogía al personaje menos talentoso de la serie_ 
 
 [![Generic badge](https://img.shields.io/badge/Made%20with-CSharp-rgb(1,143,204).svg)](https://shields.io/)
