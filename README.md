@@ -5,11 +5,11 @@
 ![Rock Lee](/Sources/Lee-Gaara.svg)
 _Naruto, Ep. 48; Rock Lee  vs Gaara - El nombre de este repositorio es así en analogía al personaje menos talentoso de la serie_  -->
 
-# 73 
+# 73 - El mejor número
 
 ![73](/Sources/Sheldon.gif)
 
-_Según Sheldon (personaje de la famosa serie "La teoría del Big-Bang"), el mejor número es el 73._
+_Según Sheldon (personaje de la famosa serie "La teoría del Big-Bang"), el mejor número es el 73_
 
 _73 es el 21er número primo. Su espejo, 37, es el 12mo número primo. 21 es el producto de multiplicar 7 por 3 y en binario, 73 es un palíndromo: 1001001_
 
