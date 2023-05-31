@@ -55,17 +55,24 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
-|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
-|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
+|0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C#]()|Medio|
+|0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C#]()|Medio|
+|0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C#]()|Medio|
+|0079|[Word Search](https://leetcode.com/problems/word-search/) | [C#]()|Medio|
 
 ### Strings
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
-|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
-|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
+|0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C#]()|Medio|
+|0005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C#]()|Medio|
+|0049|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [C#]()|Medio|
+|0076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C#]()|Díficil|
+|0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C#]()|Fácil|
+|0242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C#]()|Fácil|
+|0424|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C#]()|Medio|
+|0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C#]()|Medio|
+|0659|[Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | [C#]()|Medio|   
 
 ### Intervalos
 
