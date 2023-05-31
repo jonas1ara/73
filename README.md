@@ -1,11 +1,19 @@
-# Rock Lee 🦾
+<!-- # Rock Lee 🦾
 
 "El trabajo duro derrota al talento natural"
 
 ![Rock Lee](/Sources/Lee-Gaara.svg)
-_Naruto, Ep. 48; Rock Lee  vs Gaara - El nombre de este repositorio es así en analogía al personaje menos talentoso de la serie_ 
+_Naruto, Ep. 48; Rock Lee  vs Gaara - El nombre de este repositorio es así en analogía al personaje menos talentoso de la serie_  -->
 
-[![Generic badge](https://img.shields.io/badge/Made%20with-CSharp-rgb(1,143,204).svg)](https://shields.io/)
+# 73 
+
+![73](/Sources/Sheldon.gif)
+
+_Según Sheldon (personaje de la famosa serie "La teoría del Big-Bang"), el mejor número es el 73._
+
+_73 es el 21er número primo. Su espejo, 37, es el 12mo número primo. 21 es el producto de multiplicar 7 por 3 y en binario, 73 es un palíndromo: 1001001_
+
+[![Generic badge](https://img.shields.io/badge/Made%20with-CSharp-rgb(1,143,204).svg)](https://shields.io/) 
 
 ## ¿Qué es esto?
 
