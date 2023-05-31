@@ -66,6 +66,7 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 |---| ----- | -------- | ---------- |
 |0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C#]()|Medio|
 |0005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C#]()|Medio|
+|0020|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C#]()|Fácil|
 |0049|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [C#]()|Medio|
 |0076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C#]()|Díficil|
 |0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C#]()|Fácil|
