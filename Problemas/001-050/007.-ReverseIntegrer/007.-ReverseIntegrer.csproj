@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>_005._LongestPalindromicSubstring</RootNamespace>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>_007._ReverseIntegrer</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
