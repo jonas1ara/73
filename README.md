@@ -1,10 +1,3 @@
-<!-- # Rock Lee 🦾
-
-"El trabajo duro derrota al talento natural"
-
-![Rock Lee](/Sources/Lee-Gaara.svg)
-_Naruto, Ep. 48; Rock Lee  vs Gaara - El nombre de este repositorio es así en analogía al personaje menos talentoso de la serie_  -->
-
 # 73 - El mejor número
 
 ![73](/Sources/Sheldon.gif)
@@ -17,7 +10,7 @@ _73 es el 21er número primo. Su espejo, 37, es el 12mo número primo. 21 es el 
 
 ## ¿Qué es esto?
 
-Este es un repositorio que te llevará de la mano en N problemas de LeetCode usando C#, colocando la función, el resto del programa, un video de YT explicandolo 🤓, un README con notas del problema y la solución, **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español**
+Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCode más utiles, bueno en realidad son [75](https://leetcode.com/list/xi4ci4ig/), los algoritmos están escritos en C# sobre .NET 6 o superior, escribí cada programa colocando la función que lo resuelve, el resto del programa para poder ser probado on-promise, un README con notas del problema y de la solución y un video de YT explicandolo 🤓,  **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español**
 
 ## ¿Por qué C#?
 
@@ -33,11 +26,11 @@ Bueno pues esto es una **decisión personal**, pero te puedo dar algunas razones
 
 - Soporte: C# tiene un gran soporte de la comunidad, así que si tienes dudas, puedes encontrar ayuda en [StackOverflow](https://www.youtube.com/watch?v=nZX13dVxnJw), LeetCode, GitHub, etc.
 
-- **Soy Mexicano y admiro a otros Mexicanos**, y uno de ellos es Miguel de Icaza, quizá el segundo hombre más importante en la historia de este lenguaje
+- **Soy Mexicano y admiro a otros Mexicanos**, y uno de ellos es [Miguel de Icaza](https://github.com/migueldeicaza), quizá el segundo hombre más importante en la historia de este lenguaje
 
-La primera opción para hacer estos ejercicios era C++, pero C# es más fácil de entender y más rápido de escribir, además de que esta más cuidado en su desarrollo que C++, porque C++ se empeña en meterse esteroides, no logra mantener una base de código unificada y no han tenido la intención de arreglar sus problemas de seguridad 🫣. Pero si empiezas a estudiar algoritmos para entrevistas técnicas y no aspiras a Microsoft, Google o alguna Big Tech Company, pues C# tiene un **AMPLIO mercado laboral** , y si no me crees, checa la oferta laboral que hay en [Linkedin](https://www.linkedin.com/jobs/search/?keywords=c%23&location=Mexico&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0)
+La primera opción para hacer estos ejercicios era C++, pero C# es más fácil de entender y más rápido de escribir, si le prestas la debida atención después será muy fácil pasar de C# a GO, Java, Python o incluso C++, además de que esta más cuidado en su desarrollo que C++, porque C++ se empeña en meterse esteroides, no logra mantener una base de código unificada y no han tenido la intención de arreglar sus problemas de seguridad 🫣, aunque personalmente me gusta C++ y literalmente es EL LENGUAJE que no esta llevando a marte, no es algo que puedas dominar en 6 meses 😅.Pero si empiezas a estudiar algoritmos para entrevistas técnicas y no es tu intención llegar a Microsoft, Google o alguna de las Big Tech Companies, pues C# tiene un **AMPLIO mercado laboral** , y si no me crees, checa la oferta laboral que hay en [Linkedin](https://www.linkedin.com/jobs/search/?keywords=c%23&location=Mexico&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0)
 
-_**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-aplicaciones-en-windows-6077246c02da) a un post que escribí en Medium donde detalle los puntos anteriores**_
+_**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-aplicaciones-en-windows-6077246c02da) a un post que escribí en Medium donde detalle los puntos anteriores y a una [conferencia magistral](https://www.youtube.com/watch?v=acryVgY0O3E) de Miguel de Icaza sobre la plataforma de desarrollo .NET**_
 
 
 ## Indice 📖
