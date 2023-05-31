@@ -39,24 +39,6 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|001|[Two Sum](https://leetcode.com/problems/two-sum/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
-|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) (Arithmetic) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
-|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
-|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (Binary search) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
-
-### Matrices
-
-| # | Titulo | Solución | Dificultad |
-|---| ----- | -------- | ---------- |
-|001|[Two Sum](https://leetcode.com/problems/two-sum/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
-|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) (Arithmetic) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
-|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
-|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (Binary search) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
-
-### Strings
-
-| # | Titulo | Solución | Dificultad |
-|---| ----- | -------- | ---------- |
 |0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
 |0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
 |0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
@@ -68,69 +50,78 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 |0217|[Contains Duplicate](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C#]()|Fácil|
 |0238|[Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [C#]()|Fácil|
 
+
+### Matrices
+
+| # | Titulo | Solución | Dificultad |
+|---| ----- | -------- | ---------- |
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
+|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
+|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
+
+### Strings
+
+| # | Titulo | Solución | Dificultad |
+|---| ----- | -------- | ---------- |
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
+|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
+|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
+
 ### Intervalos
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|001|[Two Sum](https://leetcode.com/problems/two-sum/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
-|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) (Arithmetic) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
-|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
-|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (Binary search) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
+|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
+|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
 
 ### Búsqueda binaria
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|001|[Two Sum](https://leetcode.com/problems/two-sum/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
-|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) (Arithmetic) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
-|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
-|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (Binary search) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
+|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
+|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
 
 ### Programación dinámica
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|001|[Two Sum](https://leetcode.com/problems/two-sum/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
-|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) (Arithmetic) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
-|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
-|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (Binary search) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
+|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
+|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
 
 ### Listas enlazadas
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|001|[Two Sum](https://leetcode.com/problems/two-sum/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
-|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) (Arithmetic) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
-|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
-|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (Binary search) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
+|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
+|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
 
 ### Árboles
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|001|[Two Sum](https://leetcode.com/problems/two-sum/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
-|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) (Arithmetic) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
-|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
-|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (Binary search) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
+|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
+|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
 
 ### Heaps
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|001|[Two Sum](https://leetcode.com/problems/two-sum/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
-|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) (Arithmetic) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
-|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
-|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (Binary search) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
+|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
+|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
 
 ### Grafos
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|001|[Two Sum](https://leetcode.com/problems/two-sum/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/01-TwoSums.cpp)|Fácil|
-|002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) (Arithmetic) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/02-AddTwoNumbers.cpp)|Medio|
-|003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Hash map) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/03-LongestSubstringWithoutRepeatingCharacters.cpp)|Medio|
-|004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (Binary search) | [C#](https://github.com/Jonas-Lara/Ergo/blob/master/Algoritmos/04-MedianOfTwoSortedArrays.cpp)|Díficil|
-
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
+|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
+|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
 
 ## Construido con 🛠️
 
