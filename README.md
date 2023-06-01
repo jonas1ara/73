@@ -140,22 +140,22 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C#]()|Alta|
-|0295|[Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [C#]()|Alta|
-|0347|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | [C#]()|Media|
+|0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Heaps/Merge-k-Sorted-Lists)|Alta|
+|0295|[Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Heaps/Find-Median-from-Data-Stream)|Alta|
+|0347|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Heaps/Top-K-Frequent-Elements)|Media|
 
 ### Grafos
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0128|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C#]()|Media|
-|0133|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C#]()|Media|
-|0200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C#]()|Media|
-|0207|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C#]()|Media|
-|0261|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | [C#]()|Media|
-|0269|[Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | [C#]()|Alta|
-|0323|[Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [C#]()|Media|
-|0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C#]()|Media|
+|0128|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Longest-Consecutive-Sequence)|Media|
+|0133|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Clone-Graph)|Media|
+|0200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Number-of-Islands)|Media|
+|0207|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Course-Schedule)|Media|
+|0261|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Graph-Valid-Tree)|Media|
+|0269|[Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Alien-Dictionary)|Alta|
+|0323|[Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Number-of-Connected-Components-in-an-Undirected-Graph)|Media|
+|0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Pacific-Atlantic-Water-Flow)|Media|
 
 
 ## Construido con 🛠️
