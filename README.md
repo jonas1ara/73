@@ -121,20 +121,20 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0098|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C#]()|Media|
-|0100|[Same Tree](https://leetcode.com/problems/same-tree/) | [C#]()|Baja|
-|0102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [C#]()|Media|
-|0104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C#]()|Baja|
-|0105|[Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [C#]()|Media|
-|0124|[Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [C#]()|Alta|
-|0208|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [C#]()|Media|
-|0211|[Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [C#]()|Media|
-|0212|[Word Search II](https://leetcode.com/problems/word-search-ii/) | [C#]()|Alta|
-|0226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C#]()|Alta|
-|0230|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [C#]()|Media|
-|0235|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C#]()|Media|
-|0207|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [C#]()|Alta|
-|0572|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C#]()|Baja|
+|0098|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Validate-Binary-Search-Tree)|Media|
+|0100|[Same Tree](https://leetcode.com/problems/same-tree/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Same-Tree)|Baja|
+|0102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Binary-Tree-Level-Order-Traversal)|Media|
+|0104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Maximum-Depth-of-Binary-Tree)|Baja|
+|0105|[Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal)|Media|
+|0124|[Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Binary-Tree-Maximum-Path-Sum)|Alta|
+|0208|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Implement-Trie-Prefix-Tree)|Media|
+|0211|[Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Design-Add-and-Search-Words-Data-Structure)|Media|
+|0212|[Word Search II](https://leetcode.com/problems/word-search-ii/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Word-Search-II)|Alta|
+|0226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Invert-Binary-Tree)|Alta|
+|0230|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Kth-Smallest-Element-in-a-BST)|Media|
+|0235|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Lowest-Common-Ancestor-of-a-Binary-Search-Tree)|Media|
+|0207|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Serialize-and-Deserialize-Binary-Tree)|Alta|
+|0572|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Subtree-of-Another-Tree)|Baja|
 
 ### Heaps
 
