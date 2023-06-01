@@ -4,7 +4,7 @@ Según Sheldon Cooper **el mejor número es el 73**, porque 73 es el 21er númer
 
 ![73](/Sources/Sheldon.gif)
 
-_Sheldon (personaje de la famosa serie "La teoría del Big-Bang")_
+_Sheldon Cooper (personaje de la famosa serie "La teoría del Big-Bang")_
 
 ## ¿Qué es esto?
 
