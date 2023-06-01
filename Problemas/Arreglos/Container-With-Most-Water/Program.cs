@@ -1,30 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 
-int MaxArea(int[] height)
+//public int MaxArea(int[] height)
+int MaxArea(List<int> height)
 {
-    int left = 0, right = height.Length - 1;
-    int result = 0;
-
-    while (left < right)
+    int ans = 0, L = 0, R = height.Count - 1; //R = height.Length - 1;
+    while (L < R)
     {
-        var area = Math.Min(height[left], height[right]) * (right - left);
-        result = Math.Max(result, area);
+        // A = b * h
+        ans = Math.Max(ans, (R - L) * Math.Min(height[L], height[R]));
 
-        if (height[left] <= height[right])
-        {
-            var temp = height[left];
-            do
-                left++;
-            while (left < right && height[left] <= temp);
-        }
-        else
-        {
-            var temp = height[right];
-            do
-                right--;
-            while (left < right && height[right] <= temp);
-        }
+        if (height[L] < height[R]) L++; // Move the smaller edge
+        else R--;
     }
-    return result;
+    return ans;
 }
+
+//int[] height = new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+List<int> height = new List<int>() { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+
+Console.WriteLine("Input: " + string.Join(" ", height));
+
+Console.WriteLine("Output: " + MaxArea(height));
 
