@@ -66,7 +66,7 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 |0076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Minimum-Window-Substring)|Alta|
 |0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Valid-Palindrome)|Baja|
 |0242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Valid-Anagram)|Baja|
-|0271|[Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Encode-and-Decode-Strings)|Media|   
+|0271|[Encode and Decode Strings](https://www.lintcode.com/problem/659/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Encode-and-Decode-Strings)|Media|   
 |0424|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Longest-Repeating-Character-Replacement)|Media|
 |0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Palindromic-Substrings)|Media|
 
@@ -76,8 +76,8 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 |---| ----- | -------- | ---------- |
 |0056|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Merge-Intervals)|Media|
 |0057|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Insert-Interval)|Media|
-|0252|[Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Meeting-Rooms)|Baja|
-|0253|[Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Meeting-Rooms-II)|Media|
+|0252|[Meeting Rooms](https://www.lintcode.com/problem/920/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Meeting-Rooms)|Baja|
+|0253|[Meeting Rooms II](https://www.lintcode.com/problem/919/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Meeting-Rooms-II)|Media|
 |0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Non-overlapping-Intervals)|Media|
 
 ### Búsqueda binaria
@@ -152,8 +152,8 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 |0133|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Clone-Graph)|Media|
 |0200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Number-of-Islands)|Media|
 |0207|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Course-Schedule)|Media|
-|0261|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Graph-Valid-Tree)|Media|
-|0269|[Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Alien-Dictionary)|Alta|
+|0261|[Graph Valid Tree](https://www.lintcode.com/problem/178/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Graph-Valid-Tree)|Media|
+|0269|[Alien Dictionary](https://www.lintcode.com/problem/892/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Alien-Dictionary)|Alta|
 |0323|[Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Number-of-Connected-Components-in-an-Undirected-Graph)|Media|
 |0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Pacific-Atlantic-Water-Flow)|Media|
 
