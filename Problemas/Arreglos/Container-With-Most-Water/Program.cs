@@ -4,7 +4,9 @@ using System.Collections.Generic;
 //public int MaxArea(int[] height)
 int MaxArea(List<int> height)
 {
-    int ans = 0, L = 0, R = height.Count - 1; //R = height.Length - 1;
+    // int R = height.Length - 1;
+    int R = height.Count - 1;
+    int ans = 0, L = 0;
     while (L < R)
     {
         // A = b * h
