@@ -1,8 +1,10 @@
 # 73 - El mejor número
 
+Según Sheldon Cooper **el mejor número es el 73**, porque 73 es el 21er número primo. Su espejo, 37, es el 12mo número primo. 21 es el producto de multiplicar 7 por 3 y en binario, 73 es un palíndromo: 1001001
+
 ![73](/Sources/Sheldon.gif)
 
-_Según Sheldon (personaje de la famosa serie "La teoría del Big-Bang"), el mejor número es el 73, porque 73 es el 21er número primo. Su espejo, 37, es el 12mo número primo. 21 es el producto de multiplicar 7 por 3 y en binario, 73 es un palíndromo: 1001001_
+_Sheldon (personaje de la famosa serie "La teoría del Big-Bang")_
 
 ## ¿Qué es esto?
 
