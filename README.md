@@ -2,11 +2,7 @@
 
 ![73](/Sources/Sheldon.gif)
 
-_Según Sheldon (personaje de la famosa serie "La teoría del Big-Bang"), el mejor número es el 73_
-
-_73 es el 21er número primo. Su espejo, 37, es el 12mo número primo. 21 es el producto de multiplicar 7 por 3 y en binario, 73 es un palíndromo: 1001001_
-
-[![Generic badge](https://img.shields.io/badge/Made%20with-CSharp-rgb(1,143,204).svg)](https://shields.io/) 
+_Según Sheldon (personaje de la famosa serie "La teoría del Big-Bang"), el mejor número es el 73, porque 73 es el 21er número primo. Su espejo, 37, es el 12mo número primo. 21 es el producto de multiplicar 7 por 3 y en binario, 73 es un palíndromo: 1001001_
 
 ## ¿Qué es esto?
 
@@ -26,12 +22,9 @@ Bueno pues esto es una **decisión personal**, pero te puedo dar algunas razones
 
 - Soporte: C# tiene un gran soporte de la comunidad, así que si tienes dudas, puedes encontrar ayuda en [StackOverflow](https://www.youtube.com/watch?v=nZX13dVxnJw), LeetCode, GitHub, etc.
 
-- **Soy Mexicano y admiro a otros Mexicanos**, y uno de ellos es [Miguel de Icaza](https://github.com/migueldeicaza), quizá el segundo hombre más importante en la historia de este lenguaje
-
-La primera opción para hacer estos ejercicios era C++, pero C# es más fácil de entender y más rápido de escribir, si le prestas la debida atención después será muy fácil pasar de C# a GO, Java, Python o incluso C++, además de que esta más cuidado en su desarrollo que C++, porque C++ se empeña en meterse esteroides, no logra mantener una base de código unificada y no han tenido la intención de arreglar sus problemas de seguridad 🫣, aunque personalmente me gusta C++ y literalmente es EL LENGUAJE que no esta llevando a marte, no es algo que puedas dominar en 6 meses 😅.Pero si empiezas a estudiar algoritmos para entrevistas técnicas y no es tu intención llegar a Microsoft, Google o alguna de las Big Tech Companies, pues C# tiene un **AMPLIO mercado laboral** , y si no me crees, checa la oferta laboral que hay en [Linkedin](https://www.linkedin.com/jobs/search/?keywords=c%23&location=Mexico&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0)
+- **Soy Mexicano y admiro a otros Mexicanos**, y uno de ellos es [Miguel de Icaza](https://github.com/migueldeicaza), quizá el segundo hombre más importante en la historia de este lenguaje, él es el creador de Mono, Xamarin, Gnome, etc. y es un gran ejemplo de que los Mexicanos podemos hacer cosas grandes
 
 _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-aplicaciones-en-windows-6077246c02da) a un post que escribí en Medium donde detalle los puntos anteriores y a una [conferencia magistral](https://www.youtube.com/watch?v=acryVgY0O3E) de Miguel de Icaza sobre la plataforma de desarrollo .NET**_
-
 
 ## Indice 📖
 
@@ -89,17 +82,28 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
-|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
-|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
+|0190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C#]()|Fácil|
+|0191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C#]()|Fácil|
+|0268|[Missing Number](https://leetcode.com/problems/missing-number/) | [C#]()|Fácil|
+|0338|[Counting Bits](https://leetcode.com/problems/counting-bits/) | [C#]()|Fácil|
+|0371|[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [C#]()|Medium|
 
 ### Programación dinámica
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
-|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
-|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
+|0055|[Jump Game](https://leetcode.com/problems/jump-game/) | [C#]()|Medio|
+|0062|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C#]()|Medio|
+|0070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [C#]()|Fácil|
+|0091|[Decode Ways](https://leetcode.com/problems/decode-ways/) | [C#]()|Medio|
+|0139|[Word Break](https://leetcode.com/problems/word-break/) | [C#]()|Medio|
+|0198|[House Robber](https://leetcode.com/problems/house-robber/) | [C#]()|Medio|
+|0213|[House Robber II](https://leetcode.com/problems/house-robber-ii/) | [C#]()|Medio|
+|0300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [C#]()|Medio|
+|0322|[Coin Change](https://leetcode.com/problems/coin-change/) | [C#]()|Medio|
+|0377|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C#]()|Medio|
+|1143|[Longest Common Subsequence
+](https://leetcode.com/problems/longest-common-subsequence/) | [C#]()|Medio|
 
 ### Listas enlazadas
 
