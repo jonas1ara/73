@@ -104,16 +104,18 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 |0300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [C#]()|Medio|
 |0322|[Coin Change](https://leetcode.com/problems/coin-change/) | [C#]()|Medio|
 |0377|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C#]()|Medio|
-|1143|[Longest Common Subsequence
-](https://leetcode.com/problems/longest-common-subsequence/) | [C#]()|Medio|
+|1143|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C#]()|Medio|
 
 ### Listas enlazadas
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
-|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
-|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
+|0019|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C#]()|Medio|
+|0021|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C#]()|Fácil|
+|0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C#]()|Díficil|
+|0141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C#]()|Fácil|
+|0143|[Reorder List](https://leetcode.com/problems/reorder-list/) | [C#]()|Medio|
+|0206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C#]()|Fácil|
 
 ### Árboles
 
