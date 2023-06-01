@@ -74,11 +74,11 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0056|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C#]()|Media|
-|0057|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C#]()|Media|
-|0252|[Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | [C#]()|Baja|
-|0253|[Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | [C#]()|Media|
-|0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C#]()|Media|
+|0056|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Merge-Intervals)|Media|
+|0057|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Insert-Interval)|Media|
+|0252|[Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Meeting-Rooms)|Baja|
+|0253|[Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Meeting-Rooms-II)|Media|
+|0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Non-overlapping-Intervals)|Media|
 
 ### Búsqueda binaria
 
