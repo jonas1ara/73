@@ -8,7 +8,7 @@ _Sheldon Cooper (personaje de la famosa serie "La teoría del Big-Bang")_
 
 ## ¿Qué es esto?
 
-Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCode más utiles, bueno en realidad son [75](https://leetcode.com/list/xi4ci4ig/) 😬, los algoritmos están escritos en C# sobre .NET 6 o superior, escribí cada programa colocando la función que lo resuelve, el resto del programa para poder ser probado on-promise, un README con notas del problema y de la solución y un video de YT explicandolo 🤓,  **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español**
+Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCode más utiles, bueno en realidad son [76](https://leetcode.com/list/xi4ci4ig/) 😬, los algoritmos están escritos en C# sobre .NET 6 o superior, escribí cada programa colocando la función que lo resuelve, el resto del programa para poder ser probado on-promise, un README con notas del problema y de la solución y un video de YT explicandolo 🤓,  **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español**
 
 ## ¿Por qué C#?
 
