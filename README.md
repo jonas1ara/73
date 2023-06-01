@@ -140,9 +140,9 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
-|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
-|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
+|0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C#]()|Díficil|
+|0295|[Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [C#]()|Díficil|
+|0347|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | [C#]()|Medio|
 
 ### Grafos
 
