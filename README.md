@@ -110,12 +110,12 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0019|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C#]()|Media|
-|0021|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C#]()|Baja|
-|0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C#]()|Alta|
-|0141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C#]()|Baja|
-|0143|[Reorder List](https://leetcode.com/problems/reorder-list/) | [C#]()|Media|
-|0206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C#]()|Baja|
+|0019|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Remove-Nth-Node-From-End-of-List)|Media|
+|0021|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Merge-Two-Sorted-Lists)|Baja|
+|0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Merge-k-Sorted-Lists)|Alta|
+|0141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Linked-List-Cycle)|Baja|
+|0143|[Reorder List](https://leetcode.com/problems/reorder-list/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Reorder-List)|Media|
+|0206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Reverse-Linked-List)|Baja|
 
 ### Árboles
 
