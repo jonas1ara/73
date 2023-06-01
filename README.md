@@ -34,16 +34,16 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Baja|
-|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Media|
-|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Media|
-|0033|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [C#]()|Media|
-|0053|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C#]()|Media|
-|0121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [C#]()|Media|
-|0152|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | [C#]()|Media|
-|0153|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C#]()|Media|
-|0217|[Contains Duplicate](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C#]()|Baja|
-|0238|[Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [C#]()|Baja|
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Two-Sum)|Baja|
+|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Container-With-Most-Water)|Media|
+|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/3Sum)|Media|
+|0033|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Search-in-Rotated-Sorted-Array)|Media|
+|0053|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Maximum-Subarray)|Media|
+|0121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Best-Time-to-Buy-and-Sell-Stock)|Media|
+|0152|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Maximum-Product-Subarray)|Media|
+|0153|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Find-Minimum-in-Rotated-Sorted-Array)|Media|
+|0217|[Contains Duplicate](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Contains-Duplicate)|Baja|
+|0238|[Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Product-of-Array-Except-Self)|Baja|
 
 
 ### Matrices
