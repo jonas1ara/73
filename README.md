@@ -148,9 +148,15 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
-|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
-|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
+|0128|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C#]()|Medio|
+|0133|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C#]()|Medio|
+|0200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C#]()|Medio|
+|0207|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C#]()|Medio|
+|0261|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | [C#]()|Medio|
+|0269|[Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | [C#]()|Díficil|
+|0323|[Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [C#]()|Medio|
+|0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C#]()|Medio|
+
 
 ## Construido con 🛠️
 
