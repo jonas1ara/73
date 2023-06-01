@@ -94,17 +94,17 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0055|[Jump Game](https://leetcode.com/problems/jump-game/) | [C#]()|Media|
-|0062|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C#]()|Media|
-|0070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [C#]()|Baja|
-|0091|[Decode Ways](https://leetcode.com/problems/decode-ways/) | [C#]()|Media|
-|0139|[Word Break](https://leetcode.com/problems/word-break/) | [C#]()|Media|
-|0198|[House Robber](https://leetcode.com/problems/house-robber/) | [C#]()|Media|
-|0213|[House Robber II](https://leetcode.com/problems/house-robber-ii/) | [C#]()|Media|
-|0300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [C#]()|Media|
-|0322|[Coin Change](https://leetcode.com/problems/coin-change/) | [C#]()|Media|
-|0377|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C#]()|Media|
-|1143|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C#]()|Media|
+|0055|[Jump Game](https://leetcode.com/problems/jump-game/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Jump-Game)|Media|
+|0062|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Unique-Paths)|Media|
+|0070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Climbing-Stairs)|Baja|
+|0091|[Decode Ways](https://leetcode.com/problems/decode-ways/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Decode-Ways)|Media|
+|0139|[Word Break](https://leetcode.com/problems/word-break/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Word-Break)|Media|
+|0198|[House Robber](https://leetcode.com/problems/house-robber/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/House-Robber)|Media|
+|0213|[House Robber II](https://leetcode.com/problems/house-robber-ii/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/House-Robber-II)|Media|
+|0300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Longest-Common-Subsequence)|Media|
+|0322|[Coin Change](https://leetcode.com/problems/coin-change/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Coin-Change)|Media|
+|0377|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Combination-Sum-IV)|Media|
+|1143|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Longest-Increasing-Subsequence)|Media|
 
 ### Listas enlazadas
 
