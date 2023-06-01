@@ -50,10 +50,10 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C#]()|Media|
-|0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C#]()|Media|
-|0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C#]()|Media|
-|0079|[Word Search](https://leetcode.com/problems/word-search/) | [C#]()|Media|
+|0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Rotate-Image)|Media|
+|0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Spiral-Matrix)|Media|
+|0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Set-Matrix-Zeroes)|Media|
+|0079|[Word Search](https://leetcode.com/problems/word-search/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Word-Search)|Media|
 
 ### Strings
 
