@@ -7,6 +7,7 @@ int MaxArea(List<int> height)
     // int R = height.Length - 1;
     int R = height.Count - 1;
     int ans = 0, L = 0;
+    
     while (L < R)
     {
         // A = b * h
