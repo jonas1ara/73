@@ -84,11 +84,11 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C#]()|Baja|
-|0191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C#]()|Baja|
-|0268|[Missing Number](https://leetcode.com/problems/missing-number/) | [C#]()|Baja|
-|0338|[Counting Bits](https://leetcode.com/problems/counting-bits/) | [C#]()|Baja|
-|0371|[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [C#]()|Medium|
+|0190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Reverse-Bits)|Baja|
+|0191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Number-of-1-Bits)|Baja|
+|0268|[Missing Number](https://leetcode.com/problems/missing-number/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Missing-Number)|Baja|
+|0338|[Counting Bits](https://leetcode.com/problems/counting-bits/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Counting-Bits)|Baja|
+|0371|[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Sum-of-Two-Integers)|Medium|
 
 ### Programación dinámica
 
