@@ -71,17 +71,19 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 |0076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C#]()|Díficil|
 |0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C#]()|Fácil|
 |0242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C#]()|Fácil|
+|0271|[Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | [C#]()|Medio|   
 |0424|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C#]()|Medio|
 |0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C#]()|Medio|
-|0659|[Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | [C#]()|Medio|   
 
 ### Intervalos
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#]()|Fácil|
-|0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#]()|Medio|
-|0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#]()|Medio|
+|0056|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C#]()|Medio|
+|0057|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C#]()|Medio|
+|0252|[Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | [C#]()|Fácil|
+|0253|[Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | [C#]()|Medio|
+|0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C#]()|Medio|
 
 ### Búsqueda binaria
 
