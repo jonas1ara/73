@@ -59,16 +59,16 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C#]()|Media|
-|0005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C#]()|Media|
-|0020|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C#]()|Baja|
-|0049|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [C#]()|Media|
-|0076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C#]()|Alta|
-|0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C#]()|Baja|
-|0242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C#]()|Baja|
-|0271|[Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | [C#]()|Media|   
-|0424|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C#]()|Media|
-|0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C#]()|Media|
+|0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Longest-Substring-Without-Repeating-Characters)|Media|
+|0005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Longest-Palindromic-Substring)|Media|
+|0020|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Valid-Parentheses)|Baja|
+|0049|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Group-Anagrams)|Media|
+|0076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Minimum-Window-Substring)|Alta|
+|0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Valid-Palindrome)|Baja|
+|0242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Valid-Anagram)|Baja|
+|0271|[Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Encode-and-Decode-Strings)|Media|   
+|0424|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Longest-Repeating-Character-Replacement)|Media|
+|0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Palindromic-Substrings)|Media|
 
 ### Intervalos
 
