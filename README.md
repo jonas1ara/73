@@ -34,7 +34,7 @@ _**Te dejo un [link](https://medium.com/@jonas_lara/c-solo-sirve-para-crear-apli
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Two-Sum)|Baja|
+|**0001**|[Two Sum](https://leetcode.com/problems/two-sum/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Two-Sum)|Baja|
 |0011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Container-With-Most-Water)|Media|
 |0015|[3Sum](https://leetcode.com/problems/3sum/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/3Sum)|Media|
 |0033|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Search-in-Rotated-Sorted-Array)|Media|
