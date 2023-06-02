@@ -2,6 +2,7 @@
 
 Dado un arreglo de números enteros llamado `nums` y un objetivo entero llamado `target`, devuelve índices de los dos números de modo que sumen el objetivo.
 
+Restricciones:
 - Puede suponer que cada entrada tendría exactamente una solución
 - No puede usar el mismo elemento dos veces.
 - Puede devolver la respuesta en cualquier orden.
