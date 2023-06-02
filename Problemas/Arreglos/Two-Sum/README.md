@@ -11,7 +11,7 @@ Restricciones:
 
 Para la solución de este problema tenemos dos enfoques uno es el de **fuerza bruta** y el otro es el de usar una **tabla de hash**.
 
-## Solución de fuerza bruta O (n²)
+## Solución con fuerza bruta O (n²)
 
 Recorrer el arreglo con dos ciclos for anidados y comparar cada elemento con los demás hasta encontrar la suma del objetivo, esta es una solución con complejidad O(n²) que no es muy eficiente pero es la más sencilla de implementar
 
