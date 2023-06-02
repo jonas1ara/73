@@ -1,4 +1,4 @@
-# Two Sums
+# Two Sum
 
 Dado un arreglo de números enteros llamado `nums` y un objetivo entero llamado `target`, devuelve índices de los dos números de modo que sumen el objetivo.
 Puede suponer que cada entrada tendría exactamente una solución, no puede usar el mismo elemento dos veces y puede devolver la respuesta en cualquier orden.
