@@ -11,7 +11,7 @@ Restricciones:
 
 Para la solución de este problema tenemos dos enfoques uno es el de **fuerza bruta** y el otro es el de usar una **tabla de hash**.
 
-## Solución con fuerza bruta O (n²)
+## Solución con fuerza bruta O(n²)
 
 Recorrer el arreglo con dos ciclos for anidados y comparar cada elemento con los demás hasta encontrar la suma del objetivo, esta es una solución con complejidad O(n²) que no es muy eficiente pero es la más sencilla de implementar
 
@@ -38,7 +38,7 @@ int[] TwoSum(int[] nums, int target)
 }
 ```
 
-## Solución con tabla de hash O (n)
+## Solución con tabla de hash O(n)
 
 En .NET podemos usar una implementación de la biblioteca `System.Collections.Generic` llamada `Dictionary<TKey,TValue>` que es una tabla hash que nos permite almacenar pares de valores clave-valor, en este caso la clave será el valor del elemento del arreglo y el valor será el índice del elemento en el arreglo
 
