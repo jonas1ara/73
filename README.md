@@ -1,4 +1,4 @@
-# 73 - El mejor número
+# 73 - El mejor número 🤓
 
 Según Sheldon Cooper **el mejor número es el 73**, porque 73 es el 21er número primo. Su espejo, 37, es el 12mo número primo. 21 es el producto de multiplicar 7 por 3 y en binario, 73 es un palíndromo: 1001001
 
@@ -6,11 +6,11 @@ Según Sheldon Cooper **el mejor número es el 73**, porque 73 es el 21er númer
 
 _Sheldon Cooper (personaje de la famosa serie "La teoría del Big-Bang")_
 
-## ¿Qué es esto?
+## ¿Qué es esto? 🚀
 
 Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCode más utiles, bueno en realidad son [76](https://leetcode.com/list/xi4ci4ig/) 😬, los algoritmos están escritos en C/C++, escribí cada programa colocando la función que lo resuelve, el resto del programa para poder ser probado on-promise, un README con notas del problema y de la solución y un video de YT explicandolo 🤓,  **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español**
 
-## Configuración
+## Configuración 🔧
 
 Puedes usar este repositorio desde Windows o Mac pero esta pensando para usarse en Linux, **especificamente una distribución basada en Debian**, por el script `Setup.sh` y el archivo `tasks.json`que configura la tarea de compilación en Visual Studio Code, no importa si es una distro completa o una WSL, lo importante es que tengas instalado:
 
@@ -26,7 +26,7 @@ sudo apt build-essential -y
 
 ## Indice 📖
 
-### Arreglos
+### Arreglos 
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
