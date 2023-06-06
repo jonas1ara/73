@@ -30,7 +30,7 @@ sudo apt build-essential -y
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|**0001**|[Two Sum](https://leetcode.com/problems/two-sum/) | [C y C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Two-Sum)|Baja|
+|**0001**|[Two Sum](https://leetcode.com/problems/two-sum/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Two-Sum)|Baja|
 |**0011**|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Container-With-Most-Water)|Media|
 |**0015**|[3Sum](https://leetcode.com/problems/3sum/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/3Sum)|Media|
 |0033|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Search-in-Rotated-Sorted-Array)|Media|
@@ -46,7 +46,7 @@ sudo apt build-essential -y
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Rotate-Image)|Media|
+|0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Rotate-Image)|Media|
 |0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Spiral-Matrix)|Media|
 |0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Set-Matrix-Zeroes)|Media|
 |0079|[Word Search](https://leetcode.com/problems/word-search/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Word-Search)|Media|
@@ -55,7 +55,7 @@ sudo apt build-essential -y
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Longest-Substring-Without-Repeating-Characters)|Media|
+|0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Longest-Substring-Without-Repeating-Characters)|Media|
 |0005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Longest-Palindromic-Substring)|Media|
 |0020|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Valid-Parentheses)|Baja|
 |0049|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Group-Anagrams)|Media|
@@ -70,7 +70,7 @@ sudo apt build-essential -y
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0056|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Merge-Intervals)|Media|
+|0056|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Merge-Intervals)|Media|
 |0057|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Insert-Interval)|Media|
 |0252|[Meeting Rooms](https://www.lintcode.com/problem/920/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Meeting-Rooms)|Baja|
 |0253|[Meeting Rooms II](https://www.lintcode.com/problem/919/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Meeting-Rooms-II)|Media|
@@ -80,7 +80,7 @@ sudo apt build-essential -y
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Reverse-Bits)|Baja|
+|0190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Reverse-Bits)|Baja|
 |0191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Number-of-1-Bits)|Baja|
 |0268|[Missing Number](https://leetcode.com/problems/missing-number/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Missing-Number)|Baja|
 |0338|[Counting Bits](https://leetcode.com/problems/counting-bits/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Counting-Bits)|Baja|
@@ -90,7 +90,7 @@ sudo apt build-essential -y
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0055|[Jump Game](https://leetcode.com/problems/jump-game/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Jump-Game)|Media|
+|0055|[Jump Game](https://leetcode.com/problems/jump-game/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Jump-Game)|Media|
 |0062|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Unique-Paths)|Media|
 |0070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Climbing-Stairs)|Baja|
 |0091|[Decode Ways](https://leetcode.com/problems/decode-ways/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Decode-Ways)|Media|
@@ -106,7 +106,7 @@ sudo apt build-essential -y
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0019|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Remove-Nth-Node-From-End-of-List)|Media|
+|0019|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Remove-Nth-Node-From-End-of-List)|Media|
 |0021|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Merge-Two-Sorted-Lists)|Baja|
 |0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Merge-k-Sorted-Lists)|Alta|
 |0141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Linked-List-Cycle)|Baja|
@@ -117,7 +117,7 @@ sudo apt build-essential -y
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0098|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Validate-Binary-Search-Tree)|Media|
+|0098|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Validate-Binary-Search-Tree)|Media|
 |0100|[Same Tree](https://leetcode.com/problems/same-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Same-Tree)|Baja|
 |0102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Binary-Tree-Level-Order-Traversal)|Media|
 |0104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Maximum-Depth-of-Binary-Tree)|Baja|
@@ -136,7 +136,7 @@ sudo apt build-essential -y
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Heaps/Merge-k-Sorted-Lists)|Alta|
+|0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Heaps/Merge-k-Sorted-Lists)|Alta|
 |0295|[Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Heaps/Find-Median-from-Data-Stream)|Alta|
 |0347|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Heaps/Top-K-Frequent-Elements)|Media|
 
@@ -144,7 +144,7 @@ sudo apt build-essential -y
 
 | # | Titulo | Solución | Dificultad |
 |---| ----- | -------- | ---------- |
-|0128|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Longest-Consecutive-Sequence)|Media|
+|0128|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Longest-Consecutive-Sequence)|Media|
 |0133|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Clone-Graph)|Media|
 |0200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Number-of-Islands)|Media|
 |0207|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Course-Schedule)|Media|
