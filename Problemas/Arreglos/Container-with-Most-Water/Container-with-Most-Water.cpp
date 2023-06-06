@@ -1,28 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#include <iostream>
+#include <vector>
+#include <climits>
 
-//public int MaxArea(int[] height)
-int MaxArea(List<int> height)
+int maxArea(std::vector<int> &A)
 {
-    // int R = height.Length - 1;
-    int R = height.Count - 1;
-    int ans = 0, L = 0;
-    
+    int ans = 0, L = 0, R = A.size() - 1;
     while (L < R)
     {
-        // A = b * h
-        ans = Math.Max(ans, (R - L) * Math.Min(height[L], height[R]));
-
-        if (height[L] < height[R]) L++; // Move the smaller edge
-        else R--;
+        ans = std::max(ans, (R - L) * std::min(A[L], A[R]));
+        if (A[L] < A[R])
+            ++L; // Move the smaller edge
+        else
+            --R;
     }
     return ans;
 }
 
-//int[] height = new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
-List<int> height = new List<int>() { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+int main()
+{
 
-Console.WriteLine("Input: " + string.Join(" ", height));
+    std::vector<int> height = {1,8,6,2,5,4,8,3,7}; 
+    
+    std::cout << "Input: height = [";
+    for (const auto& element : height) {
+        std::cout << element << ", ";
+    }
+    std::cout << "]";
 
-Console.WriteLine("Output: " + MaxArea(height));
+    std::cout << "\nOutput: " << maxArea(height) << std::endl;
 
+    return 0;
+}

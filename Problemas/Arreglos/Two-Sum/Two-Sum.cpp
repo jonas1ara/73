@@ -15,30 +15,23 @@ std::vector<int> twoSum(std::vector<int> &nums, int target)
     return {}; // En caso de que no se encuentre
 }
 
-
-
 int main()
 {
     std::vector<int> nums = {2, 7, 11, 15};
     int target = 9;
-
-    std::vector<int> result = twoSum(nums, target);
-
-    std::cout << "Input: nums = ";
-
-    for (int i = 0; i < nums.size(); i++)
-        std::cout << "[" << nums[i] << "]";
-
-    std::cout << ", target = " << target << std::endl;
-
-    std::cout << "Output: ";
-
-    for (int i = 0; i < result.size(); i++)
-    {
-        std::cout << "[" << result[i] << "]";
+    
+    std::cout << "Input: nums = [";
+    for (const auto& element : nums) {
+        std::cout << element << ", ";
     }
+    std::cout << "]";
 
-    std::cout << "\n";
+    std::vector <int> result = twoSum(nums, target); 
 
-    // std::cin.get();
+    std::cout << "\nOutput:  [";
+    for (const auto& element : result) {
+        std::cout << element << ", ";
+    }
+    std::cout << "]\n";
+
 }
