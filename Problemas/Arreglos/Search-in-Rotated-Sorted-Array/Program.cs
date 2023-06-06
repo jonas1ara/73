@@ -44,3 +44,12 @@ int Search(int[] nums, int target)
 
     return -1;
 }
+
+int[] nums = {4,5,6,7,0,1,2};
+int target = 3;
+
+Console.WriteLine("Input: nums = [" + String.Join(", ", nums) + "] , target = " + target);
+
+int result = Search(nums, target);
+
+Console.WriteLine("Output: " + result );
