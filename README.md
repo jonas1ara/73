@@ -10,6 +10,20 @@ _Sheldon Cooper (personaje de la famosa serie "La teoría del Big-Bang")_
 
 Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCode más utiles, bueno en realidad son [76](https://leetcode.com/list/xi4ci4ig/) 😬, los algoritmos están escritos en C/C++, escribí cada programa colocando la función que lo resuelve, el resto del programa para poder ser probado on-promise, un README con notas del problema y de la solución y un video de YT explicandolo 🤓,  **este repositorio toma importancia cuándo te das cuenta que no tenemos material de calidad en español**
 
+## Pre work 📋
+
+Puedes usar este repositorio desde Windows o Mac pero esta pensando para usarse en Linux, **especificamente una distribución basada en Debian**, por el script `Setup.sh` y el archivo `tasks.json`que configura la tarea de compilación en Visual Studio Code, no importa si es una distro completa o una WSL, lo importante es que tengas instalado:
+
+- [gcc] (https://gcc.gnu.org/)
+- libstdc++-dev
+
+Para instalarlos en Debian o Ubuntu puedes usar:
+
+```bash
+sudo apt install build-essential
+```
+
+
 ## Indice 📖
 
 ### Arreglos
@@ -142,7 +156,6 @@ Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCod
 
 ## Construido con 🛠️
 
-- [.NET](https://dotnet.microsoft.com/download) (Obligatorio)
 - [VS Code](https://code.visualstudio.com/) (Opcional)
 
 ## Expresiones de Gratitud 🎁
