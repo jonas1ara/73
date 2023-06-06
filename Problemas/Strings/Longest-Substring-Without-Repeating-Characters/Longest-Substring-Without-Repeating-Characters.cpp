@@ -1,44 +1,32 @@
-﻿using System;
+﻿#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
 
-string LongestPalindrome(string s)
+int lengthOfLongestSubstring(std::string s)
 {
-    if (string.IsNullOrWhiteSpace(s) || s.Length == 1) return s;
+    int ans = 0;                 // Variable para almacenar la longitud de la subcadena más larga sin caracteres repetidos
+    int start = -1;              // Índice del inicio de la subcadena actual
+    std::vector<int> m(128, -1); // Vector para almacenar el índice más reciente de cada carácter ASCII en la cadena
 
-    int n2 = s.Length * 2 + 1;
-    var s2 = new char[n2];
-    for (int i = 0; i < s.Length; i++)
+    for (int i = 0; i < s.size(); i++)
     {
-        s2[i * 2] = '#';
-        s2[i * 2 + 1] = s[i];
-    }
-    s2[n2 - 1] = '#';
+        start = std::max(start, m[s[i]]); // Actualiza el inicio de la subcadena si se encuentra un carácter repetido
 
-    var p = new int[n2];
-    int rangeMax = 0, center = 0;
-    var longestCenter = 0;
+        ans = std::max(ans, i - start); // Calcula la longitud de la subcadena actual y la compara con la longitud máxima anterior
 
-    for (int i = 1; i < n2 - 1; i++)
-    {
-        if (rangeMax > i)
-            p[i] = Math.Min(p[center * 2 - i], rangeMax - i);
-
-        while (i - 1 - p[i] >= 0 && i + 1 + p[i] < n2 && s2[i - 1 - p[i]] == s2[i + 1 + p[i]])
-            p[i]++;
-
-        if (i + p[i] > rangeMax)
-        {
-            center = i;
-            rangeMax = i + p[i];
-        }
-
-        if (p[i] > p[longestCenter])
-            longestCenter = i;
+        m[s[i]] = i; // Actualiza el índice más reciente del carácter en el vector
     }
 
-    var range = p[longestCenter];
-    return s.Substring((longestCenter - range) / 2, range);
+    return ans; // Devuelve la longitud de la subcadena más larga sin caracteres repetidos
 }
 
-string s = "babad";
-Console.WriteLine("Input: " + s);
-Console.WriteLine("Output: " + LongestPalindrome(s));
+int main()
+{
+    std::string s = "abcabcbb";
+    std::cout << "Input: '" << s << "'" << std::endl;
+
+    std::cout << "Output: " << lengthOfLongestSubstring(s) << std::endl;
+
+    std::cin.get();
+}
