@@ -156,6 +156,7 @@ sudo apt build-essential -y
 
 ## Construido con 🛠️
 
+- [C](https://www.cprogramming.com/) (Opcional)
 - [C++](https://www.cplusplus.com/) (Obligatorio)
 - [Ubuntu](https://ubuntu.com/) (Opcional)
 - [VS Code](https://code.visualstudio.com/) (Opcional)
