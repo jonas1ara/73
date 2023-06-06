@@ -156,10 +156,16 @@ sudo apt build-essential -y
 
 ## Construido con 🛠️
 
-- [C](https://www.cprogramming.com/) (Opcional)
-- [C++](https://www.cplusplus.com/) (Obligatorio)
+- [C](https://en.wikipedia.org/wiki/C_(programming_language)) (Opcional)
+- [C++](https://isocpp.org/) (Obligatorio)
 - [Ubuntu](https://ubuntu.com/) (Opcional)
 - [VS Code](https://code.visualstudio.com/) (Opcional)
+
+## Referencias 📚
+
+_Eckel, B. (2004). Thinking in C++. [Thinking in C++](https://www.amazon.com/Thinking-C-Introduction-Standard-2nd/dp/0139798099/ref=sr_1_1?dchild=1&keywords=thinking+in+c%2B%2B&qid=1618383343&sr=8-1) (2nd ed.). Pearson._
+
+_Cormen, T. H., Leiserson, C. E., Rivest, R. L. & Stein, C. (2009). [Introduction to Algorithms](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844) (3rd ed.). MIT Press._
 
 ## Expresiones de Gratitud 🎁
 
