@@ -24,10 +24,10 @@ int main()
     std::vector<int> array = {-1, 0, 1, 2, -1, -4};
     int target = 0;
 
-    Solution solution;
+    Solution sol;
 
     printInput(array, target);
-    printOutput(solution.twoSum(array, target));
+    printOutput(sol.twoSum(array, target));
 
     return 0;
 }
