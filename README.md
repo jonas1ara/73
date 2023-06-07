@@ -41,7 +41,7 @@ El repositorio esta dividido en 3 carpetas:
 
 - **Libraries:** Contiene las librerias que se usan en el repositorio, por ejemplo la libreria `ArrayPrinter.h` que contiene funciones genericas para imprimir distintos arreglos
 
-- **Problemas:** Contiene las carpetas de cada tema, dentro tiene una carpeta por problema y dentro de cada carpeta esta el código fuente y el README que explica dicho problema, por ejemplo la carpeta `Arreglos` contiene la carpeta `Two-Sum` que contiene el código fuente en C `Two-Sum.c` (Solo en el primer problema de cada tema hay una implementación en lenguaje C para profundizar un poco más), el código fuente en C++ `Two-Sum.cpp` y el  archivo `README.md`
+- **Problemas:** Contiene las carpetas de cada tema, dentro tiene una carpeta por problema y dentro de cada carpeta esta el código fuente y el README que explica dicho problema, por ejemplo la carpeta `Arreglos` contiene la carpeta `Two-Sum` que contiene el código fuente en C `Two-Sum.c` **(Solo en el primer problema de cada tema hay una implementación en lenguaje C para profundizar un poco más)**, el código fuente en C++ `Two-Sum.cpp` y el  archivo `README.md`
 
 - **Sources:** Contiene los archivos de texto, imágenes y gifs que se usan en el repositorio, por ejemplo el gif de Sheldon Cooper 😁
 
