@@ -1,33 +1,78 @@
 ﻿#include "../../../Libraries/ArrayPrinter.h"
+#include <algorithm>
 #include <iostream>
 #include <vector>
 #include <map>
 
 class Solution {
 public:
-    std::vector<int> twoSum(std::vector<int> &nums, int target)
+    std::vector<std::vector<int>> threeSum(std::vector<int> &nums)
     {
-        std::map<int, int> map;
-        for (int i = 0; i < nums.size(); ++i)
+        std::vector<std::vector<int>> result;
+
+        int n = nums.size();
+        if (n < 3)
         {
-            int t = target - nums[i]; // t(7) = 9 - 2, t(2) = 9 - 7
-            if (map.count(t))
-                return {map[t], i}; // map[t] = 0(donde se encontro el 2) e i = 1(donde se encuentra actualmente)
-            map[nums[i]] = i;       // Recorremos una posición la tabla 0 --> 1
+            return result;
         }
-        return {}; // En caso de que no se encuentre
+
+        sort(nums.begin(), nums.end());
+
+        for (int i = 0; i < n - 2; i++)
+        {
+            if (nums[i] > 0)
+            {
+                break;
+            }
+            if (i > 0 && nums[i - 1] == nums[i])
+            {
+                continue;
+            }
+
+            int j = i + 1;
+            int k = n - 1;
+
+            while (j < k)
+            {
+                int sum = nums[i] + nums[j] + nums[k];
+
+                if (sum < 0)
+                {
+                    j++;
+                }
+                else if (sum > 0)
+                {
+                    k--;
+                }
+                else
+                {
+                    result.push_back({nums[i], nums[j], nums[k]});
+
+                    while (j < k && nums[j] == nums[j + 1])
+                    {
+                        j++;
+                    }
+                    j++;
+
+                    while (j < k && nums[k - 1] == nums[k])
+                    {
+                        k--;
+                    }
+                    k--;
+                }
+            }
+        }
+        return result;
     }
 };
 
 int main()
 {
     std::vector<int> array = {-1, 0, 1, 2, -1, -4};
-    int target = 0;
+    Solution sol;
 
-    Solution solution;
-
-    printInput(array, target);
-    printOutput(solution.twoSum(array, target));
+    printArray(array);
+    printVV(sol.threeSum(array));
 
     return 0;
 }
