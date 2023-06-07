@@ -8,9 +8,9 @@ _Sheldon Cooper (personaje de la famosa serie "La teoría del Big-Bang")_
 
 ## ¿Qué es esto? 🚀
 
-Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCode más utiles, bueno en realidad son [76](https://leetcode.com/list/xi4ci4ig/) 😬, los algoritmos están escritos en C y C++, escribí cada programa colocando la función que lo resuelve, el resto del programa para poder ser probado on-promise, un README con notas del problema y de la solución y un video en YouTube explicandolo 🤓
+Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCode más utiles, bueno en realidad son [76](https://leetcode.com/list/xi4ci4ig/) 😬, los algoritmos están escritos en C y C++, escribí cada programa colocando la función que lo resuelve, el resto del programa para poder ser probado on-promise, un README con notas del problema y de la solución. Al final si todo sale bien, haré un video en YouTube explicando cada problema 🤓
 
-**Nota: Lo valios de este repositorio es que no tenemos material de calidad en español, si te ayuda, por favor dale una estrella, forkealo, guardalo o compartelo, me ayudarias mucho** 😊
+**Nota: Lo valioso de este repositorio es cuando te das cuenta que no tenemos material de calidad en español, entonces, si te ayuda, por favor dale una estrella, forkealo, guardalo o compártelo, me ayudarías bastante** 😊
 
 ## Estructura del repositorio 📦
 
