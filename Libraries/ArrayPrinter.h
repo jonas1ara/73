@@ -21,7 +21,7 @@ void printArray(const std::vector<T> &array)
 template <typename T>
 void printInput(const std::vector<T> &array, int target)
 {
-    std::cout << "Input: Nums =[";
+    std::cout << "Input: nums = [";
     for(int i = 0; i < array.size(); ++i)
     {
         std::cout << array[i];

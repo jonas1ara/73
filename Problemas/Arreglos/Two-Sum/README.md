@@ -123,21 +123,24 @@ La voy a explicar lo juro
 Podemos ver la primera diferencia de implementar algoritmos usando C++, en este código utilizamos la biblioteca `vector` de C++ para trabajar con arreglos dinámicos. La función `twoSum` toma un `std::vector` de enteros `nums` y el objetivo `target`. Luego, se utilizan dos bucles anidados para probar todas las combinaciones posibles de dos números del vector. Si se encuentra una pareja de números que suma el objetivo, se devuelve un nuevo vector con los índices de esos números. En caso contrario, se devuelve un vector vacío.
 
 ```cpp
-std::vector<int> twoSum(std::vector<int> &nums, int target)
-{
-    int n = nums.size();
-    for (int i = 0; i < n - 1; i++)
+class Solution {
+public:
+    std::vector<int> twoSum(std::vector<int> &nums, int target)
     {
-        for (int j = i + 1; j < n; j++)
+        int n = nums.size();
+        for (int i = 0; i < n - 1; i++)
         {
-            if (nums[i] + nums[j] == target)
+            for (int j = i + 1; j < n; j++)
             {
-                return {i, j}; // Devolvemos el índice del elemento actual y el índice del complemento
+                if (nums[i] + nums[j] == target)
+                {
+                    return {i, j}; // Devolvemos el índice del elemento actual y el índice del complemento
+                }
             }
         }
+        return {}; // Si no se encuentra ninguna pareja, se devuelve un vector vacío
     }
-    return {}; // Si no se encuentra ninguna pareja, se devuelve un vector vacío
-}
+};
 ```
 
 ### Solución con tabla de hash O(n)
@@ -151,17 +154,20 @@ Si no se encuentra ninguna pareja de números, se agrega el elemento actual al m
 Este enfoque tiene una complejidad de tiempo de **O(n)**, ya que se realiza solo un recorrido lineal del vector `nums`. Además, utiliza una tabla de hash `std::map` para realizar búsquedas eficientes en tiempo constante.
 
 ```cpp
-std::vector<int> twoSum(std::vector<int> &nums, int target)
-{
-    std::map<int, int> map;
-    for (int i = 0; i < nums.size(); ++i)
+class Solution {
+public:
+    std::vector<int> twoSum(std::vector<int> &nums, int target)
     {
-        int t = target - nums[i];
-        if (map.count(t))
-            return {map[t], i}; // Devolvemos el índice del complemento y el índice actual
-        map[nums[i]] = i; // Agregamos el elemento actual a la tabla hash
+        std::map<int, int> map;
+        for (int i = 0; i < nums.size(); ++i)
+        {
+            int t = target - nums[i]; // t(7) = 9 - 2, t(2) = 9 - 7
+            if (map.count(t))
+                return {map[t], i}; // map[t] = 0(donde se encontro el 2) e i = 1(donde se encuentra actualmente)
+            map[nums[i]] = i;       // Recorremos una posición la tabla 0 --> 1
+        }
+        return {}; // En caso de que no se encuentre
     }
-    return {}; // En caso de que no se encuentre retornar un array vacío
-}
+};
 ```
 
