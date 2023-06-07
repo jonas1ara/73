@@ -20,6 +20,10 @@ El repositorio esta dividido en 3 carpetas:
         |- ArrayPrinter.h
     |- Problemas
         |- Arreglos
+            |- Two-Sum
+                |- Two-Sum.c
+                |- Two-Sum.cpp
+                |- README.md
         |- Matrices
         |- Strings
         |- Intervalos
@@ -38,8 +42,6 @@ El repositorio esta dividido en 3 carpetas:
 - **Problemas:** Contiene las carpetas de cada tema, dentro tiene una carpeta por problema y dentro de cada carpeta esta el código fuente y el README que explica dicho problema, por ejemplo la carpeta `Arreglos` contiene la carpeta `Two-Sum` que contiene el código fuente en C `Two-Sum.c`, el código fuente en C++ `Two-Sum.cpp` y el  archivo `README.md`
 
 - **Sources:** Contiene los archivos de texto, imágenes y gifs que se usan en el repositorio, por ejemplo el gif de Sheldon Cooper 😁
-
-
 
 ## Configuración 🔧
 
