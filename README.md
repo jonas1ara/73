@@ -15,7 +15,7 @@ Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCod
 El repositorio esta dividido en 3 carpetas:
 
 ```
-- Repositorio
+|- Repositorio
     |- Libraries
         |- ArrayPrinter.h
     |- Problemas
@@ -33,11 +33,11 @@ El repositorio esta dividido en 3 carpetas:
         |- Sheldon.gif
 ```
 
-- **Libraries:** Contiene las librerias que se usan en el repositorio 
+- **Libraries:** Contiene las librerias que se usan en el repositorio, por ejemplo la libreria `ArrayPrinter.h` que contiene funciones genericas para imprimir distintos arreglos
 
-- **Problemas:** Contiene las carpetas de cada problema, cada carpeta tiene el nombre del problema y dentro de ella se encuentra el código fuente, un README con notas del problema y de la solución y un video de YT explicandolo 🤓
+- **Problemas:** Contiene las carpetas de cada tema, dentro tiene una carpeta por problema y dentro de cada carpeta esta el código fuente y el README que explica dicho problema, por ejemplo la carpeta `Arreglos` contiene la carpeta `Two-Sum` que contiene el código fuente en C `Two-Sum.c`, el código fuente en C++ `Two-Sum.cpp` y el  archivo `README.md`
 
-- **Sources:** Contiene los archivos de texto, imágenes y videos que se usan en el repositorio
+- **Sources:** Contiene los archivos de texto, imágenes y gifs que se usan en el repositorio, por ejemplo el gif de Sheldon Cooper 😁
 
 
 
