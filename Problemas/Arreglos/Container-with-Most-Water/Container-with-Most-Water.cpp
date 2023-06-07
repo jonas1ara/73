@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#include "../../../Libraries/ArrayPrinter.h"
+#include <iostream>
 #include <vector>
 #include <climits>
 
@@ -18,16 +19,10 @@ int maxArea(std::vector<int> &A)
 
 int main()
 {
-
     std::vector<int> height = {1,8,6,2,5,4,8,3,7}; 
     
-    std::cout << "Input: height = [";
-    for (const auto& element : height) {
-        std::cout << element << ", ";
-    }
-    std::cout << "]";
-
-    std::cout << "\nOutput: " << maxArea(height) << std::endl;
+    printArray(height);
+    std::cout << "Output: " << maxArea(height) << std::endl;
 
     return 0;
 }

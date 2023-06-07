@@ -1,6 +1,7 @@
+#include "../../../Libraries/ArrayPrinter.h"
 #include <iostream>
-#include <map>
 #include <vector>
+#include <map>
 
 std::vector<int> twoSum(std::vector<int> &nums, int target)
 {
@@ -17,21 +18,11 @@ std::vector<int> twoSum(std::vector<int> &nums, int target)
 
 int main()
 {
-    std::vector<int> nums = {2, 7, 11, 15};
-    int target = 9;
-    
-    std::cout << "Input: nums = [";
-    for (const auto& element : nums) {
-        std::cout << element << ", ";
-    }
-    std::cout << "]";
+    std::vector<int> array = {-1, 0, 1, 2, -1, -4};
+    int target = 0;
 
-    std::vector <int> result = twoSum(nums, target); 
+    printInput(array, target);
+    printOutput(twoSum(array, target));
 
-    std::cout << "\nOutput:  [";
-    for (const auto& element : result) {
-        std::cout << element << ", ";
-    }
-    std::cout << "]\n";
-
+    return 0;
 }
