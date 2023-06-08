@@ -1,6 +1,6 @@
 # Container With Most Water
 
-Se le da una `altura` de un arreglo de enteros de longitud `n`. Hay `n` líneas verticales dibujadas de manera que los dos extremos de la `i-ésima` línea son `(i, 0)` y `(i, altura[i])`.
+Se le da la `altura` de un arreglo de enteros de longitud `n`. Hay `n` líneas verticales dibujadas de manera que los dos extremos de la `i-ésima` línea son `(i, 0)` y `(i, altura[i])`.
 
 Encuentra dos rectas que junto con el eje x formen un recipiente, tal que el recipiente contenga la mayor cantidad de agua.
 

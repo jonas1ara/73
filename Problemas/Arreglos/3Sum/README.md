@@ -1,39 +1,120 @@
 # Problema
 
-Dado un arreglo de números enteros llamado `nums` y un objetivo entero llamado `target`, devuelve índices de los dos números de modo que sumen el objetivo.
-Puede suponer que cada entrada tendría exactamente una solución, no puede usar el mismo elemento dos veces y puede devolver la respuesta en cualquier orden.
+Dado un arreglo de enteros `nums`, devolver todos los tripletes `[nums[i], nums[j], nums[k]]` tales que `i != j`, `i != k`, y `j != k`, y `nums[i] + números[j] + números[k] == 0`.
 
-Restricciones:
-- `2 <= nums.length <= 10⁴`
-- `10⁹ <= nums[i] <= 10⁹`
-- `10⁹ <= target <= 10⁹`
-- Solo hay una respuesta para cada entrada
+**Tenga en cuenta que el conjunto de soluciones no debe contener tripletes duplicados.**
 
-Para la solución de este problema tenemos dos enfoques uno es el de **fuerza bruta** y el otro es el de usar una **tabla de hash**.
+Para la solución de este problema tenemos tres estrategías una es  **tres punteros O(n²)**, la siguiente es usar **hash set O(n²)** y la última es usar la **búsqueda binaria O(n² log n)**, como hay una sección de búsqueda binaria en este repositorio, solo se mostrarán las dos primeras soluciones.
 
 ## Lenguaje C++
 
-### Solución con tabla de hash O(n)
-
-En este código, además de la biblioteca `vector` se utiliza la biblioteca `map` que nos permite utilizar `std::map` para almacenar los elementos del vector `nums` y sus respectivos índices.
-
-En el bucle for, se itera a través de los elementos del vector `nums`. Para cada elemento, se calcula el complemento `t` necesario para alcanzar el objetivo target. Luego, se verifica si el complemento `t` ya está presente en el mapa utilizando la función `map.count()`. Si se encuentra, significa que hemos encontrado una pareja de números que suma el objetivo, por lo que se devuelve un nuevo vector que contiene los índices del complemento y del elemento actual.
-
-Si no se encuentra ninguna pareja de números, se agrega el elemento actual al mapa con su índice correspondiente para futuras comprobaciones. Al final del bucle, si no se ha encontrado ninguna pareja, se devuelve un vector vacío `return {}`.
-
-Este enfoque tiene una complejidad de tiempo de **O(n)**, ya que se realiza solo un recorrido lineal del vector `nums`. Además, utiliza una tabla de hash `std::map` para realizar búsquedas eficientes en tiempo constante.
+### Solución con hash set O(n²)
 
 ```cpp
-std::vector<int> twoSum(std::vector<int> &nums, int target)
-{
-    std::map<int, int> map;
-    for (int i = 0; i < nums.size(); ++i)
+class Solution {
+public:
+    std::vector<std::vector<int>> threeSum(std::vector<int> &nums)
     {
-        int t = target - nums[i];
-        if (map.count(t))
-            return {map[t], i}; // Devolvemos el índice del complemento y el índice actual
-        map[nums[i]] = i; // Agregamos el elemento actual a la tabla hash
+        std::vector<std::vector<int>> result;
+
+        int n = nums.size();
+        if (n < 3)
+        {
+            return result;
+        }
+
+        sort(nums.begin(), nums.end());
+
+        for (int i = 0; i < n - 2; i++)
+        {
+            if (nums[i] > 0)
+            {
+                break;
+            }
+            if (i > 0 && nums[i - 1] == nums[i])
+            {
+                continue;
+            }
+
+            int j = i + 1;
+            int k = n - 1;
+
+            while (j < k)
+            {
+                int sum = nums[i] + nums[j] + nums[k];
+
+                if (sum < 0)
+                {
+                    j++;
+                }
+                else if (sum > 0)
+                {
+                    k--;
+                }
+                else
+                {
+                    result.push_back({nums[i], nums[j], nums[k]});
+
+                    while (j < k && nums[j] == nums[j + 1])
+                    {
+                        j++;
+                    }
+                    j++;
+
+                    while (j < k && nums[k - 1] == nums[k])
+                    {
+                        k--;
+                    }
+                    k--;
+                }
+            }
+        }
+        return result;
     }
-    return {}; // En caso de que no se encuentre retornar un array vacío
-}
+};
+```
+
+### Solución con hash set O(n²)
+
+```cpp
+class Solution {
+public:
+    std::vector<std::vector<int>> threeSum(std::vector<int>& nums) 
+    {
+        std::vector<std::vector<int>> result;
+        int n = nums.size();
+
+        if (n < 3) { return result; }
+
+        std::sort(nums.begin(), nums.end());
+
+        for (int i = 0; i < n - 2; ++i) 
+        {
+            if (i > 0 && nums[i] == nums[i - 1]) 
+            {
+                continue;
+            }
+
+            int target = -nums[i];
+            std::unordered_set<int> hashSet;
+
+            for (int j = i + 1; j < n; ++j) 
+            {
+                int complement = target - nums[j];
+
+                if (hashSet.find(complement) != hashSet.end()) {
+                    result.push_back({nums[i], nums[j], complement});
+
+                    while (j + 1 < n && nums[j] == nums[j + 1]) {
+                        ++j;
+                    }
+                }
+
+                hashSet.insert(nums[j]);
+            }
+        }
+
+        return result;
+    }
+};
 ```
