@@ -3,6 +3,26 @@
 #include <vector>
 #include <climits>
 
+// Fuerza Bruta O(n²)
+// class Solution {
+// public:
+//     int maxArea(std::vector<int> &A)
+//     {
+//         int N = A.size(), ans = 0;
+//         for (int i = 0; i < N; ++i)
+//         {
+//             if (!A[i])
+//                 continue;
+//             for (int j = i + 1 + ans / A[i]; j < N; ++j)
+//             {
+//                 ans = std::max(ans, std::min(A[i], A[j]) * (j - i));
+//             }
+//         }
+//         return ans;
+//     }
+// };
+
+// Dos Punteros O(n)
 class Solution {
 public:
     int maxArea(std::vector<int> &A)
@@ -12,7 +32,7 @@ public:
         {
             ans = std::max(ans, (R - L) * std::min(A[L], A[R]));
             if (A[L] < A[R])
-                ++L; // Move the smaller edge
+                ++L; // Mover el borde más pequeño
             else
                 --R;
         }
