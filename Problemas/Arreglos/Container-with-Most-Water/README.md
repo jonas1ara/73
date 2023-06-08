@@ -8,7 +8,7 @@ Devolver la máxima cantidad de agua que puede almacenar un recipiente.
 
 **Tenga en cuenta que no puede inclinar el contenedor.**
 
-![Container with Most Water](./Sources/Arreglos/CwMW.jpg)
+![Container with Most Water](/Sources/Arreglos/CwMW.jpg)
 
 Para la solución de este problema tenemos dos enfoques uno es el de **fuerza bruta** y el otro es usar la estrategía de **dos punteros**.
 
