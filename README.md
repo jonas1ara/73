@@ -14,10 +14,12 @@ Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCod
 
 ## Estructura del repositorio 📦
 
-El repositorio esta dividido en 3 carpetas:
+El repositorio esta dividido en 4 carpetas:
 
 ```
 |- Repositorio
+    |- .vscode
+        |- tasks.json
     |- Libraries
         |- ArrayPrinter.h
     |- Problemas
@@ -49,6 +51,8 @@ El repositorio esta dividido en 3 carpetas:
         |- Heaps
         |- Grafos
 ```
+
+- **.vscode:** Contiene el archivo `tasks.json` que configura la tarea de compilación en Visual Studio Code
 
 - **Libraries:** Contiene las librerias que se usan en el repositorio, por ejemplo la libreria `ArrayPrinter.h` que contiene funciones genericas para imprimir distintos arreglos
 
