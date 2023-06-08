@@ -9,12 +9,9 @@ public:
     std::vector<std::vector<int>> threeSum(std::vector<int> &nums)
     {
         std::vector<std::vector<int>> result;
-
         int n = nums.size();
-        if (n < 3)
-        {
-            return result;
-        }
+        
+        if (n < 3){ return result; }
 
         sort(nums.begin(), nums.end());
 

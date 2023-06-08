@@ -37,6 +37,17 @@ El repositorio esta dividido en 3 carpetas:
         |- Grafos
     |- Sources
         |- Sheldon.gif
+        |- Arreglos
+            |- Container-with-Most-Water.jpg
+        |- Matrices
+        |- Strings
+        |- Intervalos
+        |- Búsqueda binaria
+        |- Programación dinámica
+        |- Listas enlazadas
+        |- Árboles
+        |- Heaps
+        |- Grafos
 ```
 
 - **Libraries:** Contiene las librerias que se usan en el repositorio, por ejemplo la libreria `ArrayPrinter.h` que contiene funciones genericas para imprimir distintos arreglos
