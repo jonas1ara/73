@@ -8,7 +8,7 @@ Para la solución de este problema tenemos tres estrategías una es  **tres punt
 
 ## Lenguaje C++
 
-### Solución con hash set O(n²)
+### Solución con tres punteros O(n²)
 
 ```cpp
 class Solution {

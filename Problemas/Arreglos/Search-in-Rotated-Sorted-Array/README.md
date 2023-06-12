@@ -1,13 +1,12 @@
-# Problema
+# Search in Rotated Sorted Array
 
-Dado un arreglo de números enteros llamado `nums` y un objetivo entero llamado `target`, devuelve índices de los dos números de modo que sumen el objetivo.
-Puede suponer que cada entrada tendría exactamente una solución, no puede usar el mismo elemento dos veces y puede devolver la respuesta en cualquier orden.
+Hay un arreglo de enteros llamado `nums` ordenados en orden ascendente (con valores distintos).
 
-Restricciones:
-- `2 <= nums.length <= 10⁴`
-- `10⁹ <= nums[i] <= 10⁹`
-- `10⁹ <= target <= 10⁹`
-- Solo hay una respuesta para cada entrada
+Antes de pasar a su función, `nums` **posiblemente se rota** en un índice de pivote desconocido `k` (`1 <= k < nums.length`) de modo que el arreglo resultante es `[nums[k], nums[k+1], ... , nums[n-1], nums[0], nums[1], ..., nums[k-1]]`**(0-indexado)**. Por ejemplo, `[0,1,2,4,5,6,7]` podría rotarse en el índice de pivote 3 y convertirse en `[4,5,6,7,0,1,2]`.
+
+Dada un arreglo `nums` después de la posible rotación y un objetivo de tipo entero llamado `target`, devuelva el índice del objetivo si está en `nums`, o -1 si no está en `nums`.
+
+Debe escribir un algoritmo con una complejidad de tiempo de ejecución `O(log n)`.
 
 Para la solución de este problema tenemos dos enfoques uno es el de **fuerza bruta** y el otro es el de usar una **tabla de hash**.
 
