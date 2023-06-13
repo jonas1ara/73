@@ -3,26 +3,6 @@
 #include <vector>
 #include <map>
 
-// Fuerza Bruta O(n²)
-// class Solution {
-// public:
-//     std::vector<int> twoSum(std::vector<int> &nums, int target)
-//     {
-//         int n = nums.size();
-//         for (int i = 0; i < n - 1; i++)
-//         {
-//             for (int j = i + 1; j < n; j++)
-//             {
-//                 if (nums[i] + nums[j] == target)
-//                 {
-//                     return {i, j}; // Devolvemos el índice del elemento actual y el índice del complemento
-//                 }
-//             }
-//         }
-//         return {}; // Si no se encuentra ninguna pareja, se devuelve un vector vacío
-//     }
-// };
-
 // Hash Map O(n)
 class Solution {
 public:
