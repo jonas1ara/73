@@ -232,6 +232,8 @@ sudo apt build-essential -y
 - [C++ in Constrained Environments - Bjarne Stroustrup - CppCon 2022](https://www.youtube.com/watch?v=2BuJjaGuInI)
 - [CppCon 2017: Peter Goldsborough “A Tour of Deep Learning With C++”](https://www.youtube.com/watch?v=Lo1rXJdAJ7w)
 - [CppCon 2017: Louis Brandy “Curiously Recurring C++ Bugs at Facebook”](https://www.youtube.com/watch?v=lkgszkPnV8g)
+- [CppCon 2018: Peter Goldsborough “Machine Learning in C++ with PyTorch”](https://www.youtube.com/watch?v=auRPXMMHJzc)
+- [How C++23 Changes the Way We Write Code - Timur Doumler - CppCon 2022](https://www.youtube.com/watch?v=eD-ceG-oByA)
 - [CppCon 2014: Herb Sutter "Back to the Basics! Essentials of Modern C++ Style"](https://www.youtube.com/watch?v=xnqTKD8uD64&t=4814s)
 - [CppCon 2016: Bjarne Stroustrup "The Evolution of C++ Past, Present and Future"](https://www.youtube.com/watch?v=_wzc7a3McOs&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=4)
 - [The Imperatives Must Go! [Functional Programming in Modern C++] - Victor Ciura - CppCon 2022](https://www.youtube.com/watch?v=M5HuOZ4sgJE)
@@ -239,12 +241,7 @@ sudo apt build-essential -y
 - [CppCon 2017: Carl Cook “When a Microsecond Is an Eternity: High Performance Trading Systems in C++”](https://www.youtube.com/watch?v=NH1Tta7purM&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=16)
 - [The Most Important Optimizations to Apply in Your C++ Programs - Jan Bielak - CppCon 2022](https://www.youtube.com/watch?v=qCjEN5XRzHc)
 - [Trading at light speed: designing low latency systems in C++ - David Gross - Meeting C++ 2022](https://www.youtube.com/watch?v=8uAW5FQtcvE)
-
-- [How C++23 Changes the Way We Write Code - Timur Doumler - CppCon 2022](https://www.youtube.com/watch?v=eD-ceG-oByA)
-
-- [CppCon 2018: Peter Goldsborough “Machine Learning in C++ with PyTorch”](https://www.youtube.com/watch?v=auRPXMMHJzc)
 - [How Microsoft Uses C++ to Deliver Office - Huge Size, Small Components - Zachary Henkel CppCon 2022](https://www.youtube.com/watch?v=0QtX-nMlz0Q)
-
 - [CppCon 2018: Gordon Brown “A Modern C++ Programming Model for GPUs using Khronos SYCL”](https://www.youtube.com/watch?v=miqZS6aS9K0)
 - [CppCon 2017: Jan Babst “Driving Into the Future With Modern C++: A Look at Adaptive Autosar”](https://www.youtube.com/watch?v=YzyGgZ_RClw)
 - [Writing Safety Critical Automotive Software for High Perf AI Hardware - Michael Wong - CppCon 2019](https://www.youtube.com/watch?v=F4GzsA00s5I)
