@@ -238,12 +238,12 @@ sudo apt build-essential -y
 - [CppCon 2016: Bjarne Stroustrup "The Evolution of C++ Past, Present and Future"](https://www.youtube.com/watch?v=_wzc7a3McOs&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=4)
 - [The Most Important Optimizations to Apply in Your C++ Programs - Jan Bielak - CppCon 2022](https://www.youtube.com/watch?v=qCjEN5XRzHc)
 - [Trading at light speed: designing low latency systems in C++ - David Gross - Meeting C++ 2022](https://www.youtube.com/watch?v=8uAW5FQtcvE)
+- [CppCon 2018: Gordon Brown “A Modern C++ Programming Model for GPUs using Khronos SYCL”](https://www.youtube.com/watch?v=miqZS6aS9K0)
+- [CppCon 2017: Jan Babst “Driving Into the Future With Modern C++: A Look at Adaptive Autosar”](https://www.youtube.com/watch?v=YzyGgZ_RClw)
 - [The Imperatives Must Go! [Functional Programming in Modern C++] - Victor Ciura - CppCon 2022](https://www.youtube.com/watch?v=M5HuOZ4sgJE)
 - [Bjarne Stroustrup's Closing Keynote at Code Europe 2022 in Cracow – "How to evolve a language"](https://www.youtube.com/watch?v=UoLM-6n-Ktg&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=3)
 - [CppCon 2017: Carl Cook “When a Microsecond Is an Eternity: High Performance Trading Systems in C++”](https://www.youtube.com/watch?v=NH1Tta7purM&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=16)
 - [How Microsoft Uses C++ to Deliver Office - Huge Size, Small Components - Zachary Henkel CppCon 2022](https://www.youtube.com/watch?v=0QtX-nMlz0Q)
-- [CppCon 2018: Gordon Brown “A Modern C++ Programming Model for GPUs using Khronos SYCL”](https://www.youtube.com/watch?v=miqZS6aS9K0)
-- [CppCon 2017: Jan Babst “Driving Into the Future With Modern C++: A Look at Adaptive Autosar”](https://www.youtube.com/watch?v=YzyGgZ_RClw)
 - [Writing Safety Critical Automotive Software for High Perf AI Hardware - Michael Wong - CppCon 2019](https://www.youtube.com/watch?v=F4GzsA00s5I)
 
 ## Referencias 📚
