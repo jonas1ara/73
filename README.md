@@ -208,12 +208,6 @@ sudo apt build-essential -y
 |0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Pacific-Atlantic-Water-Flow)|Media|
 
 
-## Construido con 🛠️
-
-- [C](https://en.wikipedia.org/wiki/C_(programming_language)) (Opcional)
-- [C++](https://isocpp.org/) (Obligatorio)
-- [Ubuntu](https://ubuntu.com/) (Opcional)
-- [VS Code](https://code.visualstudio.com/) (Opcional)
 
 ## Presentaciones 📊
 
