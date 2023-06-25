@@ -98,8 +98,8 @@ sudo apt build-essential -y
 
 ### Matrices
 
-| # | Titulo | Solución | Dificultad |
-|---| ----- | -------- | ---------- |
+| # | Titulo | Solución | Dificultad |Titulo |
+|---| ----- | -------- | ---------- |----- |
 |0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Rotate-Image)|Media||Media|
 |0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Spiral-Matrix)|Media||Media|
 |0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Set-Matrix-Zeroes)|Media||Media|
