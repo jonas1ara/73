@@ -27,31 +27,9 @@ El repositorio esta dividido en 4 carpetas:
             |- Bind.cpp
             |- README.md
         |- Contenedores
-            |- Array
-                |- Array.cpp
-                |- README.md
             |- Vector
                 |- Vector.cpp
                 |- README.md
-            |- List
-                |- List.cpp
-                |- README.md
-            |- Map
-                |- Map.cpp
-                |- README.md
-            |- Set
-                |- Set.cpp
-                |- README.md
-            |- Stack
-                |- Stack.cpp
-                |- README.md
-            |- Unordered-Map
-                |- Unordered-Map.cpp
-                |- README.md
-            |- Unordered-Set
-                |- Unordered-Set.cpp
-                |- README.md
-            
         |- Delegados
         |- Enum 
         |- Lambda
@@ -76,6 +54,16 @@ El repositorio esta dividido en 4 carpetas:
         |- Grafos
     |- Sources
         |- Sheldon.gif
+        |- Arreglos
+        |- Matrices
+        |- Strings
+        |- Intervalos
+        |- Búsqueda binaria
+        |- Programación dinámica
+        |- Listas enlazadas
+        |- Árboles
+        |- Heaps
+        |- Grafos
 ```
 
 - **.vscode:** Contiene el archivo `tasks.json` que configura la tarea de compilación en Visual Studio Code
