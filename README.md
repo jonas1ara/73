@@ -23,9 +23,7 @@ El repositorio esta dividido en 4 carpetas:
     |- Libraries
         |- ArrayPrinter.h
     |- Moderno
-        |- Bind-function
-            |- Bind.cpp
-            |- README.md
+        |- Bind
         |- Contenedores
             |- Vector
                 |- Vector.cpp
@@ -54,23 +52,13 @@ El repositorio esta dividido en 4 carpetas:
         |- Grafos
     |- Sources
         |- Sheldon.gif
-        |- Arreglos
-        |- Matrices
-        |- Strings
-        |- Intervalos
-        |- Búsqueda binaria
-        |- Programación dinámica
-        |- Listas enlazadas
-        |- Árboles
-        |- Heaps
-        |- Grafos
 ```
 
 - **.vscode:** Contiene el archivo `tasks.json` que configura la tarea de compilación en Visual Studio Code
 
 - **Libraries:** Contiene las librerias que se usan en el repositorio, por ejemplo la libreria `ArrayPrinter.h` que contiene funciones genericas para imprimir distintos arreglos
 
-- **Moderno:** C++ moderno es extremandamente extenso cada cierto tiempo es bueno ayudar a la memoria a repasar ciertos temas para su comprensión, dentro de esta carpeta encontrarás explicaciones de funciones esenciales de C++ que se ocupan en este repositorio, cada subcarpeta es un tema con el código fuente y el README que explica dicho tema, por ejemplo la carpeta `Bind` contiene el código fuente en C++ `Bind.cpp` y el  archivo `README.md`, recomiendo encarecidamente leer por completo la sección `Novatadas` que contiene una serie de buenas practicas y consejos para programar en C++
+- **Moderno:** C++ moderno es extremandamente extenso cada cierto tiempo es bueno ayudar a la memoria a repasar ciertos temas para su comprensión, dentro de esta carpeta encontrarás explicaciones de funciones esenciales de C++ que se ocupan en este repositorio, cada subcarpeta es un tema con el código fuente y el README que explica dicho tema, por ejemplo la carpeta `Vector` contiene el código fuente en C++ `Vector.cpp` y el  archivo `README.md`, recomiendo encarecidamente leer por completo la sección `Novatadas` que contiene una serie de buenas practicas y consejos para programar en C++
 
 - **Problemas:** Contiene las carpetas de cada tema, dentro tiene una carpeta por problema y dentro de cada carpeta esta el código fuente y el README que explica dicho problema, por ejemplo la carpeta `Arreglos` contiene la carpeta `Two-Sum` que contiene el código fuente en C `Two-Sum.c` **(Solo en el primer problema de cada tema hay una implementación en lenguaje C para profundizar un poco más)**, el código fuente en C++ `Two-Sum.cpp` y el  archivo `README.md`
 
