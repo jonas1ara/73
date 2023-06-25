@@ -217,7 +217,11 @@ sudo apt build-essential -y
 
 ## Presentaciones 📊
 
+- [Bjarne Stroustrup - The Essence of C++](https://www.youtube.com/watch?v=86xWVb4XIyE&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=1)
 - [CppCon 2015: Kate Gregory “Stop Teaching C"](https://www.youtube.com/watch?v=YnWhqhNdYyk&t=1215s)
+- [Bjarne Stroustrup: C++ | Lex Fridman Podcast #48](https://www.youtube.com/watch?v=uTxRF5ag27A&t=2842s)
+- [Bjarne Stroustrup: Why you should avoid Linked Lists](https://www.youtube.com/watch?v=YQs6IC-vgmo&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=15)
+- [Keynote: C++'s Superpower - Matt Godbolt - CPPP 2021](https://www.youtube.com/watch?v=0_UttFDnV3k&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=7)
 - [Keynote: "Am I A Good Programmer?" - Kate Gregory - CppNorth 2022](https://www.youtube.com/watch?v=pdHvC8fDC5E&t=1420s)
 - [Modern C++ Safety and Security At 20 - Matthew Butler - CppCon 2020](https://www.youtube.com/watch?v=uccarZGpDhk&t=2422s)
 - [CppCon 2014: Herb Sutter "Back to the Basics! Essentials of Modern C++ Style"](https://www.youtube.com/watch?v=xnqTKD8uD64&t=4814s)
@@ -225,11 +229,9 @@ sudo apt build-essential -y
 - [Can C++ be 10x Simpler & Safer? - Herb Sutter - CppCon 2022](https://www.youtube.com/watch?v=ELeZAKCN4tY&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=14)
 - [CppCon 2017: Carl Cook “When a Microsecond Is an Eternity: High Performance Trading Systems in C++”](https://www.youtube.com/watch?v=NH1Tta7purM&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=16)
 - [C++ - the Newest Old Language • Matt Godbolt • GOTO 2018](https://www.youtube.com/watch?v=HAFrggEDr5U&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=10)
-- [Keynote: C++'s Superpower - Matt Godbolt - CPPP 2021](https://www.youtube.com/watch?v=0_UttFDnV3k&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=7)
-- [Bjarne Stroustrup: Why you should avoid Linked Lists](https://www.youtube.com/watch?v=YQs6IC-vgmo&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=15)
-- [Bjarne Stroustrup: C++ | Lex Fridman Podcast #48](https://www.youtube.com/watch?v=uTxRF5ag27A&t=2842s)
+
 - [CppCon 2016: Jason Turner “Practical Performance Practices"](https://www.youtube.com/watch?v=uzF4u9KgUWI)
-- [Bjarne Stroustrup - The Essence of C++](https://www.youtube.com/watch?v=86xWVb4XIyE&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=1)
+
 - [CppCon 2016: Bjarne Stroustrup "The Evolution of C++ Past, Present and Future"](https://www.youtube.com/watch?v=_wzc7a3McOs&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=4)
 - [Bjarne Stroustrup's Closing Keynote at Code Europe 2022 in Cracow – "How to evolve a language"](https://www.youtube.com/watch?v=UoLM-6n-Ktg&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=3)
 - [CppCon 2017: Bjarne Stroustrup “Learning and Teaching Modern C++”](https://www.youtube.com/watch?v=fX2W3nNjJIo&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=17)
