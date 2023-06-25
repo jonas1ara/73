@@ -22,7 +22,18 @@ El repositorio esta dividido en 4 carpetas:
         |- tasks.json
     |- Libraries
         |- ArrayPrinter.h
-    |- Modern-Cpp
+    |- Moderno
+        |- Bind-function
+            |- Bind.cpp
+            |- README.md
+        |- Contenedores
+        |- Delegados
+        |- Enum 
+        |- Lambda
+        |- Novatadas
+        |- Plantillas
+        |- Range-for-y-auto
+        |- Smart-pointers
     |- Problemas
         |- Arreglos
             |- Two-Sum
@@ -45,6 +56,8 @@ El repositorio esta dividido en 4 carpetas:
 - **.vscode:** Contiene el archivo `tasks.json` que configura la tarea de compilación en Visual Studio Code
 
 - **Libraries:** Contiene las librerias que se usan en el repositorio, por ejemplo la libreria `ArrayPrinter.h` que contiene funciones genericas para imprimir distintos arreglos
+
+-**Moderno:** C++ moderno es extremandamente extenso debes en cuando hace refrescar los ciertos temas, dentro de esta carpeta encontrarás explicaciones de funciones esenciales de C++ que se ocupan en este repositorio, cada subcarpeta es un tema con el código fuente y el README que explica dicho tema, por ejemplo la carpeta `Bind` contiene el código fuente en C++ `Bind.cpp` y el  archivo `README.md`, recomiendo encarecidamente leer por completo la sección `Novatadas` que contiene una serie de buenas practicas y consejos para programar en C++
 
 - **Problemas:** Contiene las carpetas de cada tema, dentro tiene una carpeta por problema y dentro de cada carpeta esta el código fuente y el README que explica dicho problema, por ejemplo la carpeta `Arreglos` contiene la carpeta `Two-Sum` que contiene el código fuente en C `Two-Sum.c` **(Solo en el primer problema de cada tema hay una implementación en lenguaje C para profundizar un poco más)**, el código fuente en C++ `Two-Sum.cpp` y el  archivo `README.md`
 
