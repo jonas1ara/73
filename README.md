@@ -229,15 +229,10 @@ sudo apt build-essential -y
 - [Keynote: "Am I A Good Programmer?" - Kate Gregory - CppNorth 2022](https://www.youtube.com/watch?v=pdHvC8fDC5E&t=1420s)
 - [Modern C++ Safety and Security At 20 - Matthew Butler - CppCon 2020](https://www.youtube.com/watch?v=uccarZGpDhk&t=2422s)
 - [CppCon 2014: Herb Sutter "Back to the Basics! Essentials of Modern C++ Style"](https://www.youtube.com/watch?v=xnqTKD8uD64&t=4814s)
-- [The Imperatives Must Go! [Functional Programming in Modern C++] - Victor Ciura - CppCon 2022](https://www.youtube.com/watch?v=M5HuOZ4sgJE)
-
-- [CppCon 2017: Carl Cook “When a Microsecond Is an Eternity: High Performance Trading Systems in C++”](https://www.youtube.com/watch?v=NH1Tta7purM&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=16)
-
-
-
 - [CppCon 2016: Bjarne Stroustrup "The Evolution of C++ Past, Present and Future"](https://www.youtube.com/watch?v=_wzc7a3McOs&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=4)
 - [Bjarne Stroustrup's Closing Keynote at Code Europe 2022 in Cracow – "How to evolve a language"](https://www.youtube.com/watch?v=UoLM-6n-Ktg&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=3)
-
+- [The Imperatives Must Go! [Functional Programming in Modern C++] - Victor Ciura - CppCon 2022](https://www.youtube.com/watch?v=M5HuOZ4sgJE)
+- [CppCon 2017: Carl Cook “When a Microsecond Is an Eternity: High Performance Trading Systems in C++”](https://www.youtube.com/watch?v=NH1Tta7purM&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=16)
 
 ## Referencias 📚
 
