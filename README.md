@@ -89,7 +89,7 @@ sudo apt build-essential -y
 |---| ----- | -------- | ---------- |
 |**0001**|[Two Sum](https://leetcode.com/problems/two-sum/) | [C - C++](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Two-Sum)|Baja|
 |**0011**|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Container-with-Most-Water)|Media|
-|**0015**|[3Sum](https://leetcode.com/problems/3sum/) | [C++](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/3Sum)|Media|
+|**0015**|[3Sum](https://leetcode.com/problems/3sum/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/3Sum)|Media|
 |**0033**|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Search-in-Rotated-Sorted-Array)|Media|
 |**0053**|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C++ -  C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Maximum-Subarray)|Media|
 |**0121**|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Best-Time-to-Buy-and-Sell-Stock)|Media|
