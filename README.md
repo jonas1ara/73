@@ -9,7 +9,7 @@ _Sheldon Cooper (character in the famous series "The Big-Bang Theory")_
 
 ## What is this? 🚀
 
-This is a repository that will take you by the hand in the 73 most useful LeetCode problems, well they are actually [76](https://leetcode.com/list/xi4ci4ig/), 😬 the algorithms are written in C, C ++ and C#, I wrote each program placing the worst solution and one of the most optimal, the main function or method of the program to be tested on your machine and a README with notes of the problem and the solution(only in C++). At the end when I have time I will make a video on YT explaining each problem. 🤓
+This is a repository that will take you by the hand in the 73 most useful LeetCode problems, well they are actually [76](https://leetcode.com/list/xi4ci4ig/), 😬 the algorithms are written in C, C ++ and C#, I wrote each program placing the worst solution and one of the most optimal, the main function or method of the program to be tested on your machine and a README with notes of the problem and the solution (only in C++). At the end when I have time I will make a video on YT explaining each problem. 🤓
 
 **No hurry, but no rest** 
 
