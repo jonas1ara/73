@@ -2,8 +2,9 @@
 
 # Instalar dependencias en una distribucion basada en Debian
 
-sudo apt install build-essential -y
+ 
 
-# Instalar dependencias en una distribucion basada en Red Hat
+sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-7.0 &&\
+    sudo apt install build-essential -y
 
-sudo dnf group install "Development Tools" -y
