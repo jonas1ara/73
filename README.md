@@ -52,6 +52,7 @@ The repository is divided into 4 folders:
         |- Heaps
         |- Graphs
     |- Sources
+        |- Sheldon.gif
 ```
 
 - **.vscode:** Contains the 'tasks.json' file that configures the build task in Visual Studio Code
