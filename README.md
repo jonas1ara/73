@@ -83,7 +83,7 @@ sudo apt-get update && \
     sudo apt install build-essential -y
 ```
 
-If you want use this repository with C#, then you should install .NET 7, to install .NET on Ubuntu you can type:
+If you want use this repository with C# then you should install .NET 7, to install .NET on Ubuntu you can type:
 
 ```bash
 sudo apt-get update && \
