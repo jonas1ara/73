@@ -9,7 +9,7 @@ _Sheldon Cooper (character in the famous series "The Big-Bang Theory")_
 
 ## What is this? 🚀
 
-This is a repository that will take you by the hand in the 73 most useful LeetCode problems, well they are actually [76](https://leetcode.com/list/xi4ci4ig/), 😬 the algorithms are written in C, C ++ and C#, I wrote each program placing the worst solution and one of the most optimal, the main function or method of the program to be tested on your machine and a README with notes of the problem and the solution (only in C++). At the end when I have time I will make a video on YT explaining each problem. 🤓
+This is a repository that will take you by the hand in the 73 most useful LeetCode problems, well they are actually [76](https://leetcode.com/list/xi4ci4ig/), 😬 the algorithms are written in C, C ++ and C#, I wrote each program placing the worst solution and one of the most optimal, the main function or method of the program to be tested on your machine and a README with notes of the problem and the solution. At the end when I have time I will make a video on YT explaining each problem. 🤓
 
 **No hurry, but no rest** 
 
@@ -41,6 +41,8 @@ The repository is divided into 4 folders:
             |- Two-Sum
                 |- Two-Sum.c
                 |- Two-Sum.cpp
+                |- Two-Sums.cs
+                |- Two-Sums.csproj
                 |- README.md
         |- Matrices
         |- Strings
@@ -55,9 +57,9 @@ The repository is divided into 4 folders:
         |- Sheldon.gif
 ```
 
-- **.vscode:** Contains the 'tasks.json' file that configures the build task in Visual Studio Code
+- **.vscode:** Contains the 'tasks.json' file that configures the build task in Visual Studio Code for `/usr/bin/g++` and the configuration for the output generated `${fileDirname}\\${fileBasenameNoExtension}.out`
 
-- **Libraries:** Contains the libraries that are used in the repository, for example the library `ArrayPrinter.h` which contains generic functions to print different arrays
+- **Libraries:** Contains the libraries that are used in the repository, for example the library `ArrayPrinter.h` which contains generic functions to print different arrays, you don't have to understand this topic, don't worry
 
 - **Modern:** Modern C++ is extremely extensive from time to time it is good to help the memory to review certain topics for its understanding, within this folder you will find explanations of essential C++ functions that are covered in this repository, each subfolder is a topic with the source code and the README that explains said topic, for example the `Vector` folder contains the C++ source code `Vector.cpp` and the file `README.md`. **I highly recommend reading the entire 'Hazing' section which contains a series of good practices and tips for programming in C++**
 
@@ -67,17 +69,25 @@ The repository is divided into 4 folders:
 
 ## Configuration🔧
 
-You can use this repository from Windows with MSVC or WSL and Mac with clang compiler but it is intended to be used on Linux, **specifically a Debian-based distribution**, by the script 'Setup.sh' and the file 'tasks.json' that configures the compilation task in Visual Studio Code, no matter if it is a complete distro or a WSL, the important thing is that you have installed:
+You can use this repository from Windows with MSVC or WSL and Mac with clang compiler but it is intended to be used on Linux, **specifically a Ubuntu-based distribution**, by the script 'Setup.sh' and the file 'tasks.json' that configures the compilation task in Visual Studio Code, no matter if it is a complete distro or a WSL, the important thing is that you have installed:
 
 
 - gcc
 - g++
 - libstdc++-dev
 
-To install them on Debian or Ubuntu you can use:
+To install them on Ubuntu you can type:
 
 ```bash
-sudo apt build-essential -y
+sudo apt-get update && \
+    sudo apt install build-essential -y
+```
+
+If you want use this repository with C#, then you should install .NET 7, to install .NET on Ubuntu you can type:
+
+```bash
+sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-7.0
 ```
 
 ## Index 📖
@@ -90,7 +100,7 @@ sudo apt build-essential -y
 |**0011**|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Container-with-Most-Water)|Media|
 |**0015**|[3Sum](https://leetcode.com/problems/3sum/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/3Sum)|Media|
 |**0033**|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Search-in-Rotated-Sorted-Array)|Media|
-|**0053**|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C++ -  C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Maximum-Subarray)|Media|
+|**0053**|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Maximum-Subarray)|Media|
 |**0121**|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Best-Time-to-Buy-and-Sell-Stock)|Media|
 |**0152**|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Maximum-Product-Subarray)|Media|
 |**0153**|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Find-Minimum-in-Rotated-Sorted-Array)|Media|
