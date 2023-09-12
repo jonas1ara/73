@@ -98,7 +98,7 @@ sudo apt-get update && \
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0001**|[Two Sum](https://leetcode.com/problems/two-sum/) | [C - C++](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Two-Sum)|Easy|
+|**0001**|[Two Sum](https://leetcode.com/problems/two-sum/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Two-Sum)|Easy|
 |**0011**|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Container-with-Most-Water)|Medium|
 |**0015**|[3Sum](https://leetcode.com/problems/3sum/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/3Sum)|Medium|
 |**0033**|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Search-in-Rotated-Sorted-Array)|Medium|
