@@ -1,88 +1,89 @@
-# 73 - El mejor número 🤓
+# 73 - The best number 🤓
 
-Según Sheldon Cooper **el mejor número es el 73**, porque 73 es el 21er número primo. Su espejo, 37, es el 12mo número primo. 21 es el producto de multiplicar 7 por 3 y en binario, 73 es un palíndromo: 1001001
+According to Sheldon Cooper **the best number is 73**, because 73 is the 21st prime number. Its mirror, 37, is the 12th prime number. 21 is the product of multiplying 7 by 3 and in binary, 73 is a palindrome: 1001001
 
 ![73](/Sources/Sheldon.gif)
 
-_Sheldon Cooper (personaje de la famosa serie "La teoría del Big-Bang")_
+_Sheldon Cooper (character in the famous series "The Big-Bang Theory")_
 
 ## ¿Qué es esto? 🚀
 
-Este es un repositorio que te llevará de la mano en los 73 problemas de LeetCode más utiles, bueno en realidad son [76](https://leetcode.com/list/xi4ci4ig/) 😬, los algoritmos están escritos en C y C++, escribí cada programa colocando la función que lo resuelve, el resto del programa para poder ser probado on-promise, un README con notas del problema y de la solución. Al final si todo sale bien, haré un video en YouTube explicando cada problema 🤓
+This is a repository that will take you by the hand in the 73 most useful LeetCode problems, well they are actually [76](https://leetcode.com/list/xi4ci4ig/), 😬 the algorithms are written in C, C ++ and C#, I wrote each program placing the worst solution and one of the most optimal, the main function or method of the program to be tested on your machine and a README with notes of the problem and the solution. At the end when I have time I will make a video on YT explaining each problem. 🤓
 
-**Nota: Lo valioso de este repositorio es cuando te das cuenta que no existe material de calidad en español, entonces, si te ayuda, por favor dale una estrella, forkealo, guardalo o compártelo, me ayudarías bastante** 
+**No hurry, but no rest** 
 
-## Estructura del repositorio 📦
+## Repository structure 📦
 
-El repositorio esta dividido en 4 carpetas:
+The repository is divided into 4 folders:
 
 ```
-|- Repositorio
+|- Repository
     |- .vscode
         |- tasks.json
     |- Libraries
         |- ArrayPrinter.h
-    |- Moderno
+    |- Modern
         |- Bind
-        |- Contenedores
+        |- Containers
             |- Vector
                 |- Vector.cpp
                 |- README.md
-        |- Delegados
+        |- Delegates
         |- Enum 
         |- Lambda
-        |- Novatadas
-        |- Plantillas
+        |- Noob habits
+        |- Templates
         |- Range-for-y-auto
         |- Smart-pointers
-    |- Problemas
-        |- Arreglos
+    |- Problems
+        |- Arrays
             |- Two-Sum
                 |- Two-Sum.c
                 |- Two-Sum.cpp
                 |- README.md
         |- Matrices
         |- Strings
-        |- Intervalos
-        |- Búsqueda binaria
-        |- Programación dinámica
-        |- Listas enlazadas
-        |- Árboles
+        |- Intervals
+        |- Binary Search
+        |- Dynamic Programming
+        |- Linked Lists
+        |- Trees
         |- Heaps
-        |- Grafos
+        |- Graphs
     |- Sources
         |- Sheldon.gif
 ```
 
-- **.vscode:** Contiene el archivo `tasks.json` que configura la tarea de compilación en Visual Studio Code
+- **.vscode:** Contains the 'tasks.json' file that configures the build task in Visual Studio Code
 
-- **Libraries:** Contiene las librerias que se usan en el repositorio, por ejemplo la libreria `ArrayPrinter.h` que contiene funciones genericas para imprimir distintos arreglos
+- **Libraries:** Contains the libraries that are used in the repository, for example the library 'ArrayPrinter.h' which contains generic functions to print different arrays
 
-- **Moderno:** C++ moderno es extremandamente extenso cada cierto tiempo es bueno ayudar a la memoria a repasar ciertos temas para su comprensión, dentro de esta carpeta encontrarás explicaciones de funciones esenciales de C++ que se ocupan en este repositorio, cada subcarpeta es un tema con el código fuente y el README que explica dicho tema, por ejemplo la carpeta `Vector` contiene el código fuente en C++ `Vector.cpp` y el  archivo `README.md`. **Recomiendo encarecidamente leer por completo la sección `Novatadas` que contiene una serie de buenas practicas y consejos para programar en C++**
+- **Modern:** Modern C++ is extremely extensive from time to time it is good to help the memory to review certain topics for its understanding, within this folder you will find explanations of essential C++ functions that are covered in this repository, each subfolder is a topic with the source code and the README that explains said topic, for example the `Vector` folder contains the C++ source code `Vector.cpp` and the file `README.md`. **I highly recommend reading the entire 'Hazing' section which contains a series of good practices and tips for programming in C++**
 
-- **Problemas:** Contiene las carpetas de cada tema, dentro tiene una carpeta por problema y dentro de cada carpeta esta el código fuente y el README que explica dicho problema, por ejemplo la carpeta `Arreglos` contiene la carpeta `Two-Sum` que contiene el código fuente en C `Two-Sum.c` **(Solo en el primer problema de cada tema hay una implementación en lenguaje C para profundizar un poco más)**, el código fuente en C++ `Two-Sum.cpp` y el  archivo `README.md`
+- **Problems:** Contains the folders for each topic, inside it has a folder per problem and inside each folder is the source code and the README that explains said problem, for example the `Fixes` folder contains the `Two-Sum' folder ` which contains the C source code `Two-Sum.c` **(Only in the first problem of each topic there is an implementation in C language to go a little deeper)**, the C++ source code `Two-Sum .cpp` and the `README.md` file
 
-- **Sources:** Contiene las imágenes y gifs que se usan en el repositorio, por ejemplo el gif de Sheldon Cooper 😁
+- **Sources:** Contains the images and gifs used in the repository, such as Sheldon Cooper's 😁 gif
 
-## Configuración 🔧
+## Configuration🔧
 
-Puedes usar este repositorio desde Windows o Mac pero esta pensando para usarse en Linux, **especificamente una distribución basada en Debian**, por el script `Setup.sh` y el archivo `tasks.json`que configura la tarea de compilación en Visual Studio Code, no importa si es una distro completa o una WSL, lo importante es que tengas instalado:
+You can use this repository from Windows with MSVC or Mac with clang but it is intended to be used on Linux, **specifically a Debian-based distribution**, by the script 'Setup.sh' and the file 'tasks.json' that configures the compilation task in Visual Studio Code, no matter if it is a complete distro or a WSL, the important thing is that you have installed:
+
 
 - gcc
 - g++
 - libstdc++-dev
 
-Para instalarlos en Debian o Ubuntu puedes usar:
+To install them on Debian or Ubuntu you can use:
 
 ```bash
 sudo apt build-essential -y
 ```
 
-## Indice 📖
+## Index 📖
 
-### Arreglos 
+### Arrays
 
-| # | Titulo | Solución | Dificultad |
+| # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |**0001**|[Two Sum](https://leetcode.com/problems/two-sum/) | [C - C++](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Two-Sum)|Baja|
 |**0011**|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Arreglos/Container-with-Most-Water)|Media|
@@ -98,7 +99,7 @@ sudo apt build-essential -y
 
 ### Matrices
 
-| # | Titulo | Solución | Dificultad |
+| # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Rotate-Image)|Media|
 |0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Spiral-Matrix)|Media|
@@ -108,7 +109,7 @@ sudo apt build-essential -y
 
 ### Strings
 
-| # | Titulo | Solución | Dificultad |
+| # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Longest-Substring-Without-Repeating-Characters)|Media|
 |0005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Longest-Palindromic-Substring)|Media|
@@ -121,9 +122,9 @@ sudo apt build-essential -y
 |0424|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Longest-Repeating-Character-Replacement)|Media|
 |0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Strings/Palindromic-Substrings)|Media|
 
-### Intervalos
+### Intervals
 
-| # | Titulo | Solución | Dificultad |
+| # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0056|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Merge-Intervals)|Media|
 |0057|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Insert-Interval)|Media|
@@ -131,9 +132,9 @@ sudo apt build-essential -y
 |0253|[Meeting Rooms II](https://www.lintcode.com/problem/919/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Meeting-Rooms-II)|Media|
 |0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Non-overlapping-Intervals)|Media|
 
-### Búsqueda binaria
+### Binary Search
 
-| # | Titulo | Solución | Dificultad |
+| # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Reverse-Bits)|Baja|
 |0191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Number-of-1-Bits)|Baja|
@@ -141,9 +142,9 @@ sudo apt build-essential -y
 |0338|[Counting Bits](https://leetcode.com/problems/counting-bits/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Counting-Bits)|Baja|
 |0371|[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/B%C3%BAsqueda-binaria/Sum-of-Two-Integers)|Medium|
 
-### Programación dinámica
+### Dynamic Programming
 
-| # | Titulo | Solución | Dificultad |
+| # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0055|[Jump Game](https://leetcode.com/problems/jump-game/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Jump-Game)|Media|
 |0062|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Unique-Paths)|Media|
@@ -157,9 +158,9 @@ sudo apt build-essential -y
 |0377|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Combination-Sum-IV)|Media|
 |1143|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Longest-Increasing-Subsequence)|Media|
 
-### Listas enlazadas
+### Linked Lists
 
-| # | Titulo | Solución | Dificultad |
+| # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0019|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Remove-Nth-Node-From-End-of-List)|Media|
 |0021|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Merge-Two-Sorted-Lists)|Baja|
@@ -168,9 +169,9 @@ sudo apt build-essential -y
 |0143|[Reorder List](https://leetcode.com/problems/reorder-list/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Reorder-List)|Media|
 |0206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Listas-enlazadas/Reverse-Linked-List)|Baja|
 
-### Árboles
+### Trees
 
-| # | Titulo | Solución | Dificultad |
+| # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0098|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Validate-Binary-Search-Tree)|Media|
 |0100|[Same Tree](https://leetcode.com/problems/same-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Same-Tree)|Baja|
@@ -189,15 +190,15 @@ sudo apt build-essential -y
 
 ### Heaps
 
-| # | Titulo | Solución | Dificultad |
+| # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Heaps/Merge-k-Sorted-Lists)|Alta|
 |0295|[Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Heaps/Find-Median-from-Data-Stream)|Alta|
 |0347|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Heaps/Top-K-Frequent-Elements)|Media|
 
-### Grafos
+### Graphs
 
-| # | Titulo | Solución | Dificultad |
+| # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0128|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Longest-Consecutive-Sequence)|Media|
 |0133|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Clone-Graph)|Media|
@@ -209,14 +210,14 @@ sudo apt build-essential -y
 |0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Pacific-Atlantic-Water-Flow)|Media|
 
 
-## Construido con 🛠️
+## Build with 🛠️
 
 - [C](https://en.wikipedia.org/wiki/C_(programming_language)) (Opcional)
 - [C++](https://isocpp.org/) (Obligatorio)
 - [Ubuntu](https://ubuntu.com/) (Opcional)
 - [VS Code](https://code.visualstudio.com/) (Opcional)
 
-## Presentaciones 📊
+## Conferences 📊
 
 - [Pontus Nyman: C++ in Space](https://www.youtube.com/watch?v=VxNVGVW9nyI)
 - [Bjarne Stroustrup - The Essence of C++](https://www.youtube.com/watch?v=86xWVb4XIyE&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=1)
@@ -248,7 +249,7 @@ sudo apt build-essential -y
 - [CppCon 2017: Carl Cook “When a Microsecond Is an Eternity: High Performance Trading Systems in C++”](https://www.youtube.com/watch?v=NH1Tta7purM&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=16)
 
 
-## Referencias 📚
+## References 📚
 
 _cppreference.com. (s. f.). https://en.cppreference.com/w/_
 
@@ -256,6 +257,6 @@ _Eckel, B. (2004). Thinking in C++. [Thinking in C++](https://www.amazon.com/Thi
 
 _Cormen, T. H., Leiserson, C. E., Rivest, R. L. & Stein, C. (2009). [Introduction to Algorithms](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844) (3rd ed.). MIT Press._
 
-## Expresiones de Gratitud 🎁
+## Acknowledgments 🎁
 
-_Escrito con ❤️ por [Jonas Lara](https://twitter.com/Jonas_1ara) estudiante de ingeniería en IA en el  [IPN](https://www.ipn.mx/), para quien sea que este interesado_
+_Written with ❤️ [Jonas Lara] (https://twitter.com/Jonas_1ara) student of mathematics at the [UNADM](https://www.unadmexico.mx/) and student of psychology at the [UNAM](https://www.unam.mx/), for whoever this interesado_
