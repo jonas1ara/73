@@ -60,13 +60,13 @@ The repository is divided into 4 folders:
 
 - **Modern:** Modern C++ is extremely extensive from time to time it is good to help the memory to review certain topics for its understanding, within this folder you will find explanations of essential C++ functions that are covered in this repository, each subfolder is a topic with the source code and the README that explains said topic, for example the `Vector` folder contains the C++ source code `Vector.cpp` and the file `README.md`. **I highly recommend reading the entire 'Hazing' section which contains a series of good practices and tips for programming in C++**
 
-- **Problems:** Contains the folders for each topic, inside it has a folder per problem and inside each folder is the source code and the README that explains the problem, for example the `Two-Sum' folder ` contains the C source code `Two-Sum.c` **(Only in the first problem of each topic there is an implementation in C language to go a little deeper)**, the C++ source code `Two-Sum .cpp`, the C# source code in `Two-Sum.cs` and the .NET project settings in `Two-Sum.csproj`and finally the `README.md` file
+- **Problems:** Contains the folders for each topic, inside it has a folder per problem and inside each folder is the source code and the README that explains the problem, for example the `Two-Sum' folder ` contains the C source code `Two-Sum.c` **(Only in the first problem of each topic there is an implementation in C language to go a little deeper)**, the C++ source code `Two-Sum .cpp`, the C# source code in `Two-Sum.cs` and the .NET project settings in `Two-Sum.csproj` and finally the `README.md` file
 
 - **Sources:** Contains the images and gifs used in the repository, such as Sheldon Cooper's 😁 gif
 
 ## Configuration🔧
 
-You can use this repository from Windows with MSVC or Mac with clang but it is intended to be used on Linux, **specifically a Debian-based distribution**, by the script 'Setup.sh' and the file 'tasks.json' that configures the compilation task in Visual Studio Code, no matter if it is a complete distro or a WSL, the important thing is that you have installed:
+You can use this repository from Windows with MSVC or WSL and Mac with clang compiler but it is intended to be used on Linux, **specifically a Debian-based distribution**, by the script 'Setup.sh' and the file 'tasks.json' that configures the compilation task in Visual Studio Code, no matter if it is a complete distro or a WSL, the important thing is that you have installed:
 
 
 - gcc
@@ -212,10 +212,11 @@ sudo apt build-essential -y
 
 ## Build with 🛠️
 
-- [C](https://en.wikipedia.org/wiki/C_(programming_language)) (Opcional)
-- [C++](https://isocpp.org/) (Obligatorio)
-- [Ubuntu](https://ubuntu.com/) (Opcional)
-- [VS Code](https://code.visualstudio.com/) (Opcional)
+- [C](https://en.wikipedia.org/wiki/C_(programming_language)) (Optional)
+- [C#](https://dotnet.microsoft.com/es-es/languages/csharp) (Optional)
+- [C++](https://isocpp.org/) (Olbigatory)
+- [Ubuntu](https://ubuntu.com/) (Optional)
+- [VS Code](https://code.visualstudio.com/) (Optional)
 
 ## Conferences 📊
 
