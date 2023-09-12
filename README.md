@@ -2,8 +2,7 @@
 
 According to Sheldon Cooper **the best number is 73**, because 73 is the 21st prime number. Its mirror, 37, is the 12th prime number. 21 is the product of multiplying 7 by 3 and in binary, 73 is a palindrome: 1001001
 
-file:///home/jonas/Documents/Sheldon.mp4
-
+https://github.com/jonas1ara/73/assets/61485427/f274850e-a1a8-482f-8f89-38d4e8ca7b09
 
 _Sheldon Cooper (character in the famous series "The Big-Bang Theory")_
 
