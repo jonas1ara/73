@@ -32,7 +32,7 @@ The repository is divided into 4 folders:
         |- Delegates
         |- Enum 
         |- Lambda
-        |- Noob habits
+        |- Noob 
         |- Templates
         |- Range-for-y-auto
         |- Smart-pointers
@@ -61,7 +61,7 @@ The repository is divided into 4 folders:
 
 - **Libraries:** Contains the libraries that are used in the repository, for example the library `ArrayPrinter.h` which contains generic functions to print different arrays, you don't have to understand this topic, don't worry
 
-- **Modern:** Modern C++ is extremely extensive from time to time it is good to help the memory to review certain topics for its understanding, within this folder you will find explanations of essential C++ functions that are covered in this repository, each subfolder is a topic with the source code and the README that explains said topic, for example the `Vector` folder contains the C++ source code `Vector.cpp` and the file `README.md`. **I highly recommend reading the entire 'Hazing' section which contains a series of good practices and tips for programming in C++**
+- **Modern:** Modern C++ is extremely extensive from time to time it is good to help the memory to review certain topics for its understanding, within this folder you will find explanations of essential C++ functions that are covered in this repository, each subfolder is a topic with the source code and the README that explains said topic, for example the `Vector` folder contains the C++ source code `Vector.cpp` and the file `README.md`. **I highly recommend reading the entire 'Noob' section which contains a series of good practices and tips for programming in C++**
 
 - **Problems:** Contains the folders for each topic, inside it has a folder per problem and inside each folder is the source code and the README that explains the problem, for example the `Two-Sum` folder contains the C source code `Two-Sum.c` **(Only in the first problem of each topic there is an implementation in C language to go a little deeper)**, the C++ source code `Two-Sum .cpp`, the C# source code in `Two-Sum.cs` and the .NET project settings in `Two-Sum.csproj` and finally the `README.md` file
 
