@@ -57,7 +57,7 @@ The repository is divided into 4 folders:
         |- Sheldon.gif
 ```
 
-- **.vscode:** Contains the 'tasks.json' file that configures the build task in Visual Studio Code for `/usr/bin/gcc`, `/usr/bin/g++` and the configuration for the output generated `${fileDirname}\\${fileBasenameNoExtension}.out`
+- **.vscode:** Contains the 'tasks.json' file that configures the build task in Visual Studio Code for `/usr/bin/g++` and the configuration for the output generated `${fileDirname}\\${fileBasenameNoExtension}.out`
 
 - **Libraries:** Contains the libraries that are used in the repository, for example the library `ArrayPrinter.h` which contains generic functions to print different arrays, you don't have to understand this topic, don't worry
 
