@@ -6,7 +6,10 @@ According to Sheldon Cooper **the best number is 73**, because 73 is the 21st pr
 
 ![73](https://www.dropbox.com/scl/fi/zaoxnhrvznwrbs17cictu/Sheldon.mp4?rlkey=lww3hyow6zvtx7neevahj9kms&dl=0)
 
+https://github.com/jonas1ara/73/assets/61485427/b851100b-2fdd-4f51-bd43-65d08ce3ac0f
+
 _Sheldon Cooper (character in the famous series "The Big-Bang Theory")_
+
 
 ## What is this? 🚀
 
