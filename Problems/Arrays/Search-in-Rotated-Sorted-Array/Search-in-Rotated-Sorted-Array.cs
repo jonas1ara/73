@@ -1,14 +1,14 @@
-#include "../../../Libraries/ArrayPrinter.h"
-#include <iostream>
-#include <vector>
-
-class Solution {
-public:
-    int search(std::vector<int> &nums, int target)
+﻿using System;
+public class Solution
+{
+    public int Search(int[] nums, int target)
     {
-        if (nums.empty())
+        if (nums.Length == 0)
             return -1;
-        int N = nums.size(), L = 0, R = N - 1, pivot;
+
+        int N = nums.Length;
+        int L = 0, R = N - 1, pivot;
+
         while (L < R)
         {
             int M = L + (R - L) / 2;
@@ -18,11 +18,14 @@ public:
                 L = M + 1;
         }
         pivot = L;
-        L = 0, R = N - 1;
+        L = 0;
+        R = N - 1;
+
         while (L <= R)
         {
             int M = L + (R - L) / 2;
             int MM = (M + pivot) % N;
+
             if (nums[MM] == target)
                 return MM;
             if (target > nums[MM])
@@ -32,16 +35,12 @@ public:
         }
         return -1;
     }
-};
-
-int main()
-{
-    std::vector<int> nums = {4, 5, 6, 7, 0, 1, 2};
-    int target = 3;
-
-    Solution sol;
-
-    int result = sol.search(nums, target);
-
-    std::cout << result << std::endl;
+    public static void Main(string[] args)
+    {
+        int[] nums = { 4, 5, 6, 7, 0, 1, 2 };
+        int target = 0;
+        Solution sol = new Solution();
+        Console.WriteLine(sol.Search(nums, target));
+    }
 }
+
