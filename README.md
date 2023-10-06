@@ -110,14 +110,14 @@ sudo apt-get update && \
 |**0238**|[Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Product-of-Array-Except-Self)|Easy|
 
 
-### Matrices
+### Matrix
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Rotate-Image)|Medium|
-|0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Spiral-Matrix)|Medium|
-|0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Set-Matrix-Zeroes)|Medium|
-|0079|[Word Search](https://leetcode.com/problems/word-search/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Matrices/Word-Search)|Medium|
+|0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Rotate-Image)|Medium|
+|0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Spiral-Matrix)|Medium|
+|0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Set-Matrix-Zeroes)|Medium|
+|0079|[Word Search](https://leetcode.com/problems/word-search/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Word-Search)|Medium|
 
 
 ### Strings
