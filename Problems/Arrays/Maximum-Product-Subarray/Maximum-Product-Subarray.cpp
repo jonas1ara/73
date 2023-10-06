@@ -4,26 +4,26 @@
 
 class Solution {
 public:
-    int maxProduct(std::vector<int> &A)
+    int maxProduct(std::vector<int> &nums)
     {
-        int ans = A[0], N = A.size(), j = 0;
+        int ans = nums[0], N = nums.size(), j = 0;
         while (j < N)
         {
             int i = j, prod = 1;
-            while (j < N && A[j] != 0)
+            while (j < N && nums[j] != 0)
             {
-                prod *= A[j++];
+                prod *= nums[j++];
                 ans = std::max(ans, prod);
             }
             if (j < N)
                 ans = std::max(ans, 0);
             while (i < N && prod < 0)
             {
-                prod /= A[i++];
+                prod /= nums[i++];
                 if (i != j)
                     ans = std::max(ans, prod);
             }
-            while (j < N && A[j] == 0)
+            while (j < N && nums[j] == 0)
                 ++j;
         }
         return ans;
@@ -32,7 +32,9 @@ public:
 
 int main()
 {
-    std::vector <int> array = {2,3,-2,4};
+    std::vector <int> nums = {2,3,-2,4};
+    Solution solution;
+    
 
     return 0;
 }

@@ -4,24 +4,24 @@
 
 class Solution {
 public:
-    int findMin(std::vector<int> &A)
+    int findMin(std::vector<int> &nums)
     {
-        int L = 0, R = A.size() - 1;
+        int L = 0, R = nums.size() - 1;
         while (L < R)
         {
             int M = (L + R) / 2;
-            if (A[M] > A[R])
+            if (nums[M] > nums[R])
                 L = M + 1;
             else
                 R = M;
         }
-        return A[L];
+        return nums[L];
     }
 };
 
 int main()
 {
-    std::vector<int> array = {3, 4, 5, 1, 2};
+    std::vector<int> nums = {3, 4, 5, 1, 2};
 
     return 0;
 }

@@ -2,20 +2,28 @@
 #include <iostream>
 #include <vector>
 
-class Solution {
+class Solution
+{
 public:
-    std::vector<int> productExceptSelf(std::vector<int> &A)
+    std::vector<int> productExceptSelf(std::vector<int> &nums)
     {
-        int N = A.size(), left = 1, right = 1;
-        std::vector<int> ans(N, 1);
-        for (int i = 0, j = N - 1; i < N; ++i, --j)
+        int N = nums.size();
+        std::vector<int> result(N, 1);
+        result[0] = 1;
+
+        for (int i = 1; i < N; i++)
         {
-            ans[i] *= left;
-            left *= A[i];
-            ans[j] *= right;
-            right *= A[j];
+            result[i] = result[i - 1] * nums[i - 1];
         }
-        return ans;
+
+        int rightSide = 1;
+        for (int i = N - 1; i >= 0; i--)
+        {
+            result[i] = result[i] * rightSide;
+            rightSide *= nums[i];
+        }
+
+        return result;
     }
 };
 
