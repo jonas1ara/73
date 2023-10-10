@@ -227,7 +227,7 @@ sudo apt-get update && \
 
 - [C](https://en.wikipedia.org/wiki/C_(programming_language)) (Optional)
 - [C#](https://dotnet.microsoft.com/es-es/languages/csharp) (Optional)
-- [C++](https://isocpp.org/) (Olbigatory)
+- [C++](https://isocpp.org/) (Obligatory)
 - [Ubuntu](https://ubuntu.com/) (Optional)
 - [VS Code](https://code.visualstudio.com/) (Optional)
 
