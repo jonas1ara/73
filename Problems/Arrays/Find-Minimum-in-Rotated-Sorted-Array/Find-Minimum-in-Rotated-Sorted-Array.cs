@@ -23,7 +23,7 @@ public class Solution
 
         return nums[L];
     }
-    
+
     public static void Main(string[] args)
     {
         int[] nums = new int[] { 3, 4, 5, 1, 2 };
