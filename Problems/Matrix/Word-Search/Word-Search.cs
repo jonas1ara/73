@@ -10,19 +10,19 @@
         {
             if (x < 0 || x >= M || y < 0 || y >= N || board[x][y] != word[i]) return false;
             if (i + 1 == word.Length) return true;
-          
-          	char c = board[x][y];
+
+            char c = board[x][y];
             board[x][y] = '0'; // Mark as visited
-          
+
             foreach (var dir in dirs)
             {
                 int dx = dir[0];
                 int dy = dir[1];
-            
-              	if (DFS(x + dx, y + dy, i + 1)) return true;
+
+                if (DFS(x + dx, y + dy, i + 1)) return true;
             }
-            
-          	board[x][y] = c; // Restore original value
+
+            board[x][y] = c; // Restore original value
             return false;
         }
 
@@ -36,4 +36,26 @@
 
         return false;
     }
+
+    public static void Main(string[] args)
+    {
+        // Crear una instancia de la clase Solution
+        Solution solution = new Solution();
+
+        // Definir una matriz y una palabra para buscar
+        char[][] board = new char[][]
+        {
+            new char[] { 'A', 'B', 'C', 'E' },
+            new char[] { 'S', 'F', 'C', 'S' },
+            new char[] { 'A', 'D', 'E', 'E' }
+        };
+        string word = "ABCCED";
+
+        // Llamar al método Exist para verificar si la palabra existe en la matriz
+        bool result = solution.Exist(board, word);
+
+        // Imprimir el resultado
+        Console.WriteLine("La palabra existe en la matriz: " + result);
+    }
+
 }
