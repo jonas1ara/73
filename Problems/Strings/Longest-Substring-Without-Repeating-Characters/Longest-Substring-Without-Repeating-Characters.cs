@@ -20,5 +20,14 @@ public class Solution
 
         return maxLen;
     }
+
+    public static void Main(string[] args) {
+        Solution solution = new Solution();
+        string input = "abcabcbb"; // Cambia la cadena de entrada según tus necesidades
+
+        int result = solution.LengthOfLongestSubstring(input);
+
+        Console.WriteLine("Longitud de la subcadena más larga sin caracteres repetidos: " + result);
+    }
 }
 

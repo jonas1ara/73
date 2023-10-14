@@ -1,4 +1,5 @@
-﻿#include <string>
+﻿#include <iostream>
+#include <string>
 #include <unordered_map>
 
 class Solution
@@ -24,3 +25,15 @@ public:
         return maxLen;
     }
 };
+
+int main() {
+    Solution solution;
+    std::string input = "abcabcbb"; // Cambia la cadena de entrada según tus necesidades
+
+    int result = solution.lengthOfLongestSubstring(input);
+
+    std::cout << "Longitud de la subcadena más larga sin caracteres repetidos: " << result << std::endl;
+
+    return 0;
+}
+
