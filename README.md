@@ -233,7 +233,7 @@ sudo apt-get update && \
 
 ## Conferences 📊
 
-- [Pontus Nyman: C++ in Space](https://www.youtube.com/watch?v=VxNVGVW9nyI)
+- [**Pontus Nyman: C++ in Space**](https://www.youtube.com/watch?v=VxNVGVW9nyI)
 - [Bjarne Stroustrup - The Essence of C++](https://www.youtube.com/watch?v=86xWVb4XIyE&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=1)
 - [CppCon 2015: Kate Gregory “Stop Teaching C"](https://www.youtube.com/watch?v=YnWhqhNdYyk&t=1215s)
 - [Bjarne Stroustrup: C++ | Lex Fridman Podcast #48](https://www.youtube.com/watch?v=uTxRF5ag27A&t=2842s)
