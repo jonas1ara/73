@@ -1,32 +1,26 @@
-﻿#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
+﻿#include <string>
+#include <unordered_map>
 
-int lengthOfLongestSubstring(std::string s)
+class Solution
 {
-    int ans = 0;                 // Variable para almacenar la longitud de la subcadena más larga sin caracteres repetidos
-    int start = -1;              // Índice del inicio de la subcadena actual
-    std::vector<int> m(128, -1); // Vector para almacenar el índice más reciente de cada carácter ASCII en la cadena
-
-    for (int i = 0; i < s.size(); i++)
+public:
+    int lengthOfLongestSubstring(std::string s)
     {
-        start = std::max(start, m[s[i]]); // Actualiza el inicio de la subcadena si se encuentra un carácter repetido
+        if (s.empty())
+            return 0;
 
-        ans = std::max(ans, i - start); // Calcula la longitud de la subcadena actual y la compara con la longitud máxima anterior
+        std::unordered_map<char, int> map;
+        int maxLen = 0;
+        int lastRepeatPos = -1;
+        for (int i = 0; i < s.length(); i++)
+        {
+            if (map.find(s[i]) != map.end() && lastRepeatPos < map[s[i]])
+                lastRepeatPos = map[s[i]];
+            if (maxLen < i - lastRepeatPos)
+                maxLen = i - lastRepeatPos;
+            map[s[i]] = i;
+        }
 
-        m[s[i]] = i; // Actualiza el índice más reciente del carácter en el vector
+        return maxLen;
     }
-
-    return ans; // Devuelve la longitud de la subcadena más larga sin caracteres repetidos
-}
-
-int main()
-{
-    std::string s = "abcabcbb";
-    std::cout << "Input: '" << s << "'" << std::endl;
-
-    std::cout << "Output: " << lengthOfLongestSubstring(s) << std::endl;
-
-    std::cin.get();
-}
+};
