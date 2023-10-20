@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout <<  "¯  _(ツ)_/¯ " <<endl; 
+    
+    return 0;
+}
