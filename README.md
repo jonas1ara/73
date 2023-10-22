@@ -145,7 +145,7 @@ sudo apt-get update && \
 |0253|[Meeting Rooms II](https://www.lintcode.com/problem/919/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Meeting-Rooms-II)|Medium|
 |0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Intervalos/Non-overlapping-Intervals)|Medium|
 
-### Binary Search
+### Binary 
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
