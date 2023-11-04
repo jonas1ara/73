@@ -163,7 +163,7 @@ sudo apt-get update && \
 |0062|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Unique-Paths)|Medium|
 |0070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Climbing-Stairs)|Easy|
 |0091|[Decode Ways](https://leetcode.com/problems/decode-ways/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Decode-Ways)|Medium|
-|0139|[Word Break](https://leetcode.com/problems/word-break/) | [C++ -C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Word-Break)|Medium|
+|0139|[Word Break](https://leetcode.com/problems/word-break/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Word-Break)|Medium|
 |0198|[House Robber](https://leetcode.com/problems/house-robber/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/House-Robber)|Medium|
 |0213|[House Robber II](https://leetcode.com/problems/house-robber-ii/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/House-Robber-II)|Medium|
 |0300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Programaci%C3%B3n-din%C3%A1mica/Longest-Common-Subsequence)|Medium|
