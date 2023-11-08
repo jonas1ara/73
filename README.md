@@ -233,14 +233,14 @@ sudo apt-get update && \
 
 ## C++ Conferences 📊
 
-- [**Pontus Nyman: C++ in Space**](https://www.youtube.com/watch?v=VxNVGVW9nyI)
-- [**Bjarne Stroustrup - The Essence of C++**](https://www.youtube.com/watch?v=86xWVb4XIyE&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=1)
-- [**CppCon 2015: Kate Gregory “Stop Teaching C**"](https://www.youtube.com/watch?v=YnWhqhNdYyk&t=1215s)
-- [**Bjarne Stroustrup: C++ | Lex Fridman Podcast #48**](https://www.youtube.com/watch?v=uTxRF5ag27A&t=2842s)
-- [**Bjarne Stroustrup: Why you should avoid Linked Lists**](https://www.youtube.com/watch?v=YQs6IC-vgmo&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=15)
-- [**Keynote: C++'s Superpower - Matt Godbolt - CPPP 2021**](https://www.youtube.com/watch?v=0_UttFDnV3k&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=7)
-- [**C++ - the Newest Old Language • Matt Godbolt • GOTO 2018**](https://www.youtube.com/watch?v=HAFrggEDr5U&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=10)
-- [**CppCon 2016: Jason Turner “Practical Performance Practices**"](https://www.youtube.com/watch?v=uzF4u9KgUWI)
+- [Pontus Nyman: C++ in Space](https://www.youtube.com/watch?v=VxNVGVW9nyI)
+- [Bjarne Stroustrup - The Essence of C++](https://www.youtube.com/watch?v=86xWVb4XIyE&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=1)
+- [CppCon 2015: Kate Gregory “Stop Teaching C"](https://www.youtube.com/watch?v=YnWhqhNdYyk&t=1215s)
+- [Bjarne Stroustrup: C++ | Lex Fridman Podcast #48](https://www.youtube.com/watch?v=uTxRF5ag27A&t=2842s)
+- [Bjarne Stroustrup: Why you should avoid Linked Lists](https://www.youtube.com/watch?v=YQs6IC-vgmo&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=15)
+- [Keynote: C++'s Superpower - Matt Godbolt - CPPP 2021](https://www.youtube.com/watch?v=0_UttFDnV3k&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=7)
+- [C++ - the Newest Old Language • Matt Godbolt • GOTO 2018](https://www.youtube.com/watch?v=HAFrggEDr5U&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=10)
+- [CppCon 2016: Jason Turner “Practical Performance Practices"](https://www.youtube.com/watch?v=uzF4u9KgUWI)
 - [Can C++ be 10x Simpler & Safer? - Herb Sutter - CppCon 2022](https://www.youtube.com/watch?v=ELeZAKCN4tY&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=14)
 - [C++ in Constrained Environments - Bjarne Stroustrup - CppCon 2022](https://www.youtube.com/watch?v=2BuJjaGuInI)
 - [Keynote: "Am I A Good Programmer?" - Kate Gregory - CppNorth 2022](https://www.youtube.com/watch?v=pdHvC8fDC5E&t=1420s)
@@ -266,7 +266,7 @@ sudo apt-get update && \
 
 - [Mono Edge at FOSDEM](https://www.youtube.com/watch?v=uS_9nwdzfzM)
 - [Miguel de Icaza's Vision Keynote - UnoConf 2019](https://www.youtube.com/watch?v=acryVgY0O3E&t=240s)
--[The functional journey of C# - Mads Torgersen - NDC Copenhagen 2022](https://www.youtube.com/watch?v=CLKZ7ZgVido)
+- [The functional journey of C# - Mads Torgersen - NDC Copenhagen 2022](https://www.youtube.com/watch?v=CLKZ7ZgVido)
 
 ## References 📚
 
