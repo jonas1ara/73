@@ -267,6 +267,7 @@ sudo apt-get update && \
 - [Mono Edge at FOSDEM](https://www.youtube.com/watch?v=uS_9nwdzfzM)
 - [Miguel de Icaza's Vision Keynote - UnoConf 2019](https://www.youtube.com/watch?v=acryVgY0O3E&t=240s)
 - [The functional journey of C# - Mads Torgersen - NDC Copenhagen 2022](https://www.youtube.com/watch?v=CLKZ7ZgVido)
+- [Keynote: The Microsoft Open Source Cinematic Universe - Phase 2 - Scott Hanselman](https://www.youtube.com/watch?v=HUN1j9G1Py8)
 
 ## References 📚
 
