@@ -225,13 +225,13 @@ sudo apt-get update && \
 
 ## Build with 🛠️
 
-- [C](https://en.wikipedia.org/wiki/C_(programming_language)) (Optional)
-- [C#](https://dotnet.microsoft.com/es-es/languages/csharp) (Optional)
-- [C++](https://isocpp.org/) (Obligatory)
-- [Ubuntu](https://ubuntu.com/) (Optional)
-- [VS Code](https://code.visualstudio.com/) (Optional)
+- [C](https://en.wikipedia.org/wiki/C_(programming_language))
+- [C#](https://dotnet.microsoft.com/es-es/languages/csharp) 
+- [C++](https://isocpp.org/)
+- [Ubuntu](https://ubuntu.com/)
+- [VS Code](https://code.visualstudio.com/) 
 
-## Conferences 📊
+## C++ Conferences 📊
 
 - [**Pontus Nyman: C++ in Space**](https://www.youtube.com/watch?v=VxNVGVW9nyI)
 - [**Bjarne Stroustrup - The Essence of C++**](https://www.youtube.com/watch?v=86xWVb4XIyE&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=1)
@@ -262,6 +262,11 @@ sudo apt-get update && \
 - [How Microsoft Uses C++ to Deliver Office - Huge Size, Small Components - Zachary Henkel CppCon 2022](https://www.youtube.com/watch?v=0QtX-nMlz0Q)
 - [CppCon 2017: Carl Cook “When a Microsecond Is an Eternity: High Performance Trading Systems in C++”](https://www.youtube.com/watch?v=NH1Tta7purM&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=16)
 
+## C# Conferences 📊
+
+- [Mono Edge at FOSDEM](https://www.youtube.com/watch?v=uS_9nwdzfzM)
+- [Miguel de Icaza's Vision Keynote - UnoConf 2019](https://www.youtube.com/watch?v=acryVgY0O3E&t=240s)
+-[The functional journey of C# - Mads Torgersen - NDC Copenhagen 2022](https://www.youtube.com/watch?v=CLKZ7ZgVido)
 
 ## References 📚
 
