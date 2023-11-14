@@ -186,20 +186,20 @@ sudo apt-get update && \
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|0098|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Validate-Binary-Search-Tree)|Medium|
-|0100|[Same Tree](https://leetcode.com/problems/same-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Same-Tree)|Easy|
-|0102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Binary-Tree-Level-Order-Traversal)|Medium|
-|0104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Maximum-Depth-of-Binary-Tree)|Easy|
-|0105|[Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal)|Medium|
-|0124|[Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Binary-Tree-Maximum-Path-Sum)|Hard|
-|0208|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Implement-Trie-Prefix-Tree)|Medium|
-|0211|[Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Design-Add-and-Search-Words-Data-Structure)|Medium|
-|0212|[Word Search II](https://leetcode.com/problems/word-search-ii/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Word-Search-II)|Hard|
-|0226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Invert-Binary-Tree)|Hard|
-|0230|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Kth-Smallest-Element-in-a-BST)|Medium|
-|0235|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Lowest-Common-Ancestor-of-a-Binary-Search-Tree)|Medium|
-|0207|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Serialize-and-Deserialize-Binary-Tree)|Hard|
-|0572|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Subtree-of-Another-Tree)|Easy|
+|0098|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Validate-Binary-Search-Tree)|Medium|
+|0100|[Same Tree](https://leetcode.com/problems/same-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Same-Tree)|Easy|
+|0102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Binary-Tree-Level-Order-Traversal)|Medium|
+|0104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Maximum-Depth-of-Binary-Tree)|Easy|
+|0105|[Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal)|Medium|
+|0124|[Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Binary-Tree-Maximum-Path-Sum)|Hard|
+|0208|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Implement-Trie-Prefix-Tree)|Medium|
+|0211|[Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Design-Add-and-Search-Words-Data-Structure)|Medium|
+|0212|[Word Search II](https://leetcode.com/problems/word-search-ii/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Word-Search-II)|Hard|
+|0226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Invert-Binary-Tree)|Hard|
+|0230|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Kth-Smallest-Element-in-a-BST)|Medium|
+|0235|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Lowest-Common-Ancestor-of-a-Binary-Search-Tree)|Medium|
+|0297|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Serialize-and-Deserialize-Binary-Tree)|Hard|
+|0572|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/%C3%81rboles/Subtree-of-Another-Tree)|Easy|
 
 ### Heaps
 
