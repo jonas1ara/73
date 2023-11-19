@@ -21,17 +21,18 @@ The repository is divided into 4 folders:
 |- Repository
     |- .vscode
         |- tasks.json
-    |- Libraries
-        |- ArrayPrinter.h
     |- Problems
         |- Arrays
-            |- Two-Sum
-                |- Two-Sum.c
-                |- Two-Sum.cpp
-                |- Two-Sums.cs
-                |- Two-Sums.csproj
+        |- Matrix
+            |- Rotate-Image
+                |- Rotate-Image.c
+                |- Rotate-Image.cpp
+                |- Rotate-Image.cs
+                |- Rotate-Image.csproj
                 |- README.md
-        |- Matrices
+            |- Set-Matrix-Zeroes
+            |- Spiral-Matrix
+            |- Word-Search
         |- Strings
         |- Intervals
         |- Binary Search
