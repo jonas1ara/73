@@ -197,14 +197,14 @@ sudo apt-get update && \
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|0128|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C - C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Longest-Consecutive-Sequence)|Medium|
-|0133|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Clone-Graph)|Medium|
-|0200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Number-of-Islands)|Medium|
-|0207|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Course-Schedule)|Medium|
-|0261|[Graph Valid Tree](https://www.lintcode.com/problem/178/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Graph-Valid-Tree)|Medium|
-|0269|[Alien Dictionary](https://www.lintcode.com/problem/892/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Alien-Dictionary)|Hard|
-|0323|[Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Number-of-Connected-Components-in-an-Undirected-Graph)|Medium|
-|0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C++](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Pacific-Atlantic-Water-Flow)|Medium|
+|0128|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Longest-Consecutive-Sequence)|Medium|
+|0133|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Clone-Graph)|Medium|
+|0200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Number-of-Islands)|Medium|
+|0207|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Course-Schedule)|Medium|
+|0261|[Graph Valid Tree](https://www.lintcode.com/problem/178/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Graph-Valid-Tree)|Medium|
+|0269|[Alien Dictionary](https://www.lintcode.com/problem/892/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Alien-Dictionary)|Hard|
+|0323|[Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Number-of-Connected-Components-in-an-Undirected-Graph)|Medium|
+|0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problemas/Grafos/Pacific-Atlantic-Water-Flow)|Medium|
 
 
 ## Build with 🛠️
@@ -223,22 +223,18 @@ sudo apt-get update && \
 - [Bjarne Stroustrup: C++ | Lex Fridman Podcast #48](https://www.youtube.com/watch?v=uTxRF5ag27A&t=2842s)
 - [Bjarne Stroustrup: Why you should avoid Linked Lists](https://www.youtube.com/watch?v=YQs6IC-vgmo&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=15)
 - [Keynote: C++'s Superpower - Matt Godbolt - CPPP 2021](https://www.youtube.com/watch?v=0_UttFDnV3k&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=7)
-- [C++ - the Newest Old Language • Matt Godbolt • GOTO 2018](https://www.youtube.com/watch?v=HAFrggEDr5U&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=10)
 - [CppCon 2016: Jason Turner “Practical Performance Practices"](https://www.youtube.com/watch?v=uzF4u9KgUWI)
 - [Can C++ be 10x Simpler & Safer? - Herb Sutter - CppCon 2022](https://www.youtube.com/watch?v=ELeZAKCN4tY&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=14)
 - [C++ in Constrained Environments - Bjarne Stroustrup - CppCon 2022](https://www.youtube.com/watch?v=2BuJjaGuInI)
 - [Keynote: "Am I A Good Programmer?" - Kate Gregory - CppNorth 2022](https://www.youtube.com/watch?v=pdHvC8fDC5E&t=1420s)
 - [CppCon 2017: Bjarne Stroustrup “Learning and Teaching Modern C++”](https://www.youtube.com/watch?v=fX2W3nNjJIo&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=17)
-- [Modern C++ Safety and Security At 20 - Matthew Butler - CppCon 2020](https://www.youtube.com/watch?v=uccarZGpDhk&t=2422s)
 - [CppCon 2017: Peter Goldsborough “A Tour of Deep Learning With C++”](https://www.youtube.com/watch?v=Lo1rXJdAJ7w)
 - [CppCon 2017: Louis Brandy “Curiously Recurring C++ Bugs at Facebook”](https://www.youtube.com/watch?v=lkgszkPnV8g)
 - [CppCon 2018: Peter Goldsborough “Machine Learning in C++ with PyTorch”](https://www.youtube.com/watch?v=auRPXMMHJzc)
-- [How C++23 Changes the Way We Write Code - Timur Doumler - CppCon 2022](https://www.youtube.com/watch?v=eD-ceG-oByA)
 - [CppCon 2014: Herb Sutter "Back to the Basics! Essentials of Modern C++ Style"](https://www.youtube.com/watch?v=xnqTKD8uD64&t=4814s)
 - [CppCon 2016: Bjarne Stroustrup "The Evolution of C++ Past, Present and Future"](https://www.youtube.com/watch?v=_wzc7a3McOs&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=4)
 - [The Most Important Optimizations to Apply in Your C++ Programs - Jan Bielak - CppCon 2022](https://www.youtube.com/watch?v=qCjEN5XRzHc)
 - [Trading at light speed: designing low latency systems in C++ - David Gross - Meeting C++ 2022](https://www.youtube.com/watch?v=8uAW5FQtcvE)
-- [CppCon 2017: Jan Babst “Driving Into the Future With Modern C++: A Look at Adaptive Autosar”](https://www.youtube.com/watch?v=YzyGgZ_RClw)
 - [CppCon 2018: Gordon Brown “A Modern C++ Programming Model for GPUs using Khronos SYCL”](https://www.youtube.com/watch?v=miqZS6aS9K0)
 - [The Imperatives Must Go! [Functional Programming in Modern C++] - Victor Ciura - CppCon 2022](https://www.youtube.com/watch?v=M5HuOZ4sgJE)
 - [Bjarne Stroustrup's Closing Keynote at Code Europe 2022 in Cracow – "How to evolve a language"](https://www.youtube.com/watch?v=UoLM-6n-Ktg&list=PLAfTBTbGJEKI66gnV65ELkaVKiFmz1KdW&index=3)
