@@ -4,7 +4,7 @@ git pull
 
 git add .
 
-git commit -m "UPDATE"
+git commit -m "Update README"
 
 git push -u origin main
 
