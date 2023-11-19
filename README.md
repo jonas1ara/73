@@ -23,19 +23,6 @@ The repository is divided into 4 folders:
         |- tasks.json
     |- Libraries
         |- ArrayPrinter.h
-    |- Modern
-        |- Bind
-        |- Containers
-            |- Vector
-                |- Vector.cpp
-                |- README.md
-        |- Delegates
-        |- Enum 
-        |- Lambda
-        |- Noob 
-        |- Templates
-        |- Range-for-y-auto
-        |- Smart-pointers
     |- Problems
         |- Arrays
             |- Two-Sum
