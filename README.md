@@ -53,7 +53,7 @@ The repository is divided into 4 folders:
 
 ## Configuration🔧
 
-The focus of this repository is towards C#, so you can use it from Windows, Linux, Mac, Docker or even GitHub Codespaces, but it is intended to be used on Linux, **specifically a Ubuntu-based distribution**, no matter if it is a complete distro or a WSL. Solutions in C (only the first problem of each topic) and C++ are also included , so to use this repository you must have installed:
+The focus of this repository is towards C#, so you can use it from Windows, Linux, Mac, Docker or even GitHub Codespaces, but it is intended to be used on Linux, **specifically a Ubuntu-based distribution**, no matter if it is a complete distro or a WSL distro. Solutions in C (only the first problem of each topic) and C++ are also included , so to use this repository you must have installed:
 
 To compile C and C++ you need to install `gcc` and `g++` 
 
