@@ -254,8 +254,8 @@ sudo apt-get update && \
 - [Miguel de Icaza's Vision Keynote - UnoConf 2019](https://www.youtube.com/watch?v=acryVgY0O3E&t=240s)
 - [Full stack web UI with Blazor in .NET 8 | .NET Conf 2023](https://www.youtube.com/watch?v=YwZdtLEtROA&t=2804s)
 - [Patterns for high-performance C# - Federico Andres Lois](https://www.youtube.com/watch?v=4yALYEINbyI)
-- [Adam SITNIK: Solving .NET performance issues | UCP2019](https://www.youtube.com/watch?v=HDbtwTsar1Q)
 - [Let's design a new C# language feature! | .NET Conf 2022](https://www.youtube.com/watch?v=ArN9R_8eL-E&t=152s)
+- [Adam SITNIK: Solving .NET performance issues | UCP2019](https://www.youtube.com/watch?v=HDbtwTsar1Q)
 - [What’s Next in C#? - Mads Torgersen - Copenhagen DevFest 2023](https://www.youtube.com/watch?v=gGzfAJwoH5A&t=2018s)
 - [S101 - Keynote with Scott Hunter, Mads Torgersen, and Miguel De Icaza](https://www.youtube.com/watch?v=qQdGC2jIP8s)
 - [The functional journey of C# - Mads Torgersen - NDC Copenhagen 2022](https://www.youtube.com/watch?v=CLKZ7ZgVido)
@@ -263,9 +263,10 @@ sudo apt-get update && \
 - [You are doing logging in .NET wrong. Let’s fix it. - Nick Chapsas - NDC Oslo 2023](https://www.youtube.com/watch?v=NlBjVJPkT6M)
 - [.NET Systems Programming Learned the Hard Way - Aaron Stannard - NDC Oslo 2023](https://www.youtube.com/watch?v=fi9P3-7VqHo)
 - [Keynote: The Microsoft Open Source Cinematic Universe - Phase 2 - Scott Hanselman](https://www.youtube.com/watch?v=HUN1j9G1Py8)
+- [Using C# Source Generators to Build a .NET IoT Device - Alon Fliess - NDC Melbourne 2022](https://www.youtube.com/watch?v=ifx_7daOzZw)
 - [Patterns for application development with ASP.NET Core - Damian Edwards & David Fowler](https://www.youtube.com/watch?v=x-C-CNBVTaY)
 - [Performance tricks I learned from contributing to open source .NET packages - Daniel Marbach](https://www.youtube.com/watch?v=pGgsFW7kDKI)
-- [Using C# Source Generators to Build a .NET IoT Device - Alon Fliess - NDC Melbourne 2022](https://www.youtube.com/watch?v=ifx_7daOzZw)
+
 - [Real-world examples on optimizing .NET performance - Stefán Jökull Sigurðarson - NDC Oslo 2023](https://www.youtube.com/watch?v=545Nj0_BuzA)
 
 ## References 📚
