@@ -71,7 +71,7 @@ If you want use this repository with C# then you should install .NET 7 or Mono c
 - mono-devel
 - dotnet-sdk-7.0
 
-To install .NET 7 and Mono compiler on Ubuntu you can type:
+To install them on Ubuntu you can type:
 
 
 ```bash
