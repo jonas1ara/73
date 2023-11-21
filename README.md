@@ -53,7 +53,7 @@ The repository is divided into 4 folders:
 
 ## Configuration🔧
 
-The focus of this repository is towards C++, so you can use this repository from Windows with MSVC or WSL and Mac with clang compiler but it is intended to be used on Linux, **specifically a Ubuntu-based distribution**, by the script 'Setup.sh' and the file 'tasks.json' that configures the compilation task in Visual Studio Code, no matter if it is a complete distro or a WSL, the important thing is that you have installed:
+The focus of this repository is towards C++ and a bit of C, so you can use this repository from Windows with MSVC or WSL and Mac with clang compiler but it is intended to be used on Linux, **specifically a Ubuntu-based distribution**, by the script 'Setup.sh' and the file 'tasks.json' that configures the compilation task in Visual Studio Code, no matter if it is a complete distro or a WSL, the important thing is that you have installed:
 
 - gcc
 - g++
@@ -78,7 +78,7 @@ sudo apt-get update && \
   sudo apt-get install dotnet-sdk-7.0 mono-devel -y
 ```
 
-**Note: Solutions are included in C#, but the problems are explained in C++ and only specific comments are made about the implementation in C#**
+**Note: Solutions are included in C++ and C#**
 
 ## Index 📖
 
