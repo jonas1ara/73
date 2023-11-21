@@ -57,7 +57,6 @@ The focus of this repository is towards C++, so you can use this repository from
 
 - gcc
 - g++
-- libstdc++-dev
 
 To install them on Ubuntu you can type:
 
