@@ -255,7 +255,7 @@ sudo apt-get update && \
 
 ## References 📚
 
-_cppreference.com. (s. f.). https://en.cppreference.com/w/_
+_Cppreference.com. (s. f.). https://en.cppreference.com/w/_
 
 _Eckel, B. (2004). Thinking in C++. [Thinking in C++](https://www.amazon.com/Thinking-C-Introduction-Standard-2nd/dp/0139798099/ref=sr_1_1?dchild=1&keywords=thinking+in+c%2B%2B&qid=1618383343&sr=8-1) (2nd ed.). Pearson._
 
