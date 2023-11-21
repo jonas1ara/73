@@ -53,7 +53,9 @@ The repository is divided into 4 folders:
 
 ## Configuration🔧
 
-The focus of this repository is towards C++ and a bit of C, so you can use this repository from Windows with MSVC or WSL and Mac with clang compiler but it is intended to be used on Linux, **specifically a Ubuntu-based distribution**, by the script 'Setup.sh' and the file 'tasks.json' that configures the compilation task in Visual Studio Code, no matter if it is a complete distro or a WSL, the important thing is that you have installed:
+The focus of this repository is towards C#, so you can use it from Windows, Linux, Mac, Docker or even GitHub Codespaces, but it is intended to be used on Linux, **specifically a Ubuntu-based distribution**, no matter if it is a complete distro or a WSL. Solutions in C (only the first problem of each topic) and C++ are also included , so to use this repository you must have installed:
+
+To compile C and C++ you need to install `gcc` and `g++` 
 
 - gcc
 - g++
@@ -65,7 +67,7 @@ sudo apt-get update && \
     sudo apt install build-essential -y
 ```
 
-If you want use this repository with C# then you should install .NET 7 or Mono compiler
+If you want use this repository with C# then you should install `Mono compiler` or `dotnet-sdk-7.0`
 
 - mono-devel
 - dotnet-sdk-7.0
