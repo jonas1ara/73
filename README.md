@@ -55,7 +55,6 @@ The repository is divided into 4 folders:
 
 The focus of this repository is towards C++, so you can use this repository from Windows with MSVC or WSL and Mac with clang compiler but it is intended to be used on Linux, **specifically a Ubuntu-based distribution**, by the script 'Setup.sh' and the file 'tasks.json' that configures the compilation task in Visual Studio Code, no matter if it is a complete distro or a WSL, the important thing is that you have installed:
 
-
 - gcc
 - g++
 - libstdc++-dev
@@ -67,11 +66,17 @@ sudo apt-get update && \
     sudo apt install build-essential -y
 ```
 
-If you want use this repository with C# then you should install .NET 7, to install .NET on Ubuntu you can type:
+If you want use this repository with C# then you should install .NET 7 or Mono compiler
+
+- mono-devel
+- dotnet-sdk-7.0
+
+To install .NET on Ubuntu you can type:
+
 
 ```bash
 sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-7.0
+  sudo apt-get install dotnet-sdk-7.0 mono-devel -y
 ```
 
 **Note: Solutions are included in C#, but the problems are explained in C++ and only specific comments are made about the implementation in C#**
