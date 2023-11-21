@@ -266,7 +266,6 @@ sudo apt-get update && \
 - [Using C# Source Generators to Build a .NET IoT Device - Alon Fliess - NDC Melbourne 2022](https://www.youtube.com/watch?v=ifx_7daOzZw)
 - [Patterns for application development with ASP.NET Core - Damian Edwards & David Fowler](https://www.youtube.com/watch?v=x-C-CNBVTaY)
 - [Performance tricks I learned from contributing to open source .NET packages - Daniel Marbach](https://www.youtube.com/watch?v=pGgsFW7kDKI)
-
 - [Real-world examples on optimizing .NET performance - Stefán Jökull Sigurðarson - NDC Oslo 2023](https://www.youtube.com/watch?v=545Nj0_BuzA)
 
 ## References 📚
