@@ -280,4 +280,4 @@ _Cormen, T. H., Leiserson, C. E., Rivest, R. L. & Stein, C. (2009). [Introductio
 
 ## Acknowledgments 🎁
 
-_Written with ❤️ [Jonas Lara](https://twitter.com/jonas1ara) for anyone who is interested_
+_Written with ❤️ by [Jonas Lara](https://twitter.com/jonas1ara) for anyone who is interested_
