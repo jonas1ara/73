@@ -1,31 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ContainerWithMostWater
+// Using two pointers technique - Time: O(n)
+
+public class Solution
 {
-    public class Solution 
+    public int MaxArea(int[] height)
     {
-        public int MaxArea(int[] height)
+        int ans = 0, left = 0, right = height.Length - 1;
+
+        while (left < right)
         {
-            int ans = 0, L = 0, R = height.Length - 1;
-            while (L < R)
+            ans = Math.Max(ans, (right - left) * Math.Min(height[left], height[right]));
+            if (height[left] < height[right])
+                left++; // Move the smaller edge
+            else
+                right--; // Move the larger edge
+        }
+
+        return ans;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] height = new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+
+        // Print intput
+        Console.Write("Input: height = [");
+        foreach (int h in height)
+        {
+            Console.Write(h + "");
+            if (h != height[height.Length - 1])
             {
-                ans = Math.Max(ans, (R - L) * Math.Min(height[L], height[R]));
-                if (height[L] < height[R]) L++; // Move the smaller edge
-                else R--;
+                Console.Write(", ");
             }
-            return ans;
-        }
-        public static void Main(String[] args)
-        {
-            int[] height = new int[] {1,8,6,2,5,4,8,3,7};
-
-            Console.WriteLine("Input: height = [" + string.Join(" ", height) + "]"); 
-
-            int ans = new Solution().MaxArea(height);
-            Console.WriteLine("Output: " + ans);
-
 
         }
-    }   
+        Console.WriteLine("]");
+
+        Solution solution = new Solution();
+        int maxArea = solution.MaxArea(height);
+
+        // Print output
+        Console.WriteLine("Output: " + maxArea);
+    }
 }
