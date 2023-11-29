@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using two pointers technique - Time: O(N^2)
+
 public class Solution
 {
     public IList<IList<int>> ThreeSum(int[] nums)
@@ -61,19 +63,38 @@ public class Solution
         }
         return result;
     }
+}
 
-    public static void Main(string[] args)
+
+class Program
+{
+    static void Main(string[] args)
     {
-        int[] nums = new int[] { -1, 0, 1, 2, -1, -4 };
+        int[] nums = { -1, 0, 1, 2, -1, -4 };
 
-        Console.WriteLine("Input: nums = [" + string.Join(" ", nums) + "]");
+        // Print input
+        Console.Write("Input: nums = [");
+        foreach (int num in nums)
+        {
+            Console.Write(num + "");
+            if (num != nums[nums.Length - 1])
+            {
+                Console.Write(", ");
+            }
+        }
+        Console.WriteLine("]");
 
-        IList<IList<int>> ans = new Solution().ThreeSum(nums);
+        IList<IList<int>> result = new Solution().ThreeSum(nums);
 
+        // Print output
         Console.Write("Output: [");
-        foreach (IList<int> list in ans)
+        foreach (IList<int> list in result)
         {
             Console.Write("[" + string.Join(" ", list) + "]");
+            if (list != result[result.Count - 1])
+            {
+                Console.Write(", ");
+            }
         }
         Console.WriteLine("]");
     }

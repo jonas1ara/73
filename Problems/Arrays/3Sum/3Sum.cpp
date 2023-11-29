@@ -1,8 +1,9 @@
-﻿#include "../../../Libraries/ArrayPrinter.h"
-#include <algorithm>
+﻿#include <algorithm>
 #include <iostream>
 #include <vector>
 #include <map>
+
+// Using two pointers technique - Time: O(N^2)
 
 class Solution {
 public:
@@ -65,11 +66,41 @@ public:
 
 int main()
 {
-    std::vector<int> array = {-1, 0, 1, 2, -1, -4};
+    std::vector<int> nums = {-1, 0, 1, 2, -1, -4};
+
+    // Print input
+    std::cout << "Input: nums =[";
+
+    for (const auto &num : nums)
+    {
+        std::cout << num << ", ";
+        if (num == nums.back())
+        {
+            std::cout << "\b\b";
+        }
+    }
+    std::cout << "]" << std::endl;
+
     Solution sol;
 
-    printArray(array);
-    printVV(sol.threeSum(array));
+    std::vector<std::vector<int>> result = sol.threeSum(nums);
+
+    // Print output
+    std::cout << "Output:" ;
+    for (const auto &vec : result)
+    {
+        std::cout << "[";
+        for (const auto &num : vec)
+        {
+            std::cout << num << ", ";
+            if (num == vec.back())
+            {
+                std::cout << "\b\b";
+            }
+        }
+        std::cout << "]" ;
+    }
+    std::cout << std::endl;
 
     return 0;
 }
