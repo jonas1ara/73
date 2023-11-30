@@ -51,12 +51,12 @@ class Program
     {
         int[] nums = { 2, 3, -2, 4 };
 
-        // Print input
+        // Print intput
         Console.Write("Input: nums = [");
-        for (int i = 0; i < nums.Length; i++)
+        foreach (int n in nums)
         {
-            Console.Write(nums[i] + "");
-            if (i < nums.Length - 1)
+            Console.Write(n + "");
+            if (n != nums[nums.Length - 1])
             {
                 Console.Write(", ");
             }
@@ -67,6 +67,6 @@ class Program
         int result = sol.MaxProduct(nums);
 
         // Print output
-        Console.WriteLine("Output " + result);
+        Console.WriteLine("Output: " + result);
     }
 }
