@@ -96,7 +96,7 @@ sudo apt-get update && \
 |0121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Best-Time-to-Buy-and-Sell-Stock)|Medium|
 |0152|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Maximum-Product-Subarray)|Medium|
 |0153|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Find-Minimum-in-Rotated-Sorted-Array)|Medium|
-|**0217**|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Contains-Duplicate)|Easy|
+|0217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Contains-Duplicate)|Easy|
 |**0238**|[Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Product-of-Array-Except-Self)|Easy|
 
 
