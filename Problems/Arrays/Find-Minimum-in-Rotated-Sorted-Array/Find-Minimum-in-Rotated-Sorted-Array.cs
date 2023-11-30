@@ -30,7 +30,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        int[] nums = {1, 3, 4, 5, 1, 2 };
+        int[] nums = {3, 4, 5, 1, 2 };
 
         // Print intput
         Console.Write("Input: nums = [");
