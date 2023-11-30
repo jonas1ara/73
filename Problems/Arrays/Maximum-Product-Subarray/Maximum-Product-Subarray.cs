@@ -1,4 +1,7 @@
 ﻿using System;
+
+// Using two pointers technique - Time O(n)
+
 public class Solution
 {
     public int MaxProduct(int[] nums)
@@ -14,7 +17,7 @@ public class Solution
 
             while (j < N && nums[j] != 0)
             {
-                prod *= nums[j++];
+                prod *= nums[j++]; // prod = prod * nums[j]
                 ans = Math.Max(ans, prod);
             }
 
@@ -34,16 +37,36 @@ public class Solution
 
             while (j < N && nums[j] == 0)
             {
-                ++j;
+                j++;
             }
         }
 
         return ans;
     }
+}
 
+class Program
+{
     public static void Main(string[] args)
     {
-        int[] nums = new int[] { 2, 3, -2, 4 };
-        Console.WriteLine(new Solution().MaxProduct(nums));
+        int[] nums = { 2, 3, -2, 4 };
+
+        // Print input
+        Console.Write("Input: nums = [");
+        for (int i = 0; i < nums.Length; i++)
+        {
+            Console.Write(nums[i] + "");
+            if (i < nums.Length - 1)
+            {
+                Console.Write(", ");
+            }
+        }
+        Console.WriteLine("]");
+
+        Solution sol = new Solution();
+        int result = sol.MaxProduct(nums);
+
+        // Print output
+        Console.WriteLine("Output " + result);
     }
 }
