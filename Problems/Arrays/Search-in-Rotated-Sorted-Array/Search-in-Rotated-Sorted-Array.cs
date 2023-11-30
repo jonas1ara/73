@@ -1,4 +1,7 @@
 ﻿using System;
+
+// Using binary search technique - Time: O(log n)
+
 public class Solution
 {
     public int Search(int[] nums, int target)
@@ -6,41 +9,60 @@ public class Solution
         if (nums.Length == 0)
             return -1;
 
-        int N = nums.Length;
-        int L = 0, R = N - 1, pivot;
+        int n = nums.Length, left = 0, right = n - 1, pivot;
 
-        while (L < R)
+        while (left < right)
         {
-            int M = L + (R - L) / 2;
-            if (nums[M] < nums[R])
-                R = M;
-            else
-                L = M + 1;
-        }
-        pivot = L;
-        L = 0;
-        R = N - 1;
+            int m = left + (right - left) / 2; // m is the index of the middle element
 
-        while (L <= R)
+            if (nums[m] < nums[right])
+                right = m;
+            else
+                left = m + 1;
+        }
+        pivot = left;
+        left = 0;
+        right = n - 1;
+
+        while (left <= right)
         {
-            int M = L + (R - L) / 2;
-            int MM = (M + pivot) % N;
+            int m = left + (right - left) / 2;
+            int mm = (m + pivot) % n; // mm is the index of the middle element in the rotated array
 
-            if (nums[MM] == target)
-                return MM;
-            if (target > nums[MM])
-                L = M + 1;
+            if (nums[mm] == target)
+                return mm;
+            if (target > nums[mm])
+                left = m + 1;
             else
-                R = M - 1;
+                right = m - 1;
         }
+
         return -1;
     }
-    public static void Main(string[] args)
+}
+
+class Program
+{
+    static void Main(string[] args)
     {
         int[] nums = { 4, 5, 6, 7, 0, 1, 2 };
-        int target = 0;
+        int target = 3;
+
+        // Print input
+        Console.Write("Input: nums = [");
+        foreach (int num in nums)
+        {
+            Console.Write(num + "");
+            if (num != nums[nums.Length - 1])
+                Console.Write(",");
+        }
+        Console.WriteLine("]");
+
         Solution sol = new Solution();
-        Console.WriteLine(sol.Search(nums, target));
+        int result = sol.Search(nums, target);
+
+        // Print output
+        Console.WriteLine("Output: " + result);
     }
 }
 

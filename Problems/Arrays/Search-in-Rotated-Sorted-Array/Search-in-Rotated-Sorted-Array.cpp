@@ -1,6 +1,7 @@
-#include "../../../Libraries/ArrayPrinter.h"
 #include <iostream>
 #include <vector>
+
+// Using binary search technique - Time: O(log n)
 
 class Solution {
 public:
@@ -8,28 +9,35 @@ public:
     {
         if (nums.empty())
             return -1;
-        int N = nums.size(), L = 0, R = N - 1, pivot;
-        while (L < R)
+
+        int n = nums.size(), left = 0, right = n - 1, pivot;
+        
+        while (left < right)
         {
-            int M = L + (R - L) / 2;
-            if (nums[M] < nums[R])
-                R = M;
+            int m = left + (right - left) / 2; // m is the index of the middle element
+            if (nums[m] < nums[right])
+                right = m;
             else
-                L = M + 1;
+                left = m + 1;
         }
-        pivot = L;
-        L = 0, R = N - 1;
-        while (L <= R)
+        
+        pivot = left;
+        left = 0, right = n - 1;
+
+        while (left <= right)
         {
-            int M = L + (R - L) / 2;
-            int MM = (M + pivot) % N;
-            if (nums[MM] == target)
-                return MM;
-            if (target > nums[MM])
-                L = M + 1;
+            int m = left + (right - left) / 2; 
+            int mm = (m + pivot) % n; // mm is the index of the middle element in the rotated array
+            
+            if (nums[mm] == target)
+                return mm;
+
+            if (target > nums[mm])
+                left = m + 1;
             else
-                R = M - 1;
+                right = m - 1;
         }
+
         return -1;
     }
 };
@@ -39,9 +47,21 @@ int main()
     std::vector<int> nums = {4, 5, 6, 7, 0, 1, 2};
     int target = 3;
 
-    Solution sol;
+    // Print input
+    std::cout << "Input: nums = [";
+    for (const auto &num : nums)
+    {
+        std::cout << num << "";
+        if (&num != &nums.back())
+            std::cout << ", ";
+    }
+    std::cout << "]" << std::endl;
 
+    Solution sol;
     int result = sol.search(nums, target);
 
-    std::cout << result << std::endl;
+    // Print output
+    std::cout << "Output: " << result << std::endl;
+
+    return 0;
 }
