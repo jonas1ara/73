@@ -45,7 +45,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        int[] nums = { 4, 5, 6, 7, 0, 1, 2 };
+        int[] nums = { 1, 4, 5, 6, 7, 0, 1, 2 };
         int target = 3;
 
         // Print input
@@ -54,7 +54,7 @@ class Program
         {
             Console.Write(num + "");
             if (num != nums[nums.Length - 1])
-                Console.Write(",");
+                Console.Write(", ");
         }
         Console.WriteLine("]");
 
