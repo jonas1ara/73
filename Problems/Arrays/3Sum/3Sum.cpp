@@ -99,9 +99,11 @@ int main()
                 std::cout << "\b\b";
             }
         }
-        std::cout << "]" ;
+        if (vec == result.back()) 
+                std::cout << "] \n" ;
+        else
+                std::cout << "], " ;
     }
-    std::cout << std::endl;
 
     return 0;
 }
