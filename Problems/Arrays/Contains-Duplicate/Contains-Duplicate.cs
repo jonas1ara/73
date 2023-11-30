@@ -18,12 +18,12 @@ class Program
     {
         int[] nums = {1, 2, 3, 1};
 
-        // Print intput
+        // Print input
         Console.Write("Input: nums = [");
-        foreach (int n in nums)
+        for (int i = 0; i < nums.Length; i++)
         {
-            Console.Write(n + "");
-            if (n != nums[nums.Length - 1])
+            Console.Write(nums[i] + "");
+            if (i < nums.Length - 1)
             {
                 Console.Write(", ");
             }
