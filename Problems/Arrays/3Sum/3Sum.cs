@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Using two pointers technique - Time: O(N^2)
+// Using two pointers technique - Time: O(n^2)
 
 public class Solution
 {
