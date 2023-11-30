@@ -1,31 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Using hash table - Time: O(n)
+
 #define SIZE 10000
 
-// Fuerza Bruta O(n²)
-// int* twoSum(int* nums, int numsSize, int target, int* returnSize) 
-// {
-//     for (int i = 0; i < numsSize - 1; i++) 
-//     {
-//         for (int j = i + 1; j < numsSize; j++) 
-//         {
-//             if (nums[i] + nums[j] == target) 
-//             {
-//                 int* result = (int*) malloc(2 * sizeof(int));
-//                 result[0] = i;
-//                 result[1] = j;
-//                 *returnSize = 2;
-//                 return result;
-//             }
-//         }
-//     }
-//     *returnSize = 0;
-
-//     return NULL;
-// }
-
-// Hash Map O(n)
 typedef struct
 {
     int key;
@@ -78,31 +57,33 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
     HashMap *map = createHashMap();
     for (int i = 0; i < numsSize; i++)
     {
-        int complement = target - nums[i];
-        int complementIndex = search(map, complement);
-        if (complementIndex != -1)
+        int t = target - nums[i];
+        int searchIndex = search(map, t);
+
+        //If the hash table contains the key, return the index and the current index
+        if (searchIndex != -1)
         {
             int *result = (int *)malloc(2 * sizeof(int));
-            result[0] = complementIndex;
+            result[0] = searchIndex;
             result[1] = i;
             *returnSize = 2;
             return result;
         }
         insert(map, nums[i], i);
     }
+
+    //If the sum has no solution, return the empty array
     *returnSize = 0;
-    return NULL;
+    return NULL; 
 }
 
 int main()
 {
     int nums[] = {2, 7, 11, 15};
-    
     int target = 9;
     int returnSize;
 
-
-    // Mostrar el arreglo
+    // Print input 
     printf("Input: nums = [");
     for (int i = 0; i < sizeof(nums) / sizeof(nums[0]); i++)
     {
@@ -111,6 +92,7 @@ int main()
     printf("], target = %d\n", target);
 
     int *result = twoSum(nums, sizeof(nums) / sizeof(nums[0]), target, &returnSize);
+
     if (result != NULL)
     {
         printf("Output: [%d, %d]\n", result[0], result[1]);
@@ -118,7 +100,8 @@ int main()
     }
     else
     {
-        printf("No se encontraron dos números que sumen el objetivo.\n");
+        printf("Output: []\n");
     }
+
     return 0;
 }
