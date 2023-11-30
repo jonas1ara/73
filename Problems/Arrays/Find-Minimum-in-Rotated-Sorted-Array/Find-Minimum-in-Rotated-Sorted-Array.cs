@@ -30,14 +30,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        int[] nums = { 3, 4, 5, 1, 2 };
+        int[] nums = {1, 3, 4, 5, 1, 2 };
 
-        // Print input
+        // Print intput
         Console.Write("Input: nums = [");
-        for (int i = 0; i < nums.Length; i++)
+        foreach (int n in nums)
         {
-            Console.Write(nums[i] + "");
-            if (i < nums.Length - 1)
+            Console.Write(n + "");
+            if (n != nums[nums.Length - 1])
             {
                 Console.Write(", ");
             }
@@ -48,6 +48,6 @@ class Program
         int result = sol.FindMin(nums);
 
         // Print output
-        Console.WriteLine("Output " + result);
+        Console.WriteLine("Output: " + result);
     }
 }
