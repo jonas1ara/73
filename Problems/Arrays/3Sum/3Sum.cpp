@@ -70,7 +70,7 @@ int main()
     std::vector<int> nums = {-1, 0, 1, 2, -1, -4};
 
     // Print input
-    std::cout << "Input: nums =[";
+    std::cout << "Input: nums = [";
 
     for (const auto &num : nums)
     {
@@ -87,10 +87,14 @@ int main()
     std::vector<std::vector<int>> result = sol.threeSum(nums);
 
     // Print output
-    std::cout << "Output:" ;
+    std::cout << "Output: " ;
     for (const auto &vec : result)
     {
-        std::cout << "[";
+        if (vec == result.front())
+            std::cout << "[[";
+        else
+            std::cout << "[";
+
         for (const auto &num : vec)
         {
             std::cout << num << ", ";
@@ -100,7 +104,7 @@ int main()
             }
         }
         if (vec == result.back()) 
-                std::cout << "] \n" ;
+                std::cout << "]] \n" ;
         else
                 std::cout << "], " ;
     }
