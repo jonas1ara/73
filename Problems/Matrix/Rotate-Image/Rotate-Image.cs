@@ -1,12 +1,16 @@
 ﻿using System;
+
+// Using in-place algorithm - Time: O(n^2)
 public class Solution
 {
     public void Rotate(int[][] matrix)
     {
         int n = matrix.Length;
 
+        // Transpose matrix
         for (int i = 0; i < n / 2; i++)
         {
+            // Swap rows to rotate clockwise
             for (int j = i; j < n - i - 1; j++)
             {
                 int tmp = matrix[i][j];
@@ -23,15 +27,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Jagged array
+        Solution sol = new Solution();
+
         int[][] matrix = {
             new int[] { 1, 2, 3 },
             new int[] { 4, 5, 6 },
             new int[] { 7, 8, 9 }
         };
 
-        Console.WriteLine("Before rotate:");
-
+        Console.WriteLine("Input: matrix =");
         foreach (int[] row in matrix)
         {
             foreach (int col in row)
@@ -40,10 +44,11 @@ class Program
             }
             Console.WriteLine();
         }
+        Console.WriteLine();
+        
+        sol.Rotate(matrix);
 
-        Console.WriteLine("After rotate:");
-
-        new Solution().Rotate(matrix);
+        Console.WriteLine("Output: ");  
         foreach (int[] row in matrix)
         {
             foreach (int col in row)
