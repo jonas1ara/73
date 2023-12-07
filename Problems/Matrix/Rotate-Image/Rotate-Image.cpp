@@ -27,9 +27,11 @@ public:
 
 int main()
 {
-    std::vector<std::vector<int>> matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-
-    Solution sol;
+    std::vector<std::vector<int>> matrix = {
+        {1, 2, 3}, 
+        {4, 5, 6}, 
+        {7, 8, 9}
+    };
 
     std::cout << "Input: matrix =" << std::endl;
     for (auto row : matrix)
@@ -42,6 +44,7 @@ int main()
     }
     std::cout << std::endl;
 
+    Solution sol;
     sol.rotate(matrix);
 
     std::cout << "Output: " << std::endl;

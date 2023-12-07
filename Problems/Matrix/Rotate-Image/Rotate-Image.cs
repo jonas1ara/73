@@ -27,8 +27,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Solution sol = new Solution();
-
         int[][] matrix = {
             new int[] { 1, 2, 3 },
             new int[] { 4, 5, 6 },
@@ -46,6 +44,7 @@ class Program
         }
         Console.WriteLine();
         
+        Solution sol = new Solution();
         sol.Rotate(matrix);
 
         Console.WriteLine("Output: ");  
