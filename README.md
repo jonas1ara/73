@@ -104,9 +104,9 @@ sudo apt-get update && \
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0048**|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Rotate-Image)|Medium|
-|**0054**|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Spiral-Matrix)|Medium|
-|**0073**|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Set-Matrix-Zeroes)|Medium|
+|0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Rotate-Image)|Medium|
+|0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Spiral-Matrix)|Medium|
+|0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Set-Matrix-Zeroes)|Medium|
 |**0079**|[Word Search](https://leetcode.com/problems/word-search/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Word-Search)|Medium|
 
 
