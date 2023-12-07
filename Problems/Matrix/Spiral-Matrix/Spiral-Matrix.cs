@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using spiral iterative traversals - Time: O(m⋅n)
 public class Solution
 {
     public IList<int> SpiralOrder(int[][] matrix)
@@ -11,56 +12,68 @@ public class Solution
         }
 
         List<int> ans = new List<int>();
-        int M = matrix.Length, N = matrix[0].Length;
-        for (int i = 0; ans.Count < M * N; ++i)
+
+        int m = matrix.Length; 
+        int n = matrix[0].Length;
+
+        for (int i = 0; ans.Count < m * n; i++)
         {
-            for (int j = i; j < N - i; ++j)
+            for (int j = i; j < n - i; j++)
             {
                 ans.Add(matrix[i][j]);
             }
 
-            for (int j = i + 1; j < M - i; ++j)
+            for (int j = i + 1; j < m - i; j++)
             {
-                ans.Add(matrix[j][N - i - 1]);
+                ans.Add(matrix[j][n - i - 1]);
             }
 
-            if (M - i - 1 != i)
+            if (m - i - 1 != i)
             {
-                for (int j = N - i - 2; j >= i; --j)
+                for (int j = n - i - 2; j >= i; j--)
                 {
-                    ans.Add(matrix[M - i - 1][j]);
+                    ans.Add(matrix[m - i - 1][j]);
                 }
             }
 
-            if (N - i - 1 != i)
+            if (n - i - 1 != i)
             {
-                for (int j = M - i - 2; j > i; --j)
+                for (int j = m - i - 2; j > i; j--)
                 {
                     ans.Add(matrix[j][i]);
                 }
             }
         }
+
         return ans;
     }
+}
 
-    public  static void Main(string [] args)
+class Program
+{
+    static void Main(string [] args)
     {
-        Console.WriteLine("Spiral Matrix");
         int[][] matrix = new int[][] {
             new int[] { 1, 2, 3 },
             new int[] { 4, 5, 6 },
             new int[] { 7, 8, 9 }
         };
-        Console.WriteLine("matrix = ");
-        for (int i = 0; i < matrix.Length; ++i)
+
+        Console.WriteLine("Input: matrix =");
+        for (int i = 0; i < matrix.Length; i++)
         {
-            Console.WriteLine(string.Join(", ", matrix[i]));
+            for (int j = 0; j < matrix[0].Length; j++)
+            {
+                Console.Write(matrix[i][j] + " ");
+            }
+            Console.WriteLine();
         }
+        Console.WriteLine();
 
-        IList<int> ans = new Solution().SpiralOrder(matrix);
+        Solution sol = new Solution();
+        IList<int> ans = sol.SpiralOrder(matrix);
 
-        Console.WriteLine("ans = " + string.Join(", ", ans));
-
+        Console.WriteLine("Output: " + string.Join(", ", ans));
     }
 }
 
