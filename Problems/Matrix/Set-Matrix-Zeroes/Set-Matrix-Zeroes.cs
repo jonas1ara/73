@@ -1,26 +1,28 @@
 ﻿using System;
+
+// Using in-place algorithm - Time: O(m⋅n)
 public class Solution
 {
     public void SetZeroes(int[][] matrix)
     {
-        int M = matrix.Length;
-        int N = matrix[0].Length;
+        int m = matrix.Length;
+        int n = matrix[0].Length;
 
-        bool[] row = new bool[M];
-        bool[] col = new bool[N];
+        bool[] row = new bool[m];
+        bool[] col = new bool[n];
 
-        for (int i = 0; i < M; ++i)
+        for (int i = 0; i < m; i++)
         {
-            for (int j = 0; j < N; ++j)
+            for (int j = 0; j < n; j++)
             {
                 row[i] = row[i] || matrix[i][j] == 0;
                 col[j] = col[j] || matrix[i][j] == 0;
             }
         }
 
-        for (int i = 0; i < M; ++i)
+        for (int i = 0; i < m; i++)
         {
-            for (int j = 0; j < N; ++j)
+            for (int j = 0; j < n; j++)
             {
                 if (row[i] || col[j])
                 {
@@ -29,20 +31,19 @@ public class Solution
             }
         }
     }
+}
 
-    public static void Main(string[] args)
+class Program
+{
+    static void Main(string[] args)
     {
-        // Crear una instancia de la clase Solution
-        Solution solution = new Solution();
-
-        // Definir una matriz de ejemplo
-        int[][] matrix = new int[][]
-        {
+        int[][] matrix = new int[][] {
             new int[] { 1, 2, 3 },
             new int[] { 4, 0, 6 },
             new int[] { 7, 8, 9 }
         };
 
+        Console.WriteLine("Input: matrix =");
         for (int i = 0; i < matrix.Length; i++)
         {
             for (int j = 0; j < matrix[0].Length; j++)
@@ -51,13 +52,12 @@ public class Solution
             }
             Console.WriteLine();
         }
-        
         Console.WriteLine();
 
-        // Llamar al método SetZeroes para establecer los ceros
-        solution.SetZeroes(matrix);
+        Solution sol = new Solution();
+        sol.SetZeroes(matrix);
 
-        // Imprimir la matriz modificada
+        Console.WriteLine("Output: ");
         for (int i = 0; i < matrix.Length; i++)
         {
             for (int j = 0; j < matrix[0].Length; j++)
