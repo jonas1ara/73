@@ -1,14 +1,17 @@
 ﻿using System;
 
+// Using hash map - Time: O(n)
 public class Solution
 {
     public int LengthOfLongestSubstring(string s)
     {
-        if (string.IsNullOrEmpty(s)) return 0;
+        if (string.IsNullOrEmpty(s))
+            return 0;
 
         var map = new Dictionary<int, int>();
         var maxLen = 0;
         var lastRepeatPos = -1;
+
         for (int i = 0; i < s.Length; i++)
         {
             if (map.ContainsKey(s[i]) && lastRepeatPos < map[s[i]])
@@ -20,14 +23,20 @@ public class Solution
 
         return maxLen;
     }
+}
 
-    public static void Main(string[] args) {
+class Program
+{
+    static void Main(string[] args)
+    {
+
+        string input = "abcabcbb";
+        Console.WriteLine("Input: " + input);
+
         Solution solution = new Solution();
-        string input = "abcabcbb"; // Cambia la cadena de entrada según tus necesidades
-
         int result = solution.LengthOfLongestSubstring(input);
 
-        Console.WriteLine("Longitud de la subcadena más larga sin caracteres repetidos: " + result);
+        Console.WriteLine("Output: " + result);
     }
 }
 

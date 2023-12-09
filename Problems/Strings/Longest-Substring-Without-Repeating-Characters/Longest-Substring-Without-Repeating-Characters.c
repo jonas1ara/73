@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+// Using hash map - Time: O(n)
+
 int lengthOfLongestSubstring(char *s)
 {
     if (s == NULL || *s == '\0')
@@ -8,9 +10,9 @@ int lengthOfLongestSubstring(char *s)
 
     int map[256];
     memset(map, -1, sizeof(map));
-
     int maxLen = 0;
     int lastRepeatPos = -1;
+
     for (int i = 0; i < strlen(s); i++)
     {
         if (map[s[i]] != -1 && lastRepeatPos < map[s[i]])
@@ -25,11 +27,12 @@ int lengthOfLongestSubstring(char *s)
 
 int main()
 {
-    char *input = "abcabcbb"; // Cambia la cadena de entrada según tus necesidades
+    char *input = "abcabcbb"; 
+    printf("Input: %s\n", input);
 
     int result = lengthOfLongestSubstring(input);
 
-    printf("Longitud de la subcadena más larga sin caracteres repetidos: %d\n", result);
+    printf("Output: %d\n", result);
 
     return 0;
 }

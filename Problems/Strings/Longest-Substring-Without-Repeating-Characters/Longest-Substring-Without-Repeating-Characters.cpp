@@ -2,8 +2,9 @@
 #include <string>
 #include <unordered_map>
 
-class Solution
-{
+// Using hash map - Time: O(n)
+
+class Solution {
 public:
     int lengthOfLongestSubstring(std::string s)
     {
@@ -13,6 +14,7 @@ public:
         std::unordered_map<char, int> map;
         int maxLen = 0;
         int lastRepeatPos = -1;
+
         for (int i = 0; i < s.length(); i++)
         {
             if (map.find(s[i]) != map.end() && lastRepeatPos < map[s[i]])
@@ -26,13 +28,16 @@ public:
     }
 };
 
-int main() {
-    Solution solution;
-    std::string input = "abcabcbb"; // Cambia la cadena de entrada según tus necesidades
+int main() 
+{    
+    std::string input = "abcabcbb";
 
+    std::cout << "Input: " << input << std::endl;
+    
+    Solution solution;
     int result = solution.lengthOfLongestSubstring(input);
 
-    std::cout << "Longitud de la subcadena más larga sin caracteres repetidos: " << result << std::endl;
+    std::cout << "Output: " << result << std::endl;
 
     return 0;
 }
