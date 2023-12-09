@@ -63,7 +63,7 @@ To compile C and C++ you need to install `gcc` and `g++`
 To install them on Ubuntu you can type:
 
 ```bash
-sudo apt-get update && \
+sudo apt update && \
     sudo apt install build-essential -y
 ```
 
@@ -93,7 +93,7 @@ sudo apt update
 sudo apt install dotnet-sdk-8.0 -y
 ```
 
-**Note: Solutions are included in C++ and C#**
+**Note: When using a package manager to manage your installation of .NET, you may run into a conflict if you've previously installed a preview release, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/remove-runtime-sdk-versions?pivots=os-linux#uninstall-net).**
 
 ## Index 📖
 
