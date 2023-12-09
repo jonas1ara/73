@@ -67,17 +67,31 @@ sudo apt-get update && \
     sudo apt install build-essential -y
 ```
 
-If you want use this repository with C# then you should install `Mono compiler` or `dotnet-sdk-7.0`
+If you want use this repository with C# then you should install `dotnet-sdk-8.0`
 
-- mono-devel
-- dotnet-sdk-7.0
+- dotnet-sdk-8.0
 
-To install them on Ubuntu you can type:
-
+At this time the .NET 8 is not available from Ubuntu feed, so you have to install it from Microsoft feed, to install them on Ubuntu you can copy and paste the following commands:
 
 ```bash
-sudo apt-get update && \
-  sudo apt-get install dotnet-sdk-7.0 mono-devel -y
+# Get Ubuntu version
+declare repo_version=$(if command -v lsb_release &> /dev/null; then lsb_release -r -s; else grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"'; fi)
+
+# Download Microsoft signing key and repository
+wget https://packages.microsoft.com/config/ubuntu/$repo_version/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+
+# Install Microsoft signing key and repository
+sudo dpkg -i packages-microsoft-prod.deb
+
+# Clean up
+rm packages-microsoft-prod.deb
+
+# Update packages
+sudo apt update
+```
+
+```bash
+sudo apt install dotnet-sdk-8.0 -y
 ```
 
 **Note: Solutions are included in C++ and C#**
