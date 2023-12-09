@@ -127,7 +127,7 @@ sudo apt install dotnet-sdk-8.0 -y
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0003**|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Longest-Substring-Without-Repeating-Characters)|Medium|
+|0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Longest-Substring-Without-Repeating-Characters)|Medium|
 |**0005**|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Longest-Palindromic-Substring)|Medium|
 |**0020**|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Valid-Parentheses)|Easy|
 |**0049**|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Group-Anagrams)|Medium|
