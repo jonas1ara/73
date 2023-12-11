@@ -4,10 +4,12 @@ public class Solution
 {
     public string LongestPalindrome(string s)
     {
-        if (string.IsNullOrWhiteSpace(s) || s.Length == 1) return s;
+        if (string.IsNullOrWhiteSpace(s) || s.Length == 1) 
+            return s;
 
         int n2 = s.Length * 2 + 1;
         var s2 = new char[n2];
+
         for (int i = 0; i < s.Length; i++)
         {
             s2[i * 2] = '#';
@@ -40,14 +42,18 @@ public class Solution
         var range = p[longestCenter];
         return s.Substring((longestCenter - range) / 2, range);
     }
+}
 
-    public static void Main(string[] args)
+class Program
+{
+    static void Main(string[] args)
     {
-        Solution solution = new Solution();
-        string input = "babad"; // Cambia la cadena de entrada según tus necesidades
+        string input = "babad"; 
+        Console.WriteLine("Input: s = " + input);
 
-        string result = solution.LongestPalindrome(input);
+        Solution sol = new Solution();
+        string result = sol.LongestPalindrome(input);
 
-        Console.WriteLine("La subcadena palindrómica más larga es: " + result);
+        Console.WriteLine("Output: " + result);
     }
 }
