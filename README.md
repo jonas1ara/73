@@ -133,7 +133,7 @@ sudo apt install dotnet-sdk-8.0 -y
 |0049|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Group-Anagrams)|Medium|
 |0076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Minimum-Window-Substring)|Hard|
 |0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Valid-Palindrome)|Easy|
-|**0242**|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Valid-Anagram)|Easy|
+|0242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Valid-Anagram)|Easy|
 |**0271**|[Encode and Decode Strings](https://www.lintcode.com/problem/659/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Encode-and-Decode-Strings)|Medium|   
 |**0424**|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Longest-Repeating-Character-Replacement)|Medium|
 |**0647**|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Palindromic-Substrings)|Medium|
