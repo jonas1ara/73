@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <string>
 
+// Using an array - Time: O(n)
+
 class Solution {
 public:
     bool isAnagram(std::string s, std::string t)

@@ -1,5 +1,6 @@
 ﻿using System;
 
+// Using an array - Time: O(n)
 public class Solution
 {
     public bool IsAnagram(string s, string t)
