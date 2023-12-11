@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using string manipulation - Time: O(n)
 public class Solution
 {
     public string Encode(List<string> strs)
@@ -20,25 +21,25 @@ public class Solution
         return ans;
     }
 
-    public List<string> Decode(string s)
+    public List<string> Decode(string str)
     {
         List<string> ans = new List<string>();
         int i = 0;
-        int N = s.Length;
+        int n = str.Length;
 
-        while (i < N)
+        while (i < n)
         {
-            string str = string.Empty;
+            string s = string.Empty;
 
-            for (; i < N; ++i)
+            for (; i < n; i++)
             {
-                if (s[i] != '$')
+                if (str[i] != '$')
                 {
-                    str += s[i];
+                    s += str[i];
                 }
-                else if (i + 1 < N && s[i + 1] == '$')
+                else if (i + 1 < n && str[i + 1] == '$')
                 {
-                    str += s[i++];
+                    s += str[i++];
                 }
                 else
                 {
@@ -46,28 +47,39 @@ public class Solution
                     break;
                 }
             }
-            ans.Add(str);
+            ans.Add(s);
         }
+
         return ans;
     }
 
     public static void Main(string[] args)
     {
-        Solution solution = new Solution();
-        List<string> originalStrings = new List<string> { "lint", "code", "love", "you" };
+        List<string> strs = new List<string> { "lint", "code", "love", "you" };
 
-        // Codificar las cadenas
-        string encoded = solution.Encode(originalStrings);
-        Console.WriteLine("Cadena codificada: " + encoded);
-
-        // Decodificar la cadena codificada
-        List<string> decodedStrings = solution.Decode(encoded);
-
-        // Imprimir las cadenas decodificadas
-        Console.WriteLine("Cadenas decodificadas:");
-        foreach (string str in decodedStrings)
+        Console.Write("Input: [");
+        foreach (string str in strs)
         {
-            Console.WriteLine(str);
+            Console.Write(str + " ");
+            if (str != strs[strs.Count - 1])
+                Console.Write(", ");
         }
+        Console.WriteLine("]");
+
+        Solution sol = new Solution();
+        string encoded = sol.Encode(strs);
+
+        Console.WriteLine("Encoded String: " + encoded);
+        
+        List<string> decodedStrings = sol.Decode(encoded);
+
+        Console.Write("Output: [");
+        foreach (string dstr in decodedStrings)
+        {
+            Console.Write(dstr + " ");
+            if (dstr != decodedStrings[decodedStrings.Count - 1])
+                Console.Write(", ");
+        }
+        Console.WriteLine("]");
     }
 }
