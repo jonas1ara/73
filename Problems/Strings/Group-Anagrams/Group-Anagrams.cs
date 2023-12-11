@@ -1,6 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
+
+// Using hash map - Time complexity: O(NKlogK), where N is the length of strs, and K is the maximum length of a string in strs.
 public class Solution
 {
     public IList<IList<string>> GroupAnagrams(string[] strs)
@@ -25,26 +27,34 @@ public class Solution
             ans[m[key]].Add(s);
         }
 
+        ans.Reverse();
         return ans;
     }
+}
 
-    public static void Main(string[] args)
+class Program
+{
+    static void Main(string[] args)
     {
-        Solution solution = new Solution();
-        string[] input = { "eat", "tea", "tan", "ate", "nat", "bat" }; // Cambia las cadenas de entrada según tus necesidades
+        
+        // Ejemplo de uso:
+        string[] input = { "eat", "tea", "tan", "ate", "nat", "bat" };
+        Console.Write("Input: strs = ["); 
+        Console.Write(string.Join(", ", input));
+        Console.WriteLine("]");
 
-        IList<IList<string>> result = solution.GroupAnagrams(input);
+        Solution sol = new Solution();
+        IList<IList<string>> result = sol.GroupAnagrams(input);
 
-        Console.WriteLine("Grupos de anagramas:");
-
-        foreach (IList<string> group in result)
+        Console.Write("Output: [");
+        foreach (var group in result)
         {
-            Console.Write("[ ");
-            foreach (string word in group)
+            Console.Write("[" + string.Join(", ", group) + "]");
+            if (group != result.Last())
             {
-                Console.Write(word + " ");
+                Console.Write(", ");
             }
-            Console.WriteLine("]");
         }
+        Console.WriteLine("]");
     }
 }
