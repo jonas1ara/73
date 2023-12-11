@@ -3,6 +3,8 @@
 #include <vector>
 #include <algorithm>
 
+// Using Manacher's algorithm - Time: O(n)
+
 class Solution {
 public:
     std::string longestPalindrome(std::string s)

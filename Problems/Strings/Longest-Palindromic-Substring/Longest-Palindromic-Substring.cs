@@ -1,5 +1,6 @@
 ﻿using System;
 
+// Using Manacher's algorithm - Time: O(n)
 public class Solution
 {
     public string LongestPalindrome(string s)
