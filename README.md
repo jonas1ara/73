@@ -117,113 +117,113 @@ sudo apt install dotnet-sdk-8.0 -y
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Rotate-Image)|Medium|
-|0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Spiral-Matrix)|Medium|
-|0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Set-Matrix-Zeroes)|Medium|
-|0079|[Word Search](https://leetcode.com/problems/word-search/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Matrix/Word-Search)|Medium|
+|0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Matrix/Rotate-Image)|Medium|
+|0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Matrix/Spiral-Matrix)|Medium|
+|0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Matrix/Set-Matrix-Zeroes)|Medium|
+|0079|[Word Search](https://leetcode.com/problems/word-search/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Matrix/Word-Search)|Medium|
 
 
 ### Strings
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Longest-Substring-Without-Repeating-Characters)|Medium|
-|0005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Longest-Palindromic-Substring)|Medium|
-|0020|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Valid-Parentheses)|Easy|
-|0049|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Group-Anagrams)|Medium|
-|0076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Minimum-Window-Substring)|Hard|
-|0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Valid-Palindrome)|Easy|
-|0242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Valid-Anagram)|Easy|
-|0271|[Encode and Decode Strings](https://www.lintcode.com/problem/659/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Encode-and-Decode-Strings)|Medium|   
-|0424|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Longest-Repeating-Character-Replacement)|Medium|
-|0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Palindromic-Substrings)|Medium|
+|0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Longest-Substring-Without-Repeating-Characters)|Medium|
+|0005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Longest-Palindromic-Substring)|Medium|
+|0020|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Valid-Parentheses)|Easy|
+|0049|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Group-Anagrams)|Medium|
+|0076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Minimum-Window-Substring)|Hard|
+|0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Valid-Palindrome)|Easy|
+|0242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Valid-Anagram)|Easy|
+|0271|[Encode and Decode Strings](https://www.lintcode.com/problem/659/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Encode-and-Decode-Strings)|Medium|   
+|0424|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Longest-Repeating-Character-Replacement)|Medium|
+|0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Palindromic-Substrings)|Medium|
 
 ### Intervals
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0056**|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Intervals/Merge-Intervals)|Medium|
-|**0057**|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Intervals/Insert-Interval)|Medium|
-|**0252**|[Meeting Rooms](https://www.lintcode.com/problem/920/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Intervals/Meeting-Rooms)|Easy|
-|**0253**|[Meeting Rooms II](https://www.lintcode.com/problem/919/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Intervals/Meeting-Rooms-II)|Medium|
-|**0435**|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Intervals/Non-overlapping-Intervals)|Medium|
+|**0056**|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Merge-Intervals)|Medium|
+|**0057**|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Insert-Interval)|Medium|
+|**0252**|[Meeting Rooms](https://www.lintcode.com/problem/920/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms)|Easy|
+|**0253**|[Meeting Rooms II](https://www.lintcode.com/problem/919/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms-II)|Medium|
+|**0435**|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Non-overlapping-Intervals)|Medium|
 
 ### Binary 
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0190**|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Binary/Reverse-Bits)|Easy|
-|**0191**|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Binary/Number-of-1-Bits)|Easy|
-|**0268**|[Missing Number](https://leetcode.com/problems/missing-number/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Binary/Missing-Number)|Easy|
-|**0338**|[Counting Bits](https://leetcode.com/problems/counting-bits/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Binary/Counting-Bits)|Easy|
-|**0371**|[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Binary/Sum-of-Two-Integers)|Medium|
+|**0190**|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Reverse-Bits)|Easy|
+|**0191**|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Number-of-1-Bits)|Easy|
+|**0268**|[Missing Number](https://leetcode.com/problems/missing-number/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Missing-Number)|Easy|
+|**0338**|[Counting Bits](https://leetcode.com/problems/counting-bits/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Counting-Bits)|Easy|
+|**0371**|[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Sum-of-Two-Integers)|Medium|
 
 ### Dynamic Programming
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0055**|[Jump Game](https://leetcode.com/problems/jump-game/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/Jump-Game)|Medium|
-|**0062**|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/Unique-Paths)|Medium|
-|**0070**|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/Climbing-Stairs)|Easy|
-|**0091**|[Decode Ways](https://leetcode.com/problems/decode-ways/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/Decode-Ways)|Medium|
-|**0139**|[Word Break](https://leetcode.com/problems/word-break/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/Word-Break)|Medium|
-|**0198**|[House Robber](https://leetcode.com/problems/house-robber/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/House-Robber)|Medium|
-|**0213**|[House Robber II](https://leetcode.com/problems/house-robber-ii/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/House-Robber-II)|Medium|
-|**0300**|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/Longest-Common-Subsequence)|Medium|
-|**0322**|[Coin Change](https://leetcode.com/problems/coin-change/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/Coin-Change)|Medium|
-|**0377**|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/Combination-Sum-IV)|Medium|
-|**1143**|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Dynamic-programming/Longest-Increasing-Subsequence)|Medium|
+|**0055**|[Jump Game](https://leetcode.com/problems/jump-game/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Jump-Game)|Medium|
+|**0062**|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Unique-Paths)|Medium|
+|**0070**|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Climbing-Stairs)|Easy|
+|**0091**|[Decode Ways](https://leetcode.com/problems/decode-ways/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Decode-Ways)|Medium|
+|**0139**|[Word Break](https://leetcode.com/problems/word-break/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Word-Break)|Medium|
+|**0198**|[House Robber](https://leetcode.com/problems/house-robber/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/House-Robber)|Medium|
+|**0213**|[House Robber II](https://leetcode.com/problems/house-robber-ii/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/House-Robber-II)|Medium|
+|**0300**|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Longest-Common-Subsequence)|Medium|
+|**0322**|[Coin Change](https://leetcode.com/problems/coin-change/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Coin-Change)|Medium|
+|**0377**|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Combination-Sum-IV)|Medium|
+|**1143**|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Longest-Increasing-Subsequence)|Medium|
 
 ### Linked Lists
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0019**|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Linked-lists/Remove-Nth-Node-From-End-of-List)|Medium|
-|**0021**|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Linked-lists/Merge-Two-Sorted-Lists)|Easy|
-|**0023**|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Linked-lists/Merge-k-Sorted-Lists)|Hard|
-|**0141**|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Linked-lists/Linked-List-Cycle)|Easy|
-|**0143**|[Reorder List](https://leetcode.com/problems/reorder-list/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Linked-lists/Reorder-List)|Medium|
-|**0206**|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Linked-lists/Reverse-Linked-List)|Easy|
+|**0019**|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Remove-Nth-Node-From-End-of-List)|Medium|
+|**0021**|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Merge-Two-Sorted-Lists)|Easy|
+|**0023**|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Merge-k-Sorted-Lists)|Hard|
+|**0141**|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Linked-List-Cycle)|Easy|
+|**0143**|[Reorder List](https://leetcode.com/problems/reorder-list/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Reorder-List)|Medium|
+|**0206**|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Reverse-Linked-List)|Easy|
 
 ### Trees
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0098**|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Validate-Binary-Search-Tree)|Medium|
-|**0100**|[Same Tree](https://leetcode.com/problems/same-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Same-Tree)|Easy|
-|**0102**|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Binary-Tree-Level-Order-Traversal)|Medium|
-|**0104**|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Maximum-Depth-of-Binary-Tree)|Easy|
-|**0105**|[Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal)|Medium|
-|**0124**|[Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Binary-Tree-Maximum-Path-Sum)|Hard|
-|**0208**|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Implement-Trie-Prefix-Tree)|Medium|
-|**0211**|[Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Design-Add-and-Search-Words-Data-Structure)|Medium|
-|**0212**|[Word Search II](https://leetcode.com/problems/word-search-ii/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Word-Search-II)|Hard|
-|**0226**|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Invert-Binary-Tree)|Hard|
-|**0230**|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Kth-Smallest-Element-in-a-BST)|Medium|
-|**0235**|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Lowest-Common-Ancestor-of-a-Binary-Search-Tree)|Medium|
-|**0297**|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Serialize-and-Deserialize-Binary-Tree)|Hard|
-|**0572**|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Trees/Subtree-of-Another-Tree)|Easy|
+|**0098**|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Validate-Binary-Search-Tree)|Medium|
+|**0100**|[Same Tree](https://leetcode.com/problems/same-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Same-Tree)|Easy|
+|**0102**|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Binary-Tree-Level-Order-Traversal)|Medium|
+|**0104**|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Maximum-Depth-of-Binary-Tree)|Easy|
+|**0105**|[Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal)|Medium|
+|**0124**|[Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Binary-Tree-Maximum-Path-Sum)|Hard|
+|**0208**|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Implement-Trie-Prefix-Tree)|Medium|
+|**0211**|[Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Design-Add-and-Search-Words-Data-Structure)|Medium|
+|**0212**|[Word Search II](https://leetcode.com/problems/word-search-ii/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Word-Search-II)|Hard|
+|**0226**|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Invert-Binary-Tree)|Hard|
+|**0230**|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Kth-Smallest-Element-in-a-BST)|Medium|
+|**0235**|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Lowest-Common-Ancestor-of-a-Binary-Search-Tree)|Medium|
+|**0297**|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Serialize-and-Deserialize-Binary-Tree)|Hard|
+|**0572**|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Subtree-of-Another-Tree)|Easy|
 
 ### Heaps
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0023**|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Heaps/Merge-k-Sorted-Lists)|Hard|
-|**0295**|[Find Mediumn from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/description/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Heaps/Find-Mediumn-from-Data-Stream)|Hard|
-|**0347**|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Heaps/Top-K-Frequent-Elements)|Medium|
+|**0023**|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Merge-k-Sorted-Lists)|Hard|
+|**0295**|[Find Mediumn from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/description/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Find-Mediumn-from-Data-Stream)|Hard|
+|**0347**|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Top-K-Frequent-Elements)|Medium|
 
 ### Graphs
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0128**|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Graphs/Longest-Consecutive-Sequence)|Medium|
-|**0133**|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Graphs/Clone-Graph)|Medium|
-|**0200**|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Graphs/Number-of-Islands)|Medium|
-|**0207**|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Graphs/Course-Schedule)|Medium|
-|**0261**|[Graph Valid Tree](https://www.lintcode.com/problem/178/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Graphs/Graph-Valid-Tree)|Medium|
-|**0269**|[Alien Dictionary](https://www.lintcode.com/problem/892/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Graphs/Alien-Dictionary)|Hard|
-|**0323**|[Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph)|Medium|
-|**0417**|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Graphs/Pacific-Atlantic-Water-Flow)|Medium|
+|**0128**|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Longest-Consecutive-Sequence)|Medium|
+|**0133**|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Clone-Graph)|Medium|
+|**0200**|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Number-of-Islands)|Medium|
+|**0207**|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Course-Schedule)|Medium|
+|**0261**|[Graph Valid Tree](https://www.lintcode.com/problem/178/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Graph-Valid-Tree)|Medium|
+|**0269**|[Alien Dictionary](https://www.lintcode.com/problem/892/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Alien-Dictionary)|Hard|
+|**0323**|[Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph)|Medium|
+|**0417**|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Pacific-Atlantic-Water-Flow)|Medium|
 
 
 ## Build with 🛠️
