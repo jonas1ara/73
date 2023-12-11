@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+
+// Using sliding window technique - Time: O(n)
 public class Solution
 {
     public string MinWindow(string s, string t)
@@ -10,10 +12,10 @@ public class Solution
             cnt[c]++;
         }
 
-        int N = s.Length;
+        int n = s.Length;
         int i = 0, j = 0, start = -1, minLen = int.MaxValue, matched = 0;
 
-        while (j < N)
+        while (j < n)
         {
             if (cnt[s[j]] > 0)
             {
@@ -41,15 +43,19 @@ public class Solution
 
         return start == -1 ? "" : s.Substring(start, minLen);
     }
-    public static void Main(string[] args)
-    {
-        Solution solution = new Solution();
+}
 
+class Program
+{
+    static void Main(string[] args)
+    {
         string s = "ADOBECODEBANC";
         string t = "ABC";
+        Console.WriteLine("Input: s = " + s + ", t = " + t);
 
-        string result = solution.MinWindow(s, t);
+        Solution sol = new Solution();
+        string result = sol.MinWindow(s, t);
 
-        Console.WriteLine("Ventana mínima: " + result);
+        Console.WriteLine("Output: " + result);
     }
 }
