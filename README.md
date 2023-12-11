@@ -128,7 +128,7 @@ sudo apt install dotnet-sdk-8.0 -y
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [C - C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Longest-Substring-Without-Repeating-Characters)|Medium|
-|**0005**|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Longest-Palindromic-Substring)|Medium|
+|0005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Longest-Palindromic-Substring)|Medium|
 |**0020**|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Valid-Parentheses)|Easy|
 |**0049**|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Group-Anagrams)|Medium|
 |**0076**|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Strings/Minimum-Window-Substring)|Hard|
@@ -171,7 +171,7 @@ sudo apt install dotnet-sdk-8.0 -y
 |**0213**|[House Robber II](https://leetcode.com/problems/house-robber-ii/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Programaci%C3%B3n-din%C3%A1mica/House-Robber-II)|Medium|
 |**0300**|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Programaci%C3%B3n-din%C3%A1mica/Longest-Common-Subsequence)|Medium|
 |**0322**|[Coin Change](https://leetcode.com/problems/coin-change/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Programaci%C3%B3n-din%C3%A1mica/Coin-Change)|Medium|
-|**0****377**|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Programaci%C3%B3n-din%C3%A1mica/Combination-Sum-IV)|Medium|
+|**0377**|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Programaci%C3%B3n-din%C3%A1mica/Combination-Sum-IV)|Medium|
 |**1143**|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C++ - C#](https://github.com/Jonas-Lara/73/tree/main/Problems/Programaci%C3%B3n-din%C3%A1mica/Longest-Increasing-Subsequence)|Medium|
 
 ### Linked Lists
