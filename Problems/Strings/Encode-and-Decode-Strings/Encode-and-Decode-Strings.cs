@@ -52,8 +52,11 @@ public class Solution
 
         return ans;
     }
+}
 
-    public static void Main(string[] args)
+class Program
+{
+    static void Main(string[] args)
     {
         List<string> strs = new List<string> { "lint", "code", "love", "you" };
 
@@ -69,7 +72,7 @@ public class Solution
         Solution sol = new Solution();
         string encoded = sol.Encode(strs);
 
-        Console.WriteLine("Encoded String: " + encoded);
+        // Console.WriteLine("Encoded String: " + encoded);
         
         List<string> decodedStrings = sol.Decode(encoded);
 
