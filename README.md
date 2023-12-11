@@ -152,11 +152,11 @@ sudo apt install dotnet-sdk-8.0 -y
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0190**|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Reverse-Bits)|Easy|
-|**0191**|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Number-of-1-Bits)|Easy|
-|**0268**|[Missing Number](https://leetcode.com/problems/missing-number/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Missing-Number)|Easy|
-|**0338**|[Counting Bits](https://leetcode.com/problems/counting-bits/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Counting-Bits)|Easy|
-|**0371**|[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Sum-of-Two-Integers)|Medium|
+|0190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Reverse-Bits)|Easy|
+|0191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Number-of-1-Bits)|Easy|
+|0268|[Missing Number](https://leetcode.com/problems/missing-number/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Missing-Number)|Easy|
+|0338|[Counting Bits](https://leetcode.com/problems/counting-bits/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Counting-Bits)|Easy|
+|0371|[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Sum-of-Two-Integers)|Medium|
 
 ### Dynamic Programming
 
