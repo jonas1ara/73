@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using Manacher's algorithm - Time: O(n)
 public class Solution
 {
     public int CountSubstrings(string s)
@@ -12,26 +13,23 @@ public class Solution
             t += '*';
         }
         t += '$';
-        int N = s.Length;
-        int M = t.Length;
-        List<int> r = new List<int>(new int[M]);
+
+        int n = s.Length;
+        int m = t.Length;
+        List<int> r = new List<int>(new int[m]);
         r[1] = 1;
         int j = 1;
         int ans = 0;
 
-        for (int i = 2; i <= 2 * N; ++i)
+        for (int i = 2; i <= 2 * n; i++)
         {
             int cur = j + r[j] > i ? Math.Min(r[2 * j - i], j + r[j] - i) : 1;
 
             while (t[i - cur] == t[i + cur])
-            {
-                ++cur;
-            }
+                cur++;
 
             if (i + cur > j + r[j])
-            {
                 j = i;
-            }
 
             r[i] = cur;
             ans += r[i] / 2;
@@ -39,12 +37,17 @@ public class Solution
 
         return ans;
     }
+}
 
-    public static void Main(string[] args)
+class Program
+{
+    static void Main(string[] args)
     {
-        Solution solution = new Solution();
-        string input = "abc";
-        int result = solution.CountSubstrings(input);
-        Console.WriteLine("Número de subcadenas palindrómicas: " + result);
+        string s = "abc";
+        Console.WriteLine("Input: s = " + s);
+
+        Solution sol = new Solution();
+        int result = sol.CountSubstrings(s);
+        Console.WriteLine("Output: " + result);
     }
 }
