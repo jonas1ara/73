@@ -1,32 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class Solution {
-    public bool IsValid(string s) {
+// Using a stack - Time O(n)
+public class Solution
+{
+    public bool IsValid(string s)
+    {
         Stack<char> stack = new Stack<char>();
-        foreach (char c in s) {
-            if (c == '(' || c == '{' || c == '[') {
+        foreach (char c in s)
+        {
+            if (c == '(' || c == '{' || c == '[')
+            {
                 stack.Push(c);
-            } else if (stack.Count == 0 || (c == ')' && stack.Peek() != '(') || (c == '}' && stack.Peek() != '{')
-                || (c == ']' && stack.Peek() != '[')) {
+            }
+            else if (stack.Count == 0 || (c == ')' && stack.Peek() != '(') || (c == '}' && stack.Peek() != '{')
+                || (c == ']' && stack.Peek() != '['))
+            {
                 return false;
-            } else {
+            }
+            else
+            {
                 stack.Pop();
             }
         }
         return stack.Count == 0;
     }
+}
 
-    public static void Main(string[] args) {
-        Solution solution = new Solution();
-        string input = "({[()]})"; // Cambia la cadena de entrada según tus necesidades
+class Program
+{
+    static void Main(string[] args)
+    {
+        string input = "({[()]})"; 
+        Console.WriteLine("Input: s =" + input);
 
-        bool isValid = solution.IsValid(input);
+        Solution sol = new Solution();
+        bool isValid = sol.IsValid(input);
 
-        if (isValid) {
-            Console.WriteLine("La cadena es válida.");
-        } else {
-            Console.WriteLine("La cadena no es válida.");
-        }
+        Console.WriteLine("Output: " + isValid);
     }
 }
