@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using sliding window technique - Time: O(n)
 public class Solution
 {
     public int CharacterReplacement(string s, int k)
@@ -8,9 +9,9 @@ public class Solution
         int i = 0;
         int j = 0;
         int[] cnt = new int[26];
-        int N = s.Length;
+        int n = s.Length;
         
-        while (j < N)
+        while (j < n)
         {
             cnt[s[j] - 'A']++;
             j++;
@@ -27,22 +28,29 @@ public class Solution
     private int maxElement(int[] arr, int length)
     {
         int max = arr[0];
-        for (int index = 1; index < length; index++)
+        for (int i = 1; i < length; i++)
         {
-            if (arr[index] > max)
+            if (arr[i] > max)
             {
-                max = arr[index];
+                max = arr[i];
             }
         }
         return max;
     }
+}
 
-    public static void Main(string[] args)
+class Program
+{
+    static void Main(string[] args)
     {
-        Solution sol = new Solution();
         string s = "ABAB";
         int k = 2;
+
+        Console.WriteLine("Input: s = " + s + ", k = " + k);
+
+        Solution sol = new Solution();
         int result = sol.CharacterReplacement(s, k);
-        Console.WriteLine(result);
+
+        Console.WriteLine("Output: " + result);
     }
 }
