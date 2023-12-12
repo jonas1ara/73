@@ -1,53 +1,76 @@
 ﻿#include <iostream>
 #include <vector>
 
-class Solution
-{
+// Using linear search technique - Time: O(n)
+
+class Solution {
 public:
     std::vector<std::vector<int>> insert(std::vector<std::vector<int>> &intervals, std::vector<int> &newInterval)
     {
-        int s = newInterval[0], e = newInterval[1];
         std::vector<std::vector<int>> ans;
+        int start = newInterval[0]; 
+        int end = newInterval[1]; 
+        
         for (auto &intv : intervals)
         {
-            if (s > e)
-                ans.push_back(intv);
-            else if (intv[0] > e)
+            if (start > end)
             {
-                ans.push_back({s, e});
-                s = e + 1;
                 ans.push_back(intv);
             }
-            else if (intv[1] < s)
+            else if (intv[0] > end)
+            {
+                ans.push_back({start, end});
+                start = end + 1;
+                ans.push_back(intv);
+            }
+            else if (intv[1] < start)
                 ans.push_back(intv);
             else
             {
-                s = std::min(s, intv[0]);
-                e = std::max(e, intv[1]);
+                start = std::min(start, intv[0]);
+                end = std::max(end, intv[1]);
             }
         }
-        if (s <= e)
-            ans.push_back({s, e});
+
+        if (start <= end)
+        {
+            ans.push_back({start, end});
+        }
+        
         return ans;
     }
 };
 
 int main()
 {
-    Solution solution;
+    std::vector<std::vector<int>> intervals = {{1,2},{3, 5}, {6, 7}, {8, 10}, {12, 16}};
+    std::vector<int> newInterval = {4, 8};
 
-    // Ejemplo de uso: crea intervalos y un nuevo intervalo, y llama a la función 'insert'.
-    std::vector<std::vector<int>> intervals = {{1, 3}, {6, 9}};
-    std::vector<int> newInterval = {2, 5};
-
-    std::vector<std::vector<int>> result = solution.insert(intervals, newInterval);
-
-    // Imprimir el resultado.
-    for (const auto &interval : result)
+    std::cout << "Input: intervals = [";
+    for (const auto &interval : intervals)
     {
-        std::cout << "[" << interval[0] << ", " << interval[1] << "] ";
+        std::cout << "[" << interval[0] << "," << interval[1] << "]";
+        if (&interval != &intervals.back())
+        {
+            std::cout << ", ";
+        }
     }
-    std::cout << std::endl;
+    std::cout << "], newInterval = [" << newInterval[0] << "," << newInterval[1] << "]" << std::endl;
+
+
+    Solution sol;
+    std::vector<std::vector<int>> ans = sol.insert(intervals, newInterval);
+
+    std::cout << "Output: [";
+    for (const auto &a : ans)
+    {
+        std::cout << "[" << a[0] << "," << a[1] << "]";
+        if (&a != &ans.back())
+        {
+            std::cout << ", ";
+        }
+    }
+    std::cout << "]" << std::endl;
 
     return 0;
 }
