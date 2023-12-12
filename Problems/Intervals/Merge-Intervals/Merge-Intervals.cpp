@@ -2,42 +2,58 @@
 #include <vector>
 #include <algorithm>
 
+// Using merge and quick sort - Time: O(nlogn)
 
-class Solution
-{
+class Solution {
 public:
-    std::vector<std::vector<int>> merge(std::vector<std::vector<int>> &A)
+    std::vector<std::vector<int>> merge(std::vector<std::vector<int>> &intervals)
     {
-        sort(begin(A), end(A));
-        std::vector<std::vector<int>> ans;
-        for (auto &v : A)
+        if (intervals.empty())
         {
-            if (ans.empty() || v[0] > ans.back()[1])
-                ans.push_back(v);
-            else
-                ans.back()[1] = std::max(ans.back()[1], v[1]);
+            return {};
         }
-        return ans;
+
+        sort(intervals.begin(), intervals.end());
+
+        std::vector<std::vector<int>> merged;
+        merged.push_back(intervals[0]);
+
+        for (int i = 1; i < intervals.size(); i++)
+        {
+            if (merged.back()[1] < intervals[i][0])
+            {
+                merged.push_back(intervals[i]);
+            }
+            else
+            {
+                merged.back()[1] = std::max(merged.back()[1], intervals[i][1]);
+            }
+        }
+
+        return merged;
     }
 };
 
 int main()
 {
-    Solution solution;
-    std::vector<std::vector<int>> intervals = {
-        {1, 3},
-        {2, 6},
-        {8, 10},
-        {15, 18}
-    };
+    std::vector<std::vector<int>> intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
 
-    std::vector<std::vector<int>> mergedIntervals = solution.merge(intervals);
-
-    std::cout << "Merged Intervals:" << std::endl;
-    for (const std::vector<int> &interval : mergedIntervals)
+    std::cout << "Input: intervals = [";
+    for (const auto &interval : intervals)
     {
-        std::cout << "[" << interval[0] << ", " << interval[1] << "]" << std::endl;
+        std::cout << "[" << interval[0] << "," << interval[1] << "]";
     }
+    std::cout << "]" << std::endl;
+
+    Solution solution;
+    std::vector<std::vector<int>> merged = solution.merge(intervals);
+
+    std::cout << "Output: [";
+    for (const auto &interval : merged)
+    {
+        std::cout << "[" << interval[0] << "," << interval[1] << "]";
+    }
+    std::cout << "]" << std::endl;
 
     return 0;
 }

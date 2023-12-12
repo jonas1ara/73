@@ -1,48 +1,67 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+
+// Using merge and quick sort - Time: O(nlogn)
 
 public class Solution
 {
     public int[][] Merge(int[][] intervals)
     {
-        Array.Sort(intervals, (a, b) => a[0] - b[0]);
-        List<int[]> mergedIntervals = new List<int[]>();
-
-        foreach (var interval in intervals)
+        if (intervals.Length == 0)
         {
-            if (mergedIntervals.Count == 0 || interval[0] > mergedIntervals.Last()[1])
+            return new int[0][];
+        }
+
+        Array.Sort(intervals, (a, b) => a[0].CompareTo(b[0]));
+
+        List<int[]> merged = new List<int[]>();
+        merged.Add(intervals[0]);
+
+        for (int i = 1; i < intervals.Length; i++)
+        {
+            if (merged.Last()[1] < intervals[i][0])
             {
-                mergedIntervals.Add(interval);
+                merged.Add(intervals[i]);
             }
             else
             {
-                mergedIntervals.Last()[1] = Math.Max(mergedIntervals.Last()[1], interval[1]);
+                merged.Last()[1] = Math.Max(merged.Last()[1], intervals[i][1]);
             }
         }
 
-        return mergedIntervals.ToArray();
+        return merged.ToArray();
     }
-    public static void Main(string[] args)
+}
+
+class Program
+{
+    static void Main(string[] args)
     {
-        Solution solution = new Solution();
-        int[][] intervals = new int[][]
-        {
+        
+        int[][] intervals = new int[][] {
             new int[] {1, 3},
             new int[] {2, 6},
             new int[] {8, 10},
             new int[] {15, 18}
         };
 
-        int[][] mergedIntervals = solution.Merge(intervals);
-
-        Console.WriteLine("Merged Intervals:");
-        foreach (var interval in mergedIntervals)
+        Console.Write("Input: intervals = [");
+        foreach (int[] interval in intervals)
         {
-            Console.WriteLine($"[{interval[0]}, {interval[1]}]");
+            Console.Write("[" + interval[0] + "," + interval[1] + "]");
         }
+        Console.WriteLine("]");
+
+        Solution sol = new Solution();
+        int[][] merged = sol.Merge(intervals);
+
+        Console.Write("Output: [");
+        foreach (int[] interval in merged)
+        {
+            Console.Write("[" + interval[0] + "," + interval[1] + "]");
+        }
+        Console.WriteLine("]");
     }
 }
-
 
 
