@@ -47,7 +47,7 @@ and Machine 2 does:
 <pre><b>Input:</b> <code>["we", "say", ":", "yes"]</code>
 <b>Output:</b> <code>["we", "say", ":", "yes"]</code>
 <b>Explanation:</b>
-<p>One possible encode method is: "we:;say:;:::;yes"</p> 
+One possible encode method is: "we:;say:;:::;yes" 
 </pre>
 
 <p><b>Note:</b><br>
