@@ -34,7 +34,7 @@ and Machine 2 does:
 <p>Implement the <code>encode</code> and <code>decode</code> methods.
 </p>
 
-Example
+<h2> Example </h2>
 
 <p><b>Example 1:</b></p>
 
