@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using interval scheduling algorithm - Time: O(nlogn)
+
+// Definition of Interval:
 public class Interval
 {
     public int start, end;
@@ -17,36 +20,43 @@ public class Solution
     {
         intervals.Sort((a, b) => a.start - b.start);
 
-        for (int i = 1; i < intervals.Count; ++i)
+        for (int i = 1; i < intervals.Count; i++)
         {
             if (intervals[i].start < intervals[i - 1].end)
             {
                 return false;
             }
         }
+
         return true;
     }
+}
 
+class Program
+{
     public static void Main(string[] args)
     {
-        // Crea una lista de Intervalos para probar la función CanAttendMeetings
         List<Interval> intervals = new List<Interval> {
             new Interval(0, 30),
             new Interval(5, 10),
             new Interval(15, 20)
         };
 
-        Solution solution = new Solution();
-        bool canAttend = solution.CanAttendMeetings(intervals);
+        Console.Write("Input: intervals = [");
+        foreach (Interval interval in intervals)
+        {
+            Console.Write("[" + interval.start + "," + interval.end + "]");
+            if (interval != intervals[intervals.Count - 1])
+            {
+                Console.Write(",");
+            }
+        }
+        Console.WriteLine("]");
 
-        if (canAttend)
-        {
-            Console.WriteLine("Puede asistir a todas las reuniones.");
-        }
-        else
-        {
-            Console.WriteLine("No puede asistir a todas las reuniones.");
-        }
+        Solution sol = new Solution();
+        bool ans = sol.CanAttendMeetings(intervals);
+
+        Console.WriteLine("Output: " + ans);
     }
 }
 
