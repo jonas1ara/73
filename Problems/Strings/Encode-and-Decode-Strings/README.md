@@ -34,12 +34,14 @@ and Machine 2 does:
 <p>Implement the <code>encode</code> and <code>decode</code> methods.
 </p>
 
+Example
+
 <p><b>Example 1:</b></p>
 
 <pre><b>Input:</b> <code>["lint","code","love","you"]</code>
 <b>Output:</b> <code>["lint","code","love","you"]</code>
 <b>Explanation:</b>
-<p>One possible encode method is: "lint:;code:;love:;you"</p>
+One possible encode method is: "lint:;code:;love:;you"
 </pre>
 
 <p><b>Example 2:</b></p>
