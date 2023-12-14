@@ -145,7 +145,7 @@ sudo apt install dotnet-sdk-8.0 -y
 |0056|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Merge-Intervals)|Medium|
 |0057|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Insert-Interval)|Medium|
 |0252|[Meeting Rooms](https://www.lintcode.com/problem/920/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms)|Easy|
-|**0253**|[Meeting Rooms II](https://www.lintcode.com/problem/919/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms-II)|Medium|
+|0253|[Meeting Rooms II](https://www.lintcode.com/problem/919/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms-II)|Medium|
 |0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Non-overlapping-Intervals)|Medium|
 
 ### Binary 
