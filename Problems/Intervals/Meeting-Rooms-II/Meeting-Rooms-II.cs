@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+
+// Using a greedy algorithm - Time: O(nlogn)
+
+// Definition of Interval:
 public class Interval
 {
     public int start, end;
@@ -14,23 +18,20 @@ public class Solution
 {
     public int MinMeetingRooms(List<Interval> intervals)
     {
-        // Create lists to store the start and end times
         List<int> starts = new List<int>();
         List<int> ends = new List<int>();
 
-        // Populate the start and end lists from the intervals
         foreach (Interval interval in intervals)
         {
             starts.Add(interval.start);
             ends.Add(interval.end);
         }
 
-        // Sort the start and end times
         starts.Sort();
         ends.Sort();
 
-        int rooms = 0;  // Number of rooms required
-        int endIdx = 0; // Index for the end times
+        int rooms = 0;
+        int endIdx = 0;
 
         for (int i = 0; i < intervals.Count; i++)
         {
@@ -48,19 +49,30 @@ public class Solution
     }
 }
 
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        Solution solution = new Solution();
-        List<Interval> intervals = new List<Interval>();
 
-        // Initialize 'intervals' with your meeting time intervals
+class Program
+{
+    static void Main(string[] args)
+    {
+        List<Interval> intervals = new List<Interval>();
         intervals.Add(new Interval(0, 30));
         intervals.Add(new Interval(5, 10));
         intervals.Add(new Interval(15, 20));
 
-        int minRooms = solution.MinMeetingRooms(intervals);
-        Console.WriteLine("Minimum meeting rooms required: " + minRooms);
+        Console.Write("Input: intervals =[");
+        foreach (Interval interval in intervals)
+        {
+            Console.Write("[" + interval.start + "," + interval.end + "]");
+            if (interval != intervals[intervals.Count - 1])
+            {
+                Console.Write(",");
+            }
+        }
+        Console.WriteLine("]");
+
+        Solution sol = new Solution();
+        int ans = sol.MinMeetingRooms(intervals);
+
+        Console.WriteLine("Output: " + ans);
     }
 }

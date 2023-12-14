@@ -3,10 +3,11 @@
 #include <algorithm>
 #include <queue>
 
-using namespace std;
+// Using a greedy algorithm - Time: O(nlogn)
 
-class Interval
-{
+// Definition of Interval:
+
+class Interval {
 public:
     int start, end;
     Interval(int start, int end)
@@ -16,27 +17,23 @@ public:
     }
 };
 
-class Solution
-{
+class Solution {
 public:
-    int minMeetingRooms(vector<Interval> &intervals)
+    int minMeetingRooms(std::vector<Interval> &intervals)
     {
-        // Create vectors to store the start and end times
-        vector<int> starts, ends;
+        std::vector<int> starts, ends;
 
-        // Populate the start and end vectors from the intervals
         for (const Interval &interval : intervals)
         {
             starts.push_back(interval.start);
             ends.push_back(interval.end);
         }
 
-        // Sort the start and end times
         sort(starts.begin(), starts.end());
         sort(ends.begin(), ends.end());
 
-        int rooms = 0;  // Number of rooms required
-        int endIdx = 0; // Index for the end times
+        int rooms = 0;  
+        int endIdx = 0; 
 
         for (int i = 0; i < intervals.size(); i++)
         {
@@ -56,16 +53,26 @@ public:
 
 int main()
 {
-    Solution solution;
-    vector<Interval> intervals;
-    // Initialize 'intervals' with your meeting time intervals
-
+    std::vector<Interval> intervals;
     intervals.push_back(Interval(0, 30));
     intervals.push_back(Interval(5, 10));
     intervals.push_back(Interval(15, 20));
 
-    int minRooms = solution.minMeetingRooms(intervals);
-    cout << "Minimum meeting rooms required: " << minRooms << endl;
+    std::cout << "Input: intervals = [";
+    for (int i = 0; i < intervals.size(); i++)
+    {
+        std::cout << "[" << intervals[i].start << "," << intervals[i].end << "]";
+        if (i != intervals.size() - 1)
+        {
+            std::cout << ",";
+        }
+    }
+    std::cout << "]" << std::endl;
+
+    Solution sol;
+    int ans = sol.minMeetingRooms(intervals);
+    
+    std::cout << "Output: " << ans << std::endl;
 
     return 0;
 }
