@@ -34,6 +34,22 @@ and Machine 2 does:
 <p>Implement the <code>encode</code> and <code>decode</code> methods.
 </p>
 
+<p><b>Example 1:</b></p>
+
+<pre><b>Input:</b> <code>["lint","code","love","you"]</code>
+<pre><b>Output:</b> <code>["lint","code","love","you"]</code>
+<b>Explanation:</b>
+<p>One possible encode method is: "lint:;code:;love:;you"</p>
+</pre>
+
+<p><b>Example 2:</b></p>
+
+<pre><b>Input:</b> <code>["we", "say", ":", "yes"]</code>
+<pre><b>Output:</b> <code>["we", "say", ":", "yes"]</code>
+<b>Explanation:</b>
+<p>One possible encode method is: "we:;say:;:::;yes"</p> 
+</pre>
+
 <p><b>Note:</b><br>
 </p><ul>
 <li>The string may contain any possible characters out of 256 valid ascii characters. Your algorithm should be generalized enough to work on any possible characters.</li>
