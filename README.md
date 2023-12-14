@@ -174,7 +174,7 @@ sudo apt install dotnet-sdk-8.0 -y
 |**0377**|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Combination-Sum-IV)|Medium|
 |**1143**|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Longest-Increasing-Subsequence)|Medium|
 
-### Linked Lists
+### Linked Lists (Saturday 10/16/2021)
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
@@ -204,7 +204,7 @@ sudo apt install dotnet-sdk-8.0 -y
 |**0297**|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Serialize-and-Deserialize-Binary-Tree)|Hard|
 |**0572**|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Subtree-of-Another-Tree)|Easy|
 
-### Heaps
+### Heaps (Saturday 10/23/2021)
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
