@@ -37,7 +37,7 @@ and Machine 2 does:
 <p><b>Example 1:</b></p>
 
 <pre><b>Input:</b> <code>["lint","code","love","you"]</code>
-<pre><b>Output:</b> <code>["lint","code","love","you"]</code>
+<b>Output:</b> <code>["lint","code","love","you"]</code>
 <b>Explanation:</b>
 <p>One possible encode method is: "lint:;code:;love:;you"</p>
 </pre>
@@ -45,7 +45,7 @@ and Machine 2 does:
 <p><b>Example 2:</b></p>
 
 <pre><b>Input:</b> <code>["we", "say", ":", "yes"]</code>
-<pre><b>Output:</b> <code>["we", "say", ":", "yes"]</code>
+<b>Output:</b> <code>["we", "say", ":", "yes"]</code>
 <b>Explanation:</b>
 <p>One possible encode method is: "we:;say:;:::;yes"</p> 
 </pre>
