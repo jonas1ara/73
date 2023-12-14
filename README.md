@@ -134,7 +134,7 @@ sudo apt install dotnet-sdk-8.0 -y
 |0076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Minimum-Window-Substring)|Hard|
 |0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Valid-Palindrome)|Easy|
 |0242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Valid-Anagram)|Easy|
-|0271|[Encode and Decode Strings](https://www.lintcode.com/problem/659/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Encode-and-Decode-Strings)|Medium|   
+|0271|[Encode and Decode Strings](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Encode-and-Decode-Strings) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Encode-and-Decode-Strings)|Medium|   
 |0424|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Longest-Repeating-Character-Replacement)|Medium|
 |0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Palindromic-Substrings)|Medium|
 
@@ -144,8 +144,8 @@ sudo apt install dotnet-sdk-8.0 -y
 |---| ----- | -------- | ---------- |
 |0056|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Merge-Intervals)|Medium|
 |0057|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Insert-Interval)|Medium|
-|0252|[Meeting Rooms](https://www.lintcode.com/problem/920/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms)|Easy|
-|0253|[Meeting Rooms II](https://www.lintcode.com/problem/919/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms-II)|Medium|
+|0252|[Meeting Rooms](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms)|Easy|
+|0253|[Meeting Rooms II](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms-II) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms-II)|Medium|
 |0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Non-overlapping-Intervals)|Medium|
 
 ### Binary 
