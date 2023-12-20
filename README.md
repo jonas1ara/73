@@ -74,23 +74,8 @@ If you want use this repository with C# then you should install `dotnet-sdk-8.0`
 At this time the .NET 8 is not available from Ubuntu feed, so you have to install it from Microsoft feed, to install on Ubuntu you can copy and paste the following commands:
 
 ```bash
-# Get Ubuntu version
-declare repo_version=$(if command -v lsb_release &> /dev/null; then lsb_release -r -s; else grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"'; fi)
-
-# Download Microsoft signing key and repository
-wget https://packages.microsoft.com/config/ubuntu/$repo_version/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-
-# Install Microsoft signing key and repository
-sudo dpkg -i packages-microsoft-prod.deb
-
-# Clean up
-rm packages-microsoft-prod.deb
-
-# Update packages
-sudo apt update
-
-# Install .NET 8
-sudo apt install dotnet-sdk-8.0 -y
+sudo apt update && \
+    sudo apt install dotnet-sdk-8.0 -y
 ```
 
 **Note: When using a package manager to manage your installation of .NET, you may run into a conflict if you've previously installed a preview release, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/remove-runtime-sdk-versions?pivots=os-linux#uninstall-net).**
