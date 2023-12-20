@@ -80,7 +80,7 @@ sudo apt update && \
     sudo apt install dotnet-sdk-8.0 -y
 ```
 
-**Note: To install on other linux distributions, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/linux).**
+**Note: To install on other linux versions or linux distributions, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/linux).**
 
 ## Index 📖
 
