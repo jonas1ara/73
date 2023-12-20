@@ -74,16 +74,16 @@ If you want use this repository with C# then you should install `dotnet-sdk-8.0`
 At this time the .NET 8 is only available from Ubuntu feed for Ubuntu 23.10 and Fedora 37, 38 and 39, so, to install you can copy and paste the following commands:
 
 
-Ubuntu 23.10
+**Ubuntu 23.10:**
 ```bash
 sudo apt update && \
     sudo apt install dotnet-sdk-8.0 -y
 ```
 
-Fedora 37, 38 and 39:
+**Fedora 37, 38 and 39:**
 
 ```bash
-sudo dnf install dotnet-sdk-8.0
+sudo dnf install dotnet-sdk-8.0 -y
 ```
 
 **Note: When using a package manager to manage your installation of .NET, you may run into a conflict if you've previously installed a preview release, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/remove-runtime-sdk-versions?pivots=os-linux#uninstall-net).**
