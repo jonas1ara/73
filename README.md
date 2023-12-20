@@ -60,9 +60,9 @@ To compile C and C++ you need to install `gcc` and `g++`
 - gcc
 - g++
 
-To install them on Ubuntu you can type:
+To install them on Debian based distributions you can type:
 
-**Debian bases distributions:**
+**Debian based distributions:**
 ```bash
 sudo apt update && \
     sudo apt install build-essential -y
