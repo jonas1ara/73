@@ -5,6 +5,6 @@
  
 
 sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-7.0 mono-devel &&\
+  sudo apt-get install -y dotnet-sdk-8.0 mono-devel &&\
     sudo apt install build-essential -y
 
