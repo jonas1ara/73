@@ -162,16 +162,16 @@ sudo apt update && \
 |**0377**|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Combination-Sum-IV)|Medium|
 |**1143**|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Longest-Increasing-Subsequence)|Medium|
 
-### Linked Lists (Saturday 10/16/2021)
+### Linked Lists
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0019**|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Remove-Nth-Node-From-End-of-List)|Medium|
-|**0021**|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Merge-Two-Sorted-Lists)|Easy|
-|**0023**|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Merge-k-Sorted-Lists)|Hard|
-|**0141**|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Linked-List-Cycle)|Easy|
-|**0143**|[Reorder List](https://leetcode.com/problems/reorder-list/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Reorder-List)|Medium|
-|**0206**|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Reverse-Linked-List)|Easy|
+|0019|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Remove-Nth-Node-From-End-of-List)|Medium|
+|0021|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Merge-Two-Sorted-Lists)|Easy|
+|0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Merge-k-Sorted-Lists)|Hard|
+|0141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Linked-List-Cycle)|Easy|
+|0143|[Reorder List](https://leetcode.com/problems/reorder-list/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Reorder-List)|Medium|
+|0206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Reverse-Linked-List)|Easy|
 
 ### Trees
 
@@ -192,7 +192,7 @@ sudo apt update && \
 |**0297**|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Serialize-and-Deserialize-Binary-Tree)|Hard|
 |**0572**|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Subtree-of-Another-Tree)|Easy|
 
-### Heaps (Saturday 10/23/2021)
+### Heaps
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
