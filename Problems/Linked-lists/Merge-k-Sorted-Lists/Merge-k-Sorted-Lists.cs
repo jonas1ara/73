@@ -1,5 +1,7 @@
 ﻿using System;
 
+// Using merge sort algorithm - Time: O(nlogn)
+
 public class ListNode
 {
     public int val;
@@ -17,6 +19,7 @@ public class Solution
     {
         ListNode head = new ListNode(0);
         ListNode tail = head;
+
         while (a != null && b != null)
         {
             if (a.val < b.val)
@@ -32,6 +35,7 @@ public class Solution
             tail = tail.next;
         }
         tail.next = a ?? b;
+
         return head.next;
     }
 
@@ -41,18 +45,18 @@ public class Solution
         {
             return null;
         }
-        int N = lists.Length;
-        for (int step = 1; step < N; step <<= 1)
+        int n = lists.Length;
+        for (int step = 1; step < n; step <<= 1)
         {
-            for (int i = 0; i < N - step; i += step << 1)
+            for (int i = 0; i < n - step; i += step << 1)
             {
                 lists[i] = MergeTwoLists(lists[i], lists[i + step]);
             }
         }
+
         return lists[0];
     }
 }
-
 
 class Program
 {
@@ -64,7 +68,7 @@ class Program
 
         ListNode[] lists = { list1, list2, list3 };
 
-        Console.Write("Input: [");
+        Console.Write("Input: lists = [");
         for (int i = 0; i < lists.Length; i++)
         {
             PrintList(lists[i]);

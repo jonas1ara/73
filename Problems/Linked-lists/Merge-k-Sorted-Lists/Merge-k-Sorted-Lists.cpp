@@ -1,43 +1,102 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#include <iostream>
+#include <vector>
 
-ListNode MergeKLists(ListNode[] lists)
-{
-    if (lists == null || lists.Length == 0) return null;
+// Using merge sort algorithm - Time: O(nlogn)
 
-    return MergeKHelper(lists, 0, lists.Length - 1);
-}
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
 
-ListNode MergeKHelper(ListNode[] lists, int i, int j)
-{
-    if (i == j) return lists[i];
-
-    int mid = i + (j - i) / 2;
-    var left = MergeKHelper(lists, i, mid);
-    var right = MergeKHelper(lists, mid + 1, j);
-    return MergeTwoLists(left, right);
-}
-
-ListNode MergeTwoLists(ListNode l1, ListNode l2)
-{
-    var head = new ListNode(-1);
-    var current = head;
-
-    while (l1 != null && l2 != null)
+class Solution {
+private:
+    ListNode *mergeTwoLists(ListNode *a, ListNode *b)
     {
-        if (l1.val <= l2.val)
+        ListNode *head = new ListNode(0);
+        ListNode *tail = head;
+
+        while (a != nullptr && b != nullptr)
         {
-            current.next = l1;
-            l1 = l1.next;
+            if (a->val < b->val)
+            {
+                tail->next = a;
+                a = a->next;
+            }
+            else
+            {
+                tail->next = b;
+                b = b->next;
+            }
+            tail = tail->next;
         }
-        else
-        {
-            current.next = l2;
-            l2 = l2.next;
-        }
-        current = current.next;
+        tail->next = a ? a : b;
+
+        return head->next;
     }
 
-    current.next = l1 == null ? l2 : l1;
-    return head.next;
+public:
+    ListNode *mergeKLists(std::vector<ListNode *> &lists)
+    {
+        if (lists.empty())
+        {
+            return nullptr;
+        }
+
+        int n = lists.size();
+
+        for (int step = 1; step < n; step <<= 1)
+        {
+            for (int i = 0; i < n - step; i += step << 1)
+            {
+                lists[i] = mergeTwoLists(lists[i], lists[i + step]);
+            }
+        }
+
+        return lists[0];
+    }
+};
+
+void PrintList(ListNode* head) 
+{
+    std::cout << "[";
+    while (head != nullptr) {
+        std::cout << head->val;
+        head = head->next;
+        if (head != nullptr) {
+            std::cout << ", ";
+        }
+    }
+    std::cout << "]";
+}
+
+int main()
+{
+    ListNode *list1 = new ListNode(1, new ListNode(4, new ListNode(5)));
+    ListNode *list2 = new ListNode(1, new ListNode(3, new ListNode(6)));
+    ListNode *list3 = new ListNode(2, new ListNode(7, new ListNode(8)));
+
+    std::vector<ListNode *> lists = {list1, list2, list3};
+
+    std::cout << "Input: lists = ";
+    for (int i = 0; i < lists.size(); i++)
+    {
+        PrintList(lists[i]);
+        if (i < lists.size() - 1)
+        {
+            std::cout << ", ";
+        }
+    }
+    std::cout << std::endl;
+
+    Solution sol;
+    ListNode *mergedList = sol.mergeKLists(lists);
+
+    std::cout << "Output: ";
+    PrintList(mergedList);
+    std::cout << std::endl;
+
+    return 0;
 }
