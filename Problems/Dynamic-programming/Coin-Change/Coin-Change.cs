@@ -1,32 +1,51 @@
 ﻿using System;
 
+// Using bottom-up approach - Time: O(n * amount)
+
 public class Solution
 {
     public int CoinChange(int[] coins, int amount)
     {
-        int N = coins.Length;
-        int INF = 0x3f3f3f3f;
+        int n = coins.Length;
+        int inf = 0x3f3f3f3f; // inf = 1061109567
         int[] dp = new int[10001];
-        Array.Fill(dp, INF);
+        Array.Fill(dp, inf);
         dp[0] = 0;
 
         for (int t = 1; t <= amount; t++)
         {
-            for (int i = 0; i < N; i++)
+            for (int i = 0; i < n; i++)
             {
-                dp[t] = Math.Min(dp[t], t - coins[i] >= 0 ? 1 + dp[t - coins[i]] : INF);
+                dp[t] = Math.Min(dp[t], t - coins[i] >= 0 ? 1 + dp[t - coins[i]] : inf);
             }
         }
 
-        return dp[amount] == INF ? -1 : dp[amount];
+        return dp[amount] == inf ? -1 : dp[amount];
     }
+}
 
-    public static void Main(string[] args)
+class Program
+{
+    static void Main(string[] args)
     {
-        Solution solution = new Solution();
         int[] coins = { 1, 2, 5 };
-        int target = 11;
-        int result = solution.CoinChange(coins, target);
-        Console.WriteLine("Minimum number of coins to make " + target + " is: " + result);
+        int amount = 11;
+
+        Console.Write("Input: coins = [");
+        for (int i = 0; i < coins.Length; i++)
+        {
+            Console.Write(coins[i]);
+            if (i < coins.Length - 1)
+            {
+                Console.Write(", ");
+            }
+        }
+        Console.WriteLine("], amout = " + amount);
+
+        Solution sol = new Solution();
+        int result = sol.CoinChange(coins, amount);
+
+
+        Console.WriteLine("Output: "+ result);
     }
 }
