@@ -28,7 +28,7 @@ class Program
         Console.WriteLine("Input: nums = [" + string.Join(", ", nums) + "]");
 
         Solution sol = new Solution();
-        int resul = sol.Rob(nums);
+        int result = sol.Rob(nums);
         
         Console.WriteLine("Output: " + result);
     }
