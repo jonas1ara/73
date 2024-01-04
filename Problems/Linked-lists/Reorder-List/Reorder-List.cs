@@ -1,4 +1,7 @@
-﻿
+﻿using System;
+
+// Using two pointers - Time: O(n)
+
 public class ListNode
 {
     public int val;
@@ -19,12 +22,14 @@ public class Solution
         {
             ans++;
         }
+        
         return ans;
     }
 
     private ListNode SplitList(ListNode head)
     {
         int len = (GetLength(head) - 1) / 2;
+        
         while (len > 0)
         {
             head = head.next;
@@ -32,6 +37,7 @@ public class Solution
         }
         ListNode ans = head.next;
         head.next = null;
+
         return ans;
     }
 
@@ -45,6 +51,7 @@ public class Solution
             node.next = dummy;
             dummy = node;
         }
+
         return dummy;
     }
 
@@ -70,5 +77,40 @@ public class Solution
         ListNode second = SplitList(head);
         second = ReverseList(second);
         Interleave(head, second);
+    }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        static void PrintList(ListNode node)
+        {
+            Console.Write("[");
+            while (node != null)
+            {
+                Console.Write(node.val);
+                node = node.next;
+                if (node != null)
+                {
+                    Console.Write(", ");
+                }
+            }
+            Console.Write("]");
+        }
+
+        ListNode list = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
+
+        
+        Console.Write("Input: head = ");
+        PrintList(list);
+        Console.WriteLine();
+
+        Solution sol = new Solution();
+        sol.ReorderList(list);
+
+        Console.Write("Output: ");
+        PrintList(list);
+        Console.WriteLine();
     }
 }
