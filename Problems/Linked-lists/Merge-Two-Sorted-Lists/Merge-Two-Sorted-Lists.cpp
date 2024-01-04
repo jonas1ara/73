@@ -1,25 +1,79 @@
-﻿using System;
+﻿#include <iostream>
 
-ListNode MergeTwoLists(ListNode l1, ListNode l2)
-{
-    var head = new ListNode(-1);
-    var current = head;
+// Using a part of the merge sort algorithm - Time: O(m + n)
 
-    while (l1 != null && l2 != null)
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
+class Solution {
+public:
+    ListNode *MergeTwoLists(ListNode *a, ListNode *b)
     {
-        if (l1.val <= l2.val)
-        {
-            current.next = l1;
-            l1 = l1.next;
-        }
-        else
-        {
-            current.next = l2;
-            l2 = l2.next;
-        }
-        current = current.next;
-    }
+        ListNode *head = new ListNode(0);
+        ListNode *p = head;
+        head->next = a;
 
-    current.next = l1 == null ? l2 : l1;
-    return head.next;
+        while (p->next != nullptr && b != nullptr)
+        {
+            if (p->next->val > b->val)
+            {
+                ListNode *node = b;
+                b = b->next;
+                node->next = p->next;
+                p->next = node;
+            }
+            p = p->next;
+        }
+
+        if (b != nullptr)
+        {
+            p->next = b;
+        }
+
+        return head->next;
+    }
+};
+
+void PrintList(ListNode *node)
+{
+    std::cout << "[";
+    while (node != nullptr)
+    {
+        std::cout << node->val;
+        node = node->next;
+        if (node != nullptr)
+        {
+            std::cout << ", ";
+        }
+    }
+    std::cout << "]";
+}
+
+int main()
+{
+    ListNode *list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
+    ListNode *list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+
+    std::cout << "Input: list 1 = ";
+    PrintList(list1);
+
+    std::cout << ", list 2 = ";
+    PrintList(list2);
+    std::cout << std::endl;
+
+    Solution sol;
+    ListNode *mergedList = sol.MergeTwoLists(list1, list2);
+
+    std::cout << "Output: ";
+    PrintList(mergedList);
+    std::cout << std::endl;
+
+    delete mergedList;
+
+    return 0;
 }
