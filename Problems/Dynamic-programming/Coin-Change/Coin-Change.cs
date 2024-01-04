@@ -31,16 +31,7 @@ class Program
         int[] coins = { 1, 2, 5 };
         int amount = 11;
 
-        Console.Write("Input: coins = [");
-        for (int i = 0; i < coins.Length; i++)
-        {
-            Console.Write(coins[i]);
-            if (i < coins.Length - 1)
-            {
-                Console.Write(", ");
-            }
-        }
-        Console.WriteLine("], amout = " + amount);
+        Console.WriteLine("Input: coins = [" + string.Join(", ", coins) + "], amout = " + amount);
 
         Solution sol = new Solution();
         int result = sol.CoinChange(coins, amount);
