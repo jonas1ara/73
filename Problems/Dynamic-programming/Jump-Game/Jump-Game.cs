@@ -1,6 +1,7 @@
 ﻿using System;
 
-// DP
+// Using tabulation - Time: O(n^2)
+
 public class Solution
 {
     public bool CanJump(int[] nums)
@@ -26,17 +27,16 @@ public class Solution
     }
 }
 
-// Greedy
-
+// Using greedy algorithm - Time: O(n)
 // public class Solution
 // {
-//     public bool CanJump(int[] A)
+//     public bool CanJump(int[] nums)
 //     {
 //         int last = 0;
 //         for (int i = 0; i <= last; i++)
 //         {
-//             last = Math.Max(last, i + A[i]);
-//             if (last >= A.Length - 1) return true;
+//             last = Math.Max(last, i + nums[i]);
+//             if (last >= nums.Length - 1) return true;
 //         }
 //         return false;
 //     }
@@ -46,17 +46,13 @@ class Program
 {
     static void Main()
     {
-        Solution solution = new Solution();
         int[] nums = { 2, 3, 1, 1, 4 };
-        bool result = solution.CanJump(nums);
 
-        if (result)
-        {
-            Console.WriteLine("Can jump to the end.");
-        }
-        else
-        {
-            Console.WriteLine("Cannot jump to the end.");
-        }
+        Console.WriteLine("Input: [{0}]", string.Join(", ", nums));
+
+        Solution sol = new Solution();
+        bool result = sol.CanJump(nums);
+
+        Console.WriteLine("Output: {0}", result);
     }
 }
