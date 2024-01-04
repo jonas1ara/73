@@ -1,33 +1,26 @@
 ﻿#include <iostream>
 #include <vector>
-#include <string>
-
-using namespace std;
+#include <algorithm>
 
 class Solution {
 public:
-    int longestCommonSubsequence(string s, string t) {
-        int M = s.size(), N = t.size();
-        if (M < N) swap(M, N), swap(s, t);
-        vector<int> dp(N + 1);
-        for (int i = 0; i < M; ++i) {
-            int prev = 0;
-            for (int j = 0; j < N; ++j) {
-                int cur = dp[j + 1];
-                if (s[i] == t[j]) dp[j + 1] = prev + 1;
-                else dp[j + 1] = max(dp[j], dp[j + 1]);
-                prev = cur; 
+    int lengthOfLIS(std::vector<int>& A) {
+        if (A.empty()) return 0;
+        int N = A.size();
+        std::vector<int> dp(N, 1);
+        for (int i = 1; i < N; ++i) {
+            for (int j = 0; j < i; ++j) {
+                if (A[j] < A[i]) dp[i] = std::max(dp[i], dp[j] + 1);
             }
         }
-        return dp[N];
+        return *std::max_element(dp.begin(), dp.end());
     }
 };
 
 int main() {
+    std::vector<int> A = {10, 9, 2, 5, 3, 7, 101, 18};
     Solution solution;
-    string s = "abcde";
-    string t = "ace";
-    int result = solution.longestCommonSubsequence(s, t);
-    cout << "Longest Common Subsequence: " << result << endl;
+    int result = solution.lengthOfLIS(A);
+    std::cout << "Longitud de la subsecuencia creciente más larga: " << result << std::endl;
     return 0;
 }
