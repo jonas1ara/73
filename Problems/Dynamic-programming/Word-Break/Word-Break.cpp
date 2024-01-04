@@ -4,44 +4,54 @@
 #include <unordered_set>
 #include <climits>
 
-class Solution
-{
+// Using bottom-up approach - Time: O(n^2)
+
+class Solution {
 public:
     bool wordBreak(std::string s, std::vector<std::string> &wordDict)
     {
         std::unordered_set<std::string> st(wordDict.begin(), wordDict.end());
-        int N = s.size(), minLen = INT_MAX, maxLen = 0;
+        int n = s.size(), minLen = INT_MAX, maxLen = 0;
+        
         for (const auto &w : wordDict)
         {
             minLen = std::min(minLen, static_cast<int>(w.size()));
             maxLen = std::max(maxLen, static_cast<int>(w.size()));
         }
-        std::vector<bool> dp(N + 1, false);
+        
+        std::vector<bool> dp(n + 1, false);
         dp[0] = true;
-        for (int i = 1; i <= N; ++i)
+        
+        for (int i = 1; i <= n; i++)
         {
-            for (int len = minLen; len <= maxLen && i - len >= 0 && !dp[i]; ++len)
+            for (int len = minLen; len <= maxLen && i - len >= 0 && !dp[i]; len++)
             {
                 dp[i] = dp[i - len] && st.count(s.substr(i - len, len));
             }
         }
-        return dp[N];
+        
+        return dp[n];
     }
 };
 
 int main()
 {
-    Solution solution;
     std::string s = "leetcode";
     std::vector<std::string> wordDict = {"leet", "code"};
-    bool result = solution.wordBreak(s, wordDict);
-    if (result)
+
+    std::cout << "Input: s = " << s << ", wordDict = [";
+    for (int i = 0; i < wordDict.size(); i++)
     {
-        std::cout << "Result: true" << std::endl;
+        std::cout << "" << wordDict[i] << "";
+        if (i < wordDict.size() - 1)
+            std::cout << ", ";
     }
-    else
-    {
-        std::cout << "Result: false" << std::endl;
-    }
+    std::cout << "]" << std::endl;
+
+    Solution sol;
+    bool result = sol.wordBreak(s, wordDict);
+    
+    std::cout << "Output: " << std::boolalpha << result << std::endl;
+
     return 0;
 }
