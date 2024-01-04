@@ -33,7 +33,7 @@ int main()
     std::cout << "]" << std::endl;
 
     Solution sol;
-    int resul = sol.rob(nums);
+    int result = sol.rob(nums);
     
     std::cout << "Output: "<< result << std::endl;
 
