@@ -28,6 +28,7 @@ public class Solution
 }
 
 // Using greedy algorithm - Time: O(n)
+//
 // public class Solution
 // {
 //     public bool CanJump(int[] nums)
