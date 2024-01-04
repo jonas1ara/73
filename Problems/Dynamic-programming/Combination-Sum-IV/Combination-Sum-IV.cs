@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using top-down approach - Time: O(n * amount)
+
 public class Solution
 {
     private Dictionary<int, int> m = new Dictionary<int, int> { { 0, 1 } };
@@ -8,13 +10,16 @@ public class Solution
     private int Dp(int[] nums, int target)
     {
         if (m.ContainsKey(target)) return m[target];
+
         int cnt = 0;
+
         foreach (int n in nums)
         {
             if (n > target) break;
             cnt += Dp(nums, target - n);
         }
         m[target] = cnt;
+
         return cnt;
     }
 
@@ -28,10 +33,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        Solution solution = new Solution();
         int[] nums = { 1, 2, 3 };
         int target = 4;
-        int result = solution.CombinationSum4(nums, target);
-        Console.WriteLine("Result: " + result);
+
+        Console.Write("Input: nums = [");
+        for (int i = 0; i < nums.Length; i++)
+        {
+            Console.Write(nums[i]);
+            if (i < nums.Length - 1)
+            {
+                Console.Write(", ");
+            }
+        }
+        Console.WriteLine("], target = " + target);
+
+        Solution sol = new Solution();
+        int result = sol.CombinationSum4(nums, target);
+
+        Console.WriteLine("Output: " + result);
     }
 }
