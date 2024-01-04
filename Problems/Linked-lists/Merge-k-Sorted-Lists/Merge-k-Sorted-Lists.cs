@@ -62,6 +62,21 @@ class Program
 {
     static void Main()
     {
+        static void PrintList(ListNode head)
+        {
+            Console.Write("[");
+            while (head != null)
+            {
+                Console.Write(head.val);
+                head = head.next;
+                if (head != null)
+                {
+                    Console.Write(", ");
+                }
+            }
+            Console.Write("]");
+        }
+
         ListNode list1 = new ListNode(1, new ListNode(4, new ListNode(5)));
         ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(6)));
         ListNode list3 = new ListNode(2, new ListNode(7, new ListNode(8)));
@@ -85,20 +100,5 @@ class Program
         Console.Write("Output: ");
         PrintList(mergedList);
         Console.WriteLine();
-    }
-
-    static void PrintList(ListNode head)
-    {
-        Console.Write("[");
-        while (head != null)
-        {
-            Console.Write(head.val);
-            head = head.next;       
-            if (head != null)
-            {
-                Console.Write(", ");
-            }     
-        }
-        Console.Write("]");
     }
 }
