@@ -159,7 +159,7 @@ sudo apt update && \
 |**0213**|[House Robber II](https://leetcode.com/problems/house-robber-ii/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/House-Robber-II)|Medium|
 |**0300**|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Longest-Common-Subsequence)|Medium|
 |0322|[Coin Change](https://leetcode.com/problems/coin-change/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Coin-Change)|Medium|
-|**0377**|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Combination-Sum-IV)|Medium|
+|0377|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Combination-Sum-IV)|Medium|
 |**1143**|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Longest-Increasing-Subsequence)|Medium|
 
 ### Linked Lists
