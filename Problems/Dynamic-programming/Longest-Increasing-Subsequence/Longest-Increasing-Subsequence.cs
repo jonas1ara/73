@@ -1,32 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
+
+// Using tabulation - Time: O(n^2)
 
 public class Solution
 {
     public int LengthOfLIS(int[] nums)
     {
         if (nums.Length == 0) return 0;
-        int N = nums.Length;
-        int[] dp = new int[N];
-        for (int i = 0; i < N; i++)
+
+        int n = nums.Length;
+        int[] dp = new int[n];
+        
+        for (int i = 0; i < n; i++)
         {
             dp[i] = 1; 
         }
-        for (int i = 1; i < N; i++)
+        
+        for (int i = 1; i < n; i++)
         {
             for (int j = 0; j < i; j++)
             {
                 if (nums[j] < nums[i]) dp[i] = Math.Max(dp[i], dp[j] + 1);
             }
         }
+        
         return dp.Max();
     }
+}
 
-    public static void Main(string[] args)
+class Program
+{
+    static void Main(string[] args)
     {
         int[] nums = { 31, -41, 59, 26, -53, 58, 97, -93, -23, 84 };
-        Solution solution = new Solution();
-        int result = solution.LengthOfLIS(nums);
-        Console.WriteLine("Longest Increasing Subsequence: " + result);
+
+        Console.WriteLine("Input: nums = [" + string.Join(", ", nums) + "]");
+
+        Solution sol = new Solution();
+        int result = sol.LengthOfLIS(nums);
+    
+        Console.WriteLine("Output: " + result);
     }
 }
