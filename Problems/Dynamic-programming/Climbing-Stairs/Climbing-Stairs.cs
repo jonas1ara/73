@@ -1,5 +1,7 @@
-﻿
-using System;
+﻿using System;
+
+// Using bottom-up approach - Time: O(n)
+
 public class Solution
 {
     public int ClimbStairs(int n)
@@ -16,12 +18,19 @@ public class Solution
 
         return ans;
     }
+}
 
-    public static void Main(string[] args)
+class Program
+{
+    static void Main(string[] args)
     {
-        Solution solution = new Solution();
-        int n = 5; // Puedes cambiar este valor a la cantidad de escaleras que desees calcular.
-        int result = solution.ClimbStairs(n);
-        Console.WriteLine("Número de formas de subir " + n + " escaleras: " + result);
+        int n = 5;
+
+        Console.WriteLine("Input: " + n);
+
+        Solution sol = new Solution();
+        int result = sol.ClimbStairs(n);
+
+        Console.WriteLine("Output: " + result);
     }
 }

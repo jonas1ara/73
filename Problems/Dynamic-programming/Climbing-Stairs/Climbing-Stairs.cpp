@@ -1,7 +1,8 @@
 ﻿#include <iostream>
 
-class Solution
-{
+// Using bottom-up approach - Time: O(n)
+
+class Solution {
 public:
     int climbStairs(int n)
     {
@@ -11,14 +12,20 @@ public:
             ans += prev;
             prev = ans - prev;
         }
+
         return ans;
     }
 };
 
 int main()
 {
-    Solution solution;
-    std::cout << solution.climbStairs(2) << std::endl;
-    
+    int n = 5;
+    std::cout << "Input: " << n << std::endl;
+
+    Solution sol;
+    int result = sol.climbStairs(n);
+
+    std::cout << "Output: " << result << std::endl;
+
     return 0;
 }
