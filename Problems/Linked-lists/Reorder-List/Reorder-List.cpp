@@ -15,7 +15,10 @@ class Solution {
     {
         int ans = 0;
         for (; head; head = head->next)
-            ++ans;
+        {
+            ans++;
+        }
+
         return ans;
     }
 
@@ -62,6 +65,11 @@ class Solution {
 public:
     void reorderList(ListNode *head)
     {
+        if (!head || !head->next) 
+        {
+            return;
+        }
+        
         auto second = splitList(head);
         second = reverseList(second);
         interleave(head, second);

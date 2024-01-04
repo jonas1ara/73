@@ -69,7 +69,7 @@ public class Solution
 
     public void ReorderList(ListNode head)
     {
-        if (head == null || head.next == null)
+        if (head == null || head.next == null) 
         {
             return;
         }
@@ -82,9 +82,7 @@ public class Solution
 
 class Program
 {
-    public static void Main()
-    {
-        static void PrintList(ListNode node)
+    static void PrintList(ListNode node)
         {
             Console.Write("[");
             while (node != null)
@@ -99,9 +97,10 @@ class Program
             Console.Write("]");
         }
 
+    static void Main()
+    {   
         ListNode list = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
 
-        
         Console.Write("Input: head = ");
         PrintList(list);
         Console.WriteLine();
