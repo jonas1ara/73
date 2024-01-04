@@ -36,16 +36,7 @@ class Program
         int[] nums = { 1, 2, 3 };
         int target = 4;
 
-        Console.Write("Input: nums = [");
-        for (int i = 0; i < nums.Length; i++)
-        {
-            Console.Write(nums[i]);
-            if (i < nums.Length - 1)
-            {
-                Console.Write(", ");
-            }
-        }
-        Console.WriteLine("], target = " + target);
+        Console.WriteLine("Input: nums = [" + string.Join(", ", nums) + "], target = " + target );
 
         Solution sol = new Solution();
         int result = sol.CombinationSum4(nums, target);
