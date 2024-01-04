@@ -151,7 +151,7 @@ sudo apt update && \
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |0055|[Jump Game](https://leetcode.com/problems/jump-game/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Jump-Game)|Medium|
-|**0062**|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Unique-Paths)|Medium|
+|0062|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Unique-Paths)|Medium|
 |0070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Climbing-Stairs)|Easy|
 |0091|[Decode Ways](https://leetcode.com/problems/decode-ways/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Decode-Ways)|Medium|
 |**0139**|[Word Break](https://leetcode.com/problems/word-break/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Word-Break)|Medium|
