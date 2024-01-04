@@ -1,5 +1,7 @@
 ﻿using System;
 
+// Using tabulation - Time: O(m*n)
+
 public class Solution
 {
     public int LongestCommonSubsequence(string text1, string text2)

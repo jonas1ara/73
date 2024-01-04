@@ -2,6 +2,8 @@
 #include <vector>
 #include <string>
 
+// Using tabulation - Time: O(m*n)
+
 class Solution {
 public:
     int longestCommonSubsequence(std::string text1, std::string text2)
