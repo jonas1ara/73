@@ -12,7 +12,7 @@ struct ListNode {
 
 class Solution {
 public:
-    ListNode *MergeTwoLists(ListNode *a, ListNode *b)
+    ListNode *mergeTwoLists(ListNode *a, ListNode *b)
     {
         ListNode *head = new ListNode(0);
         ListNode *p = head;
@@ -39,7 +39,7 @@ public:
     }
 };
 
-void PrintList(ListNode *node)
+void printList(ListNode *node)
 {
     std::cout << "[";
     while (node != nullptr)
@@ -60,17 +60,17 @@ int main()
     ListNode *list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
 
     std::cout << "Input: list 1 = ";
-    PrintList(list1);
+    printList(list1);
 
     std::cout << ", list 2 = ";
-    PrintList(list2);
+    printList(list2);
     std::cout << std::endl;
 
     Solution sol;
-    ListNode *mergedList = sol.MergeTwoLists(list1, list2);
+    ListNode *mergedList = sol.mergeTwoLists(list1, list2);
 
     std::cout << "Output: ";
-    PrintList(mergedList);
+    printList(mergedList);
     std::cout << std::endl;
 
     delete mergedList;
