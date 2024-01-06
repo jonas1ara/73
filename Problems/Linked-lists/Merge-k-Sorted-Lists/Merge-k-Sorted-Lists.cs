@@ -76,6 +76,7 @@ class Program
         }
         Console.Write("]");
     }
+    
     static void Main()
     {
         ListNode list1 = new ListNode(1, new ListNode(4, new ListNode(5)));
