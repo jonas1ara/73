@@ -15,27 +15,27 @@ public class ListNode
 
 public class Solution
 {
-    public ListNode MergeTwoLists(ListNode a, ListNode b)
+    public ListNode MergeTwoLists(ListNode list1, ListNode list2)
     {
         ListNode head = new ListNode(0);
         ListNode p = head;
-        head.next = a;
+        head.next = list1;
 
-        while (p.next != null && b != null)
+        while (p.next != null && list2 != null)
         {
-            if (p.next.val > b.val)
+            if (p.next.val > list2.val)
             {
-                ListNode node = b;
-                b = b.next;
+                ListNode node = list2;
+                list2 = list2.next;
                 node.next = p.next;
                 p.next = node;
             }
             p = p.next;
         }
 
-        if (b != null)
+        if (list2 != null)
         {
-            p.next = b;
+            p.next = list2;
         }
 
         return head.next;
@@ -58,6 +58,7 @@ class Program
         }
         Console.Write("]");
     }
+
     static void Main()
     {
         ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
