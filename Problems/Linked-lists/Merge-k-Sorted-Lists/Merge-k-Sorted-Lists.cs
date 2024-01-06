@@ -17,6 +17,8 @@ public class Solution
 {
     private ListNode MergeTwoLists(ListNode a, ListNode b)
     {
+        // a = lists[i], b = lists[i + step]
+        
         ListNode head = new ListNode(0);
         ListNode tail = head;
 
