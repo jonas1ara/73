@@ -97,35 +97,48 @@ class Program
     {
         Twitter twitter = new Twitter();
 
-        // Input
         Console.WriteLine("Input: [\"Twitter\", \"postTweet\", \"getNewsFeed\", \"follow\", \"postTweet\", \"getNewsFeed\", \"unfollow\", \"getNewsFeed\"]");
         Console.WriteLine("[[], [1, 5], [1], [1, 2], [2, 6], [1], [1, 2], [1]]");
 
-        Console.Write("Output: [");
-
-        
-
-        // Performing actions with actual data
         twitter.PostTweet(1, 5);
         IList<int> feed1 = twitter.GetNewsFeed(1);
-
+        Console.Write("Output: [[");
         foreach (var item in feed1)
         {
-            Console.Write(item + " ");
+            Console.Write(item);
+            if (item != feed1[feed1.Count - 1])
+            {
+                Console.Write(", ");
+            }
         }
-
-        // Console.Write("[" + string.Join(", ", feed1) + "]");
+        Console.Write("], ");
 
         twitter.Follow(1, 2);
         twitter.PostTweet(2, 6);
         IList<int> feed2 = twitter.GetNewsFeed(1);
-        Console.Write("[" + string.Join(", ", feed2) + "]");
+        Console.Write("[");
+        foreach (var item in feed2)
+        {
+            Console.Write(item);
+            if (item != feed2[feed2.Count - 1])
+            {
+                Console.Write(", ");
+            }
+        }
+        Console.Write("], ");
 
         twitter.Unfollow(1, 2);
         IList<int> feed3 = twitter.GetNewsFeed(1);
-        Console.Write("[" + string.Join(",", feed3) + "]");
-
-        Console.WriteLine("]");
+        Console.Write("[");
+        foreach (var item in feed1)
+        {
+            Console.Write(item);
+            if (item != feed1[feed1.Count - 1])
+            {
+                Console.Write(", ");
+            }
+        }
+        Console.WriteLine("]]");
     }
 }
 

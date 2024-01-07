@@ -63,22 +63,53 @@ public:
     }
 };
 
-int main()
-{
+int main() {
     Twitter twitter;
 
+    // Input
+    std::cout << "Input: [\"Twitter\", \"postTweet\", \"getNewsFeed\", \"follow\", \"postTweet\", \"getNewsFeed\", \"unfollow\", \"getNewsFeed\"]" << std::endl;
+    std::cout << "[[], [1, 5], [1], [1, 2], [2, 6], [1], [1, 2], [1]]" << std::endl;
+
+    // Performing actions with actual data
     twitter.postTweet(1, 5);
+    std::vector<int> feed1 = twitter.getNewsFeed(1);
+    std::cout << "Output: [[";
+
+    for (size_t i = 0; i < feed1.size(); ++i) {
+        std::cout << feed1[i];
+        if (i != feed1.size() - 1) {
+            std::cout << ", ";
+        }
+    }
+
+    std::cout << "], ";
+
     twitter.follow(1, 2);
     twitter.postTweet(2, 6);
+    std::vector<int> feed2 = twitter.getNewsFeed(1);
+    std::cout << "[";
 
-    std::vector<int> feed = twitter.getNewsFeed(1);
-
-    std::cout << "News Feed for User 1: ";
-    for (int tweetId : feed)
-    {
-        std::cout << tweetId << " ";
+    for (size_t i = 0; i < feed2.size(); ++i) {
+        std::cout << feed2[i];
+        if (i != feed2.size() - 1) {
+            std::cout << ", ";
+        }
     }
-    std::cout << std::endl;
+
+    std::cout << "], ";
+
+    twitter.unfollow(1, 2);
+    std::vector<int> feed3 = twitter.getNewsFeed(1);
+    std::cout << "[";
+
+    for (size_t i = 0; i < feed3.size(); ++i) {
+        std::cout << feed3[i];
+        if (i != feed3.size() - 1) {
+            std::cout << ", ";
+        }
+    }
+
+    std::cout << "]]" << std::endl;
 
     return 0;
 }
