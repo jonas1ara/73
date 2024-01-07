@@ -198,7 +198,7 @@ sudo apt update && \
 |---| ----- | -------- | ---------- |
 |0295|[Find Mediumn from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/description/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Find-Median-from-Data-Stream)|Hard|
 |0347|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Top-K-Frequent-Elements)|Medium|
-|0355|[Design Twitter](https://leetcode.com/problems/design-twitter/description/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Design-Twitters)|Medium|
+|0355|[Design Twitter](https://leetcode.com/problems/design-twitter/description/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Design-Twitter)|Medium|
 
 ### Graphs
 
