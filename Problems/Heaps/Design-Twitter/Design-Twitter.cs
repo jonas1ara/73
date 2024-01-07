@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using a heap - Time: O(n log n)
+
 public class Twitter
 {
     private Dictionary<int, HashSet<int>> following;
@@ -95,17 +97,35 @@ class Program
     {
         Twitter twitter = new Twitter();
 
+        // Input
+        Console.WriteLine("Input: [\"Twitter\", \"postTweet\", \"getNewsFeed\", \"follow\", \"postTweet\", \"getNewsFeed\", \"unfollow\", \"getNewsFeed\"]");
+        Console.WriteLine("[[], [1, 5], [1], [1, 2], [2, 6], [1], [1, 2], [1]]");
+
+        Console.Write("Output: [");
+
+        
+
+        // Performing actions with actual data
         twitter.PostTweet(1, 5);
+        IList<int> feed1 = twitter.GetNewsFeed(1);
+
+        foreach (var item in feed1)
+        {
+            Console.Write(item + " ");
+        }
+
+        // Console.Write("[" + string.Join(", ", feed1) + "]");
+
         twitter.Follow(1, 2);
         twitter.PostTweet(2, 6);
+        IList<int> feed2 = twitter.GetNewsFeed(1);
+        Console.Write("[" + string.Join(", ", feed2) + "]");
 
-        IList<int> feed = twitter.GetNewsFeed(1);
+        twitter.Unfollow(1, 2);
+        IList<int> feed3 = twitter.GetNewsFeed(1);
+        Console.Write("[" + string.Join(",", feed3) + "]");
 
-        Console.Write("News Feed for User 1: ");
-        foreach (int tweetId in feed)
-        {
-            Console.Write(tweetId + " ");
-        }
-        Console.WriteLine();
+        Console.WriteLine("]");
     }
 }
+
