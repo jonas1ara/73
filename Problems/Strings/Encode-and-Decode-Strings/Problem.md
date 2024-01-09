@@ -69,3 +69,4 @@ One possible encode method is: "we:;say:;:::;yes"
 * [Count and Say (Easy)](https://leetcode.com/problems/count-and-say/)
 * [Serialize and Deserialize Binary Tree (Hard)](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 * [String Compression (Easy)](https://leetcode.com/problems/string-compression/)
+* [Count Binary Substrings (Easy)](https://leetcode.com/problems/count-binary-substrings/)
