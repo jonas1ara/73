@@ -38,4 +38,3 @@
 
 **Similar Questions**:
 * [Course Schedule (Medium)](https://leetcode.com/problems/course-schedule/)
-* [Number of Connected Components in an Undirected Graph (Medium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
