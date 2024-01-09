@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using depth-first search - Time: O(n)
+
 public class Solution
 {
     private List<List<int>> graph;
     private List<int> state; // -1 unvisited, 0 visiting, 1 visited
 
-    private bool DFS(int u, int prev = -1)
+    private bool dfs(int u, int prev = -1)
     {
         if (state[u] != -1) return state[u] == 1;
 
@@ -14,7 +16,7 @@ public class Solution
         foreach (int v in graph[u])
         {
             if (prev == v) continue;
-            if (!DFS(v, u)) return false;
+            if (!dfs(v, u)) return false;
         }
 
         state[u] = 1;
@@ -39,10 +41,13 @@ public class Solution
         }
 
         int cnt = 0;
+
         for (int i = 0; i < n; i++)
         {
-            if (state[i] == 1) continue;
-            if (!DFS(i)) return false;
+            if (state[i] == 1) 
+                continue;
+            if (!dfs(i)) 
+                return false;
             cnt++;
         }
 
@@ -54,19 +59,29 @@ class Program
 {
     static void Main()
     {
-        Solution sol = new Solution();
-
-        // Example usage
         int n = 5;
-        int[][] edges = { new int[] { 0, 1 }, new int[] { 0, 2 }, new int[] { 0, 3 }, new int[] { 1, 4 } };
 
-        if (sol.ValidTree(n, edges))
+        int[][] edges = { 
+            new int[] { 0, 1 }, 
+            new int[] { 0, 2 }, 
+            new int[] { 0, 3 }, 
+            new int[] { 1, 4 } 
+        };
+
+        Console.Write("Input: n = {0}, edges = [", n);
+        for (int i = 0; i < edges.Length; i++)
         {
-            Console.WriteLine("The given edges form a valid tree.");
+            Console.Write("[{0}, {1}]", edges[i][0], edges[i][1]);
+            if (i < edges.Length - 1) 
+            {
+                Console.Write(", ");
+            }
         }
-        else
-        {
-            Console.WriteLine("The given edges do not form a valid tree.");
-        }
+        Console.WriteLine("]");
+
+        Solution sol = new Solution();
+        bool result = sol.ValidTree(n, edges);
+
+        Console.WriteLine("Output: {0}", result);
     }
 }
