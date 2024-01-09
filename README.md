@@ -208,9 +208,9 @@ sudo apt update && \
 |**0133**|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Clone-Graph)|Medium|
 |**0200**|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Number-of-Islands)|Medium|
 |**0207**|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Course-Schedule)|Medium|
-|0261|[Graph Valid Tree](https://www.lintcode.com/problem/178/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Graph-Valid-Tree)|Medium|
-|0269|[Alien Dictionary](https://www.lintcode.com/problem/892/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Alien-Dictionary)|Hard|
-|0323|[Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph)|Medium|
+|0261|[Graph Valid Tree](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Graph-Valid-Tree) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Graph-Valid-Tree)|Medium|
+|0269|[Alien Dictionary](https://github.com/jonas1ara/73/blob/main/Problems/Graphs/Alien-Dictionary/Problem.md) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Alien-Dictionary)|Hard|
+|0323|[Number of Connected Components in an Undirected Graph](https://github.com/jonas1ara/73/blob/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph/Problem.md) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph)|Medium|
 |0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Pacific-Atlantic-Water-Flow)|Medium|
 
 
