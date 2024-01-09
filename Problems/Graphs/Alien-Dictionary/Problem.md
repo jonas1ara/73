@@ -44,3 +44,5 @@
 **Related Topics**:  
 [Graph](https://leetcode.com/tag/graph/), [Topological Sort](https://leetcode.com/tag/topological-sort/)
 
+**Similar Questions**:
+* [Course Schedule II (Medium)](https://leetcode.com/problems/course-schedule-ii/)

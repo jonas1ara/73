@@ -39,3 +39,4 @@
 **Similar Questions**:
 * [Number of Islands (Medium)](https://leetcode.com/problems/number-of-islands/)
 * [Graph Valid Tree (Medium)](https://leetcode.com/problems/graph-valid-tree/)
+* [Number of Provinces (Medium)](https://leetcode.com/problems/number-of-provinces/)
