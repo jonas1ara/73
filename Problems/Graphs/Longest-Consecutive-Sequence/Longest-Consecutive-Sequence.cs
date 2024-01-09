@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+// Using union find algorithm - Time: O(n)
+
 public class UnionFind
 {
     private int[] id;
@@ -11,7 +13,8 @@ public class UnionFind
     {
         id = new int[n];
         size = new int[n];
-        for (int i = 0; i < n; ++i)
+
+        for (int i = 0; i < n; i++)
         {
             id[i] = i;
             size[i] = 1;
@@ -47,7 +50,7 @@ public class Solution
         UnionFind uf = new UnionFind(nums.Length);
         Dictionary<int, int> m = new Dictionary<int, int>();
 
-        for (int i = 0; i < nums.Length; ++i)
+        for (int i = 0; i < nums.Length; i++)
         {
             int n = nums[i];
             if (m.ContainsKey(n)) continue;
@@ -64,12 +67,12 @@ class Program
 {
     static void Main()
     {
-        Solution solution = new Solution();
+        int[] nums = { 0,3,7,2,5,8,4,6,0,1 };
+        Console.WriteLine("Input: [" + string.Join(",", nums) + "]");
 
-        // Ejemplo de uso
-        int[] nums = { 100, 4, 200, 1, 3, 2 };
-        int result = solution.LongestConsecutive(nums);
+        Solution sol = new Solution();
+        int result = sol.LongestConsecutive(nums);
 
-        Console.WriteLine("Longest Consecutive Sequence: " + result);
+        Console.WriteLine("Output: " + result);
     }
 }
