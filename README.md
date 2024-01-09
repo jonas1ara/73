@@ -204,7 +204,7 @@ sudo apt update && \
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0128**|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Longest-Consecutive-Sequence)|Medium|
+|0128|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Longest-Consecutive-Sequence)|Medium|
 |**0133**|[Clone Graph](https://leetcode.com/problems/clone-graph/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Clone-Graph)|Medium|
 |**0200**|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Number-of-Islands)|Medium|
 |**0207**|[Course Schedule](https://leetcode.com/problems/course-schedule/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Course-Schedule)|Medium|
