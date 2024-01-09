@@ -4,65 +4,90 @@
 #include <unordered_set>
 #include <algorithm>
 
-using namespace std;
+// Using topological sort - Time: O(V + E)
 
 class Solution {
-    unordered_map<int, unordered_set<int>> G;
+    std::unordered_map<int, std::unordered_set<int>> graph;
     int state[26];
-    string ans;
+    std::string ans;
     
-    bool dfs(int u) {
-        if (state[u] == 0) return false; // Se detectó un ciclo
-        if (state[u] == 1) return true;  // Ya se visitó este nodo
+    bool dfs(int u) 
+    {
+        if (state[u] == 0) return false; // Has a cycle
+        if (state[u] == 1) return true;  // Node already visited
         
         state[u] = 0;
-        for (int v : G[u]) {
+
+        for (int v : graph[u]) 
+        {
             if (!dfs(v)) return false;
         }
         ans += 'a' + u;
+
         return state[u] = 1;
     }
     
 public:
-    Solution() {
-        // Inicializa state con -1
-        for (int i = 0; i < 26; ++i) {
+    Solution() 
+    {
+        for (int i = 0; i < 26; i++)
+        {
             state[i] = -1;
         }
     }
 
-    string alienOrder(vector<string>& A) {
-        for (auto &s : A) {
-            for (char c : s) G[c - 'a'] = {};
+    std::string alienOrder(std::vector<std::string>& words) 
+    {
+        for (auto &s : words) 
+        {
+            for (char c : s) graph[c - 'a'] = {};
         }
         
-        for (int i = 1; i < A.size(); ++i) {
+        for (int i = 1; i < words.size(); ++i) 
+        {
             int j = 0;
-            for (; j < min(A[i - 1].size(), A[i].size()); ++j) {
-                if (A[i - 1][j] == A[i][j]) continue;
-                G[A[i - 1][j] - 'a'].insert(A[i][j] - 'a');
+
+            for (; j < std::min(words[i - 1].size(), words[i].size()); ++j) 
+            {
+                if (words[i - 1][j] == words[i][j]) continue;
+                graph[words[i - 1][j] - 'a'].insert(words[i][j] - 'a');
                 break;
             }
-            if (j == A[i].size() && j < A[i - 1].size()) return ""; // Las palabras están mal ordenadas
+
+            if (j == words[i].size() && j < words[i - 1].size()) return ""; // Words don't match
         }
         
-        for (auto &[from, tos] : G) {
-            if (!dfs(from)) return ""; // Se detectó un ciclo durante el DFS
+        for (auto &[from, tos] : graph) 
+        {
+            if (!dfs(from)) return ""; // Detected a cycle
         }
         
         reverse(begin(ans), end(ans));
-        return ans.size() == G.size() ? ans : ""; // Verifica que todos los nodos fueron visitados
+
+        return ans.size() == graph.size() ? ans : ""; // All nodes visited
     }
 };
 
-int main() {
+int main() 
+{
+    // std::vector<std::string> words = {"wrt", "wrf", "er", "ett", "rftt"};
+	std::vector<std::string> words = {"z" , "x"};
+
+    std::cout << "Input: words = [";
+    for (int i = 0; i < words.size(); i++)
+    {
+        std::cout << "\"" << words[i] << "\"";
+        if (i < words.size() - 1)
+        {
+            std::cout << ", ";
+        }
+    }
+    std::cout << "]" << std::endl;
+
     Solution sol;
-    // vector<string> words = {"wrt", "wrf", "er", "ett", "rftt"};
+	std::string result = sol.alienOrder(words);
     
-	vector<string> words = {"z" , "x"};
-	string result = sol.alienOrder(words);
-    
-    cout << "Alien Order: " << result << endl;
+    std::cout << "Output: " << result << std::endl;
     
     return 0;
 }

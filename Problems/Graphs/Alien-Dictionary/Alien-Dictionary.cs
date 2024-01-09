@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+
+// Using topological sort - Time: O(V + E)
+
 public class Solution
 {
     private Dictionary<int, HashSet<int>> graph;
     private int[] state;
     private string ans;
 
-    private bool DFS(int u)
+    private bool dfs(int u)
     {
         if (state[u] == 0) return false; // Cycle detected
         if (state[u] == 1) return true;  // Node visited
@@ -14,7 +17,7 @@ public class Solution
         state[u] = 0;
         foreach (int v in graph[u])
         {
-            if (!DFS(v)) return false;
+            if (!dfs(v)) return false;
         }
 
         ans += (char)('a' + u);
@@ -42,22 +45,24 @@ public class Solution
         for (int i = 1; i < words.Length; i++)
         {
             int j = 0;
+
             for (; j < Math.Min(words[i - 1].Length, words[i].Length); j++)
             {
                 if (words[i - 1][j] == words[i][j]) continue;
                 graph[words[i - 1][j] - 'a'].Add(words[i][j] - 'a');
                 break;
             }
-            if (j == words[i].Length && j < words[i - 1].Length) return ""; 
+            if (j == words[i].Length && j < words[i - 1].Length) return "";  // Words don't match
         }
 
         foreach (var entry in graph)
         {
-            if (!DFS(entry.Key)) return ""; 
+            if (!dfs(entry.Key)) return "";  // Detected a cycle
         }
 
         char[] ansArray = ans.ToCharArray();
         Array.Reverse(ansArray);
+
         return ansArray.Length == graph.Count ? new string(ansArray) : ""; // All nodes visited
     }
 }
@@ -66,11 +71,14 @@ class Program
 {
     static void Main()
     {
-        Solution sol = new Solution();
         //string[] words = { "wrt", "wrf", "er", "ett", "rftt" };
         string[] words = { "z", "x" };
+
+        Console.WriteLine("Input: [" + string.Join(", ", words) + "]");
+
+        Solution sol = new Solution();
         string result = sol.AlienOrder(words);
 
-        Console.WriteLine("Alien Order: " + result);
+        Console.WriteLine("Output: " + result);
     }
 }
