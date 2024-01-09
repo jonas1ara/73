@@ -1,6 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
+
+// Using Union find algorithm - Time: O(V + E)
 
 public class UnionFind
 {
@@ -22,8 +24,11 @@ public class UnionFind
     {
         int p = Find(a);
         int q = Find(b);
-        if (p == q) return;
+
+        if (p == q) 
+            return;
         id[p] = q;
+
         cnt--;
     }
 
@@ -42,6 +47,7 @@ public class Solution
         {
             uf.Connect(e[0], e[1]);
         }
+        
         return uf.GetCount();
     }
 }
@@ -50,13 +56,35 @@ class Program
 {
     static void Main()
     {
-        // Ejemplo de uso
-        Solution solution = new Solution();
         int n = 5;
-        int[][] edges = { new int[] { 0, 1 }, new int[] { 1, 2 }, new int[] { 3, 4 } };
-        //int[][] edges = { new int[] { 0, 1 }, new int[] { 1, 2 }, new int[] { 2, 3 }, new int[] { 3, 4 } };
-        int result = solution.CountComponents(n, edges);
+        int[][] edges = { 
+            new int[] { 0, 1 }, 
+            new int[] { 1, 2 }, 
+            new int[] { 3, 4 } 
+        };
 
-        Console.WriteLine("Number of Connected Components: " + result);
+        Console.Write("Input: n = {0}, edges = [", n);
+        for (int i = 0; i < edges.Length; i++)
+        {
+            Console.Write("[{0}, {1}]", edges[i][0], edges[i][1]);
+            if (i < edges.Length - 1) 
+            {
+                Console.Write(",");
+            }
+        }
+        Console.WriteLine("]");
+
+        
+        // int[][] edges = { 
+        //     new int[] { 0, 1 }, 
+        //     new int[] { 1, 2 }, 
+        //     new int[] { 2, 3 }, 
+        //     new int[] { 3, 4 } 
+        // };
+
+        Solution sol = new Solution();
+        int result = sol.CountComponents(n, edges);
+
+        Console.WriteLine("Output: " + result);
     }
 }
