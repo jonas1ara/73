@@ -1,20 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using depth-first search - Time: O(mn)
+
 public class Solution
 {
     private int[][] dirs = { new int[] { 0, 1 }, new int[] { 0, -1 }, new int[] { 1, 0 }, new int[] { -1, 0 } };
     private int M, N;
 
-    private void DFS(int[][] heights, int x, int y, int[][] m)
+    private void dfs(int[][] heights, int x, int y, int[][] m)
     {
-        if (m[x][y] == 1) return;
+        if (m[x][y] == 1) 
+            return;
+        
         m[x][y] = 1;
+        
         foreach (var dir in dirs)
         {
             int a = x + dir[0], b = y + dir[1];
-            if (a < 0 || a >= M || b < 0 || b >= N || heights[a][b] < heights[x][y]) continue;
-            DFS(heights, a, b, m);
+
+            if (a < 0 || a >= M || b < 0 || b >= N || heights[a][b] < heights[x][y]) 
+                continue;
+            
+            dfs(heights, a, b, m);
         }
     }
 
@@ -27,7 +35,8 @@ public class Solution
 
         int[][] pacific = new int[M][];
         int[][] atlantic = new int[M][];
-        for (int i = 0; i < M; ++i)
+
+        for (int i = 0; i < M; i++)
         {
             pacific[i] = new int[N];
             atlantic[i] = new int[N];
@@ -35,13 +44,13 @@ public class Solution
 
         for (int i = 0; i < M; i++)
         {
-            DFS(heights, i, 0, pacific);
-            DFS(heights, i, N - 1, atlantic);
+            dfs(heights, i, 0, pacific);
+            dfs(heights, i, N - 1, atlantic);
         }
         for (int j = 0; j < N; j++)
         {
-            DFS(heights, 0, j, pacific);
-            DFS(heights, M - 1, j, atlantic);
+            dfs(heights, 0, j, pacific);
+            dfs(heights, M - 1, j, atlantic);
         }
 
         for (int i = 0; i < M; i++)
@@ -54,6 +63,7 @@ public class Solution
                 }
             }
         }
+
         return ans;
     }
 }
@@ -62,9 +72,6 @@ class Program
 {
     static void Main()
     {
-        // Ejemplo de uso
-        Solution sol = new Solution();
-        //int[][] heights = { new int[] {1}};
         int[][] heights = {
             new int[] {1,2,2,3,5},
             new int[] {3,2,3,4,4},
@@ -72,13 +79,39 @@ class Program
             new int[] {6,7,1,4,5},
             new int[] {5,1,1,2,4}
         };
+
+        Console.Write("Input: [");
+        foreach (var row in heights)
+        {
+            Console.Write("[");
+            foreach (var point in row)
+            {
+                Console.Write($"{point}");
+                if (point != row[row.Length - 1])
+                {
+                    Console.Write(", ");
+                }
+            }
+            Console.Write("]");
+            if (row != heights[heights.Length - 1])
+            {
+                Console.Write(", ");
+            }
+        }
+        Console.WriteLine("]");
+
+        Solution sol = new Solution();
         IList<IList<int>> result = sol.PacificAtlantic(heights);
 
-        // Imprimir el resultado
+        Console.Write("Output: [");
         foreach (var point in result)
         {
-            Console.Write($"({point[0]}, {point[1]}) ");
+            Console.Write($"[{point[0]}, {point[1]}]");
+            if (point != result[result.Count - 1])
+            {
+                Console.Write(", ");
+            }
         }
-        Console.WriteLine();
+        Console.WriteLine("]");
     }
 }
