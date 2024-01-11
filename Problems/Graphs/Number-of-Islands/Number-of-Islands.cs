@@ -8,7 +8,10 @@ public class Solution
 
     private void dfs(char[][] grid, int x, int y)
     {
-        if (x < 0 || y < 0 || x >= m || y >= n || grid[x][y] != '1') return;
+        if (x < 0 || y < 0 || x >= m || y >= n || grid[x][y] != '1') 
+        {
+            return;
+        }
 
         grid[x][y] = 'x';
 
@@ -20,7 +23,10 @@ public class Solution
     // grid
     public int NumIslands(char[][] grid)
     {
-        if (grid == null || grid.Length == 0 || grid[0].Length == 0) return 0;
+        if (grid == null || grid.Length == 0 || grid[0].Length == 0) 
+        {   
+            return 0;
+        }
 
         int ans = 0;
         m = grid.Length;
@@ -30,7 +36,11 @@ public class Solution
         {
             for (int j = 0; j < n; j++)
             {
-                if (grid[i][j] != '1') continue;
+                if (grid[i][j] != '1') 
+                {   
+                    continue;
+                }
+                
                 ans++;
                 dfs(grid, i, j);
             }
@@ -44,7 +54,6 @@ class Program
 {
     static void Main()
     {
-        // Constructing the grid
         char[][] grid = new char[][]
         {
             new char[] {'1', '1', '0', '0', '0'},
@@ -53,23 +62,7 @@ class Program
             new char[] {'0', '0', '0', '1', '1'}
         };
 
-        // Print grid
-        Console.WriteLine("Grid:");
-        PrintGrid(grid);
-
-        // Create an instance of the Solution class
-        Solution solution = new Solution();
-
-        // Call the NumIslands function
-        int numIslands = solution.NumIslands(grid);
-
-        // Print answer
-        Console.WriteLine("Number of Islands: " + numIslands);
-    }
-
-    // Helper method to print the grid
-    static void PrintGrid(char[][] grid)
-    {
+        Console.WriteLine("Input: grid = [");
         foreach (var row in grid)
         {
             foreach (var cell in row)
@@ -78,5 +71,11 @@ class Program
             }
             Console.WriteLine();
         }
+        Console.WriteLine("]");
+
+        Solution sol = new Solution();
+        int numIslands = sol.NumIslands(grid);
+
+        Console.WriteLine("Output: " + numIslands);
     }
 }
