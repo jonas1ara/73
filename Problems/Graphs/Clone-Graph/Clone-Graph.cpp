@@ -49,7 +49,6 @@ public:
             cpy->neighbors.push_back(cloneGraph(n));
         }
 
-        std::cout << "org: " <<  node->val << " cpy->val: " << cpy->val << std::endl;
         return cpy;
     }
 };

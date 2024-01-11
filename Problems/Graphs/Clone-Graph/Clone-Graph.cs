@@ -47,7 +47,6 @@ public class Solution
             cpy.neighbors.Add(CloneGraph(neighbor));
         }
 
-        Console.WriteLine("node: " + node.val + " cpy: " + cpy.val);
         return cpy;
     }
 }
