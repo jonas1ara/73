@@ -1,22 +1,29 @@
-﻿public class Solution
+﻿using System;
+using System.Collections.Generic;
+
+// Using breadth-first search - Time: O(n)
+
+public class Solution
 {
     public bool CanFinish(int numCourses, int[][] prerequisites)
     {
-        List<List<int>> G = new List<List<int>>(numCourses);
+        List<List<int>> graph = new List<List<int>>(numCourses);
+
         for (int i = 0; i < numCourses; i++)
         {
-            G.Add(new List<int>());
+            graph.Add(new List<int>());
         }
 
         int[] indegree = new int[numCourses];
 
-        foreach (var e in prerequisites)
+        foreach (var p in prerequisites)
         {
-            G[e[1]].Add(e[0]);
-            indegree[e[0]]++;
+            graph[p[1]].Add(p[0]);
+            indegree[p[0]]++;
         }
 
-        Queue<int> q = new Queue<int>();
+        Queue<int> q = new Queue<int>(); // q = queue of nodes with indegree = 0
+        
         for (int i = 0; i < numCourses; i++)
         {
             if (indegree[i] == 0) q.Enqueue(i);
@@ -27,12 +34,40 @@
             int u = q.Dequeue();
             numCourses--;
 
-            foreach (int v in G[u])
+            foreach (int v in graph[u])
             {
-                if (--indegree[v] == 0) q.Enqueue(v);
+                if (indegree[v]-- == 0) q.Enqueue(v);
             }
         }
 
         return numCourses == 0;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        int numCourses = 2;
+
+        int[][] prerequisites = new int[][]
+        {
+            new int[] { 1, 0 },
+            new int[] { 0, 1 },
+        };
+
+        Console.Write("Input: numCourses: {0}, prerequisites = [", numCourses);
+        foreach (var p in prerequisites)
+        {
+            Console.Write("[{0}, {1}], ", p[0], p[1]);
+            if (p == prerequisites[prerequisites.Length - 1])
+                Console.Write("\b\b"); 
+        }
+        Console.WriteLine("]");
+
+        Solution sol = new Solution();
+        bool result = sol.CanFinish(numCourses, prerequisites);
+
+        Console.WriteLine("Output: {0}", result);
     }
 }
