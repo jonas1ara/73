@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Using topological sort - Time: O(n)
+// Using topological sort (bfs) - Time: O(n + m) where n = numCourses and m = prerequisites.Length
 
 public class Solution
 {

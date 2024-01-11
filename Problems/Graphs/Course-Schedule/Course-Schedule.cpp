@@ -2,7 +2,7 @@
 #include <vector>
 #include <queue>
 
-// Using topological sort - Time: O(n)
+// Using topological sort (bfs) - Time: O(n + m) where n = numCourses and m = prerequisites.Length
 
 class Solution {
 public:
