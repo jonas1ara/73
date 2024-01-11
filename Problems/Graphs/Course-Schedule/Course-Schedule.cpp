@@ -2,7 +2,7 @@
 #include <vector>
 #include <queue>
 
-// Using breadth-first search - Time: O(n)
+// Using topological sort - Time: O(n)
 
 class Solution {
 public:

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Using breadth-first search - Time: O(n)
+// Using topological sort - Time: O(n)
 
 public class Solution
 {
