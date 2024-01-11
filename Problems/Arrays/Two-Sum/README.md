@@ -114,8 +114,6 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 }
 ```
 
-La voy a explicar lo juro
-
 ## Lenguaje C++
 
 ### Solución con fuerza bruta O(n²)

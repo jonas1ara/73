@@ -1,1 +1,1 @@
- # Longest Consecutive Sequence
+ # Longest consecutive sequence
