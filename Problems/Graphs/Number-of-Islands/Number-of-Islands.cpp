@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <vector>
 
+// Using depth-first search - Time: O(m * n)
+
 class Solution {
     int m, n;
     int dirs[4][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};

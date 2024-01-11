@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Using depth-first search - Time: O(m * n)
+
 public class Solution
 {
     private int m, n;
