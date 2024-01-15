@@ -177,10 +177,10 @@ sudo apt update && \
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|**0098**|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Validate-Binary-Search-Tree)|Medium|
-|**0100**|[Same Tree](https://leetcode.com/problems/same-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Same-Tree)|Easy|
-|**0102**|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Binary-Tree-Level-Order-Traversal)|Medium|
-|**0104**|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Maximum-Depth-of-Binary-Tree)|Easy|
+|0098|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Validate-Binary-Search-Tree)|Medium|
+|0100|[Same Tree](https://leetcode.com/problems/same-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Same-Tree)|Easy|
+|0102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Binary-Tree-Level-Order-Traversal)|Medium|
+|0104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Maximum-Depth-of-Binary-Tree)|Easy|
 |**0105**|[Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal)|Medium|
 |**0124**|[Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Binary-Tree-Maximum-Path-Sum)|Hard|
 |**0208**|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Implement-Trie-Prefix-Tree)|Medium|
