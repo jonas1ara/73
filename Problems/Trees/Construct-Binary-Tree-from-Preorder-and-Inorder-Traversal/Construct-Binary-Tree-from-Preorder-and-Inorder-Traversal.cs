@@ -1,16 +1,19 @@
-﻿/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
-**/
+﻿using System;
+
+public class TreeNode
+{
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
+
+    public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
+    {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
 public class Solution
 {
     public TreeNode BuildTree(int[] preorder, int[] inorder)
@@ -35,5 +38,24 @@ public class Solution
             root.right = BuildTree(preorder, preorderStart + 1 + leftLength, preorderEnd, inorder, inorderIndex + 1, inorderEnd);
 
         return root;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Ejemplo de uso
+        int[] preorder = { 3, 9, 20, 15, 7 };
+        int[] inorder = { 9, 3, 15, 20, 7 };
+
+        // Crear una instancia de la solución
+        Solution solution = new Solution();
+
+        // Construir el árbol
+        TreeNode root = solution.BuildTree(preorder, inorder);
+
+        // Mostrar el resultado (puedes agregar tu propia lógica de visualización)
+        Console.WriteLine("Árbol construido exitosamente.");
     }
 }
