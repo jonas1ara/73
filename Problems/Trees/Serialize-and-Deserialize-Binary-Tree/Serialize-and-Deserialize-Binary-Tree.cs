@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 public class TreeNode
 {
@@ -59,7 +61,32 @@ public class Codec
     }
 }
 
-// Tu objeto Codec se instanciará y se llamará de la siguiente manera:
-// Codec ser = new Codec();
-// Codec deser = new Codec();
-// TreeNode ans = deser.deserialize(ser.serialize(root));
+class Program
+{
+    static void Main()
+    {
+        // Crear un árbol de ejemplo
+        TreeNode root = new TreeNode(1)
+        {
+            left = new TreeNode(2),
+            right = new TreeNode(3)
+            {
+                left = new TreeNode(4),
+                right = new TreeNode(5)
+            }
+        };
+
+        // Crear un objeto Codec
+        Codec codec = new Codec();
+
+        // Serializar el árbol
+        string serialized = codec.serialize(root);
+        Console.WriteLine($"Árbol serializado: {serialized}");
+
+        // Deserializar el árbol
+        TreeNode deserialized = codec.deserialize(serialized);
+
+        // Mostrar el resultado
+        Console.WriteLine($"Árbol deserializado: {codec.serialize(deserialized)}");
+    }
+}

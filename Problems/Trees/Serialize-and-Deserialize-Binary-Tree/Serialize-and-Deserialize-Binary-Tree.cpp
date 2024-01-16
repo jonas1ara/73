@@ -2,9 +2,6 @@
 #include <sstream>
 #include <queue>
 
-using namespace std;
-
-// Definition for a binary tree node.
 struct TreeNode
 {
     int val;
@@ -17,28 +14,28 @@ class Codec
 {
 public:
     // Encodes a tree to a single string.
-    string serialize(TreeNode *root)
+    std::string serialize(TreeNode *root)
     {
         if (root == nullptr)
         {
             return "null";
         }
 
-        stringstream ss;
+        std::stringstream ss;
         serializeHelper(root, ss);
         return ss.str();
     }
 
     // Decodes your encoded data to tree.
-    TreeNode *deserialize(string data)
+    TreeNode *deserialize(std::string data)
     {
-        queue<string> nodes = split(data, ',');
+        std::queue<std::string> nodes = split(data, ',');
 
         return deserializeHelper(nodes);
     }
 
 private:
-    void serializeHelper(TreeNode *node, stringstream &ss)
+    void serializeHelper(TreeNode *node, std::stringstream &ss)
     {
         if (node == nullptr)
         {
@@ -52,27 +49,27 @@ private:
         }
     }
 
-    TreeNode *deserializeHelper(queue<string> &nodes)
+    TreeNode *deserializeHelper(std::queue<std::string> &nodes)
     {
-        string val = nodes.front();
+        std::string val = nodes.front();
         nodes.pop();
         if (val == "null")
         {
             return nullptr;
         }
 
-        TreeNode *node = new TreeNode(stoi(val));
+        TreeNode *node = new TreeNode(std::stoi(val));
         node->left = deserializeHelper(nodes);
         node->right = deserializeHelper(nodes);
 
         return node;
     }
 
-    queue<string> split(const string &s, char delimiter)
+    std::queue<std::string> split(const std::string &s, char delimiter)
     {
-        queue<string> tokens;
-        stringstream ss(s);
-        string token;
+        std::queue<std::string> tokens;
+        std::stringstream ss(s);
+        std::string token;
         while (getline(ss, token, delimiter))
         {
             tokens.push(token);
@@ -81,7 +78,34 @@ private:
     }
 };
 
-// Tu objeto Codec se instanciará y se llamará de la siguiente manera:
-// Codec ser;
-// Codec deser;
-// TreeNode* ans = deser.deserialize(ser.serialize(root));
+int main()
+{
+    // Crear un árbol de ejemplo
+    TreeNode *root = new TreeNode(1);
+    root->left = new TreeNode(2);
+    root->right = new TreeNode(3);
+    root->left->left = new TreeNode(4);
+    root->left->right = new TreeNode(5);
+
+    // Crear un objeto Codec
+    Codec codec;
+
+    // Serializar el árbol
+    std::string serialized = codec.serialize(root);
+    std::cout << "Árbol serializado: " << serialized << std::endl;
+
+    // Deserializar el árbol
+    TreeNode *deserialized = codec.deserialize(serialized);
+
+    // Mostrar el resultado
+    std::cout << "Árbol deserializado: " << codec.serialize(deserialized) << std::endl;
+
+    // Liberar la memoria del árbol
+    delete root->left->left;
+    delete root->left->right;
+    delete root->left;
+    delete root->right;
+    delete root;
+
+    return 0;
+}
