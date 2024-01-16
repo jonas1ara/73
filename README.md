@@ -186,9 +186,9 @@ sudo apt update && \
 |0208|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Implement-Trie-Prefix-Tree)|Medium|
 |0211|[Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Design-Add-and-Search-Words-Data-Structure)|Medium|
 |0212|[Word Search II](https://leetcode.com/problems/word-search-ii/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Word-Search-II)|Hard|
-|**0226**|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Invert-Binary-Tree)|Hard|
-|**0230**|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Kth-Smallest-Element-in-a-BST)|Medium|
-|**0235**|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Lowest-Common-Ancestor-of-a-Binary-Search-Tree)|Medium|
+|0226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Invert-Binary-Tree)|Hard|
+|0230|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Kth-Smallest-Element-in-a-BST)|Medium|
+|0235|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Lowest-Common-Ancestor-of-a-Binary-Search-Tree)|Medium|
 |**0297**|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Serialize-and-Deserialize-Binary-Tree)|Hard|
 |**0572**|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Subtree-of-Another-Tree)|Easy|
 
