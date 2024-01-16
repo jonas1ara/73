@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>Binary_Tree_Maximum_Path_Sum</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
 </Project>

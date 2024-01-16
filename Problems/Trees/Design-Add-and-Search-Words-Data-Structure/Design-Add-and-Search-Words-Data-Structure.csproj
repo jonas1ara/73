@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>Design_Add_and_Search_Words_Data_Structure</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
 </Project>
