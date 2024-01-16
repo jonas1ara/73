@@ -1,12 +1,4 @@
-﻿/**
- * Your Trie object will be instantiated and called as such:
- * Trie obj = new Trie();
- * obj.Insert(word);
- * bool param_2 = obj.Search(word);
- * bool param_3 = obj.StartsWith(prefix);
-**/
-
-public class TrieNode
+﻿public class TrieNode
 {
     public TrieNode[] Next { get; } = new TrieNode[26];
     public bool Word { get; set; }
@@ -52,3 +44,18 @@ public class Trie
     }
 }
 
+class Program
+{
+    static void Main()
+    {
+        // Ejemplo de uso
+        Trie obj = new Trie();
+        obj.Insert("apple");
+        bool param_2 = obj.Search("apple");
+        bool param_3 = obj.StartsWith("app");
+
+        // Mostrar resultados
+        Console.WriteLine("Search('apple'): " + param_2); // Debería ser true
+        Console.WriteLine("StartsWith('app'): " + param_3); // Debería ser true
+    }
+}
