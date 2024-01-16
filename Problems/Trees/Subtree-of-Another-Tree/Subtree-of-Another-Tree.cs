@@ -1,16 +1,17 @@
-﻿/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
-**/
+﻿using System;
+
+public class TreeNode
+{
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
+    public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
+    {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
 
 public class Solution
 {
@@ -25,3 +26,28 @@ public class Solution
     }
 }
 
+class Program
+{
+    static void Main()
+    {
+        // Crear dos árboles de ejemplo
+        TreeNode treeS = new TreeNode(3,
+            new TreeNode(4,
+                new TreeNode(1),
+                new TreeNode(2)),
+            new TreeNode(5));
+
+        TreeNode treeT = new TreeNode(4,
+            new TreeNode(1),
+            new TreeNode(2));
+
+        // Crear un objeto Solution
+        Solution solution = new Solution();
+
+        // Verificar si treeT es subárbol de treeS
+        bool result = solution.IsSubtree(treeS, treeT);
+
+        // Mostrar el resultado
+        Console.WriteLine($"treeT {(result ? "es" : "no es")} subárbol de treeS");
+    }
+}
