@@ -1,11 +1,4 @@
-﻿/**
- * Your WordDictionary object will be instantiated and called as such:
- * WordDictionary obj = new WordDictionary();
- * obj.AddWord(word);
- * bool param_2 = obj.Search(word);
- */
-
-public class TrieNode
+﻿public class TrieNode
 {
     public TrieNode[] Next { get; } = new TrieNode[26];
     public bool End { get; set; }
@@ -45,3 +38,25 @@ public class WordDictionary
     }
 }
 
+class Program
+{
+    static void Main()
+    {
+        // Ejemplo de uso
+        WordDictionary wordDictionary = new WordDictionary();
+        wordDictionary.AddWord("bad");
+        wordDictionary.AddWord("dad");
+        wordDictionary.AddWord("mad");
+
+        bool param_1 = wordDictionary.Search("pad"); // Debería ser false
+        bool param_2 = wordDictionary.Search("bad"); // Debería ser true
+        bool param_3 = wordDictionary.Search(".ad"); // Debería ser true
+        bool param_4 = wordDictionary.Search("b.."); // Debería ser true
+
+        // Mostrar resultados
+        Console.WriteLine("Search('pad'): " + param_1);
+        Console.WriteLine("Search('bad'): " + param_2);
+        Console.WriteLine("Search('.ad'): " + param_3);
+        Console.WriteLine("Search('b..'): " + param_4);
+    }
+}
