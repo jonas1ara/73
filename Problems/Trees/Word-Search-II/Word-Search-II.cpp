@@ -1,11 +1,16 @@
-﻿struct TrieNode {
+﻿#include <iostream>
+#include <vector>
+#include <functional>
+
+
+struct TrieNode {
     TrieNode *next[26] = {};
     int cnt = 0;
     bool end = false;
 };
 class Solution {
     TrieNode root;
-    void addWord(TrieNode *node, string &s) {
+    void addWord(TrieNode *node, std::string &s) {
         for (char c : s) {
             if (!node->next[c - 'a']) node->next[c - 'a'] = new TrieNode();
             node = node->next[c - 'a'];
@@ -14,13 +19,16 @@ class Solution {
         node->end = true;
     }
 public:
-    vector<string> findWords(vector<vector<char>>& A, vector<string>& words) {
+    std::vector<std::string> findWords(std::vector<std::vector<char>>& A, std::vector<std::string>& words) {
         for (auto &s : words) addWord(&root, s);
         int M = A.size(), N = A[0].size(), dirs[4][2] = {{0,1},{0,-1},{1,0},{-1,0}};
-        vector<string> ans;
-        string tmp;
-        function<int(int, int, TrieNode*)> dfs = [&](int x, int y, TrieNode *node) {
-            int c = A[x][y] - 'a', cnt = 0;
+        std::vector<std::string> ans;
+        std::string tmp;
+
+        std::function<int(int, int, TrieNode*)> dfs = [&](int x, int y, TrieNode *node) {
+            int c = A[x][y] - 'a';
+            int cnt = 0;
+
             if (!node->next[c] || !node->next[c]->cnt) return 0;
             node = node->next[c];
             tmp.push_back(A[x][y]);
@@ -48,3 +56,24 @@ public:
         return ans;
     }
 };
+
+
+int main() {
+    // Ejemplo de uso
+    Solution solution;
+    std::vector<std::vector<char>> board = {
+        {'o', 'a', 'a', 'n'},
+        {'e', 't', 'a', 'e'},
+        {'i', 'h', 'k', 'r'},
+        {'i', 'f', 'l', 'v'}};
+    std::vector<std::string> words = {"oath", "pea", "eat", "rain"};
+
+    std::vector<std::string> result = solution.findWords(board, words);
+
+    // Mostrar resultados
+    for (const auto &word : result) {
+        std::cout << word << std::endl;
+    }
+
+    return 0;
+}

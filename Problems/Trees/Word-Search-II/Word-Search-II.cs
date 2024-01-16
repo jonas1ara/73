@@ -76,3 +76,27 @@ public class Solution
         return ans;
     }
 }
+
+class Program
+{
+    static void Main()
+    {
+        // Ejemplo de uso
+        Solution solution = new Solution();
+        char[][] board = {
+            new char[] { 'o', 'a', 'a', 'n' },
+            new char[] { 'e', 't', 'a', 'e' },
+            new char[] { 'i', 'h', 'k', 'r' },
+            new char[] { 'i', 'f', 'l', 'v' }
+        };
+        string[] words = { "oath", "pea", "eat", "rain" };
+
+        IList<string> result = solution.FindWords(board, words);
+
+        // Mostrar resultados
+        foreach (var word in result)
+        {
+            Console.WriteLine(word);
+        }
+    }
+}
