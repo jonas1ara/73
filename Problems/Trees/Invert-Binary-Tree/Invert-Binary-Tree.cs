@@ -33,3 +33,36 @@ public class Solution
         y = temp;
     }
 }
+
+class Program
+{
+    static void Main()
+    {
+        // Crear un árbol de ejemplo
+        TreeNode root = new TreeNode(1,
+            new TreeNode(2, new TreeNode(4), new TreeNode(5)),
+            new TreeNode(3, new TreeNode(6), new TreeNode(7)));
+
+        // Mostrar el árbol original
+        Console.WriteLine("Árbol original:");
+        PrintTree(root);
+
+        // Invertir el árbol
+        Solution solution = new Solution();
+        TreeNode invertedRoot = solution.InvertTree(root);
+
+        // Mostrar el árbol invertido
+        Console.WriteLine("\nÁrbol invertido:");
+        PrintTree(invertedRoot);
+    }
+
+    static void PrintTree(TreeNode root)
+    {
+        if (root == null)
+            return;
+
+        PrintTree(root.left);
+        Console.Write(root.val + " ");
+        PrintTree(root.right);
+    }
+}
