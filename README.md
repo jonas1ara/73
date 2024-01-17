@@ -47,7 +47,9 @@ The repository is divided into 4 folders:
 
 - **.vscode:** Contains the 'tasks.json' file that configures the build task in Visual Studio Code for `/usr/bin/g++` and the configuration for the output generated `${fileDirname}\\${fileBasenameNoExtension}.out`
 
-- **Problems:** Contains the folders for each topic, inside it has a folder per problem and inside each folder is the source code and the README that explains the problem, for example the `Two-Sum` folder contains the C source code `Two-Sum.c` **(Only in the first problem of each topic there is an implementation in C language to go a little deeper)**, the C++ source code `Two-Sum .cpp`, the C# source code in `Two-Sum.cs` and the .NET project settings in `Two-Sum.csproj` and finally the `README.md` file
+- **Problems-Lc:** Contains the folders for each topic, inside it has a folder per problem and inside each folder is the source code and the README that explains the problem, for example the `Two-Sum` folder contains the C source code `Two-Sum.c` **(Only in the first problem of each topic there is an implementation in C language to go a little deeper)**, the C++ source code `Two-Sum .cpp`, the C# source code in `Two-Sum.cs` and the .NET project settings in `Two-Sum.csproj` and finally the `README.md` file
+
+- **Problems-Jr:** This was not planned for the repository, but I think it would be very helpful for some people, in this directory I included the most common algorithms for junior position technical interviews
 
 - **Sources:** Contains the images and gifs used in the repository, such as Sheldon Cooper's 😁 gif
 
