@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+
+// Using depth-first search - Time: O(n)
 
 public class TreeNode
 {
@@ -12,35 +15,71 @@ public class TreeNode
         this.left = left;
         this.right = right;
     }
-}
 
-public class Solution
-{
-    public bool IsSameTree(TreeNode p, TreeNode q)
+    public class Solution
     {
-        return (p == null && q == null) ||
-               (p != null && q != null &&
-                p.val == q.val &&
-                IsSameTree(p.left, q.left) &&
-                IsSameTree(p.right, q.right));
+        public bool IsSameTree(TreeNode p, TreeNode q)
+        {
+            return (p == null && q == null) ||
+                   (p != null && q != null &&
+                    p.val == q.val &&
+                    IsSameTree(p.left, q.left) &&
+                    IsSameTree(p.right, q.right));
+        }
     }
-}
 
-class Program
-{
-    static void Main()
+    class Program
     {
-        // Crear dos árboles para probar
-        TreeNode tree1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
-        TreeNode tree2 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+        static void PrintTree(TreeNode root)
+        {
+            if (root == null)
+            {
+                Console.Write("null");
+                return;
+            }
 
-        // Crear una instancia de la solución
-        Solution solution = new Solution();
+            List<string> values = new List<string>();
+            Queue<TreeNode> queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
 
-        // Probar la función IsSameTree
-        bool result = solution.IsSameTree(tree1, tree2);
+            while (queue.Count > 0)
+            {
+                TreeNode current = queue.Dequeue();
+                if (current != null)
+                {
+                    values.Add(current.val.ToString());
+                    queue.Enqueue(current.left);
+                    queue.Enqueue(current.right);
+                }
+                else
+                {
+                    values.Add("null");
+                }
+            }
 
-        // Mostrar el resultado
-        Console.WriteLine("Los dos árboles son iguales: " + result);
+            Console.Write("[" + string.Join(", ", values) + "]");
+        }
+
+        static void Main()
+        {
+            // Input: p = [1,2,3], q = [1,2,3]
+            TreeNode tree1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+            TreeNode tree2 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+
+            // Input: p = [1,2], q = [1,null,2]
+            // TreeNode tree1 = new TreeNode(1, new TreeNode(2));
+            // TreeNode tree2 = new TreeNode(1, null, new TreeNode(2));
+
+            Console.Write("Input: p = ");
+            PrintTree(tree1);
+            Console.Write(", q = ");
+            PrintTree(tree2);
+            Console.WriteLine();
+
+            Solution sol = new Solution();
+            bool ans = sol.IsSameTree(tree1, tree2);
+
+            Console.WriteLine("Output: " + ans);
+        }
     }
 }
