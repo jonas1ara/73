@@ -15,71 +15,71 @@ public class TreeNode
         this.left = left;
         this.right = right;
     }
+}
 
-    public class Solution
+public class Solution
+{
+    public bool IsSameTree(TreeNode p, TreeNode q)
     {
-        public bool IsSameTree(TreeNode p, TreeNode q)
+        return (p == null && q == null) ||
+               (p != null && q != null &&
+                p.val == q.val &&
+                IsSameTree(p.left, q.left) &&
+                IsSameTree(p.right, q.right));
+    }
+}
+
+class Program
+{
+    static void PrintTree(TreeNode root)
+    {
+        if (root == null)
         {
-            return (p == null && q == null) ||
-                   (p != null && q != null &&
-                    p.val == q.val &&
-                    IsSameTree(p.left, q.left) &&
-                    IsSameTree(p.right, q.right));
+            Console.Write("null");
+            return;
         }
+
+        List<string> values = new List<string>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
+        queue.Enqueue(root);
+
+        while (queue.Count > 0)
+        {
+            TreeNode current = queue.Dequeue();
+            if (current != null)
+            {
+                values.Add(current.val.ToString());
+                queue.Enqueue(current.left);
+                queue.Enqueue(current.right);
+            }
+            else
+            {
+                values.Add("null");
+            }
+        }
+
+        Console.Write("[" + string.Join(", ", values) + "]");
     }
 
-    class Program
+    static void Main()
     {
-        static void PrintTree(TreeNode root)
-        {
-            if (root == null)
-            {
-                Console.Write("null");
-                return;
-            }
+        // Input: p = [1,2,3], q = [1,2,3]
+        TreeNode tree1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+        TreeNode tree2 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
 
-            List<string> values = new List<string>();
-            Queue<TreeNode> queue = new Queue<TreeNode>();
-            queue.Enqueue(root);
+        // Input: p = [1,2], q = [1,null,2]
+        // TreeNode tree1 = new TreeNode(1, new TreeNode(2));
+        // TreeNode tree2 = new TreeNode(1, null, new TreeNode(2));
 
-            while (queue.Count > 0)
-            {
-                TreeNode current = queue.Dequeue();
-                if (current != null)
-                {
-                    values.Add(current.val.ToString());
-                    queue.Enqueue(current.left);
-                    queue.Enqueue(current.right);
-                }
-                else
-                {
-                    values.Add("null");
-                }
-            }
+        Console.Write("Input: p = ");
+        PrintTree(tree1);
+        Console.Write(", q = ");
+        PrintTree(tree2);
+        Console.WriteLine();
 
-            Console.Write("[" + string.Join(", ", values) + "]");
-        }
+        Solution sol = new Solution();
+        bool ans = sol.IsSameTree(tree1, tree2);
 
-        static void Main()
-        {
-            // Input: p = [1,2,3], q = [1,2,3]
-            TreeNode tree1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
-            TreeNode tree2 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
-
-            // Input: p = [1,2], q = [1,null,2]
-            // TreeNode tree1 = new TreeNode(1, new TreeNode(2));
-            // TreeNode tree2 = new TreeNode(1, null, new TreeNode(2));
-
-            Console.Write("Input: p = ");
-            PrintTree(tree1);
-            Console.Write(", q = ");
-            PrintTree(tree2);
-            Console.WriteLine();
-
-            Solution sol = new Solution();
-            bool ans = sol.IsSameTree(tree1, tree2);
-
-            Console.WriteLine("Output: " + ans);
-        }
+        Console.WriteLine("Output: " + (ans ? "true" : "false"));
     }
 }

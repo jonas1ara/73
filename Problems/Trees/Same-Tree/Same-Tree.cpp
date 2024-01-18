@@ -82,7 +82,7 @@ int main()
     Solution sol;
     bool ans = sol.isSameTree(tree1, tree2);
 
-    std::cout << "Output: " << std::boolalpha << ans << std::endl;
+    std::cout << "Output: " << (ans ? "true" : "false") << std::endl;
 
     delete tree1;
     delete tree2;
