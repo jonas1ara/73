@@ -5,7 +5,8 @@
 
 // Using depth-first search - Time: O(n)
 
-struct TreeNode {
+struct TreeNode 
+{
     int val;
     TreeNode *left;
     TreeNode *right;
