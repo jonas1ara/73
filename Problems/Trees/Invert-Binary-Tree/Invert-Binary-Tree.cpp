@@ -1,5 +1,8 @@
 ﻿#include <iostream>
 #include <vector>
+#include <queue>
+
+// Using recursion - Time: O(n)
 
 struct TreeNode
 {
@@ -11,16 +14,19 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class Solution
-{
+class Solution {
 public:
     TreeNode *invertTree(TreeNode *root)
     {
         if (!root)
+        {    
             return NULL;
+        }
+
         std::swap(root->left, root->right);
         invertTree(root->left);
         invertTree(root->right);
+
         return root;
     }
 };
@@ -28,38 +34,61 @@ public:
 void printTree(TreeNode *root)
 {
     if (!root)
+    {
+        std::cout << "[]" << std::endl;
         return;
+    }
 
-    printTree(root->left);
-    std::cout << root->val << " ";
-    printTree(root->right);
+    std::queue<TreeNode *> queue;
+    queue.push(root);
+
+    std::cout << "[";
+
+    while (!queue.empty())
+    {
+        int n = queue.size();
+
+        for (int i = 0; i < n; i++)
+        {
+            TreeNode *node = queue.front();
+            queue.pop();
+
+            if (node)
+            {
+                std::cout << node->val << ", ";
+
+                queue.push(node->left);
+                queue.push(node->right);
+            }
+            else
+            {
+                std::cout << "null";
+
+                if (i < n - 1)
+                    std::cout << ", ";
+            }
+        }
+    }
+
+    std::cout << "]";
 }
 
 int main()
 {
-    // Crear un árbol de ejemplo
-    TreeNode *root = new TreeNode(1,
-                                   new TreeNode(2, new TreeNode(4), new TreeNode(5)),
-                                   new TreeNode(3, new TreeNode(6), new TreeNode(7)));
+    TreeNode *root = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, new TreeNode(6), new TreeNode(7)));
 
-    // Mostrar el árbol original
-    std::cout << "Árbol original: ";
+    std::cout << "Input: root = ";
     printTree(root);
     std::cout << std::endl;
 
-    // Invertir el árbol
     Solution solution;
-    TreeNode *invertedRoot = solution.invertTree(root);
+    TreeNode *ans = solution.invertTree(root);
 
-    // Mostrar el árbol invertido
-    std::cout << "Árbol invertido: ";
-    printTree(invertedRoot);
+    std::cout << "Output: ";
+    printTree(ans);
     std::cout << std::endl;
 
-    // Liberar la memoria
-    // ¡No olvides liberar la memoria después de usar new para evitar fugas de memoria!
-    // En una aplicación real, podría considerar el uso de punteros inteligentes para gestionar la memoria automáticamente.
-    delete invertedRoot;
+    delete ans;
 
     return 0;
 }

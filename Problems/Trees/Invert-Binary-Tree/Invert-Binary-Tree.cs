@@ -1,4 +1,9 @@
-﻿public class TreeNode
+﻿using System;
+using System.Collections.Generic;
+
+// Using recursion - Time: O(n)
+
+public class TreeNode
 {
     public int val;
     public TreeNode left;
@@ -11,13 +16,14 @@
     }
 }
 
-
 public class Solution
 {
     public TreeNode InvertTree(TreeNode root)
     {
         if (root == null)
+        {
             return null;
+        }
 
         Swap(ref root.left, ref root.right);
         InvertTree(root.left);
@@ -36,33 +42,48 @@ public class Solution
 
 class Program
 {
-    static void Main()
-    {
-        // Crear un árbol de ejemplo
-        TreeNode root = new TreeNode(1,
-            new TreeNode(2, new TreeNode(4), new TreeNode(5)),
-            new TreeNode(3, new TreeNode(6), new TreeNode(7)));
-
-        // Mostrar el árbol original
-        Console.WriteLine("Árbol original:");
-        PrintTree(root);
-
-        // Invertir el árbol
-        Solution solution = new Solution();
-        TreeNode invertedRoot = solution.InvertTree(root);
-
-        // Mostrar el árbol invertido
-        Console.WriteLine("\nÁrbol invertido:");
-        PrintTree(invertedRoot);
-    }
-
     static void PrintTree(TreeNode root)
     {
         if (root == null)
+        {
+            Console.Write("null");
             return;
+        }
 
-        PrintTree(root.left);
-        Console.Write(root.val + " ");
-        PrintTree(root.right);
+        List<string> values = new List<string>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
+        queue.Enqueue(root);
+
+        while (queue.Count > 0)
+        {
+            TreeNode current = queue.Dequeue();
+            if (current != null)
+            {
+                values.Add(current.val.ToString());
+                queue.Enqueue(current.left);
+                queue.Enqueue(current.right);
+            }
+            else
+            {
+                values.Add("null");
+            }
+        }
+
+        Console.Write("[" + string.Join(", ", values) + "]");
+    }
+    static void Main()
+    {
+        TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, new TreeNode(6), new TreeNode(7)));
+
+        Console.Write("Input: root = ");
+        PrintTree(root);
+        Console.WriteLine();
+
+        Solution sol = new Solution();
+        TreeNode ans = sol.InvertTree(root);
+
+        Console.Write("Output: ");
+        PrintTree(ans);
+        Console.WriteLine();
     }
 }
