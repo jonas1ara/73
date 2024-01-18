@@ -35,49 +35,56 @@ public:
     void printTree(TreeNode *root)
     {
         if (!root)
-            return;
-
-        std::queue<TreeNode *> q;
-        q.push(root);
-
-        while (!q.empty())
         {
-            int n = q.size();
+            std::cout << "[]" << std::endl;
+            return;
+        }
+
+        std::queue<TreeNode *> queue;
+        queue.push(root);
+
+        std::cout << "[";
+
+        while (!queue.empty())
+        {
+            int n = queue.size();
 
             for (int i = 0; i < n; i++)
             {
-                TreeNode *node = q.front();
-                q.pop();
+                TreeNode *node = queue.front();
+                queue.pop();
 
                 if (node)
                 {
-                    std::cout << node->val << " ";
+                    std::cout << node->val << ", ";
 
-                    q.push(node->left);
-                    q.push(node->right);
+                    queue.push(node->left);
+                    queue.push(node->right);
                 }
                 else
                 {
-                    std::cout << "null ";
+                    std::cout << "null";
+
+                    if (i < n - 1)
+                        std::cout << ", ";
                 }
             }
         }
+
+        std::cout << "]" << std::endl;
     }
 
 int main()
 {
-    Solution solution;
-
-    // Tu código original
     TreeNode *root = new TreeNode(5, new TreeNode(1), new TreeNode(4, new TreeNode(3), new TreeNode(6)));
-    bool isValid = solution.isValidBST(root);
 
-    // Imprimir el árbol
-    std::cout << "Árbol: ";
+    Solution sol;
+    bool ans = sol.isValidBST(root);
+
+    std::cout << "Input: root = ";
     printTree(root);
 
-    // Imprimir si el árbol es válido
-    std::cout << "\nEl árbol es válido: " << (isValid ? "true" : "false") << std::endl;
+    std::cout << "Output: " << (ans ? "true" : "false") << std::endl;
 
     return 0;
 }

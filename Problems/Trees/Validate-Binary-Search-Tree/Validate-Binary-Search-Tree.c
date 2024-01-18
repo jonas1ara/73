@@ -34,12 +34,16 @@ bool isValidBST(struct TreeNode *root)
 void printTree(struct TreeNode *root)
 {
     if (!root)
+    {
+        printf("[]\n");
         return;
+    }
 
     struct TreeNode **queue = (struct TreeNode **)malloc(1000 * sizeof(struct TreeNode *));
     int front = -1, rear = -1;
-
     queue[++rear] = root;
+
+    printf("[");
 
     while (front != rear)
     {
@@ -47,7 +51,7 @@ void printTree(struct TreeNode *root)
 
         if (node)
         {
-            printf("%d ", node->val);
+            printf("%d, ", node->val);
 
             if (node->left)
                 queue[++rear] = node->left;
@@ -61,9 +65,14 @@ void printTree(struct TreeNode *root)
         }
         else
         {
-            printf("null ");
+            printf("null");
+
+            if (front != rear)
+                printf(", ");
         }
     }
+
+    printf("]\n");
 
     free(queue);
 }
@@ -71,6 +80,7 @@ void printTree(struct TreeNode *root)
 int main()
 {
     struct TreeNode *root = (struct TreeNode *)malloc(sizeof(struct TreeNode));
+    
     root->val = 5;
     root->left = (struct TreeNode *)malloc(sizeof(struct TreeNode));
     root->left->val = 1;
@@ -89,12 +99,12 @@ int main()
     root->right->right->left = NULL;
     root->right->right->right = NULL;
 
-    bool isValid = isValidBST(root);
+    bool ans = isValidBST(root);
 
-    printf("Árbol: ");
+    printf("Input: root = ");
     printTree(root);
 
-    printf("\nEl árbol es válido: %s\n", isValid ? "true" : "false");
+    printf("Output: %s\n", ans ? "true" : "false");
 
     free(root->right->right);
     free(root->right->left);

@@ -30,55 +30,62 @@ public class Solution
 
         return IsValidBST(root.right);
     }
-
-    // Función para imprimir el árbol
-    public void PrintTree(TreeNode root)
-    {
-        if (root == null)
-            return;
-
-        Queue<TreeNode> q = new Queue<TreeNode>();
-        q.Enqueue(root);
-
-        while (q.Count > 0)
-        {
-            int n = q.Count;
-
-            for (int i = 0; i < n; i++)
-            {
-                TreeNode node = q.Dequeue();
-
-                if (node != null)
-                {
-                    Console.Write(node.val + " ");
-
-                    q.Enqueue(node.left);
-                    q.Enqueue(node.right);
-                }
-                else
-                {
-                    Console.Write("null ");
-                }
-            }
-        }
-    }
 }
+
 
 class Program
 {
+    static void PrintTree(TreeNode root)
+    {
+        if (root == null)
+        {
+            Console.WriteLine("[]");
+            return;
+        }
+
+        Queue<TreeNode> queue = new Queue<TreeNode>();
+        queue.Enqueue(root);
+
+        Console.Write("[");
+
+        while (queue.Count > 0)
+        {
+            int n = queue.Count;
+
+            for (int i = 0; i < n; i++)
+            {
+                TreeNode node = queue.Dequeue();
+
+                if (node != null)
+                {
+                    Console.Write(node.val + ", ");
+
+                    queue.Enqueue(node.left);
+                    queue.Enqueue(node.right);
+                }
+                else
+                {
+                    Console.Write("null");
+
+                    if (i < n - 1)
+                        Console.Write(", ");
+                }
+            }
+        }
+
+        Console.WriteLine("]");
+    }
+
     static void Main()
     {
-        Solution solution = new Solution();
-
-        // Tu código original
         TreeNode root = new TreeNode(5, new TreeNode(1), new TreeNode(4, new TreeNode(3), new TreeNode(6)));
-        bool isValid = solution.IsValidBST(root);
 
-        // Imprimir el árbol
-        Console.Write("Árbol: ");
-        solution.PrintTree(root);
+        Solution sol = new Solution();
+        bool ans = sol.IsValidBST(root);
 
-        // Imprimir si el árbol es válido
-        Console.WriteLine("\nEl árbol es válido: " + (isValid ? "true" : "false"));
+        Console.Write("Input: root = ");
+        PrintTree(root);
+
+        Console.WriteLine("Output: " + (ans ? "true" : "false"));
     }
 }
