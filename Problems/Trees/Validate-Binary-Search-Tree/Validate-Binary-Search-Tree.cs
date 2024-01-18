@@ -14,6 +14,7 @@ public class TreeNode
         this.right = right;
     }
 }
+
 public class Solution
 {
     private TreeNode prev = null;
@@ -31,7 +32,6 @@ public class Solution
         return IsValidBST(root.right);
     }
 }
-
 
 class Program
 {

@@ -31,48 +31,47 @@ public:
     }
 };
 
-    // Función para imprimir el árbol
-    void printTree(TreeNode *root)
+void printTree(TreeNode *root)
+{
+    if (!root)
     {
-        if (!root)
+        std::cout << "[]" << std::endl;
+        return;
+    }
+
+    std::queue<TreeNode *> queue;
+    queue.push(root);
+
+    std::cout << "[";
+
+    while (!queue.empty())
+    {
+        int n = queue.size();
+
+        for (int i = 0; i < n; i++)
         {
-            std::cout << "[]" << std::endl;
-            return;
-        }
+            TreeNode *node = queue.front();
+            queue.pop();
 
-        std::queue<TreeNode *> queue;
-        queue.push(root);
-
-        std::cout << "[";
-
-        while (!queue.empty())
-        {
-            int n = queue.size();
-
-            for (int i = 0; i < n; i++)
+            if (node)
             {
-                TreeNode *node = queue.front();
-                queue.pop();
+                std::cout << node->val << ", ";
 
-                if (node)
-                {
-                    std::cout << node->val << ", ";
+                queue.push(node->left);
+                queue.push(node->right);
+            }
+            else
+            {
+                std::cout << "null";
 
-                    queue.push(node->left);
-                    queue.push(node->right);
-                }
-                else
-                {
-                    std::cout << "null";
-
-                    if (i < n - 1)
-                        std::cout << ", ";
-                }
+                if (i < n - 1)
+                    std::cout << ", ";
             }
         }
-
-        std::cout << "]" << std::endl;
     }
+
+    std::cout << "]" << std::endl;
+}
 
 int main()
 {
