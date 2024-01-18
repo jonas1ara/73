@@ -1,5 +1,9 @@
 ﻿#include <iostream>
 #include <algorithm>
+#include <vector>
+#include <queue>
+
+// Using depth-first search - Time: O(n)
 
 struct TreeNode
 {
@@ -11,8 +15,7 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class Solution
-{
+class Solution {
 public:
     int maxDepth(TreeNode *root)
     {
@@ -20,21 +23,61 @@ public:
     }
 };
 
+void printTree(TreeNode *root)
+{
+    if (!root)
+    {
+        std::cout << "[]" << std::endl;
+        return;
+    }
+
+    std::queue<TreeNode *> queue;
+    queue.push(root);
+
+    std::cout << "[";
+
+    while (!queue.empty())
+    {
+        int n = queue.size();
+
+        for (int i = 0; i < n; i++)
+        {
+            TreeNode *node = queue.front();
+            queue.pop();
+
+            if (node)
+            {
+                std::cout << node->val << ", ";
+
+                queue.push(node->left);
+                queue.push(node->right);
+            }
+            else
+            {
+                std::cout << "null";
+
+                if (i < n - 1)
+                    std::cout << ", ";
+            }
+        }
+    }
+
+    std::cout << "]";
+}
+
 int main()
 {
-    // Crear un árbol para probar
     TreeNode *root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
 
-    // Crear una instancia de la solución
-    Solution solution;
+    std::cout << "Input: root = ";
+    printTree(root);
+    std::cout << std::endl;
 
-    // Probar la función maxDepth
-    int result = solution.maxDepth(root);
+    Solution sol;
+    int ans = sol.maxDepth(root);
 
-    // Mostrar el resultado
-    std::cout << "La profundidad máxima del árbol es: " << result << std::endl;
+    std::cout << "Output: " << ans << std::endl;
 
-    // Liberar la memoria
     delete root;
 
     return 0;
