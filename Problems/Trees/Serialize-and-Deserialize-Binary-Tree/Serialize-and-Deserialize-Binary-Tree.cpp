@@ -2,12 +2,19 @@
 #include <sstream>
 #include <queue>
 
+// Using preorder traversal - Time: O(n)
+
 struct TreeNode
 {
     int val;
     TreeNode *left;
     TreeNode *right;
+
+    // TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
 class Codec
@@ -23,6 +30,7 @@ public:
 
         std::stringstream ss;
         serializeHelper(root, ss);
+
         return ss.str();
     }
 
@@ -53,6 +61,7 @@ private:
     {
         std::string val = nodes.front();
         nodes.pop();
+
         if (val == "null")
         {
             return nullptr;
@@ -78,33 +87,75 @@ private:
     }
 };
 
+void printTree(TreeNode *root)
+{
+    if (!root)
+    {
+        std::cout << "[]" << std::endl;
+        return;
+    }
+
+    std::queue<TreeNode *> queue;
+    queue.push(root);
+
+    std::cout << "[";
+
+    while (!queue.empty())
+    {
+        int n = queue.size();
+
+        for (int i = 0; i < n; i++)
+        {
+            TreeNode *node = queue.front();
+            queue.pop();
+
+            if (node)
+            {
+                std::cout << node->val << ", ";
+
+                queue.push(node->left);
+                queue.push(node->right);
+            }
+            else
+            {
+                if (!queue.empty())
+                    std::cout << "null, ";
+                else
+                    std::cout << "null";
+            }
+        }
+    }
+
+    std::cout << "]";
+}
+
 int main()
 {
-    // Crear un árbol de ejemplo
-    TreeNode *root = new TreeNode(1);
-    root->left = new TreeNode(2);
-    root->right = new TreeNode(3);
-    root->left->left = new TreeNode(4);
-    root->left->right = new TreeNode(5);
+    // TreeNode *root = new TreeNode(1);
+    // root->left = new TreeNode(2);
+    // root->right = new TreeNode(3);
+    // root->left->left = new TreeNode(4);
+    // root->left->right = new TreeNode(5);
 
-    // Crear un objeto Codec
+    TreeNode *root = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3));
+
+    std::cout << "Input: root = ";
+    printTree(root);
+    std::cout << std::endl;
+
     Codec codec;
-
-    // Serializar el árbol
     std::string serialized = codec.serialize(root);
-    std::cout << "Árbol serializado: " << serialized << std::endl;
 
-    // Deserializar el árbol
-    TreeNode *deserialized = codec.deserialize(serialized);
+    std::cout << "Output: ";
+    printTree(codec.deserialize(serialized));
+    std::cout << std::endl;
 
-    // Mostrar el resultado
-    std::cout << "Árbol deserializado: " << codec.serialize(deserialized) << std::endl;
+    // delete root->left->left;
+    // delete root->left->right;
+    // delete root->left;
+    // delete root->right;
+    // delete root;
 
-    // Liberar la memoria del árbol
-    delete root->left->left;
-    delete root->left->right;
-    delete root->left;
-    delete root->right;
     delete root;
 
     return 0;
