@@ -2,6 +2,8 @@
 #include <vector>
 #include <queue>
 
+// Using breadth-first search - Time: O(n)
+
 struct TreeNode
 {
     int val;
@@ -12,8 +14,7 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class Solution
-{
+class Solution {
 public:
     std::vector<std::vector<int>> levelOrder(TreeNode *root)
     {
@@ -21,25 +22,25 @@ public:
             return {};
 
         std::vector<std::vector<int>> ans;
-        std::queue<TreeNode *> q;
-        q.push(root);
+        std::queue<TreeNode *> queue;
+        queue.push(root);
 
-        while (!q.empty())
+        while (!queue.empty())
         {
-            int levelSize = q.size();
+            int levelSize = queue.size();
             ans.emplace_back();
 
-            for (int i = 0; i < levelSize; ++i)
+            for (int i = 0; i < levelSize; i++)
             {
-                auto node = q.front();
-                q.pop();
+                auto node = queue.front();
+                queue.pop();
                 ans.back().push_back(node->val);
 
                 if (node->left)
-                    q.push(node->left);
+                    queue.push(node->left);
 
                 if (node->right)
-                    q.push(node->right);
+                    queue.push(node->right);
             }
         }
 
@@ -47,29 +48,71 @@ public:
     }
 };
 
-int main()
+void printTree(TreeNode *root)
 {
-    // Crear un nodo para probar
-    TreeNode *root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-
-    // Crear una instancia de la solución
-    Solution solution;
-
-    // Probar la función levelOrder
-    std::vector<std::vector<int>> result = solution.levelOrder(root);
-
-    // Mostrar el resultado
-    std::cout << "Recorrido por niveles del árbol:" << std::endl;
-    for (const auto &level : result)
+    if (root == nullptr)
     {
-        for (const auto &value : level)
-        {
-            std::cout << value << " ";
-        }
-        std::cout << std::endl;
+        std::cout << "null";
+        return;
     }
 
-    // Liberar la memoria
+    std::vector<std::string> values;
+    std::queue<TreeNode *> queue;
+    queue.push(root);
+
+    while (!queue.empty())
+    {
+        TreeNode *current = queue.front();
+        queue.pop();
+
+        if (current != nullptr)
+        {
+            values.push_back(std::to_string(current->val));
+            queue.push(current->left);
+            queue.push(current->right);
+        }
+        else
+        {
+            values.push_back("null");
+        }
+    }
+
+    std::cout << "[";
+    for (const std::string &value : values)
+    {
+        std::cout << value << ", ";
+    }
+    std::cout << "]";
+}
+
+int main()
+{
+    TreeNode* root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+
+    std::cout << "Input: root = ";
+    printTree(root);
+    std::cout << std::endl;
+
+    Solution sol;
+    std::vector<std::vector<int>> ans = sol.levelOrder(root);
+
+    std::cout << "Output: [";
+    for (const auto &level : ans)
+    {
+        std::cout << "[";
+        for (const auto &value : level)
+        {
+            std::cout << value << "";
+            if (&value != &level.back())
+                std::cout << ", ";
+        }
+        if (&level == &ans.back())
+            std::cout << "]";
+        else
+            std::cout << "], ";
+    }
+    std::cout << "]" << std::endl;
+
     delete root;
 
     return 0;
