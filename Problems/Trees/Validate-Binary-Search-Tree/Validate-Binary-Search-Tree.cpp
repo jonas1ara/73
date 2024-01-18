@@ -70,7 +70,7 @@ void printTree(TreeNode *root)
         }
     }
 
-    std::cout << "]" << std::endl;
+    std::cout << "]";
 }
 
 int main()
@@ -82,6 +82,7 @@ int main()
 
     std::cout << "Input: root = ";
     printTree(root);
+    std::cout << std::endl;
 
     std::cout << "Output: " << (ans ? "true" : "false") << std::endl;
 
