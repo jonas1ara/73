@@ -1,5 +1,7 @@
 ﻿using System;
 
+// Using preorder and inorder traversal - Time: O(n)
+
 public class TreeNode
 {
     public int val;
@@ -18,7 +20,10 @@ public class Solution
 {
     public TreeNode BuildTree(int[] preorder, int[] inorder)
     {
-        if (preorder.Length == 0 || inorder.Length == 0) return null;
+        if (preorder.Length == 0 || inorder.Length == 0) 
+        {
+            return null;
+        }
         return BuildTree(preorder, 0, preorder.Length, inorder, 0, inorder.Length);
     }
 
@@ -28,34 +33,72 @@ public class Solution
 
         var inorderIndex = inorderStart;
         for (; inorderIndex < inorderEnd; inorderIndex++)
+        {
             if (inorder[inorderIndex] == preorder[preorderStart])
+            {
                 break;
+            }
+        }
+
 
         var leftLength = inorderIndex - inorderStart;
-        if (leftLength > 0)
-            root.left = BuildTree(preorder, preorderStart + 1, preorderStart + 1 + leftLength, inorder, inorderStart, inorderIndex);
-        if (inorderEnd > inorderIndex + 1)
-            root.right = BuildTree(preorder, preorderStart + 1 + leftLength, preorderEnd, inorder, inorderIndex + 1, inorderEnd);
 
+        if (leftLength > 0)
+        {
+            root.left = BuildTree(preorder, preorderStart + 1, preorderStart + 1 + leftLength, inorder, inorderStart, inorderIndex);
+        }
+        if (inorderEnd > inorderIndex + 1)
+        {
+            root.right = BuildTree(preorder, preorderStart + 1 + leftLength, preorderEnd, inorder, inorderIndex + 1, inorderEnd);
+        }
+        
         return root;
     }
 }
 
 class Program
 {
+    static void PrintTree(TreeNode root)
+    {
+        if (root == null)
+        {
+            Console.Write("null");
+            return;
+        }
+
+        List<string> values = new List<string>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
+        queue.Enqueue(root);
+
+        while (queue.Count > 0)
+        {
+            TreeNode current = queue.Dequeue();
+            if (current != null)
+            {
+                values.Add(current.val.ToString());
+                queue.Enqueue(current.left);
+                queue.Enqueue(current.right);
+            }
+            else
+            {
+                values.Add("null");
+            }
+        }
+
+        Console.Write("[" + string.Join(", ", values) + "]");
+    }
     static void Main()
     {
-        // Ejemplo de uso
         int[] preorder = { 3, 9, 20, 15, 7 };
         int[] inorder = { 9, 3, 15, 20, 7 };
 
-        // Crear una instancia de la solución
-        Solution solution = new Solution();
+        Console.WriteLine("Input: preorder = [" + string.Join(", ", preorder) + "], inorder = [" + string.Join(", ", inorder) + "]");
 
-        // Construir el árbol
-        TreeNode root = solution.BuildTree(preorder, inorder);
+        Solution sol = new Solution();
+        TreeNode root = sol.BuildTree(preorder, inorder);
 
-        // Mostrar el resultado (puedes agregar tu propia lógica de visualización)
-        Console.WriteLine("Árbol construido exitosamente.");
+        Console.Write("Ouput: ");
+        PrintTree(root);
+        Console.WriteLine();
     }
 }
