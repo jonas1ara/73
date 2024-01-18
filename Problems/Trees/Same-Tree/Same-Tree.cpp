@@ -29,38 +29,43 @@ public:
 
 void printTree(TreeNode *root)
 {
-    if (root == nullptr)
+    if (!root)
     {
-        std::cout << "null";
+        std::cout << "[]" << std::endl;
         return;
     }
 
-    std::vector<std::string> values;
     std::queue<TreeNode *> queue;
     queue.push(root);
 
+    std::cout << "[";
+
     while (!queue.empty())
     {
-        TreeNode *current = queue.front();
-        queue.pop();
+        int n = queue.size();
 
-        if (current != nullptr)
+        for (int i = 0; i < n; i++)
         {
-            values.push_back(std::to_string(current->val));
-            queue.push(current->left);
-            queue.push(current->right);
-        }
-        else
-        {
-            values.push_back("null");
+            TreeNode *node = queue.front();
+            queue.pop();
+
+            if (node)
+            {
+                std::cout << node->val << ", ";
+
+                queue.push(node->left);
+                queue.push(node->right);
+            }
+            else
+            {
+                std::cout << "null";
+
+                if (i < n - 1)
+                    std::cout << ", ";
+            }
         }
     }
 
-    std::cout << "[";
-    for (const std::string &value : values)
-    {
-        std::cout << value << ", ";
-    }
     std::cout << "]";
 }
 
