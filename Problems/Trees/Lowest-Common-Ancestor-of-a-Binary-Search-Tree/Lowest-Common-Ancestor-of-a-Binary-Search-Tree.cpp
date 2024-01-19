@@ -1,4 +1,8 @@
 ﻿#include <iostream>
+#include <vector>
+#include <queue>
+
+// Using recursion - Time: O(h)
 
 struct TreeNode
 {
@@ -8,8 +12,7 @@ struct TreeNode
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-class Solution
-{
+class Solution {
 public:
     TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q)
     {
@@ -21,9 +24,50 @@ public:
     }
 };
 
+void printTree(TreeNode *root)
+{
+    if (!root)
+    {
+        std::cout << "[]" << std::endl;
+        return;
+    }
+
+    std::queue<TreeNode *> queue;
+    queue.push(root);
+
+    std::cout << "[";
+
+    while (!queue.empty())
+    {
+        int n = queue.size();
+
+        for (int i = 0; i < n; i++)
+        {
+            TreeNode *node = queue.front();
+            queue.pop();
+
+            if (node)
+            {
+                std::cout << node->val << ", ";
+
+                queue.push(node->left);
+                queue.push(node->right);
+            }
+            else
+            {
+                std::cout << "null";
+
+                if (i < n - 1)
+                    std::cout << ", ";
+            }
+        }
+    }
+
+    std::cout << "]";
+}
+
 int main()
 {
-    // Crear un árbol de ejemplo
     TreeNode *root = new TreeNode(6);
     root->left = new TreeNode(2);
     root->left->left = new TreeNode(0);
@@ -35,17 +79,19 @@ int main()
     root->right->left = new TreeNode(7);
     root->right->right = new TreeNode(9);
 
-    Solution solution;
+    TreeNode *p = new TreeNode(2);
+    TreeNode *q = new TreeNode(8);
 
-    // Encontrar el ancestro común más bajo de 3 y 5
-    TreeNode *p = new TreeNode(3);
-    TreeNode *q = new TreeNode(5);
-    TreeNode *result = solution.lowestCommonAncestor(root, p, q);
+    std::cout << "Input: root = ";
+    printTree(root);
+    std::cout << ", p = " << p->val << ", q = " << q->val << std::endl;
 
-    // Mostrar el resultado
-    std::cout << "El ancestro común más bajo de " << p->val << " y " << q->val << " es: " << result->val << std::endl;
 
-    // Liberar la memoria
+    Solution sol;
+    TreeNode *ans = sol.lowestCommonAncestor(root, p, q);
+
+    std::cout << "Output: " << ans->val << std::endl;
+
     delete root;
     delete p;
     delete q;
