@@ -1,5 +1,8 @@
 ﻿#include <iostream>
 #include <string>
+#include <vector>
+
+// Using a Trie - Time: AddWord: O(n) and Search: O(m)
 
 struct TrieNode
 {
@@ -7,8 +10,7 @@ struct TrieNode
     bool end = false;
 };
 
-class WordDictionary
-{
+class WordDictionary {
 private:
     TrieNode root;
 
@@ -20,10 +22,13 @@ private:
             return node->end;
         if (word[i] != '.')
             return dfs(node->next[word[i] - 'a'], word, i + 1);
-        for (int j = 0; j < 26; ++j)
+            
+        for (int j = 0; j < 26; j++)
         {
             if (dfs(node->next[j], word, i + 1))
+            {
                 return true;
+            }
         }
         return false;
     }
@@ -35,7 +40,9 @@ public:
         for (char c : word)
         {
             if (!node->next[c - 'a'])
+            {
                 node->next[c - 'a'] = new TrieNode();
+            }
             node = node->next[c - 'a'];
         }
         node->end = true;
@@ -47,24 +54,60 @@ public:
     }
 };
 
+std::vector<bool> performOperations(const std::vector<std::string> &operations, const std::vector<std::vector<std::string>> &inputs)
+{
+    WordDictionary *wordDictionary = nullptr;
+    std::vector<bool> results;
+
+    for (int i = 0; i < operations.size(); i++)
+    {
+        if (operations[i] == "WordDictionary")
+        {
+            wordDictionary = new WordDictionary();
+            results.push_back(false);
+        }
+        else if (operations[i] == "addWord")
+        {
+            wordDictionary->addWord(inputs[i][0]);
+            results.push_back(false);
+        }
+        else if (operations[i] == "search")
+        {
+            results.push_back(wordDictionary->search(inputs[i][0]));
+        }
+    }
+
+    return results;
+}
+
 int main()
 {
-    // Ejemplo de uso
-    WordDictionary wordDictionary;
-    wordDictionary.addWord("bad");
-    wordDictionary.addWord("dad");
-    wordDictionary.addWord("mad");
+    std::vector<std::string> operations = {"WordDictionary", "addWord", "addWord", "addWord", "search", "search", "search", "search"};
+    std::vector<std::vector<std::string>> inputs = {{}, {"bad"}, {"dad"}, {"mad"}, {"pad"}, {"bad"}, {".ad"}, {"b.."}};
 
-    bool param_1 = wordDictionary.search("pad"); // Debería ser false
-    bool param_2 = wordDictionary.search("bad"); // Debería ser true
-    bool param_3 = wordDictionary.search(".ad"); // Debería ser true
-    bool param_4 = wordDictionary.search("b.."); // Debería ser true
+    std::vector<bool> results = performOperations(operations, inputs);
 
-    // Mostrar resultados
-    std::cout << "Search('pad'): " << param_1 << std::endl;
-    std::cout << "Search('bad'): " << param_2 << std::endl;
-    std::cout << "Search('.ad'): " << param_3 << std::endl;
-    std::cout << "Search('b..'): " << param_4 << std::endl;
+    for (int i = 0; i < results.size(); i++)
+    {
+        std::cout << "Operation: " << operations[i];
+        if (!inputs[i].empty())
+        {
+            std::cout << ", Input: " << inputs[i][0];
+        }
+
+        if (operations[i] == "WordDictionary")
+        {
+            std::cout << ", Result: null" << std::endl;
+        }
+        else if (operations[i] == "addWord")
+        {
+            std::cout << ", Result: null" << std::endl;
+        }
+        else if (operations[i] == "search")
+        {
+            std::cout << ", Result: " << (results[i] ? "true" : "false") << std::endl;
+        }
+    }
 
     return 0;
 }
