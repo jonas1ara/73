@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Using trie - Time O(w) for insert, search and startsWith, where w is the length of the word
+// Using a Trie - Time O(w) for insert, search and startsWith, where w is the length of the word
 
 public class TrieNode
 {
@@ -16,12 +16,17 @@ public class Trie
     private TrieNode Find(string word)
     {
         var node = root;
+        
         foreach (char c in word)
         {
             if (node.Next[c - 'a'] == null)
+            {
                 return null;
+            }
+
             node = node.Next[c - 'a'];
         }
+
         return node;
     }
 
@@ -31,9 +36,13 @@ public class Trie
         foreach (char c in word)
         {
             if (node.Next[c - 'a'] == null)
+            {
                 node.Next[c - 'a'] = new TrieNode();
+            }
+
             node = node.Next[c - 'a'];
         }
+        
         node.Word = true;
     }
 

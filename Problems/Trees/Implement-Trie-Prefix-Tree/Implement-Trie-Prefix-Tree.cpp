@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-// Using trie - Time O(w) for insert, search and startsWith, where w is the length of the word
+// Using a Trie - Time O(w) for insert, search and startsWith, where w is the length of the word
 
 struct TrieNode
 {
@@ -20,9 +20,13 @@ private:
         for (char c : word)
         {
             if (!node->next[c - 'a'])
+            {
                 return nullptr;
+            }
+
             node = node->next[c - 'a'];
         }
+        
         return node;
     }
 
@@ -33,9 +37,13 @@ public:
         for (char c : word)
         {
             if (!node->next[c - 'a'])
+            {
                 node->next[c - 'a'] = new TrieNode();
+            }
+            
             node = node->next[c - 'a'];
         }
+
         node->word = true;
     }
 
