@@ -1,4 +1,7 @@
 ﻿#include <iostream>
+#include <queue>
+
+// Using recursion - Time: O(m * n)
 
 struct TreeNode
 {
@@ -10,46 +13,87 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class Solution
-{
+class Solution {
 private:
-    bool isSameTree(TreeNode *s, TreeNode *t)
+    bool isSameTree(TreeNode *root, TreeNode *subRoot)
     {
-        return (!s && !t) || (s && t && s->val == t->val && isSameTree(s->left, t->left) && isSameTree(s->right, t->right));
+        return (!root && !subRoot) || (root && subRoot && root->val == subRoot->val && isSameTree(root->left, subRoot->left) && isSameTree(root->right, subRoot->right));
     }
 
 public:
-    bool isSubtree(TreeNode *s, TreeNode *t)
+    bool isSubtree(TreeNode *root, TreeNode *subRoot)
     {
-        return isSameTree(s, t) || (s && (isSubtree(s->left, t) || isSubtree(s->right, t)));
+        return isSameTree(root, subRoot) || (root && (isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot)));
     }
 };
 
+void printTree(TreeNode *root)
+{
+    if (!root)
+    {
+        std::cout << "[]" << std::endl;
+        return;
+    }
+
+    std::queue<TreeNode *> queue;
+    queue.push(root);
+
+    std::cout << "[";
+
+    while (!queue.empty())
+    {
+        int n = queue.size();
+
+        for (int i = 0; i < n; i++)
+        {
+            TreeNode *node = queue.front();
+            queue.pop();
+
+            if (node)
+            {
+                std::cout << node->val << ", ";
+
+                queue.push(node->left);
+                queue.push(node->right);
+            }
+            else
+            {
+                std::cout << "null";
+
+                if (i < n - 1)
+                    std::cout << ", ";
+            }
+        }
+    }
+
+    std::cout << "]";
+}
+
 int main()
 {
-    // Crear dos árboles de ejemplo
-    TreeNode *treeS = new TreeNode(3,
+    TreeNode *root = new TreeNode(3,
                                    new TreeNode(4,
                                                 new TreeNode(1),
                                                 new TreeNode(2)),
                                    new TreeNode(5));
 
-    TreeNode *treeT = new TreeNode(4,
+    TreeNode *subRoot = new TreeNode(4,
                                    new TreeNode(1),
                                    new TreeNode(2));
 
-    // Crear un objeto Solution
-    Solution solution;
+    std::cout << "root = ";
+    printTree(root);
+    std::cout << ", subRoot = ";
+    printTree(subRoot);
+    std::cout << std::endl;
 
-    // Verificar si treeT es un subárbol de treeS
-    bool result = solution.isSubtree(treeS, treeT);
+    Solution sol;
+    bool result = sol.isSubtree(root, subRoot);
 
-    // Mostrar el resultado
-    std::cout << (result ? "treeT es subárbol de treeS" : "treeT no es subárbol de treeS") << std::endl;
+    std::cout << "Output: " << (result ? "true" : "false") << std::endl;
 
-    // Liberar memoria
-    delete treeS;
-    delete treeT;
+    delete root;
+    delete subRoot;
 
     return 0;
 }

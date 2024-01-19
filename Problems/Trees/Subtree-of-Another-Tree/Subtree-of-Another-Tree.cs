@@ -1,5 +1,7 @@
 ﻿using System;
 
+// Using recursion - Time: O(m * n)
+
 public class TreeNode
 {
     public int val;
@@ -15,39 +17,69 @@ public class TreeNode
 
 public class Solution
 {
-    private bool IsSameTree(TreeNode s, TreeNode t)
+    private bool IsSameTree(TreeNode root, TreeNode subRoot)
     {
-        return (s == null && t == null) || (s != null && t != null && s.val == t.val && IsSameTree(s.left, t.left) && IsSameTree(s.right, t.right));
+        return (root == null && subRoot == null) || (root != null && subRoot != null && root.val == subRoot.val && IsSameTree(root.left, subRoot.left) && IsSameTree(root.right, subRoot.right));
     }
 
-    public bool IsSubtree(TreeNode s, TreeNode t)
+    public bool IsSubtree(TreeNode root, TreeNode subRoot)
     {
-        return IsSameTree(s, t) || (s != null && (IsSubtree(s.left, t) || IsSubtree(s.right, t)));
+        return IsSameTree(root, subRoot) || (root != null && (IsSubtree(root.left, subRoot) || IsSubtree(root.right, subRoot)));
     }
 }
 
 class Program
 {
+    static void PrintTree(TreeNode root)
+    {
+        if (root == null)
+        {
+            Console.Write("null");
+            return;
+        }
+
+        List<string> values = new List<string>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
+        queue.Enqueue(root);
+
+        while (queue.Count > 0)
+        {
+            TreeNode current = queue.Dequeue();
+            if (current != null)
+            {
+                values.Add(current.val.ToString());
+                queue.Enqueue(current.left);
+                queue.Enqueue(current.right);
+            }
+            else
+            {
+                values.Add("null");
+            }
+        }
+
+        Console.Write("[" + string.Join(", ", values) + "]");
+    }
     static void Main()
     {
-        // Crear dos árboles de ejemplo
-        TreeNode treeS = new TreeNode(3,
+        TreeNode root = new TreeNode(3,
             new TreeNode(4,
                 new TreeNode(1),
                 new TreeNode(2)),
             new TreeNode(5));
 
-        TreeNode treeT = new TreeNode(4,
+        TreeNode subRoot = new TreeNode(4,
             new TreeNode(1),
             new TreeNode(2));
 
-        // Crear un objeto Solution
-        Solution solution = new Solution();
+        Console.Write("root = ");
+        PrintTree(root);
+        Console.Write(", subRoot = ");
+        PrintTree(subRoot);
+        Console.WriteLine();
 
-        // Verificar si treeT es subárbol de treeS
-        bool result = solution.IsSubtree(treeS, treeT);
+        Solution sol = new Solution();
+        bool result = sol.IsSubtree(root, subRoot);
 
-        // Mostrar el resultado
-        Console.WriteLine($"treeT {(result ? "es" : "no es")} subárbol de treeS");
+        Console.WriteLine("Output: " + (result ? "true" : "false"));
     }
 }
