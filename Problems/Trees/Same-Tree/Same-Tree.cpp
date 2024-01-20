@@ -5,7 +5,7 @@
 
 // Using depth-first search - Time: O(n)
 
-struct TreeNode 
+struct TreeNode
 {
     int val;
     TreeNode *left;
@@ -17,7 +17,7 @@ struct TreeNode
 
 class Solution {
 public:
-    bool isSameTree(TreeNode* p, TreeNode* q) 
+    bool isSameTree(TreeNode *p, TreeNode *q)
     {
         return (p == nullptr && q == nullptr) ||
                (p != nullptr && q != nullptr &&
@@ -58,10 +58,10 @@ void printTree(TreeNode *root)
             }
             else
             {
-                std::cout << "null";
-
-                if (i < n - 1)
-                    std::cout << ", ";
+                if (!queue.empty())
+                    std::cout << "null, ";
+                else
+                    std::cout << "null";
             }
         }
     }
