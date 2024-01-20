@@ -55,10 +55,10 @@ void printTree(TreeNode *root)
             }
             else
             {
-                std::cout << "null";
-
-                if (i < n - 1)
-                    std::cout << ", ";
+                if (!queue.empty())
+                    std::cout << "null, ";
+                else
+                    std::cout << "null";
             }
         }
     }
@@ -85,7 +85,6 @@ int main()
     std::cout << "Input: root = ";
     printTree(root);
     std::cout << ", p = " << p->val << ", q = " << q->val << std::endl;
-
 
     Solution sol;
     TreeNode *ans = sol.lowestCommonAncestor(root, p, q);
