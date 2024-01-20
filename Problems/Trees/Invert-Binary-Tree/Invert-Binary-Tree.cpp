@@ -19,7 +19,7 @@ public:
     TreeNode *invertTree(TreeNode *root)
     {
         if (!root)
-        {    
+        {
             return NULL;
         }
 
@@ -62,10 +62,10 @@ void printTree(TreeNode *root)
             }
             else
             {
-                std::cout << "null";
-
-                if (i < n - 1)
-                    std::cout << ", ";
+                if (!queue.empty())
+                    std::cout << "null, ";
+                else
+                    std::cout << "null";
             }
         }
     }
