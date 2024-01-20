@@ -58,10 +58,10 @@ void printTree(TreeNode *root)
             }
             else
             {
-                std::cout << "null";
-
-                if (i < n - 1)
-                    std::cout << ", ";
+                if (!queue.empty())
+                    std::cout << "null, ";
+                else
+                    std::cout << "null";
             }
         }
     }
@@ -72,14 +72,14 @@ void printTree(TreeNode *root)
 int main()
 {
     TreeNode *root = new TreeNode(3,
-                                   new TreeNode(4,
-                                                new TreeNode(1),
-                                                new TreeNode(2)),
-                                   new TreeNode(5));
+                                  new TreeNode(4,
+                                               new TreeNode(1),
+                                               new TreeNode(2)),
+                                  new TreeNode(5));
 
     TreeNode *subRoot = new TreeNode(4,
-                                   new TreeNode(1),
-                                   new TreeNode(2));
+                                     new TreeNode(1),
+                                     new TreeNode(2));
 
     std::cout << "root = ";
     printTree(root);
