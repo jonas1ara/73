@@ -72,13 +72,13 @@ If you want use this repository with C# then you should install `dotnet-sdk-8.0`
 
 - dotnet-sdk-8.0
 
-At this time the .NET 8 is only available from Ubuntu feed for Ubuntu 23.10, so, to install you can copy and paste the following commands:
+At this time the .NET 8 is only available from Ubuntu feed for Ubuntu 22.04, so, to install you can copy and paste the following commands:
 
 
 **Ubuntu 23.10:**
 ```bash
 sudo apt update && \
-    sudo apt install dotnet-sdk-8.0 -y
+    sudo apt install -y dotnet-sdk-8.0
 ```
 
 **Note: To install on other linux versions or linux distributions, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/linux).**
