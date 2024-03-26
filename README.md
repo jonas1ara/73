@@ -98,7 +98,7 @@ sudo apt update && \
 |0152|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Maximum-Product-Subarray)|Medium|
 |0153|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Find-Minimum-in-Rotated-Sorted-Array)|Medium|
 |0217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Contains-Duplicate)|Easy|
-|0238|[Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Product-of-Array-Except-Self)|Easy|
+|0238|[Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Arrays/Product-of-Array-Except-Self)|Easy|
 
 
 ### Matrix
@@ -108,7 +108,7 @@ sudo apt update && \
 |0048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Matrix/Rotate-Image)|Medium|
 |0054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Matrix/Spiral-Matrix)|Medium|
 |0073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Matrix/Set-Matrix-Zeroes)|Medium|
-|0079|[Word Search](https://leetcode.com/problems/word-search/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Matrix/Word-Search)|Medium|
+|0079|[Word Search](https://leetcode.com/problems/word-search/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Matrix/Word-Search)|Medium|
 
 
 ### Strings
@@ -124,7 +124,7 @@ sudo apt update && \
 |0242|[Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Valid-Anagram)|Easy|
 |0271|[Encode and Decode Strings](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Encode-and-Decode-Strings/Problem.md) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Encode-and-Decode-Strings)|Medium|   
 |0424|[Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Longest-Repeating-Character-Replacement)|Medium|
-|0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Palindromic-Substrings)|Medium|
+|0647|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Strings/Palindromic-Substrings)|Medium|
 
 ### Intervals
 
@@ -134,7 +134,7 @@ sudo apt update && \
 |0057|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Insert-Interval)|Medium|
 |0252|[Meeting Rooms](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms/Problem.md) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms)|Easy|
 |0253|[Meeting Rooms II](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms-II/Problem.md) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Meeting-Rooms-II)|Medium|
-|0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Non-overlapping-Intervals)|Medium|
+|0435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Intervals/Non-overlapping-Intervals)|Medium|
 
 ### Binary 
 
@@ -144,7 +144,7 @@ sudo apt update && \
 |0191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Number-of-1-Bits)|Easy|
 |0268|[Missing Number](https://leetcode.com/problems/missing-number/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Missing-Number)|Easy|
 |0338|[Counting Bits](https://leetcode.com/problems/counting-bits/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Counting-Bits)|Easy|
-|0371|[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Sum-of-Two-Integers)|Medium|
+|0371|[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Binary/Sum-of-Two-Integers)|Medium|
 
 ### Dynamic Programming
 
@@ -160,7 +160,7 @@ sudo apt update && \
 |0300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Longest-Common-Subsequence)|Medium|
 |0322|[Coin Change](https://leetcode.com/problems/coin-change/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Coin-Change)|Medium|
 |0377|[Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Combination-Sum-IV)|Medium|
-|1143|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Longest-Increasing-Subsequence)|Medium|
+|1143|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Dynamic-programming/Longest-Increasing-Subsequence)|Medium|
 
 ### Linked Lists
 
@@ -171,7 +171,7 @@ sudo apt update && \
 |0023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Merge-k-Sorted-Lists)|Hard|
 |0141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Linked-List-Cycle)|Easy|
 |0143|[Reorder List](https://leetcode.com/problems/reorder-list/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Reorder-List)|Medium|
-|0206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Reverse-Linked-List)|Easy|
+|0206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Linked-lists/Reverse-Linked-List)|Easy|
 
 ### Trees
 
@@ -190,7 +190,7 @@ sudo apt update && \
 |0230|[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Kth-Smallest-Element-in-a-BST)|Medium|
 |0235|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Lowest-Common-Ancestor-of-a-Binary-Search-Tree)|Medium|
 |0297|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Serialize-and-Deserialize-Binary-Tree)|Hard|
-|0572|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Subtree-of-Another-Tree)|Easy|
+|0572|[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Trees/Subtree-of-Another-Tree)|Easy|
 
 ### Heaps
 
@@ -198,7 +198,7 @@ sudo apt update && \
 |---| ----- | -------- | ---------- |
 |0295|[Find Mediumn from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/description/) | [C - C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Find-Median-from-Data-Stream)|Hard|
 |0347|[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Top-K-Frequent-Elements)|Medium|
-|0355|[Design Twitter](https://leetcode.com/problems/design-twitter/description/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Design-Twitter)|Medium|
+|0355|[Design Twitter](https://leetcode.com/problems/design-twitter/description/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Heaps/Design-Twitter)|Medium|
 
 ### Graphs
 
@@ -211,14 +211,15 @@ sudo apt update && \
 |0261|[Graph Valid Tree](https://github.com/jonas1ara/73/blob/main/Problems/Graphs/Graph-Valid-Tree/Problem.md) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Graph-Valid-Tree)|Medium|
 |0269|[Alien Dictionary](https://github.com/jonas1ara/73/blob/main/Problems/Graphs/Alien-Dictionary/Problem.md) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Alien-Dictionary)|Hard|
 |0323|[Number of Connected Components in an Undirected Graph](https://github.com/jonas1ara/73/blob/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph/Problem.md) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph)|Medium|
-|0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Pacific-Atlantic-Water-Flow)|Medium|
+|0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Pacific-Atlantic-Water-Flow)|Medium|
 
 
 ## Build with 🛠️
 
-- [C](https://en.wikipedia.org/wiki/C_(programming_language))
-- [C#](https://dotnet.microsoft.com/es-es/languages/csharp) 
+- [C](https://en.wikipedia.org/wiki/C_(programming_language)) 
 - [C++](https://isocpp.org/)
+- [C#](https://dotnet.microsoft.com/es-es/languages/csharp)
+- [F#](https://dotnet.microsoft.com/es-es/languages/fsharp)
 - [Ubuntu](https://ubuntu.com/)
 - [VS Code](https://code.visualstudio.com/) 
 
