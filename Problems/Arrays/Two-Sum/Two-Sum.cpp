@@ -13,13 +13,14 @@ public:
         {
             int t = target - nums[i];
 
-            //If the map contains the key t, return the index of t and the current index
+            //If the map contains the key t, return the index of t and the current index i
             if (map.count(t))
                 return {map[t], i}; 
+
             map[nums[i]] = i;       
         }
 
-        return {}; //If the sum has no solution, return the empty array
+        return {}; 
     }
 };
 
@@ -28,7 +29,6 @@ int main()
     std::vector<int> nums = {-1, 0, 1, 2, -1, -4};
     int target = 0;
 
-    // Print input
     std::cout << "Input: nums = [";
     for (const auto &num : nums)
     {
@@ -43,7 +43,6 @@ int main()
     Solution sol;
     std::vector<int> result = sol.twoSum(nums, target);
 
-    // Print output
     std::cout << "Output: [";
     for (const auto &r : result)
     {
