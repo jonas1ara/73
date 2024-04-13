@@ -60,7 +60,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
         int t = target - nums[i];
         int searchIndex = search(map, t);
 
-        //If the hash table contains the key, return the index and the current index
+        //If the hash table contains the key, return the index and the current index i
         if (searchIndex != -1)
         {
             int *result = (int *)malloc(2 * sizeof(int));
@@ -72,7 +72,6 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
         insert(map, nums[i], i);
     }
 
-    //If the sum has no solution, return the empty array
     *returnSize = 0;
     return NULL; 
 }
@@ -83,7 +82,6 @@ int main()
     int target = 9;
     int returnSize;
 
-    // Print input 
     printf("Input: nums = [");
     for (int i = 0; i < sizeof(nums) / sizeof(nums[0]); i++)
     {
