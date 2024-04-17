@@ -222,6 +222,11 @@ sudo dnf install gcc g++ -y
 |0323|[Number of Connected Components in an Undirected Graph](https://github.com/jonas1ara/73/blob/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph/Problem.md) | [C++ - C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph)|Medium|
 |0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C++ - C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Pacific-Atlantic-Water-Flow)|Medium|
 
+## Plan
+
+|# | Sunday | Monday | Tuesday | Wednesday | Thuesday | Friday | Saturday |
+|----- | ---| ----- | -------- | ---------- | -----| ----- | ----- | 
+|0001|Arrays| 01 and 11| 15 and 33| 53 and 121| 152 and 153| 217 and 238|
 
 ## Build with 🛠️
 
