@@ -53,9 +53,28 @@ The repository is divided into 4 folders:
 
 ## Configuration🔧
 
-The focus of this repository is towards C#, so you can use it from Windows, Linux, Mac, Docker or even GitHub Codespaces, but it is intended to be used on Linux, **specifically a Ubuntu-based distribution**, no matter if it is a complete distro or a WSL distro. Solutions in C (only the first problem of each topic) and C++ are also included , so to use this repository you must have installed:
+The focus of this repository is towards C#, so you can use it from Windows, Linux, Mac, Docker or even GitHub Codespaces, but it is intended to be used on Linux, **specifically an Ubuntu based distribution or Red Hat based distribution**, no matter if it is a complete distro or a WSL distro. All solutions are also written in C++, only the first problem of each topic includes the solution in C and only in the last problem of each topic includes the solution in F#, so to use this repository you must have installed:
 
-To compile C and C++ you need to install `gcc` and `g++` 
+To compile C# and F# you need to install `dotnet-sdk` 
+
+- dotnet-sdk-8.0
+
+At this time the dotnet sdk is available from the Ubuntu 22.04 and Fedora 39 source, so, to install you can copy and paste the following commands:
+
+**Ubuntu 22.04 or later:**
+```bash
+sudo apt update && \
+    sudo apt install -y dotnet-sdk-8.0
+```
+
+**Fedora 39 or later:**
+```bash
+sudo dnf install dotnet-sdk-8.0
+```
+
+**Note: To install on other linux versions or linux distributions, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/linux).**
+
+If you want use this repository with C and C++ then you should install `gcc` and `g++`
 
 - gcc
 - g++
@@ -68,20 +87,10 @@ sudo apt update && \
     sudo apt install build-essential -y
 ```
 
-If you want use this repository with C# then you should install `dotnet-sdk-8.0`
-
-- dotnet-sdk-8.0
-
-At this time the .NET 8 is only available from Ubuntu feed for Ubuntu 22.04, so, to install you can copy and paste the following commands:
-
-
-**Ubuntu 22.04:**
+**Red hat based distributions:**
 ```bash
-sudo apt update && \
-    sudo apt install -y dotnet-sdk-8.0
+sudo dnf install gcc g++ -y
 ```
-
-**Note: To install on other linux versions or linux distributions, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/linux).**
 
 ## Index 📖
 
