@@ -46,7 +46,7 @@ class Program
     static void Main(string[] args)
     {
         int[] nums = { 1, 4, 5, 6, 7, 0, 1, 2 };
-        int target = 3;
+        int target = 0;
 
         // Print input
         Console.Write("Input: nums = [");

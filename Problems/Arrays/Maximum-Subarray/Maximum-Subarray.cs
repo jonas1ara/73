@@ -1,6 +1,7 @@
 ﻿using System;
 
 // Using Kadan's algorithm - Time: O(n)
+
 public class Solution
 {
     public int MaxSubArray(int[] nums)
