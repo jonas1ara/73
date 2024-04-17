@@ -225,7 +225,7 @@ sudo dnf install gcc g++ -y
 ## Plan
 
 |# | Sunday | Monday | Tuesday | Wednesday | Thuesday | Friday | Saturday |
-|--------- | ---| ----- | -------- | ---------- | -----| ----- | ----- | 
+|--------- | ---| ----- | -------- | ---------- | -----| ----- | --------- | 
 |Week - 01|Arrays| 01 and 11| 15 and 33| 53 and 121| 152 and 153| 217 and 238 | Matrix |
 |Week - 02| 48 | 54| 73| 79| Strings| 03 and 05|20 and 49 |
 
