@@ -13,7 +13,8 @@ public:
         while (left < right)
         {
             ans = std::max(ans, (right - left) * std::min(height[left], height[right]));
-            if (height[left] < height[right])
+            
+			if (height[left] < height[right])
                 left++; // Move the smaller edge
             else
                 right--; // Move the larger edge
@@ -33,9 +34,9 @@ int main()
     {
         std::cout << h << "";
         if (&h != &height.back())
-            {
-            std::cout << ", ";
-            }
+        {
+        	std::cout << ", ";
+        }
     }
     std::cout << "]" << std::endl;
 

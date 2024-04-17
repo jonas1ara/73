@@ -12,7 +12,8 @@ public class Solution
         while (left < right)
         {
             ans = Math.Max(ans, (right - left) * Math.Min(height[left], height[right]));
-            if (height[left] < height[right])
+            
+			if (height[left] < height[right])
                 left++; // Move the smaller edge
             else
                 right--; // Move the larger edge
@@ -37,7 +38,6 @@ class Program
             {
                 Console.Write(", ");
             }
-
         }
         Console.WriteLine("]");
 
