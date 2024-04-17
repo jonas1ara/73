@@ -226,15 +226,15 @@ sudo dnf install gcc g++ -y
 
 |# | Sunday | Monday | Tuesday | Wednesday | Thuesday | Friday | Saturday |
 |--------- | ---| ----- | -------- | ---------- | -----| ----- | --------- | 
-|Week - 01|Arrays| 01 and 11| 15 and 33| 53 and 121| 152 and 153| 217 and 238 | Matrix |
-|Week - 02| 48 | 54| 73| 79| Strings| 03 and 05|20 and 49 |
-|Week - 03| 76 and 125 | 242 and 271| 424 and 647 | Intervals | 56 and 57 | 252 and 253 |  Binary |
-|Week - 04| 190 and 191 | 268 and 338 | 371 and 435 | DP | 55 and 62 | 70 and 91 | 139 and 198 |
-|Week - 05| 213 and 300 | 322 and 377 | 1143 | Linked lists | 19 and 21 | 23 and 141 | 143 and 206 |
-|Week - 06| Trees | 98 and 100 | 102 and 104 | 105 | 124 | 208 and 211 | 212 |
-|Week - 07| 226 | 230 and 235 | 297 | 572 | Heaps | 295 | 347 |
-|Week - 08| 355 | Graphs | 128 | 133 | 200 | 207 | 261 |
-|Week - 09| 269 | 323 | 417 | Done! |  |  |  |
+| Week - 01 | **Arrays** | 01 and 11 | 15 and 33 | 53 and 121 | 152 and 153 | 217 and 238 | **Matrix** |
+| Week - 02 | 48 | 54 | 73 | 79 | **Strings** | 03 and 05 | 20 and 49 |
+| Week - 03 | 76 and 125 | 242 and 271 | 424 and 647 | **Intervals** | 56 and 57 | 252 and 253 | **Binary** |
+| Week - 04 | 190 and 191 | 268 and 338 | 371 and 435 | **Dynamic programming** | 55 and 62 | 70 and 91 | 139 and 198 |
+| Week - 05 | 213 and 300 | 322 and 377 | 1143 | **Linked lists** | 19 and 21 | 23 and 141 | 143 and 206 |
+| Week - 06 | **Trees** | 98 and 100 | 102 and 104 | 105 | 124 | 208 and 211 | 212 |
+| Week - 07 | 226 | 230 and 235 | 297 | 572 | **Heaps** | 295 | 347 |
+| Week - 08 | 355 | **Graphs** | 128 | 133 | 200 | 207 | 261 |
+| Week - 09 | 269 | 323 | 417 | Done! |  |  |  |
 
 ## Build with 🛠️
 
