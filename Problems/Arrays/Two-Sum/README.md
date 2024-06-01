@@ -39,7 +39,7 @@ Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understa
 
     - `nums[0] = 2` 
     - `t = target - nums[0] = 9 - 2 = 7`
-    - The hash table is empty, `{2, 0}` is added to the hash table `{table[2] = 0}`
+    - The hash table is empty, `{2, 0}` is added to the hash table `{ table[2] = 0 }`
 
 3. Second iteration (i = 1):
 
