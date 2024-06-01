@@ -60,8 +60,9 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
         int t = target - nums[i];
         int searchIndex = search(map, t);
 
-        //If the hash table contains the key, return the index and the current index i
-        if (searchIndex != -1)
+        // If the hash table contains the key, return the index and the current index i
+        
+		if (searchIndex != -1)
         {
             int *result = (int *)malloc(2 * sizeof(int));
             result[0] = searchIndex;

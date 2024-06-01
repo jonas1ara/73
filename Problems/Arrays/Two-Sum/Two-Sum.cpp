@@ -9,11 +9,13 @@ public:
     std::vector<int> twoSum(std::vector<int> &nums, int target)
     {
         std::map<int, int> map;
-        for (int i = 0; i < nums.size(); i++)
+        
+		for (int i = 0; i < nums.size(); i++)
         {
             int t = target - nums[i];
 
-            //If the map contains the key t, return the index of t and the current index i
+            // If the map contains the key t, return the index of t and the current index i
+
             if (map.count(t))
                 return {map[t], i}; 
 

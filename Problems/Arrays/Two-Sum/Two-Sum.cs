@@ -13,7 +13,7 @@ public class Solution /* Define a public class Solution */
 		{
 			int t = target - nums[i];
 
-			//If the dictionary contains the key t, return the index of t and the current index i
+			// If the dictionary contains the key t, return the index of t and the current index i
 
 			if (dic.ContainsKey(t)) 
 				return new int[] { dic[t], i };
