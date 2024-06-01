@@ -69,6 +69,14 @@ public class Solution
 
 5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
 
+6. `if (dic.ContainsKey(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
+
+7. `return new int[] { dic[t], i };` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
+
+8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. This makes it possible to track which numbers have been seen during the iteration.
+
+9. `return new int[] { }` : If the sum has no solution, return the empty array
+
 ### C++ :
 
 ### C++++:
