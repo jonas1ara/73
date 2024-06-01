@@ -1,6 +1,6 @@
 # Two sum:
 
-This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages. Each implementation uses a hash table to find two numbers in a array that add up to a given target value and maintain a temporal complexity of O(n)
+This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages. Each implementation uses a hash table to find two numbers in a array that add up to a given target value and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -15,7 +15,7 @@ You can return the answer in any order.
 ```
 Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
 ```
 
 - Example 2:
@@ -45,11 +45,11 @@ Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understa
 
     - `nums[1] = 7`
     - `t = target - nums[1] = 9 - 7 = 2`
-    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}.` 
+    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}` 
 
 4. Result
-    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found.
-    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`.
+    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
+    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
 
 ## Implementations:
 
@@ -81,7 +81,7 @@ public class Solution
 }
 ```
 
-1. `public class Solution` : Define a public class called Solution.
+1. `public class Solution` : Define a public class called `Solution`.
 
 2. `public int[] TwoSum(int[] nums, int target)` : Define a public method called `TwoSum` that takes two parameters: an array of `nums` integers and a `target` integer. Returns an integer array representing the indices of the two numbers whose sum equals the target.
 
@@ -97,9 +97,54 @@ public class Solution
 
 8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
 
-9. `return new int[] { }` : If the sum has no solution, return the empty array
+9. `return new int[] { }` : If the sum has no solution, return the empty array.
 
 ### C++ :
+
+```cpp
+
+// Using hash table - Time: O(n)
+
+class Solution {
+public:
+    std::vector<int> twoSum(std::vector<int> &nums, int target)
+    {
+        std::map<int, int> map;
+
+        for (int i = 0; i < nums.size(); i++)
+        {
+            int t = target - nums[i];
+
+            // If the map contains the key t, return the index of t and the current index i
+            if (map.count(t))
+                return {map[t], i}; 
+
+            map[nums[i]] = i;       
+        }
+
+        return {}; 
+    }
+};
+
+```
+
+1. `class Solution {public: ...};` : Define a public class called `Solution`.
+
+2. `std::vector<int> twoSum(std::vector<int> &nums, int target)` : Define a function called `TwoSum` that takes two parameters: a vector of integers `nums` by reference and a `target` integer. Returns a vector representing the indices of the two numbers whose sum equals the target.
+
+3. `std::map<int, int> map;` :  Create a `map`, where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
+
+4. `for (int i = 0; i < nums.size(); i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
+
+5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
+
+6. `if (map.count(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
+
+7. `return {map[t], i};` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
+
+8. `map[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
+
+9. `return {}` : If the sum has no solution, return the empty array.
 
 ### C++++:
 
