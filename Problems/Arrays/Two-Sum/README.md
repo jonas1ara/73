@@ -68,8 +68,6 @@ public class Solution
 		{
 			int t = target - nums[i];
 
-			// If the dictionary contains the key t, return the index of t and the current index i
-
 			if (dic.ContainsKey(t)) 
 				return new int[] { dic[t], i };
 
@@ -115,7 +113,6 @@ public:
         {
             int t = target - nums[i];
 
-            // If the map contains the key t, return the index of t and the current index i
             if (map.count(t))
                 return {map[t], i}; 
 
