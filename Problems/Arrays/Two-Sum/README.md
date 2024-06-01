@@ -63,7 +63,7 @@ public class Solution
 
 2. `public int[] TwoSum(int[] nums, int target)` : Define a public method called `TwoSum` that takes two parameters: an array of `nums` integers and a `target` integer. Returns an integer array representing the indices of the two numbers whose sum equals the target.
 
-3. `var dic = new Dictionary<int, int>();` :  Create an integer dictionary (int), where the key will be a number of the nums array and the value will be its index in the array. This dictionary will be used to keep track of the numbers that have been seen during the iteration.
+3. `var dic = new Dictionary<int, int>();` :  Create an integer dictionary (int), where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
 
 4. `for (int i = 0; i < nums.Length; i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
 
