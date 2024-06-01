@@ -47,7 +47,7 @@ Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understa
     - `t = target - nums[1] = 9 - 7 = 2`
     - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}` 
 
-4. Result
+4. Result:
     - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
     - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
 
@@ -143,6 +143,8 @@ public:
 
 9. `return {}` : If the sum has no solution, return the empty array.
 
-### C++++:
+### C:
+
+
 
 
