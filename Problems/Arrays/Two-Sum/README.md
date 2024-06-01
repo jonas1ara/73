@@ -29,6 +29,8 @@ Output: [1,2]
 
 The easy and intuitive way to solve this problem is just check every combination of two values and if they can sum up to our target, that is, iterate the array using two for cycles and compare each value of the array to verify if it is the desired sum. If you manage to do that, congratulations! Once you've solved the problem, you just have to implement it in a computationally fast way and that's the reason why a hash table is needed to go from a quadratic time complexity O(n^2) to a linear time complexity O(n), and it's also a good perspective on when to use a hash table to solve certain types of problems.
 
+Let's go through the array nums = {2, 7, 11, 15} with the target = 9 to understand how the algorithm works step by step: 
+
 ## Implementations:
 
 ### C# :
@@ -46,7 +48,7 @@ public class Solution
 		{
 			int t = target - nums[i];
 
-			//If the dictionary contains the key t, return the index of t and the current index i
+			// If the dictionary contains the key t, return the index of t and the current index i
 
 			if (dic.ContainsKey(t)) 
 				return new int[] { dic[t], i };
@@ -73,7 +75,7 @@ public class Solution
 
 7. `return new int[] { dic[t], i };` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
 
-8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. This makes it possible to track which numbers have been seen during the iteration.
+8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
 
 9. `return new int[] { }` : If the sum has no solution, return the empty array
 
