@@ -27,10 +27,10 @@ Output: [1,2]
 
 ## Solutions:
 
-### C solution:
+### C :
 
-### C++ solution:
+### C++ :
 
-### C# solution:
+### C# :
 
 
