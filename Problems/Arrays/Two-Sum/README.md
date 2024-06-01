@@ -31,25 +31,25 @@ The easy and intuitive way to solve this problem is just check every combination
 
 Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understand how the algorithm works step by step: 
 
-1. Dictionary initialization:
+1. Hash table initialization:
  
- -  The dictionary is empty at first.
+    - The hash table is empty at first
 
 2. First iteration (i = 0):
 
- - `nums[0] = 2` 
- - `t = target - nums[0] = 9 - 2 = 7`
- - The dictionary is empty, `{2, 0}` is added to the dictionary (dictionary[2] = 0).
+    - `nums[0] = 2` 
+    - `t = target - nums[0] = 9 - 2 = 7`
+    - The hash table is empty, `{2, 0}` is added to the hash table (table[2] = 0)
 
 3. Second iteration (i = 1):
 
- - `nums[1] = 7`
- - `t = target - nums[1] = 9 - 7 = 2`
- - The dictionary already contains key `2`, so it returns `{ dictionary[2], 1 } = {0, 1}.` 
+    - `nums[1] = 7`
+    - `t = target - nums[1] = 9 - 7 = 2`
+    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}.` 
 
 4. Result
- - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found.
- - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`.
+    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found.
+    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`.
 
 ## Implementations:
 
