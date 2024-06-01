@@ -29,7 +29,27 @@ Output: [1,2]
 
 The easy and intuitive way to solve this problem is just check every combination of two values and if they can sum up to our target, that is, iterate the array using two for cycles and compare each value of the array to verify if it is the desired sum. If you manage to do that, congratulations! Once you've solved the problem, you just have to implement it in a computationally fast way and that's the reason why a hash table is needed to go from a quadratic time complexity O(n^2) to a linear time complexity O(n), and it's also a good perspective on when to use a hash table to solve certain types of problems.
 
-Let's go through the array nums = {2, 7, 11, 15} with the target = 9 to understand how the algorithm works step by step: 
+Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understand how the algorithm works step by step: 
+
+1. Dictionary initialization:
+ 
+ -  The dictionary is empty at first.
+
+2. First iteration (i = 0):
+
+ - `nums[0] = 2` 
+ - `t = target - nums[0] = 9 - 2 = 7`
+ - The dictionary is empty, `{2, 0}` is added to the dictionary (dictionary[2] = 0).
+
+3. Second iteration (i = 1):
+
+ - `nums[1] = 7`
+ - `t = target - nums[1] = 9 - 7 = 2`
+ - The dictionary already contains key `2`, so it returns `{ dictionary[2], 1 } = {0, 1}.` 
+
+4. Result
+ - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found.
+ - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`.
 
 ## Implementations:
 
