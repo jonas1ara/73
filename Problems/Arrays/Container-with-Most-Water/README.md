@@ -31,53 +31,104 @@ Output: 1
 
 The easy and intuitive way to solve this problem is just check every combination of two values and if they can sum up to our target, that is, iterate the array using two for cycles and compare each value of the array to verify if it is the desired sum. If you can do that, congratulations! Once you've solved the problem, you just have to implement it in a computationally fast way and that's the reason why a hash table is needed to go from a quadratic time complexity O(n^2) to a linear time complexity O(n), and it's also a good perspective on when to use a hash table to solve certain types of problems.
 
-Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understand how the algorithm works step by step: 
+Let's go through the array `height = {1, 8, 6, 2, 5, 4, 8, 3, 7}` to understand how the algorithm works step by step: 
 
-1. Hash table initialization:
+1. Variable initialization:
  
-    - The hash table is empty at first
+    - `ans = 0` (initial maximum area)
+    - `left = 0` (initial left edge)
+    - `right = height.size() - 1` (initial right edge)
 
-2. First iteration (i = 0):
+2. First iteration:
 
-    - `nums[0] = 2` 
-    - `t = target - nums[0] = 9 - 2 = 7`
-    - The hash table is empty, `{2, 0}` is added to the hash table `{ table[2] = 0 }`
+    - `left = 0`, `right = 8` 
+    - Heights: `height[left] = 1`, `height[right] = 7`
+    - Calculated area: `area = (8 - 0) * min(1, 7) = 8 * 1 = 8`
+    - `ans` is updated to `8`
 
-3. Second iteration (i = 1):
+3. Second iteration:
+    
+    - `left = 0`, `right = 7` 
+    - Heights: `height[left] = 1`, `height[right] = 3`
+    - Calculated area: `area = (7 - 0) * min(1, 3) = 7 * 1 = 7`
+    - `ans` remains in `8` (8 > 7)
 
-    - `nums[1] = 7`
-    - `t = target - nums[1] = 9 - 7 = 2`
-    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}` 
+4. Third iteration:
 
-4. Result:
-    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
-    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
+    - `left = 0`, `right = 6` 
+    - Heights: `height[left] = 1`, `height[right] = 8`
+    - Calculated area: `area = (6 - 0) * min(1, 8) = 6 * 1 = 6`
+    - `ans` remains in `8`
+
+5. Fourth iteration:
+
+    - `left = 0`, `right = 5` 
+    - Heights: `height[left] = 1`, `height[right] = 4`
+    - Calculated area: `area = (5 - 0) * min(1, 4) = 5 * 1 = 5`
+    - `ans` remains in `8`
+
+6. Fifth iteration: 
+
+    - `left = 0`, `right = 4` 
+    - Heights: `height[left] = 1`, `height[right] = 5`
+    - Calculated area: `area = (4 - 0) * min(1, 5) = 4 * 1 = 4`
+    - `ans` remains in `8`
+
+7. Sixth iteration:
+
+    - `left = 0`, `right = 3` 
+    - Heights: `height[left] = 1`, `height[right] = 2`
+    - Calculated area: `area = (3 - 0) * min(1, 2) = 3 * 1 = 3`
+    - `ans` remains in `8`
+
+8. Seventh iteration:
+ 
+    - `left = 0`, `right = 2` 
+    - Heights: `height[left] = 1`, `height[right] = 6`
+    - Calculated area: `area = (2 - 0) * min(1, 6) = 2 * 1 = 2`
+    - `ans` remains in `8`
+
+9. Eighth iteration:
+    -  `left = 0`, `right = 1`
+    - Heights: `height[left] = 1`, `height[right] = 8` 
+    - Calculated area: `area = (1 - 0) * min(1, 8) = 1 * 1 = 1`
+    - `ans` remains in 8
+
+10. New iteration:
+    - `left = 1`, `right = 1` (indices crossed, cycle ends)
+
+11. Result:
+    - The maximum area found is `ans = 8`, which is the largest possible container area with the given heights
+
+
+This algorithm uses the two-pointer technique (`left` and `right`) to find the solution efficiently, reducing the temporal complexity to `O(n)`, where `n` is the size of the height array.
+
 
 ## Implementations:
 
 ### C# :
 
 ```csharp
-// Using hash table - Time: O(n)
+// Using two pointers technique - Time: O(n)
 
 public class Solution
 {
-	public int[] TwoSum(int[] nums, int target)
-	{
-		var dic = new Dictionary<int, int>();
+    public int MaxArea(int[] height)
+    {
+        int ans = 0, left = 0, right = height.Length - 1;
 
-		for (int i = 0; i < nums.Length; i++)
-		{
-			int t = target - nums[i];
+        while (left < right)
+        {
+            ans = Math.Max(ans, (right - left) * Math.Min(height[left], height[right]));
+            
+			if (height[left] < height[right])
+                left++; // Move the smaller edge
+            else
+                right--; // Move the larger edge
+        }
 
-			if (dic.ContainsKey(t)) 
-				return new int[] { dic[t], i };
-
-			dic[nums[i]] = i;
-		}
-
-		return new int[] { };
-	}
+        return ans;
+    }
 }
 ```
 
@@ -102,29 +153,27 @@ public class Solution
 ### C++ :
 
 ```cpp
-
-// Using hash table - Time: O(n)
+// Using two pointers technique - Time: O(n)
 
 class Solution {
 public:
-    std::vector<int> twoSum(std::vector<int> &nums, int target)
+    int maxArea(std::vector<int> &height)
     {
-        std::map<int, int> map;
+        int ans = 0, left = 0, right = height.size() - 1;
 
-        for (int i = 0; i < nums.size(); i++)
+        while (left < right)
         {
-            int t = target - nums[i];
-
-            if (map.count(t))
-                return {map[t], i}; 
-
-            map[nums[i]] = i;       
+            ans = std::max(ans, (right - left) * std::min(height[left], height[right]));
+            
+			if (height[left] < height[right])
+                left++; // Move the smaller edge
+            else
+                right--; // Move the larger edge
         }
 
-        return {}; 
+        return ans;
     }
 };
-
 ```
 
 1. `class Solution {public: ...};` : Define a public class called `Solution`.
@@ -144,84 +193,4 @@ public:
 8. `map[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
 
 9. `return {}` : If the sum has no solution, return the empty array.
-
-### C:
-
-```c
-// Using hash table - Time: O(n)
-
-#define SIZE 10000
-
-typedef struct
-{
-    int key;
-    int value;
-} HashNode;
-
-typedef struct
-{
-    HashNode **array;
-} HashMap;
-
-HashMap *createHashMap()
-{
-    HashMap *map = (HashMap *)malloc(sizeof(HashMap));
-    map->array = (HashNode **)calloc(SIZE, sizeof(HashNode *));
-    return map;
-}
-
-void insert(HashMap *map, int key, int value)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL && map->array[index]->key != key)
-    {
-        index = (index + 1) % SIZE;
-    }
-    if (map->array[index] == NULL)
-    {
-        map->array[index] = (HashNode *)malloc(sizeof(HashNode));
-    }
-    map->array[index]->key = key;
-    map->array[index]->value = value;
-}
-
-int search(HashMap *map, int key)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL)
-    {
-        if (map->array[index]->key == key)
-        {
-            return map->array[index]->value;
-        }
-        index = (index + 1) % SIZE;
-    }
-    return -1;
-}
-
-int *twoSum(int *nums, int numsSize, int target, int *returnSize)
-{
-    HashMap *map = createHashMap();
-    for (int i = 0; i < numsSize; i++)
-    {
-        int t = target - nums[i];
-        int searchIndex = search(map, t);
-
-        //If the hash table contains the key, return the index and the current index i
-        if (searchIndex != -1)
-        {
-            int *result = (int *)malloc(2 * sizeof(int));
-            result[0] = searchIndex;
-            result[1] = i;
-            *returnSize = 2;
-            return result;
-        }
-        insert(map, nums[i], i);
-    }
-
-    *returnSize = 0;
-    return NULL; 
-}
-```
-
 
