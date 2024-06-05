@@ -51,6 +51,8 @@ Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understa
     - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
     - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
 
+In this case, the algorithm returns {0, 1}, which means that the numbers at positions 0 and 1 of the set nums (which are 2 and 7 respectively) add up to 9, which is the target we were looking for.
+
 ## Implementations:
 
 ### C# :
