@@ -1,6 +1,6 @@
 # Valid Parentheses:
 
-This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages. Each implementation uses a hash table to find two numbers in a array that add up to a given target value and maintain a temporal complexity of `O(n)`.
+This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages.  `O(n)`.
 
 ## Problem description
 
