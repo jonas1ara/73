@@ -1,225 +1,208 @@
-# Two sum:
+# 3Sum
 
-This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages. Each implementation uses a hash table to find two numbers in a array that add up to a given target value and maintain a temporal complexity of `O(n)`.
+This repository contains implementations of the "3Sum" problem in C++ and C#. The solutions utilize the two-pointer technique to find all unique triplets in an array that sum up to zero. The algorithms are designed to handle input arrays with time complexity of `O(n^2)`.
 
-## Problem description
+## Problem Description
 
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[k]]` such that:
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
+- `i`, `j`, and `k` are distinct indices.
+- `nums[i] + nums[j] + nums[k] == 0`.
 
-You can return the answer in any order.
+The solution must not contain duplicate triplets.
 
-- Example 1:
+### Example 1:
 
-```
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
-```
-
-- Example 2:
-
-```
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
+```plaintext
+Input: nums = [-1,0,1,2,-1,-4]
+Output: [[-1,-1,2],[-1,0,1]]
+Explanation: 
+nums[0] + nums[4] + nums[3] = -1 + (-1) + 2 = 0
+nums[0] + nums[1] + nums[2] = -1 + 0 + 1 = 0
 ```
 
-## Solution:
+### Example 2:
 
-The easy and intuitive way to solve this problem is just check every combination of two values and if they can sum up to our target, that is, iterate the array using two for cycles and compare each value of the array to verify if it is the desired sum. If you can do that, congratulations! Once you've solved the problem, you just have to implement it in a computationally fast way and that's the reason why a hash table is needed to go from a quadratic time complexity O(n^2) to a linear time complexity O(n), and it's also a good perspective on when to use a hash table to solve certain types of problems.
-
-Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understand how the algorithm works step by step: 
-
-1. Hash table initialization:
- 
-    - The hash table is empty at first
-
-2. First iteration (i = 0):
-
-    - `nums[0] = 2` 
-    - `t = target - nums[0] = 9 - 2 = 7`
-    - The hash table is empty, `{2, 0}` is added to the hash table `{ table[2] = 0 }`
-
-3. Second iteration (i = 1):
-
-    - `nums[1] = 7`
-    - `t = target - nums[1] = 9 - 7 = 2`
-    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}` 
-
-4. Result:
-    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
-    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
-
-## Implementations:
-
-### C# :
-
-```csharp
-// Using hash table - Time: O(n)
-
-public class Solution
-{
-	public int[] TwoSum(int[] nums, int target)
-	{
-		var dic = new Dictionary<int, int>();
-
-		for (int i = 0; i < nums.Length; i++)
-		{
-			int t = target - nums[i];
-
-			if (dic.ContainsKey(t)) 
-				return new int[] { dic[t], i };
-
-			dic[nums[i]] = i;
-		}
-
-		return new int[] { };
-	}
-}
+```plaintext
+Input: nums = [0,1,1]
+Output: []
+Explanation: No three numbers sum up to zero.
 ```
 
-1. `public class Solution` : Define a public class called `Solution`.
+### Example 3:
 
-2. `public int[] TwoSum(int[] nums, int target)` : Define a public method called `TwoSum` that takes two parameters: an array of `nums` integers and a `target` integer. Returns an integer array representing the indices of the two numbers whose sum equals the target.
+```plaintext
+Input: nums = [0,0,0]
+Output: [[0,0,0]]
+```
 
-3. `var dic = new Dictionary<int, int>();` :  Create an integer dictionary (int), where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
+## Approach
 
-4. `for (int i = 0; i < nums.Length; i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
+The solution sorts the array and applies the two-pointer technique. By iterating through the array and setting two pointers, one starting from the next element and the other from the end of the array, the algorithm efficiently identifies triplets that sum to zero while avoiding duplicates.
 
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
+### Steps:
+1. Sort the array.
+2. Iterate through the array with the first pointer (`i`).
+3. Use two pointers (`j` and `k`) to find pairs that sum with `nums[i]` to zero.
+4. Skip duplicate values to ensure unique triplets.
+5. Collect and return the results.
 
-6. `if (dic.ContainsKey(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
+---
 
-7. `return new int[] { dic[t], i };` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
+## Implementations
 
-8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return new int[] { }` : If the sum has no solution, return the empty array.
-
-### C++ :
+### C++ Implementation
 
 ```cpp
-
-// Using hash table - Time: O(n)
+#include <algorithm>
+#include <iostream>
+#include <vector>
+#include <map>
 
 class Solution {
 public:
-    std::vector<int> twoSum(std::vector<int> &nums, int target)
+    std::vector<std::vector<int>> threeSum(std::vector<int> &nums)
     {
-        std::map<int, int> map;
+        std::vector<std::vector<int>> result;
+        int n = nums.size();
+        
+        if (n < 3){ return result; }
 
-        for (int i = 0; i < nums.size(); i++)
+        sort(nums.begin(), nums.end());
+
+        for (int i = 0; i < n - 2; i++)
         {
-            int t = target - nums[i];
+            if (nums[i] > 0) break;
+            if (i > 0 && nums[i - 1] == nums[i]) continue;
 
-            if (map.count(t))
-                return {map[t], i}; 
+            int j = i + 1;
+            int k = n - 1;
 
-            map[nums[i]] = i;       
+            while (j < k)
+            {
+                int sum = nums[i] + nums[j] + nums[k];
+
+                if (sum < 0) j++;
+                else if (sum > 0) k--;
+                else {
+                    result.push_back({nums[i], nums[j], nums[k]});
+
+                    while (j < k && nums[j] == nums[j + 1]) j++;
+                    j++;
+
+                    while (j < k && nums[k - 1] == nums[k]) k--;
+                    k--;
+                }
+            }
         }
-
-        return {}; 
+        
+        return result;
     }
 };
 
+int main()
+{
+    std::vector<int> nums = {-1, 0, 1, 2, -1, -4};
+
+    std::cout << "Input: nums = [";
+    for (const auto &num : nums)
+    {
+        std::cout << num << (num == nums.back() ? "" : ", ");
+    }
+    std::cout << "]\n";
+
+    Solution sol;
+    std::vector<std::vector<int>> result = sol.threeSum(nums);
+
+    std::cout << "Output: [";
+    for (const auto &vec : result)
+    {
+        std::cout << "[";
+        for (size_t i = 0; i < vec.size(); i++)
+        {
+            std::cout << vec[i] << (i < vec.size() - 1 ? ", " : "");
+        }
+        std::cout << "]" << (vec == result.back() ? "" : ", ");
+    }
+    std::cout << "]\n";
+
+    return 0;
+}
 ```
 
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
+### C# Implementation
 
-2. `std::vector<int> twoSum(std::vector<int> &nums, int target)` : Define a function called `TwoSum` that takes two parameters: a vector of integers `nums` by reference and a `target` integer. Returns a vector representing the indices of the two numbers whose sum equals the target.
+```csharp
+using System;
+using System.Collections.Generic;
 
-3. `std::map<int, int> map;` :  Create a `map`, where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
-
-4. `for (int i = 0; i < nums.size(); i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
-
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
-
-6. `if (map.count(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return {map[t], i};` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `map[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return {}` : If the sum has no solution, return the empty array.
-
-### C:
-
-```c
-// Using hash table - Time: O(n)
-
-#define SIZE 10000
-
-typedef struct
+public class Solution
 {
-    int key;
-    int value;
-} HashNode;
-
-typedef struct
-{
-    HashNode **array;
-} HashMap;
-
-HashMap *createHashMap()
-{
-    HashMap *map = (HashMap *)malloc(sizeof(HashMap));
-    map->array = (HashNode **)calloc(SIZE, sizeof(HashNode *));
-    return map;
-}
-
-void insert(HashMap *map, int key, int value)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL && map->array[index]->key != key)
+    public IList<IList<int>> ThreeSum(int[] nums)
     {
-        index = (index + 1) % SIZE;
-    }
-    if (map->array[index] == NULL)
-    {
-        map->array[index] = (HashNode *)malloc(sizeof(HashNode));
-    }
-    map->array[index]->key = key;
-    map->array[index]->value = value;
-}
+        List<IList<int>> result = new List<IList<int>>();
+        int n = nums.Length;
 
-int search(HashMap *map, int key)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL)
-    {
-        if (map->array[index]->key == key)
+        if (n < 3)
         {
-            return map->array[index]->value;
-        }
-        index = (index + 1) % SIZE;
-    }
-    return -1;
-}
-
-int *twoSum(int *nums, int numsSize, int target, int *returnSize)
-{
-    HashMap *map = createHashMap();
-    for (int i = 0; i < numsSize; i++)
-    {
-        int t = target - nums[i];
-        int searchIndex = search(map, t);
-
-        //If the hash table contains the key, return the index and the current index i
-        if (searchIndex != -1)
-        {
-            int *result = (int *)malloc(2 * sizeof(int));
-            result[0] = searchIndex;
-            result[1] = i;
-            *returnSize = 2;
             return result;
         }
-        insert(map, nums[i], i);
-    }
 
-    *returnSize = 0;
-    return NULL; 
+        Array.Sort(nums);
+
+        for (int i = 0; i < n - 2; i++)
+        {
+            if (nums[i] > 0) break;
+            if (i > 0 && nums[i - 1] == nums[i]) continue;
+
+            int j = i + 1;
+            int k = n - 1;
+
+            while (j < k)
+            {
+                int sum = nums[i] + nums[j] + nums[k];
+
+                if (sum < 0) j++;
+                else if (sum > 0) k--;
+                else {
+                    result.Add(new List<int> { nums[i], nums[j], nums[k] });
+
+                    while (j < k && nums[j] == nums[j + 1]) j++;
+                    j++;
+
+                    while (j < k && nums[k - 1] == nums[k]) k--;
+                    k--;
+                }
+            }
+        }
+
+        return result;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] nums = { -1, 0, 1, 2, -1, -4 };
+
+        Console.Write("Input: nums = [");
+        for (int i = 0; i < nums.Length; i++)
+        {
+            Console.Write(nums[i]);
+            if (i < nums.Length - 1) Console.Write(", ");
+        }
+        Console.WriteLine("]");
+
+        IList<IList<int>> result = new Solution().ThreeSum(nums);
+
+        Console.Write("Output: [");
+        foreach (var triplet in result)
+        {
+            Console.Write("[" + string.Join(", ", triplet) + "]");
+            if (triplet != result[^1]) Console.Write(", ");
+        }
+        Console.WriteLine("]");
+    }
 }
 ```
-
-
