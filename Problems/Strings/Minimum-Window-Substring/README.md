@@ -1,225 +1,161 @@
-# Two sum:
+# Minimum Window Substring:
 
-This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages. Each implementation uses a hash table to find two numbers in a array that add up to a given target value and maintain a temporal complexity of `O(n)`.
+This directory contains implementations of the "Minimum Window Substring" problem in the C++ and C# languages. Each implementation uses a sliding window with character need-counts and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+Given two strings `s` and `t` of lengths `m` and `n` respectively, return the minimum window substring of `s` such that every character in `t` (including duplicates) is included in the window. If there is no such substring, return the empty string `""`.
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
+The testcases will be generated such that the answer is unique.
 
 - Example 1:
 
 ```
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
+Input: s = "ADOBECODEBANC", t = "ABC"
+Output: "BANC"
+Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
 ```
 
 - Example 2:
 
 ```
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
+Input: s = "a", t = "a"
+Output: "a"
+```
+
+- Example 3:
+
+```
+Input: s = "a", t = "aa"
+Output: ""
+Explanation: Both 'a's from t must be included, so no valid window exists.
 ```
 
 ## Solution:
 
-The easy and intuitive way to solve this problem is just check every combination of two values and if they can sum up to our target, that is, iterate the array using two for cycles and compare each value of the array to verify if it is the desired sum. If you can do that, congratulations! Once you've solved the problem, you just have to implement it in a computationally fast way and that's the reason why a hash table is needed to go from a quadratic time complexity O(n^2) to a linear time complexity O(n), and it's also a good perspective on when to use a hash table to solve certain types of problems.
+We need the smallest window in `s` that covers all characters of `t`.
 
-Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understand how the algorithm works step by step: 
+Sliding window approach:
 
-1. Hash table initialization:
- 
-    - The hash table is empty at first
+1. Count required characters from `t` into `cnt`
+2. Expand `j` until the window contains every required character (`matched == t.Length`)
+3. While valid, record the window if it is the shortest so far, then shrink from `i`
+4. Continue until `j` reaches the end
 
-2. First iteration (i = 0):
+`cnt` is used as a residual need array: positive means still needed, zero or negative means satisfied / extra.
 
-    - `nums[0] = 2` 
-    - `t = target - nums[0] = 9 - 2 = 7`
-    - The hash table is empty, `{2, 0}` is added to the hash table `{ table[2] = 0 }`
+Let's go through `s = "ADOBECODEBANC"`, `t = "ABC"`:
 
-3. Second iteration (i = 1):
-
-    - `nums[1] = 7`
-    - `t = target - nums[1] = 9 - 7 = 2`
-    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}` 
-
-4. Result:
-    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
-    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
+1. Expand until first covering window appears (e.g. `"ADOBEC"`)
+2. Shrink and re-expand, tracking shorter covering windows
+3. Best becomes `"BANC"` of length `4`
 
 ## Implementations:
 
 ### C# :
 
 ```csharp
-// Using hash table - Time: O(n)
+// Using sliding window technique - Time: O(n)
 
 public class Solution
 {
-	public int[] TwoSum(int[] nums, int target)
-	{
-		var dic = new Dictionary<int, int>();
+    public string MinWindow(string s, string t)
+    {
+        int[] cnt = new int[128];
+        foreach (char c in t)
+        {
+            cnt[c]++;
+        }
 
-		for (int i = 0; i < nums.Length; i++)
-		{
-			int t = target - nums[i];
+        int n = s.Length;
+        int i = 0, j = 0, start = -1, minLen = int.MaxValue, matched = 0;
 
-			if (dic.ContainsKey(t)) 
-				return new int[] { dic[t], i };
+        while (j < n)
+        {
+            if (cnt[s[j]] > 0)
+            {
+                matched++;
+            }
+            cnt[s[j]]--;
+            j++;
 
-			dic[nums[i]] = i;
-		}
+            while (matched == t.Length)
+            {
+                if (j - i < minLen)
+                {
+                    minLen = j - i;
+                    start = i;
+                }
 
-		return new int[] { };
-	}
+                if (cnt[s[i]] == 0)
+                {
+                    matched--;
+                }
+                cnt[s[i]]++;
+                i++;
+            }
+        }
+
+        return start == -1 ? "" : s.Substring(start, minLen);
+    }
 }
 ```
 
 1. `public class Solution` : Define a public class called `Solution`.
 
-2. `public int[] TwoSum(int[] nums, int target)` : Define a public method called `TwoSum` that takes two parameters: an array of `nums` integers and a `target` integer. Returns an integer array representing the indices of the two numbers whose sum equals the target.
+2. `public string MinWindow(string s, string t)` : Define a public method that returns the minimum covering window of `t` inside `s`.
 
-3. `var dic = new Dictionary<int, int>();` :  Create an integer dictionary (int), where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
+3. `int[] cnt = new int[128];` : ASCII frequency / residual-need array.
 
-4. `for (int i = 0; i < nums.Length; i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
+4. Count every character of `t`.
 
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
+5. Expand `j`: if `cnt[s[j]] > 0` before decrement, this character still helps `matched`.
 
-6. `if (dic.ContainsKey(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
+6. When `matched == t.Length`, the window is valid: update `start` / `minLen` if smaller.
 
-7. `return new int[] { dic[t], i };` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
+7. Shrink from `i`: if `cnt[s[i]]` returns to `0` after increment prep, lose one match.
 
-8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return new int[] { }` : If the sum has no solution, return the empty array.
+8. `return start == -1 ? "" : s.Substring(start, minLen);` : Empty string if no window, otherwise the best substring.
 
 ### C++ :
 
 ```cpp
-
-// Using hash table - Time: O(n)
+// Using sliding window technique - Time: O(n)
 
 class Solution {
 public:
-    std::vector<int> twoSum(std::vector<int> &nums, int target)
+    std::string minWindow(std::string s, std::string t)
     {
-        std::map<int, int> map;
-
-        for (int i = 0; i < nums.size(); i++)
+        int cnt[128] = {};
+        for (char c : t)
         {
-            int t = target - nums[i];
-
-            if (map.count(t))
-                return {map[t], i}; 
-
-            map[nums[i]] = i;       
+            cnt[c]++;
         }
 
-        return {}; 
+        int n = s.size(); 
+        int i = 0, j = 0, start = -1, minLen = INT_MAX, matched = 0;
+        
+        while (j < n)
+        {
+            matched += --cnt[s[j++]] >= 0;
+            
+            while (matched == t.size())
+            {
+                if (j - i < minLen)
+                    minLen = j - i, start = i;
+                matched -= ++cnt[s[i++]] > 0;
+            }
+        }
+
+        return start == -1 ? "" : s.substr(start, minLen);
     }
 };
-
 ```
 
 1. `class Solution {public: ...};` : Define a public class called `Solution`.
 
-2. `std::vector<int> twoSum(std::vector<int> &nums, int target)` : Define a function called `TwoSum` that takes two parameters: a vector of integers `nums` by reference and a `target` integer. Returns a vector representing the indices of the two numbers whose sum equals the target.
+2. `std::string minWindow(std::string s, std::string t)` : Define a function that returns the minimum covering window.
 
-3. `std::map<int, int> map;` :  Create a `map`, where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
+3. Compact residual-count window: expand with `--cnt[s[j++]] >= 0`, shrink with `++cnt[s[i++]] > 0`.
 
-4. `for (int i = 0; i < nums.size(); i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
-
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
-
-6. `if (map.count(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return {map[t], i};` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `map[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return {}` : If the sum has no solution, return the empty array.
-
-### C:
-
-```c
-// Using hash table - Time: O(n)
-
-#define SIZE 10000
-
-typedef struct
-{
-    int key;
-    int value;
-} HashNode;
-
-typedef struct
-{
-    HashNode **array;
-} HashMap;
-
-HashMap *createHashMap()
-{
-    HashMap *map = (HashMap *)malloc(sizeof(HashMap));
-    map->array = (HashNode **)calloc(SIZE, sizeof(HashNode *));
-    return map;
-}
-
-void insert(HashMap *map, int key, int value)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL && map->array[index]->key != key)
-    {
-        index = (index + 1) % SIZE;
-    }
-    if (map->array[index] == NULL)
-    {
-        map->array[index] = (HashNode *)malloc(sizeof(HashNode));
-    }
-    map->array[index]->key = key;
-    map->array[index]->value = value;
-}
-
-int search(HashMap *map, int key)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL)
-    {
-        if (map->array[index]->key == key)
-        {
-            return map->array[index]->value;
-        }
-        index = (index + 1) % SIZE;
-    }
-    return -1;
-}
-
-int *twoSum(int *nums, int numsSize, int target, int *returnSize)
-{
-    HashMap *map = createHashMap();
-    for (int i = 0; i < numsSize; i++)
-    {
-        int t = target - nums[i];
-        int searchIndex = search(map, t);
-
-        //If the hash table contains the key, return the index and the current index i
-        if (searchIndex != -1)
-        {
-            int *result = (int *)malloc(2 * sizeof(int));
-            result[0] = searchIndex;
-            result[1] = i;
-            *returnSize = 2;
-            return result;
-        }
-        insert(map, nums[i], i);
-    }
-
-    *returnSize = 0;
-    return NULL; 
-}
-```
-
-
+4. Return `""` or the best `substr(start, minLen)`.

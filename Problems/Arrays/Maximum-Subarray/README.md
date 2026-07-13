@@ -1,59 +1,109 @@
-# Maximum Subarray Problem
+# Maximum Subarray:
 
-This document explains the solution to the Maximum Subarray problem using Kadane's algorithm. The problem is to find the contiguous subarray within a one-dimensional array of numbers (containing at least one number) which has the largest sum.
+This directory contains implementations of the "Maximum Subarray" problem in the C++ and C# languages. Each implementation uses Kadane's algorithm to find the contiguous subarray with the largest sum and maintain a temporal complexity of `O(n)`.
 
----
+## Problem description
 
-## Problem Description
+Given an integer array `nums`, find the subarray with the largest sum, and return its sum.
 
-Given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
-
-### Example 1:
+- Example 1:
 
 ```
 Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
 Output: 6
-Explanation: [4,-1,2,1] has the largest sum = 6.
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
 ```
 
-### Example 2:
+- Example 2:
 
 ```
 Input: nums = [1]
 Output: 1
-Explanation: The subarray [1] is the only one with sum 1.
 ```
 
-### Constraints:
+- Example 3:
 
-- `1 <= nums.length <= 10^5`
-- `-10^4 <= nums[i] <= 10^4`
+```
+Input: nums = [5,4,-1,7,8]
+Output: 23
+```
 
----
+## Solution:
 
-## Algorithm Explanation
+The naive approach checks every possible subarray, which is `O(n^2)` or `O(n^3)`.
 
-We use Kadane's algorithm to solve this problem. The algorithm maintains the maximum sum of subarrays ending at each position. 
+Kadane's algorithm makes a local decision at each index:
 
-**Steps:**
-1. Initialize a variable `ans` to store the maximum sum encountered so far.
-2. Traverse the array, and for each element:
-   - Update the current element with the maximum sum ending at that element (`nums[i] += max(nums[i-1], 0)`).
-   - Update `ans` if the current element's value is greater than the stored maximum.
-3. Return the value of `ans`.
+- Either extend the previous best ending sum with the current element
+- Or start a new subarray at the current element (if the previous sum was negative)
 
-The time complexity is O(n), and the space complexity is O(1).
+In this code, that idea is written as:
 
----
+`nums[i] += max(nums[i - 1], 0)`
 
-## Code Implementations
+So each position becomes the best sum ending at that index, and we track the global maximum.
 
-### C++ Implementation
+Let's go through `nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4}`:
+
+1. Start: `ans = -2`
+
+2. i = 1 (`1`): previous is `-2 < 0`, so keep `1`. `ans = 1`
+
+3. i = 2 (`-3`): previous is `1 > 0`, so `-3 + 1 = -2`. `ans = 1`
+
+4. i = 3 (`4`): previous is `-2 < 0`, so keep `4`. `ans = 4`
+
+5. i = 4 (`-1`): `-1 + 4 = 3`. `ans = 4`
+
+6. i = 5 (`2`): `2 + 3 = 5`. `ans = 5`
+
+7. i = 6 (`1`): `1 + 5 = 6`. `ans = 6`
+
+8. Later values do not beat `6`
+
+9. Result: `6` from subarray `[4, -1, 2, 1]`
+
+## Implementations:
+
+### C# :
+
+```csharp
+// Using Kadan's algorithm - Time: O(n)
+
+public class Solution
+{
+    public int MaxSubArray(int[] nums)
+    {
+        int ans = nums[0];
+
+        for (int i = 1; i < nums.Length; i++)
+        {
+            nums[i] = nums[i] + Math.Max(nums[i - 1], 0);
+            ans = Math.Max(ans, nums[i]);
+        }
+
+        return ans;
+    }
+}
+```
+
+1. `public class Solution` : Define a public class called `Solution`.
+
+2. `public int MaxSubArray(int[] nums)` : Define a public method that returns the largest subarray sum.
+
+3. `int ans = nums[0];` : Initialize the answer with the first element.
+
+4. `for (int i = 1; i < nums.Length; i++)` : Iterate from the second element to the end.
+
+5. `nums[i] = nums[i] + Math.Max(nums[i - 1], 0);` : If the previous best ending sum is positive, extend it; otherwise start fresh at `nums[i]`. **After this, `nums[i]` is the best sum ending at index `i`.**
+
+6. `ans = Math.Max(ans, nums[i]);` : Keep the global maximum.
+
+7. `return ans;` : Return the largest sum found.
+
+### C++ :
 
 ```cpp
-#include <iostream>
-#include <vector>
-
 // Using Kadan's algorithm - Time: O(n)
 
 class Solution {
@@ -71,93 +121,16 @@ public:
         return ans;
     }
 };
-
-int main()
-{
-    std::vector<int> nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-
-    // Print input
-    std::cout << "Input: nums = [";
-    for (const auto &num : nums)
-    {
-        std::cout << num << "";
-        if (&num != &nums.back())
-        {
-            std::cout << ", ";
-        }
-    }
-    std::cout << "]" << std::endl;
-
-    Solution sol;
-    int result = sol.maxSubArray(nums);
-
-    // Print output
-    std::cout << "Output: " << result << std::endl;
-
-    return 0;
-}
 ```
 
-### C# Implementation
+1. `class Solution {public: ...};` : Define a public class called `Solution`.
 
-```csharp
-using System;
+2. `int maxSubArray(std::vector<int> &nums)` : Define a function that returns the largest subarray sum.
 
-// Using Kadan's algorithm - Time: O(n)
+3. `int ans = nums[0];` : Initialize the answer with the first element.
 
-public class Solution
-{
-    public int MaxSubArray(int[] nums)
-    {
-        int ans = nums[0];
+4. `nums[i] += std::max(nums[i - 1], 0);` : Apply Kadane's recurrence in place.
 
-        for (int i = 1; i < nums.Length; i++)
-        {
-            nums[i] = nums[i] +  Math.Max(nums[i - 1], 0);
-            ans = Math.Max(ans, nums[i]);
-        }
+5. `ans = std::max(ans, nums[i]);` : Track the global maximum.
 
-        return ans;
-    }
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        int[] nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
-
-        // Print input
-        Console.Write("Input: nums = [");
-        foreach (int num in nums)
-        {
-            Console.Write(num + "");
-            if (num != nums[nums.Length - 1])
-            {
-                Console.Write(", ");
-            }
-        }
-        Console.WriteLine("]");
-
-        Solution sol = new Solution();
-        int result = sol.MaxSubArray(nums);
-
-        // Print output
-        Console.WriteLine("Output: " + result);
-    }
-}
-```
-
----
-
-## Complexity Analysis
-
-**Time Complexity:**
-- O(n): Each element is visited once.
-
-**Space Complexity:**
-- O(1): In-place computation without additional data structures.
-
----
-
-Feel free to adapt or extend the code to suit your needs.
+6. `return ans;` : Return the largest sum found.

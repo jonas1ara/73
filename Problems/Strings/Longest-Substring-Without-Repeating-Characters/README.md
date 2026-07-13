@@ -1,225 +1,175 @@
-# Two sum:
+# Longest Substring Without Repeating Characters:
 
-This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages. Each implementation uses a hash table to find two numbers in a array that add up to a given target value and maintain a temporal complexity of `O(n)`.
+This directory contains implementations of the "Longest Substring Without Repeating Characters" problem in the C, C++, and C# languages. Each implementation uses a hash map of last-seen indices to track a sliding window and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
+Given a string `s`, find the length of the longest substring without repeating characters.
 
 - Example 1:
 
 ```
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
 ```
 
 - Example 2:
 
 ```
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+```
+
+- Example 3:
+
+```
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
 ```
 
 ## Solution:
 
-The easy and intuitive way to solve this problem is just check every combination of two values and if they can sum up to our target, that is, iterate the array using two for cycles and compare each value of the array to verify if it is the desired sum. If you can do that, congratulations! Once you've solved the problem, you just have to implement it in a computationally fast way and that's the reason why a hash table is needed to go from a quadratic time complexity O(n^2) to a linear time complexity O(n), and it's also a good perspective on when to use a hash table to solve certain types of problems.
+A nested-loop search of every substring is `O(n^2)`.
 
-Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understand how the algorithm works step by step: 
+Instead, scan once while remembering the last index where each character appeared:
 
-1. Hash table initialization:
- 
-    - The hash table is empty at first
+- `lastRepeatPos` is the rightmost previous index of a repeated character that still affects the current window
+- The current valid window is from `lastRepeatPos + 1` to `i`
+- Its length is `i - lastRepeatPos`
 
-2. First iteration (i = 0):
+Whenever a character repeats inside the current window, move `lastRepeatPos` forward to that previous occurrence.
 
-    - `nums[0] = 2` 
-    - `t = target - nums[0] = 9 - 2 = 7`
-    - The hash table is empty, `{2, 0}` is added to the hash table `{ table[2] = 0 }`
+Let's go through `s = "abcabcbb"`:
 
-3. Second iteration (i = 1):
-
-    - `nums[1] = 7`
-    - `t = target - nums[1] = 9 - 7 = 2`
-    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}` 
-
-4. Result:
-    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
-    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
+1. `a` at 0 → length 1
+2. `b` at 1 → length 2
+3. `c` at 2 → length 3 (`"abc"`)
+4. `a` at 3 repeats index 0 → `lastRepeatPos = 0`, length stays 3 (`"bca"`)
+5. Continue similarly; best length remains `3`
 
 ## Implementations:
 
 ### C# :
 
 ```csharp
-// Using hash table - Time: O(n)
+// Using hash map - Time: O(n)
 
 public class Solution
 {
-	public int[] TwoSum(int[] nums, int target)
-	{
-		var dic = new Dictionary<int, int>();
+    public int LengthOfLongestSubstring(string s)
+    {
+        if (string.IsNullOrEmpty(s))
+            return 0;
 
-		for (int i = 0; i < nums.Length; i++)
-		{
-			int t = target - nums[i];
+        var map = new Dictionary<int, int>();
+        var maxLen = 0;
+        var lastRepeatPos = -1;
 
-			if (dic.ContainsKey(t)) 
-				return new int[] { dic[t], i };
+        for (int i = 0; i < s.Length; i++)
+        {
+            if (map.ContainsKey(s[i]) && lastRepeatPos < map[s[i]])
+                lastRepeatPos = map[s[i]];
+            if (maxLen < i - lastRepeatPos)
+                maxLen = i - lastRepeatPos;
+            map[s[i]] = i;
+        }
 
-			dic[nums[i]] = i;
-		}
-
-		return new int[] { };
-	}
+        return maxLen;
+    }
 }
 ```
 
 1. `public class Solution` : Define a public class called `Solution`.
 
-2. `public int[] TwoSum(int[] nums, int target)` : Define a public method called `TwoSum` that takes two parameters: an array of `nums` integers and a `target` integer. Returns an integer array representing the indices of the two numbers whose sum equals the target.
+2. `public int LengthOfLongestSubstring(string s)` : Define a public method that returns the longest substring length without repeating characters.
 
-3. `var dic = new Dictionary<int, int>();` :  Create an integer dictionary (int), where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
+3. `if (string.IsNullOrEmpty(s)) return 0;` : Handle empty input.
 
-4. `for (int i = 0; i < nums.Length; i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
+4. `var map = new Dictionary<int, int>();` : Map each character to its last seen index.
 
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
+5. `lastRepeatPos` tracks the start of the invalid region before the current window.
 
-6. `if (dic.ContainsKey(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
+6. If the current character was seen after `lastRepeatPos`, update `lastRepeatPos`.
 
-7. `return new int[] { dic[t], i };` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
+7. Update `maxLen` with `i - lastRepeatPos`.
 
-8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
+8. Store the current index for `s[i]` and continue.
 
-9. `return new int[] { }` : If the sum has no solution, return the empty array.
+9. `return maxLen;` : Return the best length found.
 
 ### C++ :
 
 ```cpp
-
-// Using hash table - Time: O(n)
+// Using hash map - Time: O(n)
 
 class Solution {
 public:
-    std::vector<int> twoSum(std::vector<int> &nums, int target)
+    int lengthOfLongestSubstring(std::string s)
     {
-        std::map<int, int> map;
+        if (s.empty())
+            return 0;
 
-        for (int i = 0; i < nums.size(); i++)
+        std::unordered_map<char, int> map;
+        int maxLen = 0;
+        int lastRepeatPos = -1;
+
+        for (int i = 0; i < s.length(); i++)
         {
-            int t = target - nums[i];
-
-            if (map.count(t))
-                return {map[t], i}; 
-
-            map[nums[i]] = i;       
+            if (map.find(s[i]) != map.end() && lastRepeatPos < map[s[i]])
+                lastRepeatPos = map[s[i]];
+            if (maxLen < i - lastRepeatPos)
+                maxLen = i - lastRepeatPos;
+            map[s[i]] = i;
         }
 
-        return {}; 
+        return maxLen;
     }
 };
-
 ```
 
 1. `class Solution {public: ...};` : Define a public class called `Solution`.
 
-2. `std::vector<int> twoSum(std::vector<int> &nums, int target)` : Define a function called `TwoSum` that takes two parameters: a vector of integers `nums` by reference and a `target` integer. Returns a vector representing the indices of the two numbers whose sum equals the target.
+2. `int lengthOfLongestSubstring(std::string s)` : Define a function that returns the longest substring length without repeats.
 
-3. `std::map<int, int> map;` :  Create a `map`, where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
+3. Track last-seen indices in an unordered map and maintain `lastRepeatPos` / `maxLen` as above.
 
-4. `for (int i = 0; i < nums.size(); i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
-
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
-
-6. `if (map.count(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return {map[t], i};` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `map[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return {}` : If the sum has no solution, return the empty array.
+4. `return maxLen;` : Return the best length found.
 
 ### C:
 
 ```c
-// Using hash table - Time: O(n)
+// Using hash map - Time: O(n)
 
-#define SIZE 10000
-
-typedef struct
+int lengthOfLongestSubstring(char *s)
 {
-    int key;
-    int value;
-} HashNode;
+    if (s == NULL || *s == '\0')
+        return 0;
 
-typedef struct
-{
-    HashNode **array;
-} HashMap;
+    int map[256];
+    memset(map, -1, sizeof(map));
+    int maxLen = 0;
+    int lastRepeatPos = -1;
 
-HashMap *createHashMap()
-{
-    HashMap *map = (HashMap *)malloc(sizeof(HashMap));
-    map->array = (HashNode **)calloc(SIZE, sizeof(HashNode *));
-    return map;
-}
-
-void insert(HashMap *map, int key, int value)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL && map->array[index]->key != key)
+    for (int i = 0; i < strlen(s); i++)
     {
-        index = (index + 1) % SIZE;
-    }
-    if (map->array[index] == NULL)
-    {
-        map->array[index] = (HashNode *)malloc(sizeof(HashNode));
-    }
-    map->array[index]->key = key;
-    map->array[index]->value = value;
-}
-
-int search(HashMap *map, int key)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL)
-    {
-        if (map->array[index]->key == key)
-        {
-            return map->array[index]->value;
-        }
-        index = (index + 1) % SIZE;
-    }
-    return -1;
-}
-
-int *twoSum(int *nums, int numsSize, int target, int *returnSize)
-{
-    HashMap *map = createHashMap();
-    for (int i = 0; i < numsSize; i++)
-    {
-        int t = target - nums[i];
-        int searchIndex = search(map, t);
-
-        //If the hash table contains the key, return the index and the current index i
-        if (searchIndex != -1)
-        {
-            int *result = (int *)malloc(2 * sizeof(int));
-            result[0] = searchIndex;
-            result[1] = i;
-            *returnSize = 2;
-            return result;
-        }
-        insert(map, nums[i], i);
+        if (map[s[i]] != -1 && lastRepeatPos < map[s[i]])
+            lastRepeatPos = map[s[i]];
+        if (maxLen < i - lastRepeatPos)
+            maxLen = i - lastRepeatPos;
+        map[s[i]] = i;
     }
 
-    *returnSize = 0;
-    return NULL; 
+    return maxLen;
 }
 ```
 
+1. Use a fixed array `map[256]` as a last-seen index table for all character codes.
 
+2. Initialize every entry to `-1` with `memset`.
+
+3. Apply the same window logic as in C# / C++.
+
+4. `return maxLen;` : Return the best length found.

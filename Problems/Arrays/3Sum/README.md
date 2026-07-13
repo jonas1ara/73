@@ -1,140 +1,67 @@
-# 3Sum
+# 3Sum:
 
-This repository contains implementations of the "3Sum" problem in C++ and C#. The solutions utilize the two-pointer technique to find all unique triplets in an array that sum up to zero. The algorithms are designed to handle input arrays with time complexity of `O(n^2)`.
+This directory contains implementations of the "3Sum" problem in the C++ and C# languages. Each implementation sorts the array and uses the two-pointer technique to find all unique triplets that sum to zero with a temporal complexity of `O(n^2)`.
 
-## Problem Description
+## Problem description
 
-Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[k]]` such that:
+Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`.
 
-- `i`, `j`, and `k` are distinct indices.
-- `nums[i] + nums[j] + nums[k] == 0`.
+Notice that the solution set must not contain duplicate triplets.
 
-The solution must not contain duplicate triplets.
+- Example 1:
 
-### Example 1:
-
-```plaintext
+```
 Input: nums = [-1,0,1,2,-1,-4]
 Output: [[-1,-1,2],[-1,0,1]]
-Explanation: 
-nums[0] + nums[4] + nums[3] = -1 + (-1) + 2 = 0
-nums[0] + nums[1] + nums[2] = -1 + 0 + 1 = 0
+Explanation:
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0
+The distinct triplets are [-1,0,1] and [-1,-1,2].
 ```
 
-### Example 2:
+- Example 2:
 
-```plaintext
+```
 Input: nums = [0,1,1]
 Output: []
-Explanation: No three numbers sum up to zero.
+Explanation: The only possible triplet does not sum up to 0.
 ```
 
-### Example 3:
+- Example 3:
 
-```plaintext
+```
 Input: nums = [0,0,0]
 Output: [[0,0,0]]
 ```
 
-## Approach
+## Solution:
 
-The solution sorts the array and applies the two-pointer technique. By iterating through the array and setting two pointers, one starting from the next element and the other from the end of the array, the algorithm efficiently identifies triplets that sum to zero while avoiding duplicates.
+A brute-force triple loop is `O(n^3)`. After sorting, for each fixed index `i` the problem reduces to finding two numbers that sum to `-nums[i]`, which two pointers can do in linear time.
 
-### Steps:
-1. Sort the array.
-2. Iterate through the array with the first pointer (`i`).
-3. Use two pointers (`j` and `k`) to find pairs that sum with `nums[i]` to zero.
-4. Skip duplicate values to ensure unique triplets.
-5. Collect and return the results.
+Steps:
 
----
+1. Sort the array
+2. For each `i`, set `j = i + 1` and `k = n - 1`
+3. Move `j` right if the sum is too small, move `k` left if too large
+4. When the sum is zero, record the triplet and skip duplicates
 
-## Implementations
+Let's go through `nums = {-1, 0, 1, 2, -1, -4}` after sorting `{-4, -1, -1, 0, 1, 2}`:
 
-### C++ Implementation
+1. `i = 0`, `nums[i] = -4` → look for pair sum `4` → none
+2. `i = 1`, `nums[i] = -1` → pair `(-1, 2)` works → triplet `[-1, -1, 2]`
+3. Same `i`, pair `(0, 1)` works → triplet `[-1, 0, 1]`
+4. Skip the next duplicate `-1`
+5. Remaining starts do not add new unique triplets
 
-```cpp
-#include <algorithm>
-#include <iostream>
-#include <vector>
-#include <map>
+Result: `[[-1, -1, 2], [-1, 0, 1]]`
 
-class Solution {
-public:
-    std::vector<std::vector<int>> threeSum(std::vector<int> &nums)
-    {
-        std::vector<std::vector<int>> result;
-        int n = nums.size();
-        
-        if (n < 3){ return result; }
+## Implementations:
 
-        sort(nums.begin(), nums.end());
-
-        for (int i = 0; i < n - 2; i++)
-        {
-            if (nums[i] > 0) break;
-            if (i > 0 && nums[i - 1] == nums[i]) continue;
-
-            int j = i + 1;
-            int k = n - 1;
-
-            while (j < k)
-            {
-                int sum = nums[i] + nums[j] + nums[k];
-
-                if (sum < 0) j++;
-                else if (sum > 0) k--;
-                else {
-                    result.push_back({nums[i], nums[j], nums[k]});
-
-                    while (j < k && nums[j] == nums[j + 1]) j++;
-                    j++;
-
-                    while (j < k && nums[k - 1] == nums[k]) k--;
-                    k--;
-                }
-            }
-        }
-        
-        return result;
-    }
-};
-
-int main()
-{
-    std::vector<int> nums = {-1, 0, 1, 2, -1, -4};
-
-    std::cout << "Input: nums = [";
-    for (const auto &num : nums)
-    {
-        std::cout << num << (num == nums.back() ? "" : ", ");
-    }
-    std::cout << "]\n";
-
-    Solution sol;
-    std::vector<std::vector<int>> result = sol.threeSum(nums);
-
-    std::cout << "Output: [";
-    for (const auto &vec : result)
-    {
-        std::cout << "[";
-        for (size_t i = 0; i < vec.size(); i++)
-        {
-            std::cout << vec[i] << (i < vec.size() - 1 ? ", " : "");
-        }
-        std::cout << "]" << (vec == result.back() ? "" : ", ");
-    }
-    std::cout << "]\n";
-
-    return 0;
-}
-```
-
-### C# Implementation
+### C# :
 
 ```csharp
-using System;
-using System.Collections.Generic;
+// Using two pointers technique - Time: O(n^2)
 
 public class Solution
 {
@@ -152,8 +79,14 @@ public class Solution
 
         for (int i = 0; i < n - 2; i++)
         {
-            if (nums[i] > 0) break;
-            if (i > 0 && nums[i - 1] == nums[i]) continue;
+            if (nums[i] > 0)
+            {
+                break;
+            }
+            if (i > 0 && nums[i - 1] == nums[i])
+            {
+                continue;
+            }
 
             int j = i + 1;
             int k = n - 1;
@@ -162,15 +95,28 @@ public class Solution
             {
                 int sum = nums[i] + nums[j] + nums[k];
 
-                if (sum < 0) j++;
-                else if (sum > 0) k--;
-                else {
+                if (sum < 0)
+                {
+                    j++;
+                }
+                else if (sum > 0)
+                {
+                    k--;
+                }
+                else
+                {
                     result.Add(new List<int> { nums[i], nums[j], nums[k] });
 
-                    while (j < k && nums[j] == nums[j + 1]) j++;
+                    while (j < k && nums[j] == nums[j + 1])
+                    {
+                        j++;
+                    }
                     j++;
 
-                    while (j < k && nums[k - 1] == nums[k]) k--;
+                    while (j < k && nums[k - 1] == nums[k])
+                    {
+                        k--;
+                    }
                     k--;
                 }
             }
@@ -179,30 +125,98 @@ public class Solution
         return result;
     }
 }
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        int[] nums = { -1, 0, 1, 2, -1, -4 };
-
-        Console.Write("Input: nums = [");
-        for (int i = 0; i < nums.Length; i++)
-        {
-            Console.Write(nums[i]);
-            if (i < nums.Length - 1) Console.Write(", ");
-        }
-        Console.WriteLine("]");
-
-        IList<IList<int>> result = new Solution().ThreeSum(nums);
-
-        Console.Write("Output: [");
-        foreach (var triplet in result)
-        {
-            Console.Write("[" + string.Join(", ", triplet) + "]");
-            if (triplet != result[^1]) Console.Write(", ");
-        }
-        Console.WriteLine("]");
-    }
-}
 ```
+
+1. `public class Solution` : Define a public class called `Solution`.
+
+2. `public IList<IList<int>> ThreeSum(int[] nums)` : Define a public method that returns all unique triplets summing to zero.
+
+3. `if (n < 3) return result;` : Need at least three numbers.
+
+4. `Array.Sort(nums);` : Sort so two pointers and duplicate skipping work.
+
+5. Outer loop over `i`: fix the first element of the triplet.
+
+6. `if (nums[i] > 0) break;` : All remaining values are positive, no zero-sum triplet possible.
+
+7. Skip duplicate values of `nums[i]`.
+
+8. Two pointers `j` and `k` search for a pair that completes the sum to zero.
+
+9. On match, add the triplet and skip duplicate `j` / `k` values.
+
+10. `return result;` : Return all unique triplets.
+
+### C++ :
+
+```cpp
+// Using two pointers technique - Time: O(n^2)
+
+class Solution {
+public:
+    std::vector<std::vector<int>> threeSum(std::vector<int> &nums)
+    {
+        std::vector<std::vector<int>> result;
+        int n = nums.size();
+        
+        if (n < 3){ return result; }
+
+        sort(nums.begin(), nums.end());
+
+        for (int i = 0; i < n - 2; i++)
+        {
+            if (nums[i] > 0)
+            {
+                break;
+            }
+            if (i > 0 && nums[i - 1] == nums[i])
+            {
+                continue;
+            }
+
+            int j = i + 1;
+            int k = n - 1;
+
+            while (j < k)
+            {
+                int sum = nums[i] + nums[j] + nums[k];
+
+                if (sum < 0)
+                {
+                    j++;
+                }
+                else if (sum > 0)
+                {
+                    k--;
+                }
+                else
+                {
+                    result.push_back({nums[i], nums[j], nums[k]});
+
+                    while (j < k && nums[j] == nums[j + 1])
+                    {
+                        j++;
+                    }
+                    j++;
+
+                    while (j < k && nums[k - 1] == nums[k])
+                    {
+                        k--;
+                    }
+                    k--;
+                }
+            }
+        }
+        
+        return result;
+    }
+};
+```
+
+1. `class Solution {public: ...};` : Define a public class called `Solution`.
+
+2. `std::vector<std::vector<int>> threeSum(std::vector<int> &nums)` : Define a function that returns all unique triplets summing to zero.
+
+3. Sort, fix `i`, use two pointers `j`/`k`, skip duplicates, collect matches.
+
+4. `return result;` : Return all unique triplets.

@@ -1,48 +1,124 @@
 # Maximum Product Subarray:
 
-This directory contains implementations of the "Maximum Product Subarray" problem in both C++ and C#. The solution uses the two pointers technique to calculate the maximum product of a subarray in a given array of integers.
+This directory contains implementations of the "Maximum Product Subarray" problem in the C++ and C# languages. Each implementation uses a linear scan over segments between zeros to find the contiguous subarray with the largest product and maintain a temporal complexity of `O(n)`.
 
-## Problem Description
+## Problem description
 
-Given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest product and return its product.
+Given an integer array `nums`, find a subarray that has the largest product, and return the product.
 
-### Example 1:
+The test cases are generated so that the answer will fit in a 32-bit integer.
 
-Input: `nums = [2, 3, -2, 4]`  
-Output: `6`  
-Explanation: Subarray `[2, 3]` has the largest product = 6.
+- Example 1:
 
-### Example 2:
+```
+Input: nums = [2,3,-2,4]
+Output: 6
+Explanation: [2,3] has the largest product 6.
+```
 
-Input: `nums = [-2, 0, -1]`  
-Output: `0`  
-Explanation: The result is 0 because the product of any subarray of `[0]` is 0.
+- Example 2:
 
-## Approach:
+```
+Input: nums = [-2,0,-1]
+Output: 0
+Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
+```
 
-The solution uses the **two pointers technique** to find the maximum product subarray:
+## Solution:
 
-1. **Initialization**:
-   - Start by initializing the answer to the first element of the array.
-   - Set a pointer `j` to iterate through the array.
+Products behave differently from sums: a negative number can flip the sign of a large product, and zeros reset the product to zero.
 
-2. **Main Loop**:
-   - Use a while loop to traverse the array using the pointer `j`.
-   - For each subarray, calculate the product by multiplying the elements until a `0` is encountered. If a zero is encountered, it breaks the current subarray and starts a new search.
-   - The product is updated dynamically as we move through the array.
+This implementation walks the array from left to right and processes non-zero segments:
 
-3. **Handling Negative Products**:
-   - If a negative product is encountered (after the pointer `j` has moved past a `0`), we divide the product by elements from the beginning of the subarray (using pointer `i`) to potentially maximize the product.
+1. Multiply consecutive non-zero numbers and track the best product seen
+2. If a zero is found, consider `0` as a candidate answer
+3. If the full segment product is negative, divide out left factors until the remaining product is non-negative (or empty), updating the answer along the way
 
-4. **Zeroes**:
-   - Whenever a zero is encountered, the product is reset, and the algorithm moves to the next subarray.
+That way we never keep a trailing negative factor when removing it increases the product.
 
-## C++ Implementation:
+Let's go through `nums = {2, 3, -2, 4}`:
+
+1. Segment starts at index `0`
+2. Running product: `2` → `6` → `-12` → `-48`
+3. Best so far becomes `6` (from `2 * 3`)
+4. Segment product ends negative (`-48`). Remove left factors:
+    - divide by `2` → `-24`
+    - divide by `3` → `-8`
+    - divide by `-2` → `4` → answer updates to at least `4`
+5. Final best is `6`
+
+## Implementations:
+
+### C# :
+
+```csharp
+// Using two pointers technique - Time O(n)
+
+public class Solution
+{
+    public int MaxProduct(int[] nums)
+    {
+        int ans = nums[0];
+        int N = nums.Length;
+        int j = 0;
+
+        while (j < N)
+        {
+            int i = j;
+            int prod = 1;
+
+            while (j < N && nums[j] != 0)
+            {
+                prod *= nums[j++];
+                ans = Math.Max(ans, prod);
+            }
+
+            if (j < N)
+            {
+                ans = Math.Max(ans, 0);
+            }
+
+            while (i < N && prod < 0)
+            {
+                prod /= nums[i++];
+                if (i != j)
+                {
+                    ans = Math.Max(ans, prod);
+                }
+            }
+
+            while (j < N && nums[j] == 0)
+            {
+                j++;
+            }
+        }
+
+        return ans;
+    }
+}
+```
+
+1. `public class Solution` : Define a public class called `Solution`.
+
+2. `public int MaxProduct(int[] nums)` : Define a public method that returns the maximum product of a contiguous subarray.
+
+3. `int ans = nums[0]; int j = 0;` : Initialize the answer and a pointer that scans the array.
+
+4. Outer `while (j < N)` : Process the array in segments separated by zeros.
+
+5. Inner multiply loop: multiply non-zero values, advance `j`, and update `ans`.
+
+6. `if (j < N) ans = Math.Max(ans, 0);` : If we stopped on a zero, zero is a valid product candidate.
+
+7. Negative-product cleanup: divide out left factors until `prod` is non-negative, updating `ans` when the remaining product is non-empty.
+
+8. Skip consecutive zeros and continue.
+
+9. `return ans;` : Return the maximum product found.
+
+### C++ :
 
 ```cpp
-#include <iostream>
-#include <vector>
-
 // Using two pointers technique - Time O(n)
 
 class Solution {
@@ -55,7 +131,7 @@ public:
             int i = j, prod = 1;
             while (j < n && nums[j] != 0)
             {
-                prod *= nums[j++]; // prod = prod * nums[j]
+                prod *= nums[j++];
                 ans = std::max(ans, prod);
             }
             if (j < n)
@@ -72,27 +148,12 @@ public:
         return ans;
     }
 };
-
-int main()
-{
-    std::vector<int> nums = {2, 3, -2, 4};
-
-    // Print input
-    std::cout << "Input: nums = [";
-    for (int i = 0; i < nums.size(); i++)
-    {
-        std::cout << nums[i] << "";
-        if (i < nums.size() - 1)
-            std::cout << ", ";
-    }
-    std::cout << "]" << std::endl;
-
-    Solution sol;
-    int result = sol.maxProduct(nums);
-
-    // Print output
-    std::cout << "Output: " << result << std::endl;
-
-    return 0;
-}
 ```
+
+1. `class Solution {public: ...};` : Define a public class called `Solution`.
+
+2. `int maxProduct(std::vector<int> &nums)` : Define a function that returns the maximum product of a contiguous subarray.
+
+3. Scan non-zero segments, track running products, handle zeros, and fix negative full-segment products by removing left factors.
+
+4. `return ans;` : Return the maximum product found.

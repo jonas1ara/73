@@ -1,53 +1,112 @@
 # Find Minimum in Rotated Sorted Array:
 
-This directory contains implementations of the "Find Minimum in Rotated Sorted Array" problem in both C++ and C#. The solution uses the **binary search technique** to efficiently find the minimum element in a rotated sorted array.
+This directory contains implementations of the "Find Minimum in Rotated Sorted Array" problem in the C++ and C# languages. Each implementation uses binary search to find the minimum element and maintain a temporal complexity of `O(log n)`.
 
-## Problem Description
+## Problem description
 
-Given a rotated sorted array `nums` of **distinct** integers, find the minimum element in the array. 
+Suppose an array of length `n` sorted in ascending order is rotated between `1` and `n` times. For example, the array `nums = [0,1,2,4,5,6,7]` might become:
 
-You must solve it in **O(log n)** time complexity.
+- `[4,5,6,7,0,1,2]` if it was rotated `4` times
+- `[0,1,2,4,5,6,7]` if it was rotated `7` times
 
-### Example 1:
+Notice that rotating an array `[a[0], a[1], a[2], ..., a[n-1]]` 1 time results in the array `[a[n-1], a[0], a[1], a[2], ..., a[n-2]]`.
 
-Input: `nums = [3, 4, 5, 1, 2]`  
-Output: `1`  
-Explanation: The original array was `[1, 2, 3, 4, 5]`, and it was rotated 3 times.
+Given the sorted rotated array `nums` of unique elements, return the minimum element of this array.
 
-### Example 2:
+You must write an algorithm that runs in `O(log n)` time.
 
-Input: `nums = [4, 5, 6, 7, 0, 1, 2]`  
-Output: `0`  
-Explanation: The original array was `[0, 1, 2, 4, 5, 6, 7]`, and it was rotated 4 times.
+- Example 1:
 
-### Example 3:
+```
+Input: nums = [3,4,5,1,2]
+Output: 1
+Explanation: The original array was [1,2,3,4,5] rotated 3 times.
+```
 
-Input: `nums = [11, 13, 15, 17]`  
-Output: `11`  
-Explanation: The original array was `[11, 13, 15, 17]`, and it was not rotated.
+- Example 2:
 
-## Approach:
+```
+Input: nums = [4,5,6,7,0,1,2]
+Output: 0
+```
 
-The solution uses the **binary search technique** to find the minimum element in the rotated sorted array:
+- Example 3:
 
-1. **Initialization**:
-   - Start with two pointers `left` and `right` pointing to the first and last elements of the array respectively.
-   
-2. **Main Loop**:
-   - Use a `while` loop that continues as long as `left` is less than `right`.
-   - Calculate the middle index `m` as `(left + right) / 2`.
-   - If the middle element `nums[m]` is greater than `nums[right]`, this means the minimum element must be in the right half of the array, so we move the `left` pointer to `m + 1`.
-   - If `nums[m]` is less than or equal to `nums[right]`, this means the minimum element is in the left half of the array (or possibly at `m` itself), so we move the `right` pointer to `m`.
-   
-3. **Return the Result**:
-   - When `left` equals `right`, the minimum element is found at the index `left`, so we return `nums[left]`.
+```
+Input: nums = [11,13,15,17]
+Output: 11
+Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
+```
 
-## C++ Implementation:
+## Solution:
+
+A linear scan finds the minimum in `O(n)`, but the array is sorted then rotated, so binary search still works.
+
+Key observation: compare the middle element with the rightmost element.
+
+- If `nums[m] > nums[right]`, the rotation pivot is to the right of `m`, so move `left = m + 1`
+- Otherwise the minimum is at `m` or to its left, so move `right = m`
+
+When `left == right`, that index holds the minimum.
+
+Let's go through `nums = {3, 4, 5, 1, 2}`:
+
+1. `left = 0`, `right = 4`
+2. `m = 2`, `nums[2] = 5`, `nums[4] = 2` → `5 > 2` → `left = 3`
+3. `m = 3`, `nums[3] = 1`, `nums[4] = 2` → `1 < 2` → `right = 3`
+4. `left == right == 3` → minimum is `nums[3] = 1`
+
+## Implementations:
+
+### C# :
+
+```csharp
+// Using binary search technique - Time O(log n)
+
+public class Solution
+{
+    public int FindMin(int[] nums)
+    {
+        int left = 0, right = nums.Length - 1;
+
+        while (left < right)
+        {
+            int m = (left + right) / 2;
+
+            if (nums[m] > nums[right])
+            {
+                left = m + 1;
+            }
+            else
+            {
+                right = m;
+            }
+        }
+
+        return nums[left];
+    }
+}
+```
+
+1. `public class Solution` : Define a public class called `Solution`.
+
+2. `public int FindMin(int[] nums)` : Define a public method that returns the minimum value in a rotated sorted array.
+
+3. `int left = 0, right = nums.Length - 1;` : Initialize the binary search bounds.
+
+4. `while (left < right)` : Continue while the search range has more than one element.
+
+5. `int m = (left + right) / 2;` : Compute the middle index.
+
+6. `if (nums[m] > nums[right]) left = m + 1;` : The minimum is strictly to the right of `m`.
+
+7. `else right = m;` : The minimum is at `m` or to its left.
+
+8. `return nums[left];` : When the range collapses, return the minimum.
+
+### C++ :
 
 ```cpp
-#include <iostream>
-#include <vector>
-
 // Using binary search technique - Time O(log n)
 
 class Solution {
@@ -58,7 +117,7 @@ public:
 
         while (left < right)
         {
-            int m = (left + right) / 2; // middle index
+            int m = (left + right) / 2;
 
             if (nums[m] > nums[right])
                 left = m + 1;
@@ -69,27 +128,12 @@ public:
         return nums[left];
     }
 };
-
-int main()
-{
-    std::vector<int> nums = {3, 4, 5, 1, 2};
-
-    // Print input
-    std::cout << "Input: nums = [";
-    for (int i = 0; i < nums.size(); i++)
-    {
-        std::cout << nums[i] << "";
-        if (i < nums.size() - 1)
-            std::cout << ", ";
-    }
-    std::cout << "]" << std::endl;
-
-    Solution sol;
-    int result = sol.findMin(nums);
-
-    // Print output
-    std::cout << "Output: " << result << std::endl;
-
-    return 0;
-}
 ```
+
+1. `class Solution {public: ...};` : Define a public class called `Solution`.
+
+2. `int findMin(std::vector<int> &nums)` : Define a function that returns the minimum value in a rotated sorted array.
+
+3. Use binary search comparing `nums[m]` with `nums[right]` to discard half of the range each step.
+
+4. `return nums[left];` : Return the minimum when `left == right`.
