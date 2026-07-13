@@ -1,225 +1,164 @@
-# Two sum:
+# Merge k Sorted Lists:
 
-This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages. Each implementation uses a hash table to find two numbers in a array that add up to a given target value and maintain a temporal complexity of `O(n)`.
+This directory contains implementations of the "Merge k Sorted Lists" problem in the C++ and C# languages. Each implementation merges lists pairwise in a bottom-up fashion (like merge sort) with temporal complexity `O(N log k)` where `N` is the total number of nodes.
 
 ## Problem description
 
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You are given an array of `k` linked-lists `lists`, each linked-list is sorted in ascending order.
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
+Merge all the linked-lists into one sorted linked-list and return it.
 
 - Example 1:
 
 ```
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
+Input: lists = [[1,4,5],[1,3,4],[2,6]]
+Output: [1,1,2,3,4,4,5,6]
 ```
 
 - Example 2:
 
 ```
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
+Input: lists = []
+Output: []
+```
+
+- Example 3:
+
+```
+Input: lists = [[]]
+Output: []
 ```
 
 ## Solution:
 
-The easy and intuitive way to solve this problem is just check every combination of two values and if they can sum up to our target, that is, iterate the array using two for cycles and compare each value of the array to verify if it is the desired sum. If you can do that, congratulations! Once you've solved the problem, you just have to implement it in a computationally fast way and that's the reason why a hash table is needed to go from a quadratic time complexity O(n^2) to a linear time complexity O(n), and it's also a good perspective on when to use a hash table to solve certain types of problems.
+Instead of repeatedly scanning all list heads (slower), merge lists in rounds:
 
-Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understand how the algorithm works step by step: 
+1. `step = 1, 2, 4, ...`
+2. Merge pairs `(lists[i], lists[i + step])` into `lists[i]`
+3. After `log k` rounds, `lists[0]` holds the full merge
 
-1. Hash table initialization:
- 
-    - The hash table is empty at first
+`mergeTwoLists` is the classic two-list merge with a dummy head.
 
-2. First iteration (i = 0):
+For 3 lists A, B, C:
 
-    - `nums[0] = 2` 
-    - `t = target - nums[0] = 9 - 2 = 7`
-    - The hash table is empty, `{2, 0}` is added to the hash table `{ table[2] = 0 }`
-
-3. Second iteration (i = 1):
-
-    - `nums[1] = 7`
-    - `t = target - nums[1] = 9 - 7 = 2`
-    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}` 
-
-4. Result:
-    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
-    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
+1. Round step=1: merge A with B → AB; C alone
+2. Round step=2: merge AB with C → ABC
 
 ## Implementations:
 
 ### C# :
 
 ```csharp
-// Using hash table - Time: O(n)
+// Using merge sort algorithm - Time: O(nlogn)
 
 public class Solution
 {
-	public int[] TwoSum(int[] nums, int target)
-	{
-		var dic = new Dictionary<int, int>();
+    private ListNode MergeTwoLists(ListNode a, ListNode b)
+    {
+        ListNode head = new ListNode(0);
+        ListNode tail = head;
 
-		for (int i = 0; i < nums.Length; i++)
-		{
-			int t = target - nums[i];
+        while (a != null && b != null)
+        {
+            if (a.val < b.val)
+            {
+                tail.next = a;
+                a = a.next;
+            }
+            else
+            {
+                tail.next = b;
+                b = b.next;
+            }
+            tail = tail.next;
+        }
+        tail.next = a ?? b;
 
-			if (dic.ContainsKey(t)) 
-				return new int[] { dic[t], i };
+        return head.next;
+    }
 
-			dic[nums[i]] = i;
-		}
+    public ListNode MergeKLists(ListNode[] lists)
+    {
+        if (lists == null || lists.Length == 0)
+        {
+            return null;
+        }
+        int n = lists.Length;
+        for (int step = 1; step < n; step <<= 1)
+        {
+            for (int i = 0; i < n - step; i += step << 1)
+            {
+                lists[i] = MergeTwoLists(lists[i], lists[i + step]);
+            }
+        }
 
-		return new int[] { };
-	}
+        return lists[0];
+    }
 }
 ```
 
-1. `public class Solution` : Define a public class called `Solution`.
+1. `MergeTwoLists` stitches two sorted lists into one.
 
-2. `public int[] TwoSum(int[] nums, int target)` : Define a public method called `TwoSum` that takes two parameters: an array of `nums` integers and a `target` integer. Returns an integer array representing the indices of the two numbers whose sum equals the target.
+2. Outer loop doubles `step` each round (`<<= 1`).
 
-3. `var dic = new Dictionary<int, int>();` :  Create an integer dictionary (int), where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
+3. Inner loop merges non-overlapping pairs.
 
-4. `for (int i = 0; i < nums.Length; i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
-
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
-
-6. `if (dic.ContainsKey(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return new int[] { dic[t], i };` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return new int[] { }` : If the sum has no solution, return the empty array.
+4. `return lists[0];` final merged list (or null if empty input).
 
 ### C++ :
 
 ```cpp
-
-// Using hash table - Time: O(n)
+// Using merge sort algorithm - Time: O(nlogn)
 
 class Solution {
-public:
-    std::vector<int> twoSum(std::vector<int> &nums, int target)
+private:
+    ListNode *mergeTwoLists(ListNode *a, ListNode *b)
     {
-        std::map<int, int> map;
+        ListNode *head = new ListNode(0);
+        ListNode *tail = head;
 
-        for (int i = 0; i < nums.size(); i++)
+        while (a != nullptr && b != nullptr)
         {
-            int t = target - nums[i];
+            if (a->val < b->val)
+            {
+                tail->next = a;
+                a = a->next;
+            }
+            else
+            {
+                tail->next = b;
+                b = b->next;
+            }
+            tail = tail->next;
+        }
+        tail->next = a ? a : b;
 
-            if (map.count(t))
-                return {map[t], i}; 
+        return head->next;
+    }
 
-            map[nums[i]] = i;       
+public:
+    ListNode *mergeKLists(std::vector<ListNode *> &lists)
+    {
+        if (lists.empty())
+        {
+            return nullptr;
         }
 
-        return {}; 
+        int n = lists.size();
+
+        for (int step = 1; step < n; step <<= 1)
+        {
+            for (int i = 0; i < n - step; i += step << 1)
+            {
+                lists[i] = mergeTwoLists(lists[i], lists[i + step]);
+            }
+        }
+
+        return lists[0];
     }
 };
-
 ```
 
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
+1. Same pairwise bottom-up merge as C#.
 
-2. `std::vector<int> twoSum(std::vector<int> &nums, int target)` : Define a function called `TwoSum` that takes two parameters: a vector of integers `nums` by reference and a `target` integer. Returns a vector representing the indices of the two numbers whose sum equals the target.
-
-3. `std::map<int, int> map;` :  Create a `map`, where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
-
-4. `for (int i = 0; i < nums.size(); i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
-
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
-
-6. `if (map.count(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return {map[t], i};` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `map[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return {}` : If the sum has no solution, return the empty array.
-
-### C:
-
-```c
-// Using hash table - Time: O(n)
-
-#define SIZE 10000
-
-typedef struct
-{
-    int key;
-    int value;
-} HashNode;
-
-typedef struct
-{
-    HashNode **array;
-} HashMap;
-
-HashMap *createHashMap()
-{
-    HashMap *map = (HashMap *)malloc(sizeof(HashMap));
-    map->array = (HashNode **)calloc(SIZE, sizeof(HashNode *));
-    return map;
-}
-
-void insert(HashMap *map, int key, int value)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL && map->array[index]->key != key)
-    {
-        index = (index + 1) % SIZE;
-    }
-    if (map->array[index] == NULL)
-    {
-        map->array[index] = (HashNode *)malloc(sizeof(HashNode));
-    }
-    map->array[index]->key = key;
-    map->array[index]->value = value;
-}
-
-int search(HashMap *map, int key)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL)
-    {
-        if (map->array[index]->key == key)
-        {
-            return map->array[index]->value;
-        }
-        index = (index + 1) % SIZE;
-    }
-    return -1;
-}
-
-int *twoSum(int *nums, int numsSize, int target, int *returnSize)
-{
-    HashMap *map = createHashMap();
-    for (int i = 0; i < numsSize; i++)
-    {
-        int t = target - nums[i];
-        int searchIndex = search(map, t);
-
-        //If the hash table contains the key, return the index and the current index i
-        if (searchIndex != -1)
-        {
-            int *result = (int *)malloc(2 * sizeof(int));
-            result[0] = searchIndex;
-            result[1] = i;
-            *returnSize = 2;
-            return result;
-        }
-        insert(map, nums[i], i);
-    }
-
-    *returnSize = 0;
-    return NULL; 
-}
-```
-
-
+2. Empty vector → `nullptr`.

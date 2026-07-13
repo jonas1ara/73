@@ -1,225 +1,148 @@
-# Two sum:
+# Rotate Image:
 
-This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages. Each implementation uses a hash table to find two numbers in a array that add up to a given target value and maintain a temporal complexity of `O(n)`.
+This directory contains implementations of the "Rotate Image" problem in the C, C++, and C# languages. Each implementation rotates an `n x n` matrix 90 degrees clockwise in place with temporal complexity `O(n^2)`.
 
 ## Problem description
 
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You are given an `n x n` 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
+You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
 
 - Example 1:
 
 ```
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
+Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+Output: [[7,4,1],[8,5,2],[9,6,3]]
 ```
 
 - Example 2:
 
 ```
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
+Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
+Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 ```
 
 ## Solution:
 
-The easy and intuitive way to solve this problem is just check every combination of two values and if they can sum up to our target, that is, iterate the array using two for cycles and compare each value of the array to verify if it is the desired sum. If you can do that, congratulations! Once you've solved the problem, you just have to implement it in a computationally fast way and that's the reason why a hash table is needed to go from a quadratic time complexity O(n^2) to a linear time complexity O(n), and it's also a good perspective on when to use a hash table to solve certain types of problems.
+A 90° clockwise rotation maps `(i, j)` → `(j, n - 1 - i)`.
 
-Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understand how the algorithm works step by step: 
+The C++/C# solutions rotate layer by layer: for each ring, cycle four cells in place with a temporary variable.
 
-1. Hash table initialization:
- 
-    - The hash table is empty at first
+The C solution does it as two steps:
 
-2. First iteration (i = 0):
+1. **Transpose** the matrix (`matrix[i][j] ↔ matrix[j][i]`)
+2. **Reverse each row** (swap left/right)
 
-    - `nums[0] = 2` 
-    - `t = target - nums[0] = 9 - 2 = 7`
-    - The hash table is empty, `{2, 0}` is added to the hash table `{ table[2] = 0 }`
+Both approaches use constant extra space besides a few variables.
 
-3. Second iteration (i = 1):
+Let's go through `[[1,2,3],[4,5,6],[7,8,9]]` with the cycle method (outer layer only):
 
-    - `nums[1] = 7`
-    - `t = target - nums[1] = 9 - 7 = 2`
-    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}` 
-
-4. Result:
-    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
-    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
+1. Cycle `1 → 3 → 9 → 7 → 1`
+2. Cycle `2 → 6 → 8 → 4 → 2`
+3. Center `5` stays
+4. Result: `[[7,4,1],[8,5,2],[9,6,3]]`
 
 ## Implementations:
 
 ### C# :
 
 ```csharp
-// Using hash table - Time: O(n)
+// Using in-place algorithm - Time: O(n^2)
 
 public class Solution
 {
-	public int[] TwoSum(int[] nums, int target)
-	{
-		var dic = new Dictionary<int, int>();
+    public void Rotate(int[][] matrix)
+    {
+        int n = matrix.Length;
 
-		for (int i = 0; i < nums.Length; i++)
-		{
-			int t = target - nums[i];
-
-			if (dic.ContainsKey(t)) 
-				return new int[] { dic[t], i };
-
-			dic[nums[i]] = i;
-		}
-
-		return new int[] { };
-	}
+        for (int i = 0; i < n / 2; i++)
+        {
+            for (int j = i; j < n - i - 1; j++)
+            {
+                int tmp = matrix[i][j];
+                matrix[i][j] = matrix[n - j - 1][i];
+                matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1];
+                matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1];
+                matrix[j][n - i - 1] = tmp;
+            }
+        }
+    }
 }
 ```
 
 1. `public class Solution` : Define a public class called `Solution`.
 
-2. `public int[] TwoSum(int[] nums, int target)` : Define a public method called `TwoSum` that takes two parameters: an array of `nums` integers and a `target` integer. Returns an integer array representing the indices of the two numbers whose sum equals the target.
+2. `public void Rotate(int[][] matrix)` : Rotate the matrix 90° clockwise in place.
 
-3. `var dic = new Dictionary<int, int>();` :  Create an integer dictionary (int), where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
+3. Outer loop `i` iterates over layers from the outside in.
 
-4. `for (int i = 0; i < nums.Length; i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
+4. Inner loop `j` walks the top edge of the current layer (excluding the last corner).
 
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
-
-6. `if (dic.ContainsKey(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return new int[] { dic[t], i };` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return new int[] { }` : If the sum has no solution, return the empty array.
+5. The four assignments cycle values: top ← left ← bottom ← right ← top (via `tmp`).
 
 ### C++ :
 
 ```cpp
-
-// Using hash table - Time: O(n)
+// Using in-place algorithm - Time: O(n^2)
 
 class Solution {
 public:
-    std::vector<int> twoSum(std::vector<int> &nums, int target)
+    void rotate(std::vector<std::vector<int>> &matrix)
     {
-        std::map<int, int> map;
+        int n = matrix.size();
 
-        for (int i = 0; i < nums.size(); i++)
+        for (int i = 0; i < n / 2; i++)
         {
-            int t = target - nums[i];
-
-            if (map.count(t))
-                return {map[t], i}; 
-
-            map[nums[i]] = i;       
+            for (int j = i; j < n - i - 1; j++)
+            {
+                int tmp = matrix[i][j];
+                matrix[i][j] = matrix[n - j - 1][i];
+                matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1];
+                matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1];
+                matrix[j][n - i - 1] = tmp;
+            }
         }
-
-        return {}; 
     }
 };
-
 ```
 
 1. `class Solution {public: ...};` : Define a public class called `Solution`.
 
-2. `std::vector<int> twoSum(std::vector<int> &nums, int target)` : Define a function called `TwoSum` that takes two parameters: a vector of integers `nums` by reference and a `target` integer. Returns a vector representing the indices of the two numbers whose sum equals the target.
-
-3. `std::map<int, int> map;` :  Create a `map`, where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
-
-4. `for (int i = 0; i < nums.size(); i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
-
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
-
-6. `if (map.count(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return {map[t], i};` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `map[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return {}` : If the sum has no solution, return the empty array.
+2. `void rotate(...)` : Same layer-by-layer 4-cycle rotation as C#.
 
 ### C:
 
 ```c
-// Using hash table - Time: O(n)
+// Using in-place algorithm - Time: O(n^2)
 
-#define SIZE 10000
-
-typedef struct
+void rotate(int **matrix, int matrixSize, int *matrixColSize)
 {
-    int key;
-    int value;
-} HashNode;
-
-typedef struct
-{
-    HashNode **array;
-} HashMap;
-
-HashMap *createHashMap()
-{
-    HashMap *map = (HashMap *)malloc(sizeof(HashMap));
-    map->array = (HashNode **)calloc(SIZE, sizeof(HashNode *));
-    return map;
-}
-
-void insert(HashMap *map, int key, int value)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL && map->array[index]->key != key)
+    // Transpose the matrix
+    for (int i = 0; i < matrixSize; i++)
     {
-        index = (index + 1) % SIZE;
-    }
-    if (map->array[index] == NULL)
-    {
-        map->array[index] = (HashNode *)malloc(sizeof(HashNode));
-    }
-    map->array[index]->key = key;
-    map->array[index]->value = value;
-}
-
-int search(HashMap *map, int key)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL)
-    {
-        if (map->array[index]->key == key)
+        for (int j = i + 1; j < matrixSize; j++)
         {
-            return map->array[index]->value;
+            int temp = matrix[i][j];
+            matrix[i][j] = matrix[j][i];
+            matrix[j][i] = temp;
         }
-        index = (index + 1) % SIZE;
     }
-    return -1;
-}
 
-int *twoSum(int *nums, int numsSize, int target, int *returnSize)
-{
-    HashMap *map = createHashMap();
-    for (int i = 0; i < numsSize; i++)
+    // Reverse each row to rotate clockwise
+    for (int i = 0; i < matrixSize; i++)
     {
-        int t = target - nums[i];
-        int searchIndex = search(map, t);
-
-        //If the hash table contains the key, return the index and the current index i
-        if (searchIndex != -1)
+        for (int j = 0; j < matrixSize / 2; j++)
         {
-            int *result = (int *)malloc(2 * sizeof(int));
-            result[0] = searchIndex;
-            result[1] = i;
-            *returnSize = 2;
-            return result;
+            int temp = matrix[i][j];
+            matrix[i][j] = matrix[i][matrixSize - 1 - j];
+            matrix[i][matrixSize - 1 - j] = temp;
         }
-        insert(map, nums[i], i);
     }
-
-    *returnSize = 0;
-    return NULL; 
 }
 ```
 
+1. First nested loops transpose the matrix.
 
+2. Second nested loops reverse every row.
+
+3. Transpose + reverse row = 90° clockwise rotation.

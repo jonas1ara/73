@@ -1,225 +1,103 @@
-# Two sum:
+# Unique Paths:
 
-This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages. Each implementation uses a hash table to find two numbers in a array that add up to a given target value and maintain a temporal complexity of `O(n)`.
+This directory contains implementations of the "Unique Paths" problem in the C++ and C# languages. Each implementation uses bottom-up DP tabulation with temporal complexity `O(m·n)`. A combinatorial `O(n)` alternative is commented in the source files.
 
 ## Problem description
 
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+There is a robot on an `m x n` grid. The robot is initially located at the top-left corner (i.e., `grid[0][0]`). The robot tries to move to the bottom-right corner (i.e., `grid[m - 1][n - 1]`). The robot can only move either down or right at any point in time.
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
+Given the two integers `m` and `n`, return the number of possible unique paths that the robot can take to reach the bottom-right corner.
 
 - Example 1:
 
 ```
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
+Input: m = 3, n = 7
+Output: 28
 ```
 
 - Example 2:
 
 ```
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
+Input: m = 3, n = 2
+Output: 3
+Explanation: right→down→down, down→down→right, down→right→down.
 ```
 
 ## Solution:
 
-The easy and intuitive way to solve this problem is just check every combination of two values and if they can sum up to our target, that is, iterate the array using two for cycles and compare each value of the array to verify if it is the desired sum. If you can do that, congratulations! Once you've solved the problem, you just have to implement it in a computationally fast way and that's the reason why a hash table is needed to go from a quadratic time complexity O(n^2) to a linear time complexity O(n), and it's also a good perspective on when to use a hash table to solve certain types of problems.
+Paths into cell `(i, j)` equal paths from left + paths from above.
 
-Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understand how the algorithm works step by step: 
+This implementation walks from the bottom-right backwards using a 1D array `dp` of size `n + 1`:
 
-1. Hash table initialization:
- 
-    - The hash table is empty at first
+- Seed `dp[n - 1] = 1` (destination has one trivial "empty" path)
+- For each row from bottom to top, for each column from right to left:
+  `dp[j] += dp[j + 1]`
 
-2. First iteration (i = 0):
+After processing all rows, `dp[0]` is the number of paths from the start.
 
-    - `nums[0] = 2` 
-    - `t = target - nums[0] = 9 - 2 = 7`
-    - The hash table is empty, `{2, 0}` is added to the hash table `{ table[2] = 0 }`
+Combinatorial view (commented): choose `n-1` rights among `(m-1)+(n-1)` moves → `C(m+n-2, n-1)`.
 
-3. Second iteration (i = 1):
+For `m = 3`, `n = 2`:
 
-    - `nums[1] = 7`
-    - `t = target - nums[1] = 9 - 7 = 2`
-    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}` 
-
-4. Result:
-    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
-    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
+1. Fill DP bottom-up
+2. Result: `3`
 
 ## Implementations:
 
 ### C# :
 
 ```csharp
-// Using hash table - Time: O(n)
+// Using tabulation - Time: O(m*n)
 
 public class Solution
 {
-	public int[] TwoSum(int[] nums, int target)
-	{
-		var dic = new Dictionary<int, int>();
+    public int UniquePaths(int m, int n)
+    {
+        int[] dp = new int[n + 1];
+        dp[n - 1] = 1;
 
-		for (int i = 0; i < nums.Length; i++)
-		{
-			int t = target - nums[i];
+        for (int i = m - 1; i >= 0; i--)
+        {
+            for (int j = n - 1; j >= 0; j--)
+            {
+                dp[j] += dp[j + 1];
+            }
+        }
 
-			if (dic.ContainsKey(t)) 
-				return new int[] { dic[t], i };
-
-			dic[nums[i]] = i;
-		}
-
-		return new int[] { };
-	}
+        return dp[0];
+    }
 }
 ```
 
-1. `public class Solution` : Define a public class called `Solution`.
+1. 1D DP where `dp[j]` accumulates paths for column `j`.
 
-2. `public int[] TwoSum(int[] nums, int target)` : Define a public method called `TwoSum` that takes two parameters: an array of `nums` integers and a `target` integer. Returns an integer array representing the indices of the two numbers whose sum equals the target.
+2. Nested reverse loops fill the grid implicitly.
 
-3. `var dic = new Dictionary<int, int>();` :  Create an integer dictionary (int), where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
-
-4. `for (int i = 0; i < nums.Length; i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
-
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
-
-6. `if (dic.ContainsKey(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return new int[] { dic[t], i };` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return new int[] { }` : If the sum has no solution, return the empty array.
+3. `return dp[0];` paths from top-left.
 
 ### C++ :
 
 ```cpp
-
-// Using hash table - Time: O(n)
+// Using tabulation - Time: O(m*n)
 
 class Solution {
 public:
-    std::vector<int> twoSum(std::vector<int> &nums, int target)
+    int uniquePaths(int m, int n)
     {
-        std::map<int, int> map;
+        std::vector<int> dp(n + 1, 0);
+        dp[n - 1] = 1;
 
-        for (int i = 0; i < nums.size(); i++)
+        for (int i = m - 1; i >= 0; i--)
         {
-            int t = target - nums[i];
-
-            if (map.count(t))
-                return {map[t], i}; 
-
-            map[nums[i]] = i;       
+            for (int j = n - 1; j >= 0; j--)
+                dp[j] += dp[j + 1];
         }
 
-        return {}; 
+        return dp[0];
     }
 };
-
 ```
 
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
+1. Same rolling-row DP as C#.
 
-2. `std::vector<int> twoSum(std::vector<int> &nums, int target)` : Define a function called `TwoSum` that takes two parameters: a vector of integers `nums` by reference and a `target` integer. Returns a vector representing the indices of the two numbers whose sum equals the target.
-
-3. `std::map<int, int> map;` :  Create a `map`, where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
-
-4. `for (int i = 0; i < nums.size(); i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
-
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
-
-6. `if (map.count(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return {map[t], i};` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `map[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return {}` : If the sum has no solution, return the empty array.
-
-### C:
-
-```c
-// Using hash table - Time: O(n)
-
-#define SIZE 10000
-
-typedef struct
-{
-    int key;
-    int value;
-} HashNode;
-
-typedef struct
-{
-    HashNode **array;
-} HashMap;
-
-HashMap *createHashMap()
-{
-    HashMap *map = (HashMap *)malloc(sizeof(HashMap));
-    map->array = (HashNode **)calloc(SIZE, sizeof(HashNode *));
-    return map;
-}
-
-void insert(HashMap *map, int key, int value)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL && map->array[index]->key != key)
-    {
-        index = (index + 1) % SIZE;
-    }
-    if (map->array[index] == NULL)
-    {
-        map->array[index] = (HashNode *)malloc(sizeof(HashNode));
-    }
-    map->array[index]->key = key;
-    map->array[index]->value = value;
-}
-
-int search(HashMap *map, int key)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL)
-    {
-        if (map->array[index]->key == key)
-        {
-            return map->array[index]->value;
-        }
-        index = (index + 1) % SIZE;
-    }
-    return -1;
-}
-
-int *twoSum(int *nums, int numsSize, int target, int *returnSize)
-{
-    HashMap *map = createHashMap();
-    for (int i = 0; i < numsSize; i++)
-    {
-        int t = target - nums[i];
-        int searchIndex = search(map, t);
-
-        //If the hash table contains the key, return the index and the current index i
-        if (searchIndex != -1)
-        {
-            int *result = (int *)malloc(2 * sizeof(int));
-            result[0] = searchIndex;
-            result[1] = i;
-            *returnSize = 2;
-            return result;
-        }
-        insert(map, nums[i], i);
-    }
-
-    *returnSize = 0;
-    return NULL; 
-}
-```
-
-
+2. Space is `O(n)` instead of full `O(m·n)` table.

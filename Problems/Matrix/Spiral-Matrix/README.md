@@ -1,225 +1,152 @@
-# Two sum:
+# Spiral Matrix:
 
-This directory contains implementations of the "Two Sum" problem in the C, C++, and C# languages. Each implementation uses a hash table to find two numbers in a array that add up to a given target value and maintain a temporal complexity of `O(n)`.
+This directory contains implementations of the "Spiral Matrix" problem in the C++ and C# languages. Each implementation walks the matrix layer by layer in spiral order with temporal complexity `O(m·n)`.
 
 ## Problem description
 
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
+Given an `m x n` matrix, return all elements of the matrix in spiral order.
 
 - Example 1:
 
 ```
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
+Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+Output: [1,2,3,6,9,8,7,4,5]
 ```
 
 - Example 2:
 
 ```
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
+Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 ```
 
 ## Solution:
 
-The easy and intuitive way to solve this problem is just check every combination of two values and if they can sum up to our target, that is, iterate the array using two for cycles and compare each value of the array to verify if it is the desired sum. If you can do that, congratulations! Once you've solved the problem, you just have to implement it in a computationally fast way and that's the reason why a hash table is needed to go from a quadratic time complexity O(n^2) to a linear time complexity O(n), and it's also a good perspective on when to use a hash table to solve certain types of problems.
+Think of the matrix as concentric rectangles (layers). For layer `i`:
 
-Let's go through the array `nums = {2, 7, 11, 15}` with `target = 9` to understand how the algorithm works step by step: 
+1. Left → right along the top row
+2. Top → bottom along the right column
+3. Right → left along the bottom row (if it is not the same as the top)
+4. Bottom → top along the left column (if it is not the same as the right)
 
-1. Hash table initialization:
- 
-    - The hash table is empty at first
+Guards `m - i - 1 != i` and `n - i - 1 != i` avoid double-counting a single middle row or column.
 
-2. First iteration (i = 0):
+Stop when `ans` has collected all `m * n` elements.
 
-    - `nums[0] = 2` 
-    - `t = target - nums[0] = 9 - 2 = 7`
-    - The hash table is empty, `{2, 0}` is added to the hash table `{ table[2] = 0 }`
+Let's go through `[[1,2,3],[4,5,6],[7,8,9]]`:
 
-3. Second iteration (i = 1):
-
-    - `nums[1] = 7`
-    - `t = target - nums[1] = 9 - 7 = 2`
-    - The hash table already contains key `2`, so it returns `{ table[2], 1 } = {0, 1}` 
-
-4. Result:
-    - A pair of numbers `(nums[0] and nums[1])` whose sum is equal to the `target` has been found
-    - The function returns `{0, 1}`, which are the indices of the numbers `2` and `7` in the original array and these two numbers add up to `9`, which is the `target`
+1. Layer 0 top: `1,2,3`
+2. Right: `6,9`
+3. Bottom: `8,7`
+4. Left: `4`
+5. Center layer: `5`
+6. Result: `[1,2,3,6,9,8,7,4,5]`
 
 ## Implementations:
 
 ### C# :
 
 ```csharp
-// Using hash table - Time: O(n)
+// Using spiral iterative traversals - Time: O(m⋅n)
 
 public class Solution
 {
-	public int[] TwoSum(int[] nums, int target)
-	{
-		var dic = new Dictionary<int, int>();
+    public IList<int> SpiralOrder(int[][] matrix)
+    {
+        if (matrix.Length == 0 || matrix[0].Length == 0)
+        {
+            return new List<int>();
+        }
 
-		for (int i = 0; i < nums.Length; i++)
-		{
-			int t = target - nums[i];
+        List<int> ans = new List<int>();
+        int m = matrix.Length;
+        int n = matrix[0].Length;
 
-			if (dic.ContainsKey(t)) 
-				return new int[] { dic[t], i };
+        for (int i = 0; ans.Count < m * n; i++)
+        {
+            for (int j = i; j < n - i; j++)
+                ans.Add(matrix[i][j]);
 
-			dic[nums[i]] = i;
-		}
+            for (int j = i + 1; j < m - i; j++)
+                ans.Add(matrix[j][n - i - 1]);
 
-		return new int[] { };
-	}
+            if (m - i - 1 != i)
+            {
+                for (int j = n - i - 2; j >= i; j--)
+                    ans.Add(matrix[m - i - 1][j]);
+            }
+
+            if (n - i - 1 != i)
+            {
+                for (int j = m - i - 2; j > i; j--)
+                    ans.Add(matrix[j][i]);
+            }
+        }
+
+        return ans;
+    }
 }
 ```
 
 1. `public class Solution` : Define a public class called `Solution`.
 
-2. `public int[] TwoSum(int[] nums, int target)` : Define a public method called `TwoSum` that takes two parameters: an array of `nums` integers and a `target` integer. Returns an integer array representing the indices of the two numbers whose sum equals the target.
+2. `public IList<int> SpiralOrder(int[][] matrix)` : Return matrix elements in spiral order.
 
-3. `var dic = new Dictionary<int, int>();` :  Create an integer dictionary (int), where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
+3. Handle empty matrix early.
 
-4. `for (int i = 0; i < nums.Length; i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
+4. Layer loop continues until all elements are collected.
 
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
+5. Four directional passes per layer, with guards for single-row/column layers.
 
-6. `if (dic.ContainsKey(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return new int[] { dic[t], i };` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return new int[] { }` : If the sum has no solution, return the empty array.
+6. `return ans;` : Return the spiral sequence.
 
 ### C++ :
 
 ```cpp
-
-// Using hash table - Time: O(n)
+// Using spiral iterative traversals - Time: O(m⋅n)
 
 class Solution {
 public:
-    std::vector<int> twoSum(std::vector<int> &nums, int target)
+    std::vector<int> spiralOrder(std::vector<std::vector<int>> &matrix)
     {
-        std::map<int, int> map;
+        std::vector<int> ans;
 
-        for (int i = 0; i < nums.size(); i++)
+        if (matrix.empty() || matrix[0].empty())
         {
-            int t = target - nums[i];
-
-            if (map.count(t))
-                return {map[t], i}; 
-
-            map[nums[i]] = i;       
+            return ans;
         }
 
-        return {}; 
+        int m = matrix.size();
+        int n = matrix[0].size();
+
+        for (int i = 0; ans.size() < m * n; i++)
+        {
+            for (int j = i; j < n - i; j++)
+                ans.push_back(matrix[i][j]);
+
+            for (int j = i + 1; j < m - i; j++)
+                ans.push_back(matrix[j][n - i - 1]);
+
+            if (m - i - 1 != i)
+            {
+                for (int j = n - i - 2; j >= i; j--)
+                    ans.push_back(matrix[m - i - 1][j]);
+            }
+
+            if (n - i - 1 != i)
+            {
+                for (int j = m - i - 2; j > i; j--)
+                    ans.push_back(matrix[j][i]);
+            }
+        }
+
+        return ans;
     }
 };
-
 ```
 
 1. `class Solution {public: ...};` : Define a public class called `Solution`.
 
-2. `std::vector<int> twoSum(std::vector<int> &nums, int target)` : Define a function called `TwoSum` that takes two parameters: a vector of integers `nums` by reference and a `target` integer. Returns a vector representing the indices of the two numbers whose sum equals the target.
+2. Same four-direction layer traversal as C#.
 
-3. `std::map<int, int> map;` :  Create a `map`, where the `key` will be a number of the nums array and the `value` will be its index in the array. **This dictionary will be used to keep track of the numbers that have been seen during the iteration.**
-
-4. `for (int i = 0; i < nums.size(); i++)` : Initialites a for loop that iterate through all the elements of the `nums` array.
-
-5. `int t = target - nums[i];` : Calculate the difference `t` between the `target` and the current number of the array at position `i`.
-
-6. `if (map.count(t))` : Check if the key `t` is present in the dictionary. **This means that a number has already been found whose sum with the current number equals the `target`.**
-
-7. `return {map[t], i};` : If a pair of numbers is found whose sum equals the 'target', it returns an integer array containing the indices of those two numbers in the `nums` array.
-
-8. `map[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
-
-9. `return {}` : If the sum has no solution, return the empty array.
-
-### C:
-
-```c
-// Using hash table - Time: O(n)
-
-#define SIZE 10000
-
-typedef struct
-{
-    int key;
-    int value;
-} HashNode;
-
-typedef struct
-{
-    HashNode **array;
-} HashMap;
-
-HashMap *createHashMap()
-{
-    HashMap *map = (HashMap *)malloc(sizeof(HashMap));
-    map->array = (HashNode **)calloc(SIZE, sizeof(HashNode *));
-    return map;
-}
-
-void insert(HashMap *map, int key, int value)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL && map->array[index]->key != key)
-    {
-        index = (index + 1) % SIZE;
-    }
-    if (map->array[index] == NULL)
-    {
-        map->array[index] = (HashNode *)malloc(sizeof(HashNode));
-    }
-    map->array[index]->key = key;
-    map->array[index]->value = value;
-}
-
-int search(HashMap *map, int key)
-{
-    int index = abs(key) % SIZE;
-    while (map->array[index] != NULL)
-    {
-        if (map->array[index]->key == key)
-        {
-            return map->array[index]->value;
-        }
-        index = (index + 1) % SIZE;
-    }
-    return -1;
-}
-
-int *twoSum(int *nums, int numsSize, int target, int *returnSize)
-{
-    HashMap *map = createHashMap();
-    for (int i = 0; i < numsSize; i++)
-    {
-        int t = target - nums[i];
-        int searchIndex = search(map, t);
-
-        //If the hash table contains the key, return the index and the current index i
-        if (searchIndex != -1)
-        {
-            int *result = (int *)malloc(2 * sizeof(int));
-            result[0] = searchIndex;
-            result[1] = i;
-            *returnSize = 2;
-            return result;
-        }
-        insert(map, nums[i], i);
-    }
-
-    *returnSize = 0;
-    return NULL; 
-}
-```
-
-
+3. `return ans;` when all cells have been visited.
