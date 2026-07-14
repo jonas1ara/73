@@ -74,3 +74,11 @@ public class Solution
 2. Nested reverse loops fill the grid implicitly.
 
 3. `return dp[0];` paths from top-left.
+
+## Suggested practice 🎯
+
+Same grid path-counting DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)
+- [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
+- [Dungeon Game](https://leetcode.com/problems/dungeon-game/)

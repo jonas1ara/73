@@ -68,3 +68,11 @@ public class Solution
 1. Single boolean expression covering null cases, value equality, and recursive children.
 
 2. Short-circuits as soon as a mismatch is found.
+
+## Suggested practice 🎯
+
+Same structural tree comparison pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+- [Flip Equivalent Binary Trees](https://leetcode.com/problems/flip-equivalent-binary-trees/)
+- [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)

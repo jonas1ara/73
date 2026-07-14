@@ -158,3 +158,11 @@ type Solution() =
 7. `if i + curVar > j + r.[j] then j <- i` : Update the active center `j` when a farther boundary is found.
 
 8. `ans` : Last expression of the member, returned implicitly as the total number of palindromic substrings.
+
+## Suggested practice 🎯
+
+Same expand around center / Manacher pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
+- [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
+- [Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)

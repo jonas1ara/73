@@ -110,3 +110,11 @@ public class WordDictionary
 1. Literal characters follow one edge; `.` fans out to all edges.
 
 2. End-of-word check prevents matching proper prefixes as full words.
+
+## Suggested practice 🎯
+
+Same trie with wildcard search pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Replace Words](https://leetcode.com/problems/replace-words/)
+- [Map Sum Pairs](https://leetcode.com/problems/map-sum-pairs/)
+- [Design Search Autocomplete System](https://leetcode.com/problems/design-search-autocomplete-system/)

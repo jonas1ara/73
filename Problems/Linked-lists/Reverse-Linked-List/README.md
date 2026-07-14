@@ -114,3 +114,11 @@ type Solution() =
 3. `match head with | None -> None | Some h -> ...` : Pattern matching replaces the C# `if (head == null) return null;` null check.
 
 4. `reverse h |> fst |> Some` : Take the new head out of the tuple and re-wrap it in `Some` for the caller.
+
+## Suggested practice 🎯
+
+Same pointer reversal pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)
+- [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
+- [Rotate List](https://leetcode.com/problems/rotate-list/)

@@ -86,3 +86,11 @@ public class Solution
 1. `SortedSet` acts as a min-heap ordered by frequency.
 
 2. Removing `Min` when size `> k` drops the least frequent key.
+
+## Suggested practice 🎯
+
+Same heap/bucket selection pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+- [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)
+- [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)

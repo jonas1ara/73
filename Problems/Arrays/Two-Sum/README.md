@@ -98,3 +98,11 @@ public class Solution
 8. `dic[nums[i]] = i;` : Adds the current number of the `nums` array as a key to the `dic` dictionary, with its value being the current index `i`. **This makes it possible to track which numbers have been seen during the iteration.**
 
 9. `return new int[] { }` : If the sum has no solution, return the empty array.
+
+## Suggested practice 🎯
+
+Same hash-table pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+- [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
+- [4Sum](https://leetcode.com/problems/4sum/)

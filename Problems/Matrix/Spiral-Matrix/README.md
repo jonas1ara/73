@@ -99,3 +99,11 @@ public class Solution
 5. Four directional passes per layer, with guards for single-row/column layers.
 
 6. `return ans;` : Return the spiral sequence.
+
+## Suggested practice 🎯
+
+Same boundary-by-boundary traversal pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)
+- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/)
+- [Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)

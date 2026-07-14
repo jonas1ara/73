@@ -79,3 +79,11 @@ public class Solution
 3. Accumulate `nums[i] ^ (i + 1)` into `xorVal`.
 
 4. `return xorVal;` is the missing number.
+
+## Suggested practice 🎯
+
+Same XOR/sum trick pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Single Number](https://leetcode.com/problems/single-number/)
+- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+- [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)

@@ -98,3 +98,11 @@ public class Solution
 4. Cases: already inserted (`start > end`), left of new, right of new, or overlapping merge.
 
 5. Append remaining merged interval if needed and return the array.
+
+## Suggested practice 🎯
+
+Same interval merging pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [My Calendar I](https://leetcode.com/problems/my-calendar-i/)
+- [Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)
+- [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)

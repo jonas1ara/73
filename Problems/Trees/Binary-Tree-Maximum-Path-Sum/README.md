@@ -84,3 +84,11 @@ public class Solution
 1. `dfs` returns the best single-branch gain for the parent.
 
 2. Global `ans` tracks the best path that may bend at the current node.
+
+## Suggested practice 🎯
+
+Same post-order recursion with a global max pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+- [Path Sum](https://leetcode.com/problems/path-sum/)
+- [Path Sum III](https://leetcode.com/problems/path-sum-iii/)

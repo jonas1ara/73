@@ -104,3 +104,11 @@ public class Solution
 3. Inner loop merges non-overlapping pairs.
 
 4. `return lists[0];` final merged list (or null if empty input).
+
+## Suggested practice 🎯
+
+Same k-way merge pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Smallest Range Covering Elements from K Lists](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/)
+- [Sort List](https://leetcode.com/problems/sort-list/)
+- [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)

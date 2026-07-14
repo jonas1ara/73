@@ -77,3 +77,11 @@ class Solution
 2. Update both states each step without overwriting prematurely (use temps `r`, `s`).
 
 3. `return Math.Max(rob, skip);`
+
+## Suggested practice 🎯
+
+Same adjacent-choice DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [House Robber III](https://leetcode.com/problems/house-robber-iii/)
+- [Delete and Earn](https://leetcode.com/problems/delete-and-earn/)
+- [Paint House](https://leetcode.com/problems/paint-house/)

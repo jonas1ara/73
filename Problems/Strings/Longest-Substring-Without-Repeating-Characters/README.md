@@ -99,3 +99,11 @@ public class Solution
 8. Store the current index for `s[i]` and continue.
 
 9. `return maxLen;` : Return the best length found.
+
+## Suggested practice 🎯
+
+Same sliding window pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)
+- [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
+- [Permutation in String](https://leetcode.com/problems/permutation-in-string/)

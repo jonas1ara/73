@@ -118,3 +118,11 @@ type Solution() =
 5. `dp.[i] <- Math.Max(dp.[i], dp.[j] + 1)` : Mutate the array in place through `<-`.
 
 6. `Array.max dp` : Last expression of the `else` branch, returned implicitly as the overall LIS length.
+
+## Suggested practice 🎯
+
+Same subsequence DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
+- [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)
+- [Maximum Length of Pair Chain](https://leetcode.com/problems/maximum-length-of-pair-chain/)

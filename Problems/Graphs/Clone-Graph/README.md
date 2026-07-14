@@ -87,3 +87,11 @@ public class Solution
 1. The map both memoizes clones and breaks cycles.
 
 2. Neighbors are filled after the clone node exists so mutual edges link correctly.
+
+## Suggested practice 🎯
+
+Same graph traversal with a visited map pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
+- [Clone Binary Tree With Random Pointer](https://leetcode.com/problems/clone-binary-tree-with-random-pointer/)
+- [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/)

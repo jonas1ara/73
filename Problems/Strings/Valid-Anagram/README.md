@@ -83,3 +83,11 @@ public class Solution
 6. `if (n != 0) return false;` : Any non-zero count means the frequencies do not match.
 
 7. `return true;` : All counts are zero, so the strings are anagrams.
+
+## Suggested practice 🎯
+
+Same character frequency counting pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+- [Ransom Note](https://leetcode.com/problems/ransom-note/)
+- [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)

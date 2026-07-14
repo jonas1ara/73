@@ -88,3 +88,11 @@ public class Solution
 6. `if (height[left] < height[right]) left++; else right--;` : Move the shorter edge inward to try a taller boundary.
 
 7. `return ans;` : Return the maximum area found.
+
+## Suggested practice 🎯
+
+Same two-pointer greedy pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+- [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)
+- [Two City Scheduling](https://leetcode.com/problems/two-city-scheduling/)

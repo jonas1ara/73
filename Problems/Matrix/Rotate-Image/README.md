@@ -72,3 +72,11 @@ public class Solution
 4. Inner loop `j` walks the top edge of the current layer (excluding the last corner).
 
 5. The four assignments cycle values: top ← left ← bottom ← right ← top (via `tmp`).
+
+## Suggested practice 🎯
+
+Same in-place matrix rotation pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Rotate Array](https://leetcode.com/problems/rotate-array/)
+- [Game of Life](https://leetcode.com/problems/game-of-life/)
+- [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/)

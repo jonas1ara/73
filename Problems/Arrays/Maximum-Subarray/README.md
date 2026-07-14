@@ -100,3 +100,11 @@ public class Solution
 6. `ans = Math.Max(ans, nums[i]);` : Keep the global maximum.
 
 7. `return ans;` : Return the largest sum found.
+
+## Suggested practice 🎯
+
+Same Kadane's algorithm pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/)
+- [Maximum Subarray Sum with One Deletion](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)
+- [K-Concatenation Maximum Sum](https://leetcode.com/problems/k-concatenation-maximum-sum/)

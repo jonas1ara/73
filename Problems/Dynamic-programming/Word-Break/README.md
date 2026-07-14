@@ -92,3 +92,11 @@ public class Solution
 3. Fill `dp` left to right; stop early for an `i` once true.
 
 4. `return dp[n];` whether the whole string can be segmented.
+
+## Suggested practice 🎯
+
+Same string-segmentation DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Word Break II](https://leetcode.com/problems/word-break-ii/)
+- [Concatenated Words](https://leetcode.com/problems/concatenated-words/)
+- [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)

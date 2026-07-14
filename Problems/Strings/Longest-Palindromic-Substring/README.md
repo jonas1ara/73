@@ -107,3 +107,11 @@ public class Solution
 8. Update `center` / `rangeMax` when a farther boundary is found.
 
 9. Track `longestCenter` and convert its range back with `Substring((longestCenter - range) / 2, range)`.
+
+## Suggested practice 🎯
+
+Same expand around center pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
+- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)
+- [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)

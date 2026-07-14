@@ -85,3 +85,11 @@ public class Solution
 3. Sort enables early stop when `n > target`.
 
 4. `return Dp(nums, target);`
+
+## Suggested practice 🎯
+
+Same ordered combination DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Combination Sum](https://leetcode.com/problems/combination-sum/)
+- [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
+- [Coin Change II](https://leetcode.com/problems/coin-change-ii/)

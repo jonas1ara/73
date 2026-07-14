@@ -121,3 +121,11 @@ type Solution() =
 6. The nested `if`/`else` mirrors the same carry logic as the C# version, one bit at a time.
 
 7. `ans` : Last expression of the member, returned implicitly as `a + b` without using `+`.
+
+## Suggested practice 🎯
+
+Same manual addition without +/- pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Add Binary](https://leetcode.com/problems/add-binary/)
+- [Add Strings](https://leetcode.com/problems/add-strings/)
+- [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)

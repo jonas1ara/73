@@ -103,3 +103,11 @@ type Solution() =
 3. `member this.IsSubtree(...)` : Defines a local recursive `check` function that closes over `subRoot`, avoiding re-passing it on every call like the C# version does.
 
 4. The boolean logic (`isSameTree node subRoot || (not (isNull node) && ...)`) mirrors the C# `||`/`&&` short-circuiting exactly.
+
+## Suggested practice 🎯
+
+Same structural tree comparison pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Flip Equivalent Binary Trees](https://leetcode.com/problems/flip-equivalent-binary-trees/)
+- [Most Frequent Subtree Sum](https://leetcode.com/problems/most-frequent-subtree-sum/)
+- [Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)

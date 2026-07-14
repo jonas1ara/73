@@ -118,3 +118,11 @@ public class Solution
 8. Compare `nums[mm]` with `target` and shrink the virtual search range.
 
 9. `return -1;` : Target was not found.
+
+## Suggested practice 🎯
+
+Same binary search on rotated arrays pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+- [Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)

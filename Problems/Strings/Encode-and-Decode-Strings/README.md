@@ -129,3 +129,11 @@ public class Solution
 8. Other `$...` (the `$x` marker) ends the current string (`i += 2` skips `$x`).
 
 9. `return ans;` : Return the reconstructed list.
+
+## Suggested practice 🎯
+
+Same length-prefixed encoding pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [String Compression](https://leetcode.com/problems/string-compression/)
+- [Count and Say](https://leetcode.com/problems/count-and-say/)
+- [Serialize and Deserialize BST](https://leetcode.com/problems/serialize-and-deserialize-bst/)

@@ -85,3 +85,11 @@ public class Solution
 3. Non-overlap → append; overlap → extend last end.
 
 4. Return the merged array.
+
+## Suggested practice 🎯
+
+Same sort-and-merge intervals pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
+- [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
+- [My Calendar II](https://leetcode.com/problems/my-calendar-ii/)

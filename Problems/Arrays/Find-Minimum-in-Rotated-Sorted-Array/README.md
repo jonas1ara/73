@@ -103,3 +103,11 @@ public class Solution
 7. `else right = m;` : The minimum is at `m` or to its left.
 
 8. `return nums[left];` : When the range collapses, return the minimum.
+
+## Suggested practice 🎯
+
+Same binary search on rotated arrays pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+- [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+- [Find Peak Element](https://leetcode.com/problems/find-peak-element/)

@@ -89,3 +89,11 @@ public class Solution
 1. Edge `p[1] → p[0]` matches “take `bi` before `ai`”.
 
 2. Post-decrement `indegree[v]-- == 0` enqueues as soon as all prereqs are done.
+
+## Suggested practice 🎯
+
+Same topological sort / cycle detection pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+- [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)
+- [Parallel Courses](https://leetcode.com/problems/parallel-courses/)

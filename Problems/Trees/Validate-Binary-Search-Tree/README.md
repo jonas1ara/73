@@ -71,3 +71,11 @@ public class Solution
 1. Left-root-right order guarantees increasing values in a valid BST.
 
 2. Strict `<` is enforced via `prev.val >= root.val` failing the check.
+
+## Suggested practice 🎯
+
+Same in-order traversal / bounds recursion pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)
+- [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+- [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)

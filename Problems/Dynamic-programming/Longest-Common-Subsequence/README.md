@@ -97,3 +97,11 @@ public class Solution
 3. `prev` is the previous diagonal; `cur` saves the old `dp[j+1]` before overwrite.
 
 4. `return dp[n];` LCS length.
+
+## Suggested practice 🎯
+
+Same two-string DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Edit Distance](https://leetcode.com/problems/edit-distance/)
+- [Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence/)
+- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)

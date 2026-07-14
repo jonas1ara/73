@@ -85,3 +85,11 @@ public class Solution
 3. If pointers meet → cycle exists.
 
 4. If the loop ends → no cycle.
+
+## Suggested practice 🎯
+
+Same fast/slow pointers pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
+- [Happy Number](https://leetcode.com/problems/happy-number/)
+- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)

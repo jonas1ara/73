@@ -75,3 +75,11 @@ public class Solution
 1. Sentinel `-1` means “not found yet” in this branch.
 
 2. Shared `k` is captured by the closure and decremented on each visit.
+
+## Suggested practice 🎯
+
+Same in-order traversal pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+- [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
+- [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/)

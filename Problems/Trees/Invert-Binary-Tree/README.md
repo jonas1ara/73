@@ -80,3 +80,11 @@ public class Solution
 2. Swap left and right children, then recurse into both subtrees.
 
 3. Return the same root (structure inverted in place).
+
+## Suggested practice 🎯
+
+Same tree mirroring recursion pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+- [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)
+- [Same Tree](https://leetcode.com/problems/same-tree/)

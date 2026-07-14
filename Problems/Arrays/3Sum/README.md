@@ -146,3 +146,11 @@ public class Solution
 9. On match, add the triplet and skip duplicate `j` / `k` values.
 
 10. `return result;` : Return all unique triplets.
+
+## Suggested practice 🎯
+
+Same two-pointer after sorting pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [3Sum Closest](https://leetcode.com/problems/3sum-closest/)
+- [3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)
+- [4Sum](https://leetcode.com/problems/4sum/)

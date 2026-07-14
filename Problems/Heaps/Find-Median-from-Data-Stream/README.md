@@ -98,3 +98,11 @@ public class MedianFinder
 1. Unique `index` allows equal numbers in `SortedSet`.
 
 2. Rebalancing keeps the two halves size-balanced.
+
+## Suggested practice 🎯
+
+Same two-heap balancing pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/)
+- [IPO](https://leetcode.com/problems/ipo/)
+- [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)

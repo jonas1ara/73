@@ -91,3 +91,11 @@ public class Solution
 1. Ranges are half-open / end-exclusive style indices over the original arrays (no copying).
 
 2. `leftLength` sizes the left preorder slice after the root.
+
+## Suggested practice 🎯
+
+Same traversal-to-tree reconstruction pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+- [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)
+- [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)

@@ -117,3 +117,11 @@ type Solution() =
 5. `endVar <- i.[1]` / `ans <- ans + 1` : Both bindings are `mutable`, updated with `<-` as the greedy scan keeps or drops each interval.
 
 6. `ans` : Last expression of the member, returned implicitly as the minimum number of removals.
+
+## Suggested practice 🎯
+
+Same greedy sort-by-end pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
+- [Video Stitching](https://leetcode.com/problems/video-stitching/)
+- [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/)

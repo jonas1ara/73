@@ -140,3 +140,11 @@ type Solution() =
 9. `rightSide <- rightSide * nums.[i]` : Include the current element in the right product for the next index.
 
 10. `result` : The last expression of the member is its return value; no explicit `return` keyword is needed.
+
+## Suggested practice 🎯
+
+Same prefix/suffix pass pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+- [Candy](https://leetcode.com/problems/candy/)
+- [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)

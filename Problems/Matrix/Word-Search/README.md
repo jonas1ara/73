@@ -153,3 +153,11 @@ type Solution() =
 6. `if not !found && dfs (x + dx) (y + dy) (i + 1) then ()` : `!found` dereferences the ref cell; short-circuits remaining directions once the word is found.
 
 7. `!found` : Last expression of the member, returned implicitly as whether `word` exists on the board.
+
+## Suggested practice 🎯
+
+Same DFS backtracking on a grid pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/)
+- [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
+- [N-Queens](https://leetcode.com/problems/n-queens/)

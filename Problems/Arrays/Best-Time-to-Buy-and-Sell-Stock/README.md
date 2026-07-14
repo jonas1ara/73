@@ -99,3 +99,11 @@ public class Solution
 6. `sell = Math.Max(sell, buy + price);` : Update the best profit if selling at the current price with the best buy.
 
 7. `return sell;` : Return the maximum profit found.
+
+## Suggested practice 🎯
+
+Same single-pass min/max tracking pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
+- [Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)
+- [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)

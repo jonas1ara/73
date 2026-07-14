@@ -75,3 +75,11 @@ public class Solution
 2. Each loop clears one set bit and increments `ans`.
 
 3. `return ans;` Hamming weight.
+
+## Suggested practice 🎯
+
+Same bit counting pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Hamming Distance](https://leetcode.com/problems/hamming-distance/)
+- [Power of Two](https://leetcode.com/problems/power-of-two/)
+- [Binary Number with Alternating Bits](https://leetcode.com/problems/binary-number-with-alternating-bits/)

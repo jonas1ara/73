@@ -66,3 +66,11 @@ public class Solution
 3. `n >>= 1` moves to the next bit of the input.
 
 4. `return ans;` reversed bits.
+
+## Suggested practice 🎯
+
+Same bit manipulation pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+- [UTF-8 Validation](https://leetcode.com/problems/utf-8-validation/)
+- [Binary Watch](https://leetcode.com/problems/binary-watch/)

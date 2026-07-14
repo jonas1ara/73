@@ -80,3 +80,11 @@ public class Solution
 4. If any meeting starts before the previous one ends, return `false`.
 
 5. `return true;` if every consecutive pair is conflict-free.
+
+## Suggested practice 🎯
+
+Same interval overlap check pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
+- [My Calendar I](https://leetcode.com/problems/my-calendar-i/)
+- [Car Pooling](https://leetcode.com/problems/car-pooling/)

@@ -115,3 +115,11 @@ public class Solution
 1. Edges encode “must come before” between letters.
 
 2. Post-order append + reverse is classic DFS topological order.
+
+## Suggested practice 🎯
+
+Same topological sort pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/)
+- [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+- [Sequence Reconstruction](https://leetcode.com/problems/sequence-reconstruction/)

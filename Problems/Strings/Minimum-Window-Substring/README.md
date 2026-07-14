@@ -116,3 +116,11 @@ public class Solution
 7. Shrink from `i`: if `cnt[s[i]]` returns to `0` after increment prep, lose one match.
 
 8. `return start == -1 ? "" : s.Substring(start, minLen);` : Empty string if no window, otherwise the best substring.
+
+## Suggested practice 🎯
+
+Same sliding window with a need/have count pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Permutation in String](https://leetcode.com/problems/permutation-in-string/)
+- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+- [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)

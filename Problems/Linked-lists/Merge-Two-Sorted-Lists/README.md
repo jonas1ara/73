@@ -91,3 +91,11 @@ public class Solution
 2. Splice `list2` nodes into the `list1` chain when smaller.
 
 3. Attach leftover `list2` and return `head.next`.
+
+## Suggested practice 🎯
+
+Same merge two sorted sequences pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+- [Sort List](https://leetcode.com/problems/sort-list/)
+- [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)

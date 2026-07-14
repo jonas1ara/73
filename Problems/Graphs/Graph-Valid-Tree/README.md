@@ -101,3 +101,11 @@ public class Solution
 1. Bidirectional edges model the undirected graph.
 
 2. `cnt == 1` enforces a single connected component without cycles.
+
+## Suggested practice 🎯
+
+Same union-find / cycle detection pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Redundant Connection](https://leetcode.com/problems/redundant-connection/)
+- [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
+- [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph/)

@@ -99,3 +99,11 @@ public class Solution
 6. `return j - i;` : Length of the largest valid window maintained by the pointers.
 
 7. `maxElement` finds the highest frequency in `cnt`.
+
+## Suggested practice 🎯
+
+Same sliding window with a frequency count pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
+- [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
+- [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)

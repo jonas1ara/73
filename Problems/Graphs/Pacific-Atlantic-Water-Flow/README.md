@@ -156,3 +156,11 @@ type Solution() =
 3. `dfs` is a module-level `let rec` closed over nothing external — `m` and `n` are threaded as explicit parameters instead of being private fields (`M`, `N` in C#).
 
 4. The final `[ for i in ... do for j in ... do if ... then yield [i; j] ]` : A list comprehension replaces the nested `for` loops with `ans.Add(...)`, building the result list declaratively.
+
+## Suggested practice 🎯
+
+Same multi-source flood-fill pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)
+- [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
+- [Making A Large Island](https://leetcode.com/problems/making-a-large-island/)

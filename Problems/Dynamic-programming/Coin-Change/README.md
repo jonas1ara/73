@@ -85,3 +85,11 @@ public class Solution
 2. For each target `t`, try every coin and take the minimum.
 
 3. Return `-1` if `dp[amount]` is still `inf`.
+
+## Suggested practice 🎯
+
+Same unbounded knapsack DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Coin Change II](https://leetcode.com/problems/coin-change-ii/)
+- [Perfect Squares](https://leetcode.com/problems/perfect-squares/)
+- [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)

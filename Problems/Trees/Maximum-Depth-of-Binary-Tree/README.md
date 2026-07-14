@@ -56,3 +56,11 @@ public class Solution
 1. One expression: base case `0`, otherwise `1 + max` of both sides.
 
 2. Visits each node once → `O(n)` time, `O(h)` stack space.
+
+## Suggested practice 🎯
+
+Same tree recursion pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
+- [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+- [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)

@@ -129,3 +129,11 @@ public class Solution
 1. Trie avoids re-searching dead prefixes.
 
 2. `Cnt` prunes branches after all words under them have been found.
+
+## Suggested practice 🎯
+
+Same trie + DFS backtracking pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Concatenated Words](https://leetcode.com/problems/concatenated-words/)
+- [Replace Words](https://leetcode.com/problems/replace-words/)
+- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)

@@ -108,3 +108,11 @@ public class Trie
 1. Index children with `c - 'a'`.
 
 2. Shared `Find` powers both `Search` and `StartsWith`.
+
+## Suggested practice 🎯
+
+Same trie pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Replace Words](https://leetcode.com/problems/replace-words/)
+- [Map Sum Pairs](https://leetcode.com/problems/map-sum-pairs/)
+- [Longest Word in Dictionary](https://leetcode.com/problems/longest-word-in-dictionary/)

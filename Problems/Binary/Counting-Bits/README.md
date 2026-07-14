@@ -78,3 +78,11 @@ public class Solution
 4. Fill `ans[i + j]` as sum of high-bit contribution and `ans[j]`.
 
 5. `return ans;`
+
+## Suggested practice 🎯
+
+Same bit-counting DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Hamming Distance](https://leetcode.com/problems/hamming-distance/)
+- [Total Hamming Distance](https://leetcode.com/problems/total-hamming-distance/)
+- [Binary Watch](https://leetcode.com/problems/binary-watch/)

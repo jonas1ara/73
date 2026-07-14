@@ -89,3 +89,11 @@ public class Solution
 1. Snapshot `levelSize` so only the current level is drained each outer loop.
 
 2. Children are enqueued after their parent is recorded.
+
+## Suggested practice 🎯
+
+Same BFS by level pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
+- [Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)
+- [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)

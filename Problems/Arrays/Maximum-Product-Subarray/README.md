@@ -115,3 +115,11 @@ public class Solution
 8. Skip consecutive zeros and continue.
 
 9. `return ans;` : Return the maximum product found.
+
+## Suggested practice 🎯
+
+Same running min/max DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/)
+- [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/)
+- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/)

@@ -108,3 +108,11 @@ public class Solution
 1. In-place marking avoids a separate visited matrix.
 
 2. Each new unvisited `'1'` starts a new island.
+
+## Suggested practice 🎯
+
+Same grid flood-fill pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)
+- [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
+- [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)

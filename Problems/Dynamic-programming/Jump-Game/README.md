@@ -81,3 +81,11 @@ public class Solution
 2. Early `break` once a valid predecessor is found.
 
 3. `return dp[n - 1];`
+
+## Suggested practice 🎯
+
+Same greedy reachability pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Jump Game II](https://leetcode.com/problems/jump-game-ii/)
+- [Jump Game III](https://leetcode.com/problems/jump-game-iii/)
+- [Jump Game IV](https://leetcode.com/problems/jump-game-iv/)

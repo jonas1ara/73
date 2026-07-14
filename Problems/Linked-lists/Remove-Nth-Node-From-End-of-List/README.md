@@ -87,3 +87,11 @@ public class Solution
 3. Align `p` before the target and unlink it.
 
 4. Return original `head` (or new head if first node removed).
+
+## Suggested practice 🎯
+
+Same two-pointer gap pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+- [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
+- [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)

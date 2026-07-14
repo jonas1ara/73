@@ -74,3 +74,11 @@ public class Solution
 3. Loop runs `n - 1` times via `--n > 0`.
 
 4. `return ans;` number of ways.
+
+## Suggested practice 🎯
+
+Same Fibonacci-style DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
+- [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
+- [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/)

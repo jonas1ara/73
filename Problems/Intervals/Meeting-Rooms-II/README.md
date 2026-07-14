@@ -100,3 +100,11 @@ public class Solution
 2. For each start in order, either allocate a new room or reuse a freed one.
 
 3. `return rooms;` is the peak concurrent meetings count.
+
+## Suggested practice 🎯
+
+Same interval overlap counting pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
+- [Car Pooling](https://leetcode.com/problems/car-pooling/)
+- [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)

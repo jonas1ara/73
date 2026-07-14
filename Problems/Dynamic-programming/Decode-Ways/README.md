@@ -94,3 +94,11 @@ public class Solution
 3. Early stop if `pre1` hits 0 (dead encoding).
 
 4. `return pre1;` number of decodings.
+
+## Suggested practice 🎯
+
+Same string-segmentation DP pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Decode Ways II](https://leetcode.com/problems/decode-ways-ii/)
+- [Perfect Squares](https://leetcode.com/problems/perfect-squares/)
+- [Word Break II](https://leetcode.com/problems/word-break-ii/)

@@ -68,3 +68,11 @@ public class Solution
 1. Only one path is followed, so time is proportional to height.
 
 2. No need to explore both subtrees (unlike general binary trees).
+
+## Suggested practice 🎯
+
+Same BST-property search pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+- [Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
+- [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)

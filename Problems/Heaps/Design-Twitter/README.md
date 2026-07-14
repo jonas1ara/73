@@ -179,3 +179,11 @@ type Twitter() =
 3. `allTweets |> Seq.sortByDescending fst |> Seq.truncate 10 |> Seq.map snd |> List.ofSeq` : Same net effect as the C# `SortedSet` + `TupleComparer`, expressed as a single pipe chain: sort by timestamp descending, keep the first 10, project the tweet IDs.
 
 4. `following.[followerId].Add followeeId |> ignore` : `HashSet.Add` returns a `bool` in .NET; `|> ignore` discards it since the F# compiler warns on unused non-unit results.
+
+## Suggested practice 🎯
+
+Same heap/ordered-set design pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [LFU Cache](https://leetcode.com/problems/lfu-cache/)
+- [Design Underground System](https://leetcode.com/problems/design-underground-system/)
+- [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)

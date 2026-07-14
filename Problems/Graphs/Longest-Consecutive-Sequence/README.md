@@ -107,3 +107,11 @@ public class Solution
 1. Value→index map enables neighbor lookups in average `O(1)`.
 
 2. Union-by-size accumulates sequence lengths on roots.
+
+## Suggested practice 🎯
+
+Same hash-set range expansion pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Binary Tree Longest Consecutive Sequence](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/)
+- [Binary Tree Longest Consecutive Sequence II](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/)
+- [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)

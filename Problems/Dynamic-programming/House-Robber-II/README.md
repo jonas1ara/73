@@ -87,3 +87,11 @@ class Solution
 1. Helper `Rob(nums, start, end)` solves linear House Robber on a half-open range.
 
 2. Public method takes max of the two circular-safe ranges.
+
+## Suggested practice 🎯
+
+Same adjacent-choice DP on a circle pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [House Robber III](https://leetcode.com/problems/house-robber-iii/)
+- [Paint Fence](https://leetcode.com/problems/paint-fence/)
+- [Delete and Earn](https://leetcode.com/problems/delete-and-earn/)

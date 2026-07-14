@@ -118,3 +118,11 @@ public class Solution
 4. `Interleave` zips one node from the second list after each node of the first.
 
 5. `ReorderList` orchestrates split → reverse → interleave.
+
+## Suggested practice 🎯
+
+Same find middle + reverse + merge pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
+- [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
+- [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)

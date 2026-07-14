@@ -90,3 +90,11 @@ public class Solution
 4. First double loop: mark rows/cols when a zero is found.
 
 5. Second double loop: write zeros where a row or column marker is set.
+
+## Suggested practice 🎯
+
+Same in-place matrix marking pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Game of Life](https://leetcode.com/problems/game-of-life/)
+- [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/)
+- [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)

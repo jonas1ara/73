@@ -104,3 +104,11 @@ public class Solution
 1. `Find` uses path compression (`id[a] = Find(id[a])`).
 
 2. Only distinct roots trigger a component decrement.
+
+## Suggested practice 🎯
+
+Same union-find pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
+- [Redundant Connection](https://leetcode.com/problems/redundant-connection/)
+- [Accounts Merge](https://leetcode.com/problems/accounts-merge/)

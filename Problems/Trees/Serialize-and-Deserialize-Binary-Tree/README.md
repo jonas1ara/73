@@ -98,3 +98,11 @@ public class Codec
 1. Preorder + explicit nulls makes reconstruction unambiguous.
 
 2. A queue of tokens preserves left-to-right consumption order.
+
+## Suggested practice 🎯
+
+Same tree serialization pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Serialize and Deserialize BST](https://leetcode.com/problems/serialize-and-deserialize-bst/)
+- [Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)
+- [Verify Preorder Serialization of a Binary Tree](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/)

@@ -93,3 +93,11 @@ public class Solution
 6. Advance both pointers after a successful match.
 
 7. `return true;` : The string is a palindrome.
+
+## Suggested practice 🎯
+
+Same two-pointer scan pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
+- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
+- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)

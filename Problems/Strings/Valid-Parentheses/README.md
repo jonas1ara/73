@@ -96,3 +96,11 @@ public class Solution
 5. For closing brackets: reject if the stack is empty or the top does not match; otherwise pop.
 
 6. `return stack.Count == 0;` : Valid only if every opening bracket was closed.
+
+## Suggested practice 🎯
+
+Same stack matching pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+- [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
+- [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)

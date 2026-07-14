@@ -74,3 +74,11 @@ public class Solution
 3. `HashSet<int> set = new HashSet<int>(nums);` : Build a hash set from the array. **Only unique values are kept.**
 
 4. `return set.Count != nums.Length;` : If the set is smaller than the array, at least one value was discarded as a duplicate, so return `true`. Otherwise return `false`.
+
+## Suggested practice 🎯
+
+Same hash-set membership pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)
+- [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/)
+- [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/)

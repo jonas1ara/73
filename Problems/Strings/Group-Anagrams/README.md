@@ -100,3 +100,11 @@ public class Solution
 6. `ans[m[key]].Add(s);` : Append the original string to its group.
 
 7. `ans.Reverse(); return ans;` : Reverse groups (order does not matter for correctness) and return.
+
+## Suggested practice 🎯
+
+Same hashing by sorted/counted signature pattern, different constraints — solve these next to check you generalized it instead of memorizing it:
+
+- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+- [Group Shifted Strings](https://leetcode.com/problems/group-shifted-strings/)
+- [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
