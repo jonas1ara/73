@@ -1,6 +1,6 @@
 # Set Matrix Zeroes:
 
-This directory contains implementations of the "Set Matrix Zeroes" problem in the C++ and C# languages. Each implementation marks rows and columns that contain zeros and then zeroes them out with temporal complexity `O(m·n)`.
+This directory contains an implementation of the "Set Matrix Zeroes" problem in C#. The implementation marks rows and columns that contain zeros and then zeroes them out with temporal complexity `O(m·n)`.
 
 ## Problem description
 
@@ -90,44 +90,3 @@ public class Solution
 4. First double loop: mark rows/cols when a zero is found.
 
 5. Second double loop: write zeros where a row or column marker is set.
-
-### C++ :
-
-```cpp
-// Using in-place algorithm - Time: O(m⋅n)
-
-class Solution {
-public:
-    void setZeroes(std::vector<std::vector<int>> &matrix)
-    {
-        int m = matrix.size();
-        int n = matrix[0].size();
-
-        std::vector<bool> row(m), col(n);
-
-        for (int i = 0; i < m; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                row[i] = row[i] || matrix[i][j] == 0;
-                col[j] = col[j] || matrix[i][j] == 0;
-            }
-        }
-
-        for (int i = 0; i < m; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                if (row[i] || col[j])
-                    matrix[i][j] = 0;
-            }
-        }
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. Mark then write: same two-pass approach as C#.
-
-3. `if (row[i] || col[j]) matrix[i][j] = 0;` : Zero the cell when its row or column is marked.

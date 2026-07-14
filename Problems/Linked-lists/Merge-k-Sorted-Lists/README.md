@@ -1,6 +1,6 @@
 # Merge k Sorted Lists:
 
-This directory contains implementations of the "Merge k Sorted Lists" problem in the C++ and C# languages. Each implementation merges lists pairwise in a bottom-up fashion (like merge sort) with temporal complexity `O(N log k)` where `N` is the total number of nodes.
+This directory contains an implementation of the "Merge k Sorted Lists" problem in C#. The implementation merges lists pairwise in a bottom-up fashion (like merge sort) with temporal complexity `O(N log k)` where `N` is the total number of nodes.
 
 ## Problem description
 
@@ -104,61 +104,3 @@ public class Solution
 3. Inner loop merges non-overlapping pairs.
 
 4. `return lists[0];` final merged list (or null if empty input).
-
-### C++ :
-
-```cpp
-// Using merge sort algorithm - Time: O(nlogn)
-
-class Solution {
-private:
-    ListNode *mergeTwoLists(ListNode *a, ListNode *b)
-    {
-        ListNode *head = new ListNode(0);
-        ListNode *tail = head;
-
-        while (a != nullptr && b != nullptr)
-        {
-            if (a->val < b->val)
-            {
-                tail->next = a;
-                a = a->next;
-            }
-            else
-            {
-                tail->next = b;
-                b = b->next;
-            }
-            tail = tail->next;
-        }
-        tail->next = a ? a : b;
-
-        return head->next;
-    }
-
-public:
-    ListNode *mergeKLists(std::vector<ListNode *> &lists)
-    {
-        if (lists.empty())
-        {
-            return nullptr;
-        }
-
-        int n = lists.size();
-
-        for (int step = 1; step < n; step <<= 1)
-        {
-            for (int i = 0; i < n - step; i += step << 1)
-            {
-                lists[i] = mergeTwoLists(lists[i], lists[i + step]);
-            }
-        }
-
-        return lists[0];
-    }
-};
-```
-
-1. Same pairwise bottom-up merge as C#.
-
-2. Empty vector → `nullptr`.

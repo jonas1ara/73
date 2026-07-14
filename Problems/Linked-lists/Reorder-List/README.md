@@ -1,6 +1,6 @@
 # Reorder List:
 
-This directory contains implementations of the "Reorder List" problem in the C++ and C# languages. Each implementation splits, reverses, and interleaves the list in `O(n)` time and `O(1)` extra space.
+This directory contains an implementation of the "Reorder List" problem in C#. The implementation splits, reverses, and interleaves the list in `O(n)` time and `O(1)` extra space.
 
 ## Problem description
 
@@ -118,69 +118,3 @@ public class Solution
 4. `Interleave` zips one node from the second list after each node of the first.
 
 5. `ReorderList` orchestrates split → reverse → interleave.
-
-### C++ :
-
-```cpp
-// Using two pointers - Time: O(n)
-
-class Solution {
-    int getLength(ListNode *head)
-    {
-        int ans = 0;
-        for (; head; head = head->next)
-            ans++;
-        return ans;
-    }
-
-    ListNode *splitList(ListNode *head)
-    {
-        int len = (getLength(head) - 1) / 2;
-        while (len--)
-            head = head->next;
-        auto ans = head->next;
-        head->next = nullptr;
-        return ans;
-    }
-
-    ListNode *reverseList(ListNode *head)
-    {
-        ListNode dummy;
-        while (head)
-        {
-            auto node = head;
-            head = head->next;
-            node->next = dummy.next;
-            dummy.next = node;
-        }
-        return dummy.next;
-    }
-
-    void interleave(ListNode *first, ListNode *second)
-    {
-        while (second)
-        {
-            auto node = second;
-            second = second->next;
-            node->next = first->next;
-            first->next = node;
-            first = node->next;
-        }
-    }
-
-public:
-    void reorderList(ListNode *head)
-    {
-        if (!head || !head->next)
-            return;
-
-        auto second = splitList(head);
-        second = reverseList(second);
-        interleave(head, second);
-    }
-};
-```
-
-1. Same three-phase algorithm as C#.
-
-2. Modifies node links only; values stay unchanged.

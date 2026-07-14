@@ -1,6 +1,6 @@
 # Combination Sum IV:
 
-This directory contains implementations of the "Combination Sum IV" problem in the C++ and C# languages. Each implementation uses top-down memoized recursion (order matters) with temporal complexity `O(n · target)`.
+This directory contains an implementation of the "Combination Sum IV" problem in C#. The implementation uses top-down memoized recursion (order matters) with temporal complexity `O(n · target)`.
 
 ## Problem description
 
@@ -85,41 +85,3 @@ public class Solution
 3. Sort enables early stop when `n > target`.
 
 4. `return Dp(nums, target);`
-
-### C++ :
-
-```cpp
-// Using top-down approach - Time: O(n * amount)
-
-class Solution {
-    std::unordered_map<int, int> m{{0, 1}};
-
-    int dp(std::vector<int> &nums, int target)
-    {
-        if (m.count(target))
-            return m[target];
-
-        int cnt = 0;
-
-        for (int n : nums)
-        {
-            if (n > target)
-                break;
-            cnt += dp(nums, target - n);
-        }
-
-        return m[target] = cnt;
-    }
-
-public:
-    int combinationSum4(std::vector<int> &nums, int target)
-    {
-        std::sort(nums.begin(), nums.end());
-        return dp(nums, target);
-    }
-};
-```
-
-1. Same memoized recurrence as C#.
-
-2. Order matters because each recursive branch picks the next number independently (permutations counted separately).

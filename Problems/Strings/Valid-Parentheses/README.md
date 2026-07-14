@@ -1,6 +1,6 @@
 # Valid Parentheses:
 
-This directory contains implementations of the "Valid Parentheses" problem in the C++ and C# languages. Each implementation uses a stack to validate bracket matching and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Valid Parentheses" problem in C#. The implementation uses a stack to validate bracket matching and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -96,36 +96,3 @@ public class Solution
 5. For closing brackets: reject if the stack is empty or the top does not match; otherwise pop.
 
 6. `return stack.Count == 0;` : Valid only if every opening bracket was closed.
-
-### C++ :
-
-```cpp
-// Using a stack - Time O(n)
-
-class Solution {
-public:
-    bool isValid(std::string s)
-    {
-        std::stack<char> stack;
-        for (char c : s)
-        {
-            if (c == '(' || c == '{' || c == '[')
-                stack.push(c);
-            else if (stack.empty() || (c == ')' && stack.top() != '(') || (c == '}' && stack.top() != '{') 
-                || (c == ']' && stack.top() != '['))
-                return false;
-            else
-                stack.pop();
-        }
-        return stack.empty();
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `bool isValid(std::string s)` : Define a function that returns whether the bracket string is valid.
-
-3. Push openers, validate/pop closers, and require an empty stack at the end.
-
-4. `return stack.empty();` if all brackets matched correctly.

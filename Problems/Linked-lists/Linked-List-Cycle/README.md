@@ -1,6 +1,6 @@
 # Linked List Cycle:
 
-This directory contains implementations of the "Linked List Cycle" problem in the C++ and C# languages. Each implementation uses Floyd's tortoise and hare algorithm with temporal complexity `O(n)` and constant extra space.
+This directory contains an implementation of the "Linked List Cycle" problem in C#. The implementation uses Floyd's tortoise and hare algorithm with temporal complexity `O(n)` and constant extra space.
 
 ## Problem description
 
@@ -85,35 +85,3 @@ public class Solution
 3. If pointers meet → cycle exists.
 
 4. If the loop ends → no cycle.
-
-### C++ :
-
-```cpp
-// Using Floyd's tortoise and hare algorithm - Time: O(n)
-
-class Solution {
-public:
-    bool hasCycle(ListNode* head)
-    {
-        ListNode* p = head;
-        ListNode* q = head;
-
-        while (q != nullptr && q->next != nullptr)
-        {
-            p = p->next;
-            q = q->next->next;
-
-            if (p == q)
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
-};
-```
-
-1. Same Floyd cycle detection as C#.
-
-2. `return false;` when the fast pointer falls off the list.

@@ -1,6 +1,6 @@
 # Product of Array Except Self:
 
-This directory contains implementations of the "Product of Array Except Self" problem in the C++ and C# languages. Each implementation uses prefix and postfix products to build the answer without division and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Product of Array Except Self" problem in C#. The implementation uses prefix and postfix products to build the answer without division and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -100,42 +100,43 @@ public class Solution
 
 10. `return result;` : Return the final array.
 
-### C++ :
+### F# :
 
-```cpp
-// Using prefix and postfix - Time O(n)
+```fsharp
+open System
 
-class Solution {
-public:
-    std::vector<int> productExceptSelf(std::vector<int> &nums)
-    {
-        int n = nums.size();
-        std::vector<int> result(n, 1);
-        result[0] = 1;
+type Solution() =
+    member this.ProductExceptSelf(nums : int[]) =
+        let result = Array.zeroCreate<int>(nums.Length)
+        result.[0] <- 1
 
-        for (int i = 1; i < n; i++)
-        {
-            result[i] = result[i - 1] * nums[i - 1];
-        }
+        for i = 1 to nums.Length - 1 do
+            result.[i] <- result.[i - 1] * nums.[i - 1]
 
-        int rightSide = 1;
-        for (int i = n - 1; i >= 0; i--)
-        {
-            result[i] = result[i] * rightSide;
-            rightSide *= nums[i];
-        }
+        let mutable rightSide = 1
+        for i = nums.Length - 1 downto 0 do
+            result.[i] <- result.[i] * rightSide
+            rightSide <- rightSide * nums.[i]
 
-        return result;
-    }
-};
+        result
 ```
 
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
+1. `type Solution() =` : Define a class-like type called `Solution`.
 
-2. `std::vector<int> productExceptSelf(std::vector<int> &nums)` : Define a function that returns the product of all elements except the one at each index.
+2. `member this.ProductExceptSelf(nums : int[]) =` : Define a member method that returns the product of all elements except the one at each index.
 
-3. `std::vector<int> result(n, 1);` : Create the answer vector initialized with ones.
+3. `let result = Array.zeroCreate<int>(nums.Length)` : Allocate the answer array with `0`s, then set the left product of the first index to `1`.
 
-4. Left pass fills prefix products; right pass multiplies postfix products into `result`.
+4. `for i = 1 to nums.Length - 1 do` : Fill left products in an inclusive `for` loop (F# ranges are inclusive on both ends).
 
-5. `return result;` : Return the final vector.
+5. `result.[i] <- result.[i - 1] * nums.[i - 1]` : Prefix product for index `i`, using `<-` to mutate the array in place.
+
+6. `let mutable rightSide = 1` : `mutable` is required because F# bindings are immutable by default.
+
+7. `for i = nums.Length - 1 downto 0 do` : Second pass from right to left using `downto`.
+
+8. `result.[i] <- result.[i] * rightSide` : Multiply left product by right product.
+
+9. `rightSide <- rightSide * nums.[i]` : Include the current element in the right product for the next index.
+
+10. `result` : The last expression of the member is its return value; no explicit `return` keyword is needed.

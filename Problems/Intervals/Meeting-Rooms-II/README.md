@@ -1,6 +1,6 @@
 # Meeting Rooms II:
 
-This directory contains implementations of the "Meeting Rooms II" problem in the C++ and C# languages. Each implementation uses a greedy scan of sorted starts and ends with temporal complexity `O(n log n)`.
+This directory contains an implementation of the "Meeting Rooms II" problem in C#. The implementation uses a greedy scan of sorted starts and ends with temporal complexity `O(n log n)`.
 
 ## Problem description
 
@@ -100,59 +100,3 @@ public class Solution
 2. For each start in order, either allocate a new room or reuse a freed one.
 
 3. `return rooms;` is the peak concurrent meetings count.
-
-### C++ :
-
-```cpp
-// Using a greedy algorithm - Time: O(nlogn)
-
-class Interval {
-public:
-    int start, end;
-    Interval(int start, int end)
-    {
-        this->start = start;
-        this->end = end;
-    }
-};
-
-class Solution {
-public:
-    int minMeetingRooms(std::vector<Interval> &intervals)
-    {
-        std::vector<int> starts, ends;
-
-        for (const Interval &interval : intervals)
-        {
-            starts.push_back(interval.start);
-            ends.push_back(interval.end);
-        }
-
-        sort(starts.begin(), starts.end());
-        sort(ends.begin(), ends.end());
-
-        int rooms = 0;
-        int endIdx = 0;
-
-        for (int i = 0; i < intervals.size(); i++)
-        {
-            if (starts[i] < ends[endIdx])
-            {
-                rooms++;
-            }
-            else
-            {
-                endIdx++;
-            }
-        }
-
-        return rooms;
-    }
-};
-```
-
-1. Same two-array sweep as C#.
-
-2. `starts[i] < ends[endIdx]` means a meeting starts while another is still running.
-
-3. `return rooms;` minimum rooms required.

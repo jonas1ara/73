@@ -1,6 +1,6 @@
 # Missing Number:
 
-This directory contains implementations of the "Missing Number" problem in the C++ and C# languages. Each implementation uses XOR to find the missing value in `O(n)` time and `O(1)` extra space.
+This directory contains an implementation of the "Missing Number" problem in C#. The implementation uses XOR to find the missing value in `O(n)` time and `O(1)` extra space.
 
 ## Problem description
 
@@ -79,27 +79,3 @@ public class Solution
 3. Accumulate `nums[i] ^ (i + 1)` into `xorVal`.
 
 4. `return xorVal;` is the missing number.
-
-### C++ :
-
-```cpp
-// Using XOR operation - Time: O(n)
-
-class Solution {
-public:
-    int missingNumber(std::vector<int> &nums)
-    {
-        int n = nums.size();
-        int xorVal = 0;
-
-        for (int i = 0; i < n; ++i)
-            xorVal ^= nums[i] ^ (i + 1);
-
-        return xorVal;
-    }
-};
-```
-
-1. Same XOR cancellation as C#.
-
-2. `return xorVal;` missing number in the range.

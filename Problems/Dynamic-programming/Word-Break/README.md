@@ -1,6 +1,6 @@
 # Word Break:
 
-This directory contains implementations of the "Word Break" problem in the C++ and C# languages. Each implementation uses bottom-up DP with a dictionary set and temporal complexity `O(n^2)` (with dictionary lookup roughly `O(1)` average).
+This directory contains an implementation of the "Word Break" problem in C#. The implementation uses bottom-up DP with a dictionary set and temporal complexity `O(n^2)` (with dictionary lookup roughly `O(1)` average).
 
 ## Problem description
 
@@ -92,41 +92,3 @@ public class Solution
 3. Fill `dp` left to right; stop early for an `i` once true.
 
 4. `return dp[n];` whether the whole string can be segmented.
-
-### C++ :
-
-```cpp
-// Using bottom-up approach - Time: O(n^2)
-
-class Solution {
-public:
-    bool wordBreak(std::string s, std::vector<std::string> &wordDict)
-    {
-        std::unordered_set<std::string> st(wordDict.begin(), wordDict.end());
-        int n = s.size(), minLen = INT_MAX, maxLen = 0;
-
-        for (const auto &w : wordDict)
-        {
-            minLen = std::min(minLen, static_cast<int>(w.size()));
-            maxLen = std::max(maxLen, static_cast<int>(w.size()));
-        }
-
-        std::vector<bool> dp(n + 1, false);
-        dp[0] = true;
-
-        for (int i = 1; i <= n; i++)
-        {
-            for (int len = minLen; len <= maxLen && i - len >= 0 && !dp[i]; len++)
-            {
-                dp[i] = dp[i - len] && st.count(s.substr(i - len, len));
-            }
-        }
-
-        return dp[n];
-    }
-};
-```
-
-1. Same DP segmentation as C#.
-
-2. `return dp[n];` final answer.

@@ -1,6 +1,6 @@
 # Reverse Bits:
 
-This directory contains implementations of the "Reverse Bits" problem in the C, C++, and C# languages. Each implementation reverses the 32 bits of an unsigned integer with temporal complexity `O(1)` (fixed 32 iterations).
+This directory contains an implementation of the "Reverse Bits" problem in C#. The implementation reverses the 32 bits of an unsigned integer with temporal complexity `O(1)` (fixed 32 iterations).
 
 ## Problem description
 
@@ -66,46 +66,3 @@ public class Solution
 3. `n >>= 1` moves to the next bit of the input.
 
 4. `return ans;` reversed bits.
-
-### C++ :
-
-```cpp
-// Using bit manipulation - Time: O(1)
-
-class Solution {
-public:
-    uint32_t reverseBits(uint32_t n)
-    {
-        int ans = 0;
-        for (int i = 0; i < 32; i++)
-        {
-            ans = (ans << 1) | (n & 1);
-            n >>= 1;
-        }
-        return ans;
-    }
-};
-```
-
-1. Same 32-step reverse construction as C#.
-
-### C:
-
-```c
-// Using bit manipulation - Time: O(1)
-
-uint32_t reverseBits(uint32_t n)
-{
-    uint32_t ans = 0;
-
-    for (int i = 0; i < 32; i++)
-    {
-        ans = (ans << 1) | (n & 1);
-        n >>= 1;
-    }
-
-    return ans;
-}
-```
-
-1. Identical bit-by-bit reverse for 32-bit unsigned integers.

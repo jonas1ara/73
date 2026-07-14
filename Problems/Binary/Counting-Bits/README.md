@@ -1,6 +1,6 @@
 # Counting Bits:
 
-This directory contains implementations of the "Counting Bits" problem in the C++ and C# languages. Each implementation fills bit counts using dynamic programming over powers of two with temporal complexity `O(n)`.
+This directory contains an implementation of the "Counting Bits" problem in C#. The implementation fills bit counts using dynamic programming over powers of two with temporal complexity `O(n)`.
 
 ## Problem description
 
@@ -78,31 +78,3 @@ public class Solution
 4. Fill `ans[i + j]` as sum of high-bit contribution and `ans[j]`.
 
 5. `return ans;`
-
-### C++ :
-
-```cpp
-// Using dynamic programming - Time: O(n)
-
-class Solution {
-public:
-    std::vector<int> countBits(int n)
-    {
-        std::vector<int> ans(n + 1);
-
-        for (int i = 1; i <= n; i *= 2)
-        {
-            ans[i] = 1;
-
-            for (int j = 1; j < i && i + j <= n; j++)
-                ans[i + j] = ans[i] + ans[j];
-        }
-
-        return ans;
-    }
-};
-```
-
-1. Same power-of-two DP fill as C#.
-
-2. `return ans;` bit counts for every value in `[0, n]`.

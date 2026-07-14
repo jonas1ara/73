@@ -1,6 +1,6 @@
 # Longest Repeating Character Replacement:
 
-This directory contains implementations of the "Longest Repeating Character Replacement" problem in the C++ and C# languages. Each implementation uses a sliding window with character frequency counts and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Longest Repeating Character Replacement" problem in C#. The implementation uses a sliding window with character frequency counts and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -99,36 +99,3 @@ public class Solution
 6. `return j - i;` : Length of the largest valid window maintained by the pointers.
 
 7. `maxElement` finds the highest frequency in `cnt`.
-
-### C++ :
-
-```cpp
-// Using sliding window technique - Time: O(n)
-
-class Solution {
-public:
-    int characterReplacement(std::string s, int k)
-    {
-        int i = 0;
-        int j = 0;
-        int cnt[26] = {};
-        int n = s.size();
-
-        while (j < n)
-        {
-            cnt[s[j++] - 'A']++;
-            if (j - i - *std::max_element(cnt, cnt + 26) > k)
-                cnt[s[i++] - 'A']--;
-        }
-        return j - i;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `int characterReplacement(std::string s, int k)` : Define a function that returns the longest length after at most `k` replacements.
-
-3. Sliding window with frequency array; shrink when replacements needed exceed `k`.
-
-4. `return j - i;` : Return the final valid window length.

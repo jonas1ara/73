@@ -1,6 +1,6 @@
 # Longest Increasing Subsequence:
 
-This directory contains implementations of the "Longest Increasing Subsequence" problem in the C++ and C# languages. Each implementation uses classic DP tabulation with temporal complexity `O(n^2)`.
+This directory contains an implementation of the "Longest Increasing Subsequence" problem in C#. The implementation uses classic DP tabulation with temporal complexity `O(n^2)`.
 
 ## Problem description
 
@@ -87,35 +87,34 @@ public class Solution
 
 3. `return dp.Max();` overall LIS length.
 
-### C++ :
+### F# :
 
-```cpp
-// Using tabulation - Time: O(n^2)
+```fsharp
+open System
 
-class Solution {
-public:
-    int lengthOfLIS(std::vector<int> &nums)
-    {
-        if (nums.empty())
-            return 0;
+type Solution() =
+    member this.LengthOfLIS(nums: int[]) =
+        if nums.Length = 0 then 0
+        else
+            let n = nums.Length
+            let dp = Array.create n 1
 
-        int n = nums.size();
-        std::vector<int> dp(n, 1);
-
-        for (int i = 1; i < n; i++)
-        {
-            for (int j = 0; j < i; j++)
-            {
-                if (nums[j] < nums[i])
-                    dp[i] = std::max(dp[i], dp[j] + 1);
-            }
-        }
-
-        return *std::max_element(dp.begin(), dp.end());
-    }
-};
+            for i in 1..n-1 do
+                for j in 0..i-1 do
+                    if nums.[j] < nums.[i] then
+                        dp.[i] <- Math.Max(dp.[i], dp.[j] + 1)
+            
+            Array.max dp
 ```
 
-1. Same DP as C#.
+1. `type Solution() =` : Define a class-like type called `Solution`.
 
-2. `max_element` picks the longest increasing subsequence length.
+2. `if nums.Length = 0 then 0 else ...` : F#'s `if` is an expression, so the empty-array case and the general case both produce the method's return value.
+
+3. `let dp = Array.create n 1` : Initialize every LIS ending length to `1` in one call, equivalent to the C# initialization loop.
+
+4. `for i in 1..n-1 do` / `for j in 0..i-1 do` : Nested ranges extend the LIS when a smaller predecessor is found.
+
+5. `dp.[i] <- Math.Max(dp.[i], dp.[j] + 1)` : Mutate the array in place through `<-`.
+
+6. `Array.max dp` : Last expression of the `else` branch, returned implicitly as the overall LIS length.

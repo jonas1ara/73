@@ -1,6 +1,6 @@
 # Meeting Rooms:
 
-This directory contains implementations of the "Meeting Rooms" problem in the C++ and C# languages. Each implementation sorts intervals by start time and checks for overlaps with temporal complexity `O(n log n)`.
+This directory contains an implementation of the "Meeting Rooms" problem in C#. The implementation sorts intervals by start time and checks for overlaps with temporal complexity `O(n log n)`.
 
 ## Problem description
 
@@ -80,42 +80,3 @@ public class Solution
 4. If any meeting starts before the previous one ends, return `false`.
 
 5. `return true;` if every consecutive pair is conflict-free.
-
-### C++ :
-
-```cpp
-// Using interval scheduling algorithm - Time: O(nlogn)
-
-class Interval {
-public:
-    int start, end;
-    Interval(int start, int end)
-    {
-        this->start = start;
-        this->end = end;
-    }
-};
-
-class Solution {
-public:
-    bool canAttendMeetings(std::vector<Interval> &intervals)
-    {
-        std::sort(intervals.begin(), intervals.end(), [&](Interval &a, Interval &b)
-                  { return a.start < b.start; });
-
-        for (int i = 1; i < intervals.size(); i++)
-        {
-            if (intervals[i].start < intervals[i - 1].end)
-                return false;
-        }
-
-        return true;
-    }
-};
-```
-
-1. Sort by start time with a lambda comparator.
-
-2. Linear scan for any start that falls inside the previous meeting.
-
-3. `return true;` when no overlaps exist.

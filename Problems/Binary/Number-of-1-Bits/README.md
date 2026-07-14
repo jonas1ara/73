@@ -1,6 +1,6 @@
 # Number of 1 Bits:
 
-This directory contains implementations of the "Number of 1 Bits" (Hamming Weight) problem in the C++ and C# languages. Each implementation uses Brian Kernighan's algorithm with temporal complexity proportional to the number of set bits (bounded by 32, treated as `O(1)` for fixed-width integers).
+This directory contains an implementation of the "Number of 1 Bits" (Hamming Weight) problem in C#. The implementation uses Brian Kernighan's algorithm with temporal complexity proportional to the number of set bits (bounded by 32, treated as `O(1)` for fixed-width integers).
 
 ## Problem description
 
@@ -75,28 +75,3 @@ public class Solution
 2. Each loop clears one set bit and increments `ans`.
 
 3. `return ans;` Hamming weight.
-
-### C++ :
-
-```cpp
-// Using Brian Kernighan's Algorithm - Time: O(1)
-
-class Solution {
-public:
-    int hammingWeight(uint32_t n)
-    {
-        int ans = 0;
-
-        for (; n; n -= (n & -n))
-            ans++;
-
-        return ans;
-    }
-};
-```
-
-1. `n & -n` isolates the lowest set bit of `n`.
-
-2. Subtract it to clear that bit; count iterations.
-
-3. `return ans;` number of 1-bits.

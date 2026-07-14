@@ -1,6 +1,6 @@
 # Search in Rotated Sorted Array:
 
-This directory contains implementations of the "Search in Rotated Sorted Array" problem in the C++ and C# languages. Each implementation uses binary search twice (find pivot, then search) and maintain a temporal complexity of `O(log n)`.
+This directory contains an implementation of the "Search in Rotated Sorted Array" problem in C#. The implementation uses binary search twice (find pivot, then search) and maintain a temporal complexity of `O(log n)`.
 
 ## Problem description
 
@@ -118,56 +118,3 @@ public class Solution
 8. Compare `nums[mm]` with `target` and shrink the virtual search range.
 
 9. `return -1;` : Target was not found.
-
-### C++ :
-
-```cpp
-// Using binary search technique - Time: O(log n)
-
-class Solution {
-public:
-    int search(std::vector<int> &nums, int target)
-    {
-        if (nums.empty())
-            return -1;
-
-        int n = nums.size(), left = 0, right = n - 1, pivot;
-        
-        while (left < right)
-        {
-            int m = left + (right - left) / 2;
-            if (nums[m] < nums[right])
-                right = m;
-            else
-                left = m + 1;
-        }
-        
-        pivot = left;
-        left = 0, right = n - 1;
-
-        while (left <= right)
-        {
-            int m = left + (right - left) / 2; 
-            int mm = (m + pivot) % n;
-            
-            if (nums[mm] == target)
-                return mm;
-
-            if (target > nums[mm])
-                left = m + 1;
-            else
-                right = m - 1;
-        }
-
-        return -1;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `int search(std::vector<int> &nums, int target)` : Define a function that returns the index of `target`, or `-1`.
-
-3. Find the pivot with binary search, then search with modular index mapping.
-
-4. `return -1;` if the target is not present.

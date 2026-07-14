@@ -1,6 +1,6 @@
 # Contains Duplicate:
 
-This directory contains implementations of the "Contains Duplicate" problem in the C++ and C# languages. Each implementation uses a hash set to check whether any value appears at least twice and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Contains Duplicate" problem in C#. The implementation uses a hash set to check whether any value appears at least twice and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -74,26 +74,3 @@ public class Solution
 3. `HashSet<int> set = new HashSet<int>(nums);` : Build a hash set from the array. **Only unique values are kept.**
 
 4. `return set.Count != nums.Length;` : If the set is smaller than the array, at least one value was discarded as a duplicate, so return `true`. Otherwise return `false`.
-
-### C++ :
-
-```cpp
-// Using hash table - Time O(n)
-
-class Solution {
-public:
-    bool containsDuplicate(std::vector<int> &nums)
-    {
-        std::unordered_set<int> s(begin(nums), end(nums));
-        return s.size() != nums.size();
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `bool containsDuplicate(std::vector<int> &nums)` : Define a function that takes a vector of integers by reference and returns whether it contains any duplicate.
-
-3. `std::unordered_set<int> s(begin(nums), end(nums));` : Build an unordered set from the vector. **Only unique values are kept.**
-
-4. `return s.size() != nums.size();` : If the set is smaller than the vector, there is at least one duplicate.

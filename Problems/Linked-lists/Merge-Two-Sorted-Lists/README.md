@@ -1,6 +1,6 @@
 # Merge Two Sorted Lists:
 
-This directory contains implementations of the "Merge Two Sorted Lists" problem in the C++ and C# languages. Each implementation merges two sorted lists in linear time `O(m + n)`.
+This directory contains an implementation of the "Merge Two Sorted Lists" problem in C#. The implementation merges two sorted lists in linear time `O(m + n)`.
 
 ## Problem description
 
@@ -91,42 +91,3 @@ public class Solution
 2. Splice `list2` nodes into the `list1` chain when smaller.
 
 3. Attach leftover `list2` and return `head.next`.
-
-### C++ :
-
-```cpp
-// Using a part of the merge sort algorithm - Time: O(m + n)
-
-class Solution {
-public:
-    ListNode *mergeTwoLists(ListNode *list1, ListNode *list2)
-    {
-        ListNode *head = new ListNode(0);
-        ListNode *p = head;
-        head->next = list1;
-
-        while (p->next != nullptr && list2 != nullptr)
-        {
-            if (p->next->val > list2->val)
-            {
-                ListNode *node = list2;
-                list2 = list2->next;
-                node->next = p->next;
-                p->next = node;
-            }
-            p = p->next;
-        }
-
-        if (list2 != nullptr)
-        {
-            p->next = list2;
-        }
-
-        return head->next;
-    }
-};
-```
-
-1. Same in-place splice merge as C#.
-
-2. Returns the merged sorted list head.

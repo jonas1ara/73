@@ -1,6 +1,6 @@
 # Valid Anagram:
 
-This directory contains implementations of the "Valid Anagram" problem in the C++ and C# languages. Each implementation uses a frequency count array to check if two strings are anagrams and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Valid Anagram" problem in C#. The implementation uses a frequency count array to check if two strings are anagrams and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -83,39 +83,3 @@ public class Solution
 6. `if (n != 0) return false;` : Any non-zero count means the frequencies do not match.
 
 7. `return true;` : All counts are zero, so the strings are anagrams.
-
-### C++ :
-
-```cpp
-// Using an array - Time: O(n)
-
-class Solution {
-public:
-    bool isAnagram(std::string s, std::string t)
-    {
-        int cnt[26] = {};
-
-        for (char c : s)
-            cnt[c - 'a']++;
-
-        for (char c : t)
-            cnt[c - 'a']--;
-
-        for (int n : cnt)
-        {
-            if (n)
-                return false;
-        }
-
-        return true;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `bool isAnagram(std::string s, std::string t)` : Define a function that returns whether the two strings are anagrams.
-
-3. Count with `cnt[26]`, increment for `s`, decrement for `t`, and reject if any count remains non-zero.
-
-4. `return true;` if every frequency matches.

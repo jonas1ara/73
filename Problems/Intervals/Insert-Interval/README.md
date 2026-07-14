@@ -1,6 +1,6 @@
 # Insert Interval:
 
-This directory contains implementations of the "Insert Interval" problem in the C++ and C# languages. Each implementation merges a new interval into a sorted non-overlapping list with temporal complexity `O(n)`.
+This directory contains an implementation of the "Insert Interval" problem in C#. The implementation merges a new interval into a sorted non-overlapping list with temporal complexity `O(n)`.
 
 ## Problem description
 
@@ -98,53 +98,3 @@ public class Solution
 4. Cases: already inserted (`start > end`), left of new, right of new, or overlapping merge.
 
 5. Append remaining merged interval if needed and return the array.
-
-### C++ :
-
-```cpp
-// Using linear search technique - Time: O(n)
-
-class Solution {
-public:
-    std::vector<std::vector<int>> insert(std::vector<std::vector<int>> &intervals, std::vector<int> &newInterval)
-    {
-        std::vector<std::vector<int>> ans;
-        int start = newInterval[0];
-        int end = newInterval[1];
-
-        for (auto &intv : intervals)
-        {
-            if (start > end)
-            {
-                ans.push_back(intv);
-            }
-            else if (intv[0] > end)
-            {
-                ans.push_back({start, end});
-                start = end + 1;
-                ans.push_back(intv);
-            }
-            else if (intv[1] < start)
-                ans.push_back(intv);
-            else
-            {
-                start = std::min(start, intv[0]);
-                end = std::max(end, intv[1]);
-            }
-        }
-
-        if (start <= end)
-        {
-            ans.push_back({start, end});
-        }
-
-        return ans;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. Same linear classification/merge of intervals as C#.
-
-3. `return ans;` with the new interval fully integrated.

@@ -1,6 +1,6 @@
 # Jump Game:
 
-This directory contains implementations of the "Jump Game" problem in the C, C++, and C# languages. The primary solution uses DP tabulation (`O(n^2)`); a commented greedy `O(n)` alternative is also included in the source files.
+This directory contains an implementation of the "Jump Game" problem in C#. The primary solution uses DP tabulation (`O(n^2)`); a commented greedy `O(n)` alternative is also included in the source files.
 
 ## Problem description
 
@@ -81,70 +81,3 @@ public class Solution
 2. Early `break` once a valid predecessor is found.
 
 3. `return dp[n - 1];`
-
-### C++ :
-
-```cpp
-// Using tabulation - Time: O(n^2)
-
-class Solution
-{
-public:
-    bool canJump(std::vector<int> &nums)
-    {
-        int n = nums.size();
-        std::vector<bool> dp(n, false);
-
-        dp[0] = true;
-
-        for (int i = 1; i < n; i++)
-        {
-            for (int j = 0; j < i; j++)
-            {
-                if (dp[j] && j + nums[j] >= i)
-                {
-                    dp[i] = true;
-                    break;
-                }
-            }
-        }
-
-        return dp[n - 1];
-    }
-};
-```
-
-1. Same DP reachability table as C#.
-
-### C:
-
-```c
-// Using tabulation - Time: O(n^2)
-
-bool canJump(int nums[], int n)
-{
-    bool dp[n];
-    for (int i = 0; i < n; i++)
-        dp[i] = false;
-
-    dp[0] = true;
-
-    for (int i = 1; i < n; i++)
-    {
-        for (int j = 0; j < i; j++)
-        {
-            if (dp[j] && j + nums[j] >= i)
-            {
-                dp[i] = true;
-                break;
-            }
-        }
-    }
-
-    return dp[n - 1];
-}
-```
-
-1. VLA `dp[n]` stores reachability flags.
-
-2. Return whether the last index is reachable.

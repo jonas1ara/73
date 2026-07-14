@@ -1,6 +1,6 @@
 # Rotate Image:
 
-This directory contains implementations of the "Rotate Image" problem in the C, C++, and C# languages. Each implementation rotates an `n x n` matrix 90 degrees clockwise in place with temporal complexity `O(n^2)`.
+This directory contains an implementation of the "Rotate Image" problem in C#. The implementation rotates an `n x n` matrix 90 degrees clockwise in place with temporal complexity `O(n^2)`.
 
 ## Problem description
 
@@ -26,14 +26,7 @@ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 
 A 90° clockwise rotation maps `(i, j)` → `(j, n - 1 - i)`.
 
-The C++/C# solutions rotate layer by layer: for each ring, cycle four cells in place with a temporary variable.
-
-The C solution does it as two steps:
-
-1. **Transpose** the matrix (`matrix[i][j] ↔ matrix[j][i]`)
-2. **Reverse each row** (swap left/right)
-
-Both approaches use constant extra space besides a few variables.
+The C# solution rotates layer by layer: for each ring, cycle four cells in place with a temporary variable, using constant extra space besides a few variables.
 
 Let's go through `[[1,2,3],[4,5,6],[7,8,9]]` with the cycle method (outer layer only):
 
@@ -79,70 +72,3 @@ public class Solution
 4. Inner loop `j` walks the top edge of the current layer (excluding the last corner).
 
 5. The four assignments cycle values: top ← left ← bottom ← right ← top (via `tmp`).
-
-### C++ :
-
-```cpp
-// Using in-place algorithm - Time: O(n^2)
-
-class Solution {
-public:
-    void rotate(std::vector<std::vector<int>> &matrix)
-    {
-        int n = matrix.size();
-
-        for (int i = 0; i < n / 2; i++)
-        {
-            for (int j = i; j < n - i - 1; j++)
-            {
-                int tmp = matrix[i][j];
-                matrix[i][j] = matrix[n - j - 1][i];
-                matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1];
-                matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1];
-                matrix[j][n - i - 1] = tmp;
-            }
-        }
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `void rotate(...)` : Same layer-by-layer 4-cycle rotation as C#.
-
-### C:
-
-```c
-// Using in-place algorithm - Time: O(n^2)
-
-void rotate(int **matrix, int matrixSize, int *matrixColSize)
-{
-    // Transpose the matrix
-    for (int i = 0; i < matrixSize; i++)
-    {
-        for (int j = i + 1; j < matrixSize; j++)
-        {
-            int temp = matrix[i][j];
-            matrix[i][j] = matrix[j][i];
-            matrix[j][i] = temp;
-        }
-    }
-
-    // Reverse each row to rotate clockwise
-    for (int i = 0; i < matrixSize; i++)
-    {
-        for (int j = 0; j < matrixSize / 2; j++)
-        {
-            int temp = matrix[i][j];
-            matrix[i][j] = matrix[i][matrixSize - 1 - j];
-            matrix[i][matrixSize - 1 - j] = temp;
-        }
-    }
-}
-```
-
-1. First nested loops transpose the matrix.
-
-2. Second nested loops reverse every row.
-
-3. Transpose + reverse row = 90° clockwise rotation.

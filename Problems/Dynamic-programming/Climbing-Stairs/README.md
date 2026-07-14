@@ -1,6 +1,6 @@
 # Climbing Stairs:
 
-This directory contains implementations of the "Climbing Stairs" problem in the C++ and C# languages. Each implementation uses bottom-up dynamic programming (Fibonacci recurrence) with temporal complexity `O(n)`.
+This directory contains an implementation of the "Climbing Stairs" problem in C#. The implementation uses bottom-up dynamic programming (Fibonacci recurrence) with temporal complexity `O(n)`.
 
 ## Problem description
 
@@ -74,28 +74,3 @@ public class Solution
 3. Loop runs `n - 1` times via `--n > 0`.
 
 4. `return ans;` number of ways.
-
-### C++ :
-
-```cpp
-// Using bottom-up approach - Time: O(n)
-
-class Solution {
-public:
-    int climbStairs(int n)
-    {
-        int ans = 1, prev = 1;
-        while (--n)
-        {
-            ans += prev;
-            prev = ans - prev;
-        }
-
-        return ans;
-    }
-};
-```
-
-1. Same Fibonacci rolling update (C++ updates `prev` via `ans - prev` after adding).
-
-2. `return ans;` number of distinct climbing sequences.

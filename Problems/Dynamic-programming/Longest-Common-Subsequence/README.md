@@ -1,6 +1,6 @@
 # Longest Common Subsequence:
 
-This directory contains implementations of the "Longest Common Subsequence" problem in the C++ and C# languages. Each implementation uses 1D rolling DP tabulation with temporal complexity `O(m·n)` and space `O(min(m,n))`.
+This directory contains an implementation of the "Longest Common Subsequence" problem in C#. The implementation uses 1D rolling DP tabulation with temporal complexity `O(m·n)` and space `O(min(m,n))`.
 
 ## Problem description
 
@@ -97,47 +97,3 @@ public class Solution
 3. `prev` is the previous diagonal; `cur` saves the old `dp[j+1]` before overwrite.
 
 4. `return dp[n];` LCS length.
-
-### C++ :
-
-```cpp
-// Using tabulation - Time: O(m*n)
-
-class Solution {
-public:
-    int longestCommonSubsequence(std::string text1, std::string text2)
-    {
-        int m = text1.size(), n = text2.size();
-
-        if (m < n)
-            std::swap(m, n), swap(text1, text2);
-
-        std::vector<int> dp(n + 1);
-
-        for (int i = 0; i < m; i++)
-        {
-            int prev = 0;
-
-            for (int j = 0; j < n; j++)
-            {
-                int cur = dp[j + 1];
-                if (text1[i] == text2[j])
-                {
-                    dp[j + 1] = prev + 1;
-                }
-                else
-                {
-                    dp[j + 1] = std::max(dp[j], dp[j + 1]);
-                }
-                prev = cur;
-            }
-        }
-
-        return dp[n];
-    }
-};
-```
-
-1. Same 1D LCS optimization as C#.
-
-2. Returns the length of the longest common subsequence.

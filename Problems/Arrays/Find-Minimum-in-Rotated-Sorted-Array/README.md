@@ -1,6 +1,6 @@
 # Find Minimum in Rotated Sorted Array:
 
-This directory contains implementations of the "Find Minimum in Rotated Sorted Array" problem in the C++ and C# languages. Each implementation uses binary search to find the minimum element and maintain a temporal complexity of `O(log n)`.
+This directory contains an implementation of the "Find Minimum in Rotated Sorted Array" problem in C#. The implementation uses binary search to find the minimum element and maintain a temporal complexity of `O(log n)`.
 
 ## Problem description
 
@@ -103,37 +103,3 @@ public class Solution
 7. `else right = m;` : The minimum is at `m` or to its left.
 
 8. `return nums[left];` : When the range collapses, return the minimum.
-
-### C++ :
-
-```cpp
-// Using binary search technique - Time O(log n)
-
-class Solution {
-public:
-    int findMin(std::vector<int> &nums)
-    {
-        int left = 0, right = nums.size() - 1;
-
-        while (left < right)
-        {
-            int m = (left + right) / 2;
-
-            if (nums[m] > nums[right])
-                left = m + 1;
-            else
-                right = m;
-        }
-
-        return nums[left];
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `int findMin(std::vector<int> &nums)` : Define a function that returns the minimum value in a rotated sorted array.
-
-3. Use binary search comparing `nums[m]` with `nums[right]` to discard half of the range each step.
-
-4. `return nums[left];` : Return the minimum when `left == right`.

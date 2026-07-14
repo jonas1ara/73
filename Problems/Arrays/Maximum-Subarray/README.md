@@ -1,6 +1,6 @@
 # Maximum Subarray:
 
-This directory contains implementations of the "Maximum Subarray" problem in the C++ and C# languages. Each implementation uses Kadane's algorithm to find the contiguous subarray with the largest sum and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Maximum Subarray" problem in C#. The implementation uses Kadane's algorithm to find the contiguous subarray with the largest sum and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -100,37 +100,3 @@ public class Solution
 6. `ans = Math.Max(ans, nums[i]);` : Keep the global maximum.
 
 7. `return ans;` : Return the largest sum found.
-
-### C++ :
-
-```cpp
-// Using Kadan's algorithm - Time: O(n)
-
-class Solution {
-public:
-    int maxSubArray(std::vector<int> &nums)
-    {
-        int ans = nums[0];
-
-        for (int i = 1; i < nums.size(); i++)
-        {
-            nums[i] += std::max(nums[i - 1], 0);
-            ans = std::max(ans, nums[i]);
-        }
-
-        return ans;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `int maxSubArray(std::vector<int> &nums)` : Define a function that returns the largest subarray sum.
-
-3. `int ans = nums[0];` : Initialize the answer with the first element.
-
-4. `nums[i] += std::max(nums[i - 1], 0);` : Apply Kadane's recurrence in place.
-
-5. `ans = std::max(ans, nums[i]);` : Track the global maximum.
-
-6. `return ans;` : Return the largest sum found.

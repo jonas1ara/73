@@ -1,6 +1,6 @@
 # Maximum Product Subarray:
 
-This directory contains implementations of the "Maximum Product Subarray" problem in the C++ and C# languages. Each implementation uses a linear scan over segments between zeros to find the contiguous subarray with the largest product and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Maximum Product Subarray" problem in C#. The implementation uses a linear scan over segments between zeros to find the contiguous subarray with the largest product and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -115,45 +115,3 @@ public class Solution
 8. Skip consecutive zeros and continue.
 
 9. `return ans;` : Return the maximum product found.
-
-### C++ :
-
-```cpp
-// Using two pointers technique - Time O(n)
-
-class Solution {
-public:
-    int maxProduct(std::vector<int> &nums)
-    {
-        int ans = nums[0], n = nums.size(), j = 0;
-        while (j < n)
-        {
-            int i = j, prod = 1;
-            while (j < n && nums[j] != 0)
-            {
-                prod *= nums[j++];
-                ans = std::max(ans, prod);
-            }
-            if (j < n)
-                ans = std::max(ans, 0);
-            while (i < n && prod < 0)
-            {
-                prod /= nums[i++];
-                if (i != j)
-                    ans = std::max(ans, prod);
-            }
-            while (j < n && nums[j] == 0)
-                j++;
-        }
-        return ans;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `int maxProduct(std::vector<int> &nums)` : Define a function that returns the maximum product of a contiguous subarray.
-
-3. Scan non-zero segments, track running products, handle zeros, and fix negative full-segment products by removing left factors.
-
-4. `return ans;` : Return the maximum product found.

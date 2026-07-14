@@ -1,6 +1,6 @@
 # House Robber II:
 
-This directory contains implementations of the "House Robber II" problem in the C++ and C# languages. Each implementation reduces the circular street to two linear House Robber subproblems with temporal complexity `O(n)`.
+This directory contains an implementation of the "House Robber II" problem in C#. The implementation reduces the circular street to two linear House Robber subproblems with temporal complexity `O(n)`.
 
 ## Problem description
 
@@ -87,39 +87,3 @@ class Solution
 1. Helper `Rob(nums, start, end)` solves linear House Robber on a half-open range.
 
 2. Public method takes max of the two circular-safe ranges.
-
-### C++ :
-
-```cpp
-// Using memoization - Time: O(n)
-
-class Solution {
-    int rob(std::vector<int>& nums, int start, int end)
-    {
-        if (start == end) return 0;
-        if (start + 1 == end) return nums[start];
-
-        int prev2 = 0, prev = 0;
-
-        for (int i = start; i < end; i++)
-        {
-            int cur = std::max(prev, nums[i] + prev2);
-            prev2 = prev;
-            prev = cur;
-        }
-
-        return prev;
-    }
-
-public:
-    int rob(std::vector<int>& nums)
-    {
-        if (nums.size() == 1) return nums[0];
-        return std::max(rob(nums, 1, nums.size()), rob(nums, 0, nums.size() - 1));
-    }
-};
-```
-
-1. Same dual linear DP as C#.
-
-2. `return max(...)` is the best circular-safe robbery plan.

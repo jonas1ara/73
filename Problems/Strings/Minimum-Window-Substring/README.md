@@ -1,6 +1,6 @@
 # Minimum Window Substring:
 
-This directory contains implementations of the "Minimum Window Substring" problem in the C++ and C# languages. Each implementation uses a sliding window with character need-counts and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Minimum Window Substring" problem in C#. The implementation uses a sliding window with character need-counts and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -116,46 +116,3 @@ public class Solution
 7. Shrink from `i`: if `cnt[s[i]]` returns to `0` after increment prep, lose one match.
 
 8. `return start == -1 ? "" : s.Substring(start, minLen);` : Empty string if no window, otherwise the best substring.
-
-### C++ :
-
-```cpp
-// Using sliding window technique - Time: O(n)
-
-class Solution {
-public:
-    std::string minWindow(std::string s, std::string t)
-    {
-        int cnt[128] = {};
-        for (char c : t)
-        {
-            cnt[c]++;
-        }
-
-        int n = s.size(); 
-        int i = 0, j = 0, start = -1, minLen = INT_MAX, matched = 0;
-        
-        while (j < n)
-        {
-            matched += --cnt[s[j++]] >= 0;
-            
-            while (matched == t.size())
-            {
-                if (j - i < minLen)
-                    minLen = j - i, start = i;
-                matched -= ++cnt[s[i++]] > 0;
-            }
-        }
-
-        return start == -1 ? "" : s.substr(start, minLen);
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `std::string minWindow(std::string s, std::string t)` : Define a function that returns the minimum covering window.
-
-3. Compact residual-count window: expand with `--cnt[s[j++]] >= 0`, shrink with `++cnt[s[i++]] > 0`.
-
-4. Return `""` or the best `substr(start, minLen)`.

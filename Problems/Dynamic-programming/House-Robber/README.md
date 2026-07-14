@@ -1,6 +1,6 @@
 # House Robber:
 
-This directory contains implementations of the "House Robber" problem in the C++ and C# languages. Each implementation uses bottom-up DP with two rolling states and temporal complexity `O(n)`.
+This directory contains an implementation of the "House Robber" problem in C#. The implementation uses bottom-up DP with two rolling states and temporal complexity `O(n)`.
 
 ## Problem description
 
@@ -77,29 +77,3 @@ class Solution
 2. Update both states each step without overwriting prematurely (use temps `r`, `s`).
 
 3. `return Math.Max(rob, skip);`
-
-### C++ :
-
-```cpp
-// Using bottom-up approach - Time: O(n)
-
-class Solution {
-public:
-    int rob(std::vector<int>& nums)
-    {
-        int rob = 0, skip = 0;
-
-        for (int n : nums)
-        {
-            int r = n + skip, s = std::max(rob, skip);
-            rob = r, skip = s;
-        }
-
-        return std::max(rob, skip);
-    }
-};
-```
-
-1. Same two-state DP as C#.
-
-2. Linear scan, constant extra space.

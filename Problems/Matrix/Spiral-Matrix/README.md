@@ -1,6 +1,6 @@
 # Spiral Matrix:
 
-This directory contains implementations of the "Spiral Matrix" problem in the C++ and C# languages. Each implementation walks the matrix layer by layer in spiral order with temporal complexity `O(m·n)`.
+This directory contains an implementation of the "Spiral Matrix" problem in C#. The implementation walks the matrix layer by layer in spiral order with temporal complexity `O(m·n)`.
 
 ## Problem description
 
@@ -99,54 +99,3 @@ public class Solution
 5. Four directional passes per layer, with guards for single-row/column layers.
 
 6. `return ans;` : Return the spiral sequence.
-
-### C++ :
-
-```cpp
-// Using spiral iterative traversals - Time: O(m⋅n)
-
-class Solution {
-public:
-    std::vector<int> spiralOrder(std::vector<std::vector<int>> &matrix)
-    {
-        std::vector<int> ans;
-
-        if (matrix.empty() || matrix[0].empty())
-        {
-            return ans;
-        }
-
-        int m = matrix.size();
-        int n = matrix[0].size();
-
-        for (int i = 0; ans.size() < m * n; i++)
-        {
-            for (int j = i; j < n - i; j++)
-                ans.push_back(matrix[i][j]);
-
-            for (int j = i + 1; j < m - i; j++)
-                ans.push_back(matrix[j][n - i - 1]);
-
-            if (m - i - 1 != i)
-            {
-                for (int j = n - i - 2; j >= i; j--)
-                    ans.push_back(matrix[m - i - 1][j]);
-            }
-
-            if (n - i - 1 != i)
-            {
-                for (int j = m - i - 2; j > i; j--)
-                    ans.push_back(matrix[j][i]);
-            }
-        }
-
-        return ans;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. Same four-direction layer traversal as C#.
-
-3. `return ans;` when all cells have been visited.

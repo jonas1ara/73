@@ -1,6 +1,6 @@
 # Merge Intervals:
 
-This directory contains implementations of the "Merge Intervals" problem in the C, C++, and C# languages. Each implementation sorts intervals and merges overlaps with temporal complexity `O(n log n)`.
+This directory contains an implementation of the "Merge Intervals" problem in C#. The implementation sorts intervals and merges overlaps with temporal complexity `O(n log n)`.
 
 ## Problem description
 
@@ -85,96 +85,3 @@ public class Solution
 3. Non-overlap → append; overlap → extend last end.
 
 4. Return the merged array.
-
-### C++ :
-
-```cpp
-// Using merge and quick sort - Time: O(nlogn)
-
-class Solution {
-public:
-    std::vector<std::vector<int>> merge(std::vector<std::vector<int>> &intervals)
-    {
-        if (intervals.empty())
-        {
-            return {};
-        }
-
-        sort(intervals.begin(), intervals.end());
-
-        std::vector<std::vector<int>> merged;
-        merged.push_back(intervals[0]);
-
-        for (int i = 1; i < intervals.size(); i++)
-        {
-            if (merged.back()[1] < intervals[i][0])
-            {
-                merged.push_back(intervals[i]);
-            }
-            else
-            {
-                merged.back()[1] = std::max(merged.back()[1], intervals[i][1]);
-            }
-        }
-
-        return merged;
-    }
-};
-```
-
-1. Empty input → empty output.
-
-2. Sort and merge consecutive overlaps as above.
-
-### C:
-
-```c
-// Using merge and quick sort - Time: O(nlogn)
-
-int compare(const void *a, const void *b)
-{
-    int *intervalA = *(int **)a;
-    int *intervalB = *(int **)b;
-    return intervalA[0] - intervalB[0];
-}
-
-int **merge(int **intervals, int intervalsSize, int *intervalsColSize, int *returnSize, int **returnColumnSizes)
-{
-    if (intervalsSize == 0)
-    {
-        *returnSize = 0;
-        return NULL;
-    }
-
-    qsort(intervals, intervalsSize, sizeof(int *), compare);
-
-    int **merged = malloc(intervalsSize * sizeof(int *));
-    *returnColumnSizes = malloc(intervalsSize * sizeof(int));
-    merged[0] = intervals[0];
-    (*returnColumnSizes)[0] = 2;
-    *returnSize = 1;
-
-    for (int i = 1; i < intervalsSize; i++)
-    {
-        if (merged[*returnSize - 1][1] < intervals[i][0])
-        {
-            merged[*returnSize] = intervals[i];
-            (*returnColumnSizes)[*returnSize] = 2;
-            ++(*returnSize);
-        }
-        else
-        {
-            if (intervals[i][1] > merged[*returnSize - 1][1])
-                merged[*returnSize - 1][1] = intervals[i][1];
-        }
-    }
-
-    return merged;
-}
-```
-
-1. `qsort` by start via `compare`.
-
-2. Grow `merged` the same way as C++/C#.
-
-3. Set `returnSize` and column sizes for the LeetCode C interface.

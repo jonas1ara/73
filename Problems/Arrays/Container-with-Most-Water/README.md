@@ -1,6 +1,6 @@
 # Container With Most Water:
 
-This directory contains implementations of the "Container With Most Water" problem in the C++ and C# languages. Each implementation uses the two-pointer technique to find the maximum area of water and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Container With Most Water" problem in C#. The implementation uses the two-pointer technique to find the maximum area of water and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -88,37 +88,3 @@ public class Solution
 6. `if (height[left] < height[right]) left++; else right--;` : Move the shorter edge inward to try a taller boundary.
 
 7. `return ans;` : Return the maximum area found.
-
-### C++ :
-
-```cpp
-// Using two pointers technique - Time: O(n)
-
-class Solution {
-public:
-    int maxArea(std::vector<int> &height)
-    {
-        int ans = 0, left = 0, right = height.size() - 1;
-
-        while (left < right)
-        {
-            ans = std::max(ans, (right - left) * std::min(height[left], height[right]));
-            
-            if (height[left] < height[right])
-                left++;
-            else
-                right--;
-        }
-
-        return ans;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `int maxArea(std::vector<int> &height)` : Define a function that returns the maximum water area.
-
-3. Use two pointers from both ends, always move the shorter line, and track the maximum area.
-
-4. `return ans;` : Return the maximum area found.

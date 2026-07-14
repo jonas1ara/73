@@ -1,6 +1,6 @@
 # Sum of Two Integers:
 
-This directory contains implementations of the "Sum of Two Integers" problem in the C++ and C# languages. Each implementation adds two integers using only bit operations (no `+` / `-`) with temporal complexity `O(1)` for fixed-width 32-bit integers.
+This directory contains an implementation of the "Sum of Two Integers" problem in C#. The implementation adds two integers using only bit operations (no `+` / `-`) with temporal complexity `O(1)` for fixed-width 32-bit integers.
 
 ## Problem description
 
@@ -83,44 +83,41 @@ public class Solution
 
 3. `return ans;` is `a + b` without using `+`.
 
-### C++ :
+### F# :
 
-```cpp
-// Using bit manipulation - Time: O(1)
+```fsharp
+open System
 
-class Solution {
-public:
-    int getSum(int a, int b)
-    {
-        int carry = 0, ans = 0;
+type Solution() =
+    member this.GetSum(a: int, b: int) =
+        let mutable carry = 0
+        let mutable ans = 0
 
-        for (int i = 0; i < 32; i++)
-        {
-            int x = (a >> i & 1), y = (b >> i & 1);
+        for i in 0..31 do
+            let x = (a >>> i) &&& 1
+            let y = (b >>> i) &&& 1
 
-            if (carry)
-            {
-                if (x == y)
-                {
-                    ans |= 1 << i;
-                    if (!x & !y)
-                        carry = 0;
-                }
-            }
+            if carry <> 0 then
+                if x = y then
+                    ans <- ans ||| (1 <<< i)
+                    if x = 0 && y = 0 then carry <- 0
             else
-            {
-                if (x != y)
-                    ans |= 1 << i;
-                if (x & y)
-                    carry = 1;
-            }
-        }
+                if x <> y then ans <- ans ||| (1 <<< i)
+                if x = 1 && y = 1 then carry <- 1
 
-        return ans;
-    }
-};
+        ans
 ```
 
-1. Same bit-wise full adder simulation as C#.
+1. `type Solution() =` : Define a class-like type called `Solution`.
 
-2. Works for negative numbers too because two's complement is bit-consistent over 32 bits.
+2. `let mutable carry = 0` / `let mutable ans = 0` : Both need `mutable` since they're updated inside the loop.
+
+3. `for i in 0..31 do` : Iterate the 32 bit positions using an inclusive range.
+
+4. `let x = (a >>> i) &&& 1` : `>>>` is the logical right shift and `&&&` is bitwise AND in F#.
+
+5. `ans <- ans ||| (1 <<< i)` : `|||` is bitwise OR and `<<<` is left shift; `<-` mutates the binding.
+
+6. The nested `if`/`else` mirrors the same carry logic as the C# version, one bit at a time.
+
+7. `ans` : Last expression of the member, returned implicitly as `a + b` without using `+`.

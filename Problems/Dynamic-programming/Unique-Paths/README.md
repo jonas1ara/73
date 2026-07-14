@@ -1,6 +1,6 @@
 # Unique Paths:
 
-This directory contains implementations of the "Unique Paths" problem in the C++ and C# languages. Each implementation uses bottom-up DP tabulation with temporal complexity `O(m·n)`. A combinatorial `O(n)` alternative is commented in the source files.
+This directory contains an implementation of the "Unique Paths" problem in C#. The implementation uses bottom-up DP tabulation with temporal complexity `O(m·n)`. A combinatorial `O(n)` alternative is commented in the source files.
 
 ## Problem description
 
@@ -74,30 +74,3 @@ public class Solution
 2. Nested reverse loops fill the grid implicitly.
 
 3. `return dp[0];` paths from top-left.
-
-### C++ :
-
-```cpp
-// Using tabulation - Time: O(m*n)
-
-class Solution {
-public:
-    int uniquePaths(int m, int n)
-    {
-        std::vector<int> dp(n + 1, 0);
-        dp[n - 1] = 1;
-
-        for (int i = m - 1; i >= 0; i--)
-        {
-            for (int j = n - 1; j >= 0; j--)
-                dp[j] += dp[j + 1];
-        }
-
-        return dp[0];
-    }
-};
-```
-
-1. Same rolling-row DP as C#.
-
-2. Space is `O(n)` instead of full `O(m·n)` table.

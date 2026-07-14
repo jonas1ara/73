@@ -1,6 +1,6 @@
 # Valid Palindrome:
 
-This directory contains implementations of the "Valid Palindrome" problem in the C++ and C# languages. Each implementation uses the two-pointer technique to verify a palindrome while ignoring non-alphanumeric characters and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Valid Palindrome" problem in C#. The implementation uses the two-pointer technique to verify a palindrome while ignoring non-alphanumeric characters and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -93,40 +93,3 @@ public class Solution
 6. Advance both pointers after a successful match.
 
 7. `return true;` : The string is a palindrome.
-
-### C++ :
-
-```cpp
-// Using two pointers technique - Time: O(n)
-
-class Solution {
-public:
-    bool isPalindrome(std::string s)
-    {
-        int i = 0, j = s.length() - 1;
-        
-        while (i < j)
-        {
-            while (i < j && !isalnum(s[i]))
-                i++;
-            while (i < j && !isalnum(s[j]))
-                j--;
-            if (i < j && tolower(s[i]) != tolower(s[j]))
-                return false;
-            
-            i++;
-            j--;
-        }
-
-        return true;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `bool isPalindrome(std::string s)` : Define a function that returns whether `s` is a valid palindrome.
-
-3. Use two pointers with `isalnum` and `tolower` to ignore noise and compare case-insensitively.
-
-4. `return true;` if every compared pair matches.

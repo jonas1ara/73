@@ -1,6 +1,6 @@
 # Coin Change:
 
-This directory contains implementations of the "Coin Change" problem in the C++ and C# languages. Each implementation uses bottom-up dynamic programming to find the fewest coins needed with temporal complexity `O(n · amount)`.
+This directory contains an implementation of the "Coin Change" problem in C#. The implementation uses bottom-up dynamic programming to find the fewest coins needed with temporal complexity `O(n · amount)`.
 
 ## Problem description
 
@@ -42,7 +42,7 @@ Transition:
 
 Base: `dp[0] = 0`. Unreachable amounts stay at a large sentinel (`inf`).
 
-C# uses a 1D DP array. C++ shows a 2D formulation (`coin index × amount`) with the same idea.
+The C# solution uses a 1D DP array over amounts.
 
 Let's go through `coins = [1,2,5]`, `amount = 11`:
 
@@ -85,39 +85,3 @@ public class Solution
 2. For each target `t`, try every coin and take the minimum.
 
 3. Return `-1` if `dp[amount]` is still `inf`.
-
-### C++ :
-
-```cpp
-// Using bottom-up approach - Time: O(n * amount)
-
-class Solution {
-public:
-    int coinChange(std::vector<int> &coins, int amount)
-    {
-        std::sort(begin(coins), end(coins), std::greater<>());
-        int n = coins.size();
-        int inf = 0x3f3f3f3f;
-        int dp[13][10001] = {};
-        std::memset(dp, 0x3f, sizeof(dp));
-
-        for (int i = 0; i <= n; i++)
-            dp[i][0] = 0;
-
-        for (int t = 1; t <= amount; t++)
-        {
-            for (int i = 0; i < n; i++)
-            {
-                dp[i + 1][t] = std::min(dp[i][t], t - coins[i] >= 0 ? 1 + dp[i + 1][t - coins[i]] : inf);
-            }
-        }
-        return dp[n][amount] == inf ? -1 : dp[n][amount];
-    }
-};
-```
-
-1. 2D DP: rows are coins considered, columns are amounts.
-
-2. `dp[i+1][t]` chooses skip coin `i` vs take another coin `i`.
-
-3. Return `-1` when impossible.

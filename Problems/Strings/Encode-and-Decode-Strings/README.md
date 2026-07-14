@@ -1,6 +1,6 @@
 # Encode and Decode Strings:
 
-This directory contains implementations of the "Encode and Decode Strings" problem in the C++ and C# languages. Each implementation serializes a list of strings into one string and deserializes it back using escaping, with temporal complexity `O(n)` over the total number of characters.
+This directory contains an implementation of the "Encode and Decode Strings" problem in C#. The implementation serializes a list of strings into one string and deserializes it back using escaping, with temporal complexity `O(n)` over the total number of characters.
 
 ## Problem description
 
@@ -129,63 +129,3 @@ public class Solution
 8. Other `$...` (the `$x` marker) ends the current string (`i += 2` skips `$x`).
 
 9. `return ans;` : Return the reconstructed list.
-
-### C++ :
-
-```cpp
-// Using string manipulation - Time: O(n)
-
-class Solution {
-public:
-    std::string encode(std::vector<std::string> &strs)
-    {
-        std::string ans;
-        for (std::string &str : strs)
-        {
-            for (char c : str)
-            {
-                if (c == '$')
-                    ans.push_back(c);
-                ans.push_back(c);
-            }
-            ans.push_back('$');
-            ans.push_back('x');
-        }
-        return ans;
-    }
-    std::vector<std::string> decode(std::string str)
-    {
-        std::vector<std::string> ans;
-        int i = 0, n = str.size();
-
-        while (i < n)
-        {
-            std::string s;
-
-            for (; i < n; i++)
-            {
-                if (str[i] != '$')
-                    s.push_back(str[i]);
-                else if (i + 1 < n && str[i + 1] == '$')
-                    s.push_back(str[i++]);
-                else
-                {
-                    i += 2;
-                    break;
-                }
-            }
-            ans.push_back(s);
-        }
-
-        return ans;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `encode` writes escaped strings ending with `$x`.
-
-3. `decode` reconstructs each original string by undoing escaping and splitting on `$x`.
-
-4. Return the decoded vector of strings.

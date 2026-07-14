@@ -1,6 +1,6 @@
 # Non-overlapping Intervals:
 
-This directory contains implementations of the "Non-overlapping Intervals" problem in the C++ and C# languages. Each implementation uses a greedy sort-by-end strategy with temporal complexity `O(n log n)`.
+This directory contains an implementation of the "Non-overlapping Intervals" problem in C#. The implementation uses a greedy sort-by-end strategy with temporal complexity `O(n log n)`.
 
 ## Problem description
 
@@ -85,35 +85,35 @@ public class Solution
 
 4. `return ans;` minimum removals.
 
-### C++ :
+### F# :
 
-```cpp
-// Using a greedy algorithm - Time: O(nlogn)
+```fsharp
+open System
 
-class Solution {
-public:
-    int eraseOverlapIntervals(std::vector<std::vector<int>> &intervals)
-    {
-        sort(begin(intervals), end(intervals), [](auto &a, auto &b) { return a[1] < b[1]; });
+type Solution() =
+    member this.EraseOverlapIntervals(intervals: int[][]) =
+        Array.Sort(intervals, fun a b -> compare a.[1] b.[1])
 
-        int ans = 0;
-        int end = INT_MIN;
+        let mutable ans = 0
+        let mutable endVar = Int32.MinValue
 
-        for (auto &i : intervals)
-        {
-            if (i[0] >= end)
-                end = i[1];
+        for i in intervals do
+            if i.[0] >= endVar then
+                endVar <- i.[1]
             else
-                ans++;
-        }
+                ans <- ans + 1
 
-        return ans;
-    }
-};
+        ans
 ```
 
-1. Lambda sorts by second endpoint.
+1. `type Solution() =` : Define a class-like type called `Solution`.
 
-2. Greedy keep/remove scan as above.
+2. `Array.Sort(intervals, fun a b -> compare a.[1] b.[1])` : Sort in place with an inline comparator lambda instead of a `Comparison<T>` delegate.
 
-3. `return ans;` minimum number of intervals to erase.
+3. `endVar` is named to avoid shadowing the `end` keyword reserved by F#'s offside/verbose syntax.
+
+4. `for i in intervals do` : Iterate the sorted intervals directly (no index needed).
+
+5. `endVar <- i.[1]` / `ans <- ans + 1` : Both bindings are `mutable`, updated with `<-` as the greedy scan keeps or drops each interval.
+
+6. `ans` : Last expression of the member, returned implicitly as the minimum number of removals.

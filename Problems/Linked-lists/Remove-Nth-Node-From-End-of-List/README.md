@@ -1,6 +1,6 @@
 # Remove Nth Node From End of List:
 
-This directory contains implementations of the "Remove Nth Node From End of List" problem in the C, C++, and C# languages. Each implementation uses two pointers with a gap of `n` and temporal complexity `O(n)`.
+This directory contains an implementation of the "Remove Nth Node From End of List" problem in C#. The implementation uses two pointers with a gap of `n` and temporal complexity `O(n)`.
 
 ## Problem description
 
@@ -87,83 +87,3 @@ public class Solution
 3. Align `p` before the target and unlink it.
 
 4. Return original `head` (or new head if first node removed).
-
-### C++ :
-
-```cpp
-// Using two pointers - Time: O(n)
-
-class Solution {
-public:
-    ListNode *removeNthFromEnd(ListNode *head, int n)
-    {
-        ListNode *p = head;
-        ListNode *q = head;
-
-        while (n > 0)
-        {
-            q = q->next;
-            n--;
-        }
-
-        if (q == nullptr)
-        {
-            return head->next;
-        }
-
-        while (q->next != nullptr)
-        {
-            p = p->next;
-            q = q->next;
-        }
-
-        p->next = p->next->next;
-
-        return head;
-    }
-};
-```
-
-1. Same two-pointer unlink as C#.
-
-### C:
-
-```c
-// Using two pointers - Time: O(n)
-
-struct ListNode *removeNthFromEnd(struct ListNode *head, int n)
-{
-    struct ListNode *p = head;
-    struct ListNode *q = head;
-    struct ListNode *prev = NULL;
-
-    while (n > 0)
-    {
-        q = q->next;
-        n--;
-    }
-
-    if (q == NULL)
-    {
-        struct ListNode *newHead = head->next;
-        free(head);
-        return newHead;
-    }
-
-    while (q != NULL)
-    {
-        prev = p;
-        p = p->next;
-        q = q->next;
-    }
-
-    prev->next = p->next;
-    free(p);
-
-    return head;
-}
-```
-
-1. C version also frees the removed node.
-
-2. Uses `prev` because the C loop advances until `q` is null (slightly different stopping condition, same effect).

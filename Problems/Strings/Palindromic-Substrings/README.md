@@ -1,6 +1,6 @@
 # Palindromic Substrings:
 
-This directory contains implementations of the "Palindromic Substrings" problem in the C++ and C# languages. Each implementation uses Manacher's algorithm to count every palindromic substring in linear time `O(n)`.
+This directory contains an implementation of the "Palindromic Substrings" problem in C#. The implementation uses Manacher's algorithm to count every palindromic substring in linear time `O(n)`.
 
 ## Problem description
 
@@ -104,53 +104,57 @@ public class Solution
 
 8. `return ans;` : Return the total number of palindromic substrings.
 
-### C++ :
+### F# :
 
-```cpp
-// Using Manacher's algorithm - Time: O(n)
+```fsharp
+open System
 
-class Solution {
-public:
-    int countSubstrings(std::string s)
-    {
-        std::string t = "^*";
-        for (char c : s)
-        {
-            t += c;
-            t += '*';
-        }
-        t += '$';
+type Solution() =
+    member this.CountSubstrings(s: string) =
+        let mutable t = "^*"
+        for c in s do
+            t <- t + string c + "*"
+        t <- t + "$"
 
-        int n = s.size(); 
-        int m = t.size();
-        std::vector<int> r(m);
-        r[1] = 1;
-        int j = 1; 
-        int ans = 0;
+        let n = s.Length
+        let m = t.Length
+        let r = Array.zeroCreate<int> m
+        r.[1] <- 1
+        let mutable j = 1
+        let mutable ans = 0
 
-        for (int i = 2; i <= 2 * n; i++)
-        {
-            int cur = j + r[j] > i ? std::min(r[2 * j - i], j + r[j] - i) : 1;
+        for i in 2..2 * n do
+            let cur = 
+                if j + r.[j] > i then
+                    Math.Min(r.[2 * j - i], j + r.[j] - i)
+                else
+                    1
 
-            while (t[i - cur] == t[i + cur])
-                cur++;
+            let mutable curVar = cur
+            while t.[i - curVar] = t.[i + curVar] do
+                curVar <- curVar + 1
 
-            if (i + cur > j + r[j])
-                j = i;
+            if i + curVar > j + r.[j] then
+                j <- i
 
-            r[i] = cur;
-            ans += r[i] / 2;
-        }
+            r.[i] <- curVar
+            ans <- ans + r.[i] / 2
 
-        return ans;
-    }
-};
+        ans
 ```
 
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
+1. `type Solution() =` : Define a class-like type called `Solution`.
 
-2. `int countSubstrings(std::string s)` : Define a function that returns the number of palindromic substrings.
+2. `let mutable t = "^*"` : Build the transformed string with sentinels `^`, `$` and separators `*`, using `<-` to append inside the loop.
 
-3. Run Manacher on the transformed string and accumulate `r[i] / 2` for every center.
+3. `let r = Array.zeroCreate<int> m` : `r.[i]` stores the radius around center `i`, same role as the C# `List<int>`.
 
-4. `return ans;` : Return the total count.
+4. `for i in 2..2 * n do` : Inclusive range walks every transformed center.
+
+5. `let cur = if ... then ... else 1` : Initialize from the mirror when inside the current right boundary, then expand from there.
+
+6. `let mutable curVar = cur` : Named `curVar` to avoid clashing with the `cur` binding; expanded with a `while` loop instead of a C-style `for`.
+
+7. `if i + curVar > j + r.[j] then j <- i` : Update the active center `j` when a farther boundary is found.
+
+8. `ans` : Last expression of the member, returned implicitly as the total number of palindromic substrings.

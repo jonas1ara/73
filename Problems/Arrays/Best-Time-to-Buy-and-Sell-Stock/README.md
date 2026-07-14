@@ -1,6 +1,6 @@
 # Best Time to Buy and Sell Stock:
 
-This directory contains implementations of the "Best Time to Buy and Sell Stock" problem in the C++ and C# languages. Each implementation uses a one-pass dynamic programming idea to find the maximum profit and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Best Time to Buy and Sell Stock" problem in C#. The implementation uses a one-pass dynamic programming idea to find the maximum profit and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -97,41 +97,5 @@ public class Solution
 5. `buy = Math.Max(buy, -price);` : Keep the cheapest buy seen so far (stored as a negative price).
 
 6. `sell = Math.Max(sell, buy + price);` : Update the best profit if selling at the current price with the best buy.
-
-7. `return sell;` : Return the maximum profit found.
-
-### C++ :
-
-```cpp
-// Using dynamic programming technique - Time: O(n)
-
-class Solution {
-public:
-    int maxProfit(std::vector<int> &prices)
-    {
-        int buy = INT_MIN, sell = 0;
-        
-        for (int price : prices)
-        {
-            buy = std::max(buy, -price);
-            sell = std::max(sell, buy + price);
-        }
-
-        return sell;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `int maxProfit(std::vector<int> &prices)` : Define a function that returns the maximum profit for one buy and one sell.
-
-3. `int buy = INT_MIN, sell = 0;` : Initialize the best buy and the best profit.
-
-4. `for (int price : prices)` : Iterate through every daily price once.
-
-5. `buy = std::max(buy, -price);` : Keep the cheapest buy seen so far.
-
-6. `sell = std::max(sell, buy + price);` : Update the best profit if selling today.
 
 7. `return sell;` : Return the maximum profit found.

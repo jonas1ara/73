@@ -1,6 +1,6 @@
 # Decode Ways:
 
-This directory contains implementations of the "Decode Ways" problem in the C++ and C# languages. Each implementation uses bottom-up DP with two rolling variables and temporal complexity `O(n)`.
+This directory contains an implementation of the "Decode Ways" problem in C#. The implementation uses bottom-up DP with two rolling variables and temporal complexity `O(n)`.
 
 ## Problem description
 
@@ -94,36 +94,3 @@ public class Solution
 3. Early stop if `pre1` hits 0 (dead encoding).
 
 4. `return pre1;` number of decodings.
-
-### C++ :
-
-```cpp
-// Using bottom-up approach - Time: O(n)
-
-class Solution {
-public:
-    int numDecodings(std::string s)
-    {
-        int pre2 = 0, pre1 = 1;
-
-        for (int i = 0; i < s.size() && pre1; i++)
-        {
-            int cur = 0;
-            if (s[i] != '0')
-                cur += pre1;
-
-            if (i != 0 && s[i - 1] != '0' && (s[i - 1] - '0') * 10 + s[i] - '0' <= 26)
-                cur += pre2;
-
-            pre2 = pre1;
-            pre1 = cur;
-        }
-
-        return pre1;
-    }
-};
-```
-
-1. Same two-state DP as C#.
-
-2. Handles leading zeros by forbidding single-digit `'0'` and invalid two-digit pairs.

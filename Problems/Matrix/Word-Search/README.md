@@ -1,6 +1,6 @@
 # Word Search:
 
-This directory contains implementations of the "Word Search" problem in the C++ and C# languages. Each implementation uses DFS backtracking on the board with temporal complexity `O(m·n·4^k)` where `k` is the word length.
+This directory contains an implementation of the "Word Search" problem in C#. The implementation uses DFS backtracking on the board with temporal complexity `O(m·n·4^k)` where `k` is the word length.
 
 ## Problem description
 
@@ -104,56 +104,52 @@ public class Solution
 
 6. Try every start cell; return `true` on the first successful path.
 
-### C++ :
+### F# :
 
-```cpp
-// Using Depth-First Search - Time: O(m⋅n⋅4^k)
+```fsharp
+open System
 
-class Solution {
-public:
-    bool exist(std::vector<std::vector<char>> &board, std::string word)
-    {
-        int m = board.size();
-        int n = board[0].size();
-        int dirs[4][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+type Solution() =
+    member this.Exist(board: char[][], word: string) =
+        let m = Array.length board
+        let n = Array.length board.[0]
+        let dirs = [| [| 0; 1 |]; [| 0; -1 |]; [| 1; 0 |]; [| -1; 0 |] |]
 
-        std::function<bool(int, int, int)> dfs = [&](int x, int y, int i)
-        {
-            if (x < 0 || x >= m || y < 0 || y >= n || board[x][y] != word[i])
-                return false;
-            if (i + 1 == static_cast<int>(word.size()))
-                return true;
+        let found = ref false // Mutable flag indicating whether the word was found
 
-            char c = board[x][y];
-            board[x][y] = 0;
+        let rec dfs x y i =
+            if x < 0 || x >= m || y < 0 || y >= n || board.[x].[y] <> word.[i] then false
+            else if i + 1 = word.Length then
+                found := true
+                true
+            else
+                let c = board.[x].[y]
+                board.[x].[y] <- '0' // Mark as visited
 
-            for (auto &[dx, dy] : dirs)
-            {
-                if (dfs(x + dx, y + dy, i + 1))
-                    return true;
-            }
+                for dir in dirs do
+                    let dx, dy = dir.[0], dir.[1]
+                    if not !found && dfs (x + dx) (y + dy) (i + 1) then ()
 
-            board[x][y] = c;
-            return false;
-        };
+                board.[x].[y] <- c // Restore original value
+                false
 
-        for (int i = 0; i < m; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                if (dfs(i, j, 0))
-                    return true;
-            }
-        }
-        return false;
-    }
-};
+        for i = 0 to m - 1 do
+            for j = 0 to n - 1 do
+                if not !found && dfs i j 0 then ()
+
+        !found
 ```
 
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
+1. `type Solution() =` : Define a class-like type called `Solution`.
 
-2. Lambda `dfs` performs the same backtracking search as C#.
+2. `let dirs = [| [| 0; 1 |]; ... |]` : Four adjacency directions stored as an array of arrays.
 
-3. Mark with `0`, explore neighbors, restore original char.
+3. `let found = ref false` : A `ref` cell gives a mutable box that can be shared and updated from the recursive `dfs` closure.
 
-4. `return false;` if no starting cell leads to a full match.
+4. `let rec dfs x y i =` : `rec` is required for a function to call itself; matches the C# local `DFS`.
+
+5. `board.[x].[y] <- '0'` : Mark the cell visited by mutating the board array, then restore it with `<-` after backtracking.
+
+6. `if not !found && dfs (x + dx) (y + dy) (i + 1) then ()` : `!found` dereferences the ref cell; short-circuits remaining directions once the word is found.
+
+7. `!found` : Last expression of the member, returned implicitly as whether `word` exists on the board.

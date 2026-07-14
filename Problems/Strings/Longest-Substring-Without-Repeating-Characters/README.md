@@ -1,6 +1,6 @@
 # Longest Substring Without Repeating Characters:
 
-This directory contains implementations of the "Longest Substring Without Repeating Characters" problem in the C, C++, and C# languages. Each implementation uses a hash map of last-seen indices to track a sliding window and maintain a temporal complexity of `O(n)`.
+This directory contains an implementation of the "Longest Substring Without Repeating Characters" problem in C#. The implementation uses a hash map of last-seen indices to track a sliding window and maintain a temporal complexity of `O(n)`.
 
 ## Problem description
 
@@ -99,77 +99,3 @@ public class Solution
 8. Store the current index for `s[i]` and continue.
 
 9. `return maxLen;` : Return the best length found.
-
-### C++ :
-
-```cpp
-// Using hash map - Time: O(n)
-
-class Solution {
-public:
-    int lengthOfLongestSubstring(std::string s)
-    {
-        if (s.empty())
-            return 0;
-
-        std::unordered_map<char, int> map;
-        int maxLen = 0;
-        int lastRepeatPos = -1;
-
-        for (int i = 0; i < s.length(); i++)
-        {
-            if (map.find(s[i]) != map.end() && lastRepeatPos < map[s[i]])
-                lastRepeatPos = map[s[i]];
-            if (maxLen < i - lastRepeatPos)
-                maxLen = i - lastRepeatPos;
-            map[s[i]] = i;
-        }
-
-        return maxLen;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `int lengthOfLongestSubstring(std::string s)` : Define a function that returns the longest substring length without repeats.
-
-3. Track last-seen indices in an unordered map and maintain `lastRepeatPos` / `maxLen` as above.
-
-4. `return maxLen;` : Return the best length found.
-
-### C:
-
-```c
-// Using hash map - Time: O(n)
-
-int lengthOfLongestSubstring(char *s)
-{
-    if (s == NULL || *s == '\0')
-        return 0;
-
-    int map[256];
-    memset(map, -1, sizeof(map));
-    int maxLen = 0;
-    int lastRepeatPos = -1;
-
-    for (int i = 0; i < strlen(s); i++)
-    {
-        if (map[s[i]] != -1 && lastRepeatPos < map[s[i]])
-            lastRepeatPos = map[s[i]];
-        if (maxLen < i - lastRepeatPos)
-            maxLen = i - lastRepeatPos;
-        map[s[i]] = i;
-    }
-
-    return maxLen;
-}
-```
-
-1. Use a fixed array `map[256]` as a last-seen index table for all character codes.
-
-2. Initialize every entry to `-1` with `memset`.
-
-3. Apply the same window logic as in C# / C++.
-
-4. `return maxLen;` : Return the best length found.

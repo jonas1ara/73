@@ -1,6 +1,6 @@
 # Group Anagrams:
 
-This directory contains implementations of the "Group Anagrams" problem in the C++ and C# languages. Each implementation sorts each word to build a canonical key and groups words with the same key using a hash map, with overall complexity `O(N K log K)` where `N` is the number of strings and `K` is the maximum string length.
+This directory contains an implementation of the "Group Anagrams" problem in C#. The implementation sorts each word to build a canonical key and groups words with the same key using a hash map, with overall complexity `O(N K log K)` where `N` is the number of strings and `K` is the maximum string length.
 
 ## Problem description
 
@@ -100,41 +100,3 @@ public class Solution
 6. `ans[m[key]].Add(s);` : Append the original string to its group.
 
 7. `ans.Reverse(); return ans;` : Reverse groups (order does not matter for correctness) and return.
-
-### C++ :
-
-```cpp
-// Using hash map - Time complexity: O(NKlogK)
-
-class Solution {
-public:
-    std::vector<std::vector<std::string>> groupAnagrams(std::vector<std::string> &strs)
-    {
-        std::unordered_map<std::string, int> m;
-        std::vector<std::vector<std::string>> ans;
-
-        for (auto &s : strs)
-        {
-            auto key = s;
-            sort(begin(key), end(key));
-            if (!m.count(key))
-            {
-                m[key] = ans.size();
-                ans.emplace_back();
-            }
-            ans[m[key]].push_back(s);
-        }
-
-        std::reverse(ans.begin(), ans.end());
-        return ans;
-    }
-};
-```
-
-1. `class Solution {public: ...};` : Define a public class called `Solution`.
-
-2. `groupAnagrams(...)` : Group strings that share the same sorted key.
-
-3. Sort each string into `key`, map key to a group index, and append originals into groups.
-
-4. `return ans;` after optionally reversing the group order.

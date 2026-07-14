@@ -1,6 +1,6 @@
 # Reverse Linked List:
 
-This directory contains implementations of the "Reverse Linked List" problem in the C++ and C# languages. The main solution uses recursion; an iterative version is commented in the source files. Temporal complexity is `O(n)`.
+This directory contains an implementation of the "Reverse Linked List" problem in C#. The main solution uses recursion; an iterative version is commented in the source files. Temporal complexity is `O(n)`.
 
 ## Problem description
 
@@ -82,34 +82,35 @@ public class Solution
 
 3. Public API returns only the new head; empty list stays null.
 
-### C++ :
+### F# :
 
-```cpp
-// Using recursion - Time: O(n)
+```fsharp
+open System
 
-class Solution {
-    std::array<ListNode*, 2> reverse(ListNode *head)
-    {
-        if (!head->next) return {head, head};
+type ListNode(v: int) =
+    member val Val = v with get, set
+    member val Next : ListNode option = None with get, set
 
-        auto [h, t] = reverse(head->next);
-        t->next = head;
-        head->next = NULL;
+type Solution() =
+    member this.ReverseList(head: ListNode option) =
+        let rec reverse (node: ListNode) =
+            match node.Next with
+            | None -> (node, node)
+            | Some next ->
+                let (h, t) = reverse next
+                t.Next <- Some node
+                node.Next <- None
+                (h, node)
 
-        return {h, head};
-    }
-
-public:
-    ListNode* reverseList(ListNode* head)
-    {
-        if (!head) return NULL;
-        return reverse(head)[0];
-    }
-};
+        match head with
+        | None -> None
+        | Some h -> reverse h |> fst |> Some
 ```
 
-1. Uses `std::array` / structured bindings for the `(head, tail)` pair.
+1. `Next : ListNode option` : Instead of a nullable reference like C#'s `head == null`, the list end is modeled with `None` / `Some`, so a missing node can never be dereferenced by accident.
 
-2. Same recursive reverse as C#.
+2. `reverse` mirrors the C# helper: it returns `(newHead, newTail)` of the reversed sublist, using `<-` to mutate `Next` in place (`ListNode` fields are declared `with get, set`).
 
-3. Iterative alternative is available as comments in the source files.
+3. `match head with | None -> None | Some h -> ...` : Pattern matching replaces the C# `if (head == null) return null;` null check.
+
+4. `reverse h |> fst |> Some` : Take the new head out of the tuple and re-wrap it in `Some` for the caller.
