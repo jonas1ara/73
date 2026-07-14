@@ -198,12 +198,10 @@ If you are on Windows and use this repository with Visual Studio, you just have 
 
 ## Build with 🛠️
 
-- [C#](https://dotnet.microsoft.com/es-es/languages/csharp)
-- [F#](https://dotnet.microsoft.com/es-es/languages/fsharp)
+- [C#](https://dotnet.microsoft.com/es-es/languages/csharp) and [F#](https://dotnet.microsoft.com/es-es/languages/fsharp)
 - [Windows](https://www.microsoft.com/en-us/windows)
 - [Ubuntu](https://ubuntu.com/) on [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-- [VS Code](https://code.visualstudio.com/) 
-- [Visual Studio](https://visualstudio.microsoft.com/es/)
+- [VS Code](https://code.visualstudio.com/) and [Visual Studio](https://visualstudio.microsoft.com/es/)
 
 ## C# Conferences 📊
 
