@@ -42,7 +42,7 @@ The repository is divided into 4 folders:
         |- Sheldon.gif
 ```
 
-- **Problems:** Contains the folders for each topic, inside it has a folder per problem and inside each folder is the source code and the README that explains the problem, for example the `Two-Sum` folder contains the C# source code in `Two-Sum.cs` and the .NET project settings in `Two-Sum.csproj` **(only the last problem of each topic also includes an F# solution, e.g. `Word-Search.fsx`)** and finally the `README.md` file
+- **Problems:** Contains the folders for each topic, inside it has a folder per problem and inside each folder is the source code and the README that explains the problem, for example the `Two-Sum` folder contains the C# source code in `Two-Sum.cs` and the .NET project settings in `Two-Sum.csproj` **(only the last problem of each topic also includes an F# solution, e.g. `Word-Search.fsx`)** and finally the `README.md` file. Every problem's `README.md` also ends with a **Suggested practice 🎯** section linking 3 related LeetCode problems, so you can practice the same pattern instead of just memorizing the solution
 
 - **Sources:** Contains the images and gifs used in the repository, such as Sheldon Cooper's 😁 gif
 
