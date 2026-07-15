@@ -1,12 +1,17 @@
 # 73 - The best number 🤓
 
+<p align="center">
+  <a href="https://github.com/jonas1ara/73/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/jonas1ara/73/actions/workflows/tests.yml/badge.svg"></a>
+  <a href="https://dotnet.microsoft.com/en-us/languages/csharp"><img alt="C#" src="https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white"></a>
+  <a href="https://dotnet.microsoft.com/en-us/languages/fsharp"><img alt="F#" src="https://img.shields.io/badge/F%23-378BBA?style=flat&logo=fsharp&logoColor=white"></a>
+  <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0"><img alt=".NET 10" src="https://img.shields.io/badge/.NET-10.0-512BD4?style=flat&logo=dotnet&logoColor=white"></a>
+</p>
+
 According to Sheldon Cooper **the best number is 73**, because 73 is the 21st prime number. Its mirror, 37, is the 12th prime number. 21 is the product of multiplying 7 by 3 and in binary, 73 is a palindrome: 1001001
 
 ![73](/Sources/Sheldon.gif)
 
 _Sheldon Cooper (character in the famous series "The Big-Bang Theory")_
-
-[![Tests](https://github.com/jonas1ara/73/actions/workflows/tests.yml/badge.svg)](https://github.com/jonas1ara/73/actions/workflows/tests.yml)
 
 ## What is this? 🚀
 
@@ -46,49 +51,6 @@ The repository is divided into 4 folders:
 - **Problems:** Contains the folders for each topic, inside it has a folder per problem and inside each folder is the source code and the README that explains the problem, for example the `Two-Sum` folder contains the C# source code in `Two-Sum.cs` and the .NET project settings in `Two-Sum.csproj` **(only the last problem of each topic also includes an F# solution, e.g. `Word-Search.fsx`)** and finally the `README.md` file. Every problem's `README.md` also ends with a **Suggested practice** section linking 3 related LeetCode problems, so you can practice the same pattern
 
 - **Sources:** Contains the images and gifs used in the repository, such as Sheldon Cooper's 😁 gif
-
-## Configuration🔧
-
-The focus of this repository is towards C#, so you can use it from Windows, Linux, Mac, Docker or even GitHub Codespaces, but it is intended to be used on Linux, **specifically an Ubuntu based distribution or Red Hat based distribution**, no matter if it is a complete distro or a WSL distro. All solutions are written in C#, and only the last problem of each topic also includes a solution in F#, so to use this repository you must have installed:
-
-To compile C# and F# you need to install `dotnet-sdk` 
-
-- dotnet-sdk-10.0
-
-At this time the dotnet sdk is available from the Ubuntu 22.04 and Fedora 39 source, so, to install you can copy and paste the following commands:
-
-**Ubuntu 22.04 or later:**
-```bash
-sudo apt update && \
-    sudo apt install -y dotnet-sdk-10.0
-```
-
-**Note: To install on other linux versions or linux distributions, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/linux).**
-
-If you are on Windows and use this repository with Visual Studio, you just have to change the solution to compile: open `73.sln`, pick the desired project in the Solution Explorer and set it as the startup project (or select it from the run configuration dropdown) to build and run it.
-
-## Running the tests 🧪
-
-Every problem has a matching `<Problem>.Tests` xUnit project, all registered in `73.sln`, and they also run automatically on every push/PR to `main` via the [`Tests` GitHub Actions workflow](.github/workflows/tests.yml/).
-
-**Run the full suite (all problems):**
-```bash
-dotnet test 73.sln
-```
-
-**Run only one problem's tests:**
-```bash
-dotnet test Problems/<Topic>/<Problem>.Tests/<Problem>.Tests.csproj
-```
-For example:
-```bash
-dotnet test Problems/Graphs/Course-Schedule.Tests/Course-Schedule.Tests.csproj
-```
-
-**Run from Visual Studio:**
-1. Open `73.sln`.
-2. Go to `Test` → `Test Explorer` (or press `Ctrl+E, T`).
-3. Click **Run All Tests** to run the whole solution, or right-click a specific test/project in Test Explorer and choose **Run** to run just that one.
 
 ## Index 📖
 
@@ -219,6 +181,92 @@ dotnet test Problems/Graphs/Course-Schedule.Tests/Course-Schedule.Tests.csproj
 |0269|[Alien Dictionary](https://github.com/jonas1ara/73/blob/main/Problems/Graphs/Alien-Dictionary/Problem.md) | [C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Alien-Dictionary)|Hard|
 |0323|[Number of Connected Components in an Undirected Graph](https://github.com/jonas1ara/73/blob/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph/Problem.md) | [C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph)|Medium|
 |0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Pacific-Atlantic-Water-Flow)|Medium|
+
+## Configuration 🔧
+
+The focus of this repository is towards C#, so you can use it from Windows, Linux, Mac, Docker or even GitHub Codespaces, but it is intended to be used on Linux, **specifically an Ubuntu based distribution or Red Hat based distribution**, no matter if it is a complete distro or a WSL distro. All solutions are written in C#, and only the last problem of each topic also includes a solution in F#.
+
+### Prerequisites
+
+- **dotnet-sdk-10.0** — required to build and run both the C# and F# solutions.
+
+**Ubuntu 22.04 or later:**
+```bash
+sudo apt update && \
+    sudo apt install -y dotnet-sdk-10.0
+```
+
+**Fedora 39 or later:**
+```bash
+sudo dnf install -y dotnet-sdk-10.0
+```
+
+**Note: To install on other Linux versions or distributions, Windows or macOS, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/).**
+
+**Docker:** run everything inside the official SDK image, mounting the repository as a volume:
+```bash
+docker run --rm -it -v "${PWD}:/repo" -w /repo mcr.microsoft.com/dotnet/sdk:10.0 bash
+```
+
+**GitHub Codespaces:** open the repository in a Codespace, the container image ships with `dotnet-sdk-10.0` already installed, so you can build and test right away with no extra setup.
+
+### Getting started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jonas1ara/73.git
+   cd 73
+   ```
+2. Restore dependencies:
+   ```bash
+   dotnet restore 73.sln
+   ```
+3. Verify your SDK version:
+   ```bash
+   dotnet --version
+   ```
+
+### Visual Studio
+
+If you are on Windows and use this repository with Visual Studio, you just have to change the solution to compile: open `73.sln`, pick the desired project in the Solution Explorer and set it as the startup project (or select it from the run configuration dropdown) to build and run it.
+
+## Running the tests 🧪
+
+Every problem has a matching `<Problem>.Tests` xUnit project, all registered in `73.sln`, and they also run automatically on every push/PR to `main` via the [`Tests` GitHub Actions workflow](.github/workflows/tests.yml/).
+
+### Run the full suite (all problems)
+
+```bash
+dotnet test 73.sln
+```
+
+### Run only one problem's tests
+
+```bash
+dotnet test Problems/<Topic>/<Problem>.Tests/<Problem>.Tests.csproj
+```
+For example:
+```bash
+dotnet test Problems/Graphs/Course-Schedule.Tests/Course-Schedule.Tests.csproj
+```
+
+### Run a single test by name
+
+```bash
+dotnet test 73.sln --filter "FullyQualifiedName~CanFinish_DetectsWhetherAllCoursesCanBeCompleted"
+```
+
+### Run with code coverage
+
+```bash
+dotnet test 73.sln --collect:"XPlat Code Coverage"
+```
+
+### Run from Visual Studio
+
+1. Open `73.sln`.
+2. Go to `Test` → `Test Explorer` (or press `Ctrl+E, T`).
+3. Click **Run All Tests** to run the whole solution, or right-click a specific test/project in Test Explorer and choose **Run** to run just that one.
 
 ## Build with 🛠️
 
