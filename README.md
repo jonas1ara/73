@@ -306,9 +306,9 @@ dotnet test 73.sln --collect:"XPlat Code Coverage"
 
 ## References 📚
 
-_C# Docs - Get started, Tutorials, reference. https://learn.microsoft.com/en-us/dotnet/csharp/_
-
 _F# Docs - Get started, Tutorials, reference. https://fsharp.org/docs/_
+
+_C# Docs - Get started, Tutorials, reference. https://learn.microsoft.com/en-us/dotnet/csharp/_
 
 _Cormen, T. H., Leiserson, C. E., Rivest, R. L. & Stein, C. (2009). [Introduction to Algorithms](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844) (3rd ed.). MIT Press._
 
