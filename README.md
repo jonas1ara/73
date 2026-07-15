@@ -1,17 +1,18 @@
 # 73 - The best number 🤓
 
-<p align="center">
-  <a href="https://github.com/jonas1ara/73/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/jonas1ara/73/actions/workflows/tests.yml/badge.svg"></a>
-  <a href="https://dotnet.microsoft.com/en-us/languages/csharp"><img alt="C#" src="https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white"></a>
-  <a href="https://dotnet.microsoft.com/en-us/languages/fsharp"><img alt="F#" src="https://img.shields.io/badge/F%23-378BBA?style=flat&logo=fsharp&logoColor=white"></a>
-  <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0"><img alt=".NET 10" src="https://img.shields.io/badge/.NET-10.0-512BD4?style=flat&logo=dotnet&logoColor=white"></a>
-</p>
-
 According to Sheldon Cooper **the best number is 73**, because 73 is the 21st prime number. Its mirror, 37, is the 12th prime number. 21 is the product of multiplying 7 by 3 and in binary, 73 is a palindrome: 1001001
 
 ![73](/Sources/Sheldon.gif)
 
 _Sheldon Cooper (character in the famous series "The Big-Bang Theory")_
+
+<p align="center">
+  <a href="https://github.com/jonas1ara/73/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/jonas1ara/73/actions/workflows/tests.yml/badge.svg"></a>
+  <a href="https://dotnet.microsoft.com/en-us/languages/csharp"><img alt="C#" src="https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white"></a>
+  <a href="https://dotnet.microsoft.com/en-us/languages/fsharp"><img alt="F#" src="https://img.shields.io/badge/F%23-378BBA?style=flat&logo=fsharp&logoColor=white"></a>
+  <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0"><img alt=".NET 10" src="https://img.shields.io/badge/.NET-10.0-512BD4?style=flat&logo=dotnet&logoColor=white"></a>
+  <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+</p>
 
 ## What is this? 🚀
 
@@ -182,7 +183,8 @@ The repository is divided into 4 folders:
 |0323|[Number of Connected Components in an Undirected Graph](https://github.com/jonas1ara/73/blob/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph/Problem.md) | [C#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Number-of-Connected-Components-in-an-Undirected-Graph)|Medium|
 |0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Pacific-Atlantic-Water-Flow)|Medium|
 
-## Configuration 🔧
+<details>
+<summary><h2 style="display: inline;">Configuration 🔧</h2></summary>
 
 The focus of this repository is towards C#, so you can use it from Windows, Linux, Mac, Docker or even GitHub Codespaces, but it is intended to be used on Linux, **specifically an Ubuntu based distribution or Red Hat based distribution**, no matter if it is a complete distro or a WSL distro. All solutions are written in C#, and only the last problem of each topic also includes a solution in F#.
 
@@ -230,7 +232,10 @@ docker run --rm -it -v "${PWD}:/repo" -w /repo mcr.microsoft.com/dotnet/sdk:10.0
 
 If you are on Windows and use this repository with Visual Studio, you just have to change the solution to compile: open `73.sln`, pick the desired project in the Solution Explorer and set it as the startup project (or select it from the run configuration dropdown) to build and run it.
 
-## Running the tests 🧪
+</details>
+
+<details>
+<summary><h2 style="display: inline;">Tests 🧪</h2></summary>
 
 Every problem has a matching `<Problem>.Tests` xUnit project, all registered in `73.sln`, and they also run automatically on every push/PR to `main` via the [`Tests` GitHub Actions workflow](.github/workflows/tests.yml/).
 
@@ -268,6 +273,8 @@ dotnet test 73.sln --collect:"XPlat Code Coverage"
 2. Go to `Test` → `Test Explorer` (or press `Ctrl+E, T`).
 3. Click **Run All Tests** to run the whole solution, or right-click a specific test/project in Test Explorer and choose **Run** to run just that one.
 
+</details>
+
 ## Build with 🛠️
 
 - [C#](https://dotnet.microsoft.com/es-es/languages/csharp) and [F#](https://dotnet.microsoft.com/es-es/languages/fsharp)
@@ -302,6 +309,10 @@ dotnet test 73.sln --collect:"XPlat Code Coverage"
 _C# Docs - Get started, Tutorials, reference. https://learn.microsoft.com/en-us/dotnet/csharp/_
 
 _Cormen, T. H., Leiserson, C. E., Rivest, R. L. & Stein, C. (2009). [Introduction to Algorithms](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844) (3rd ed.). MIT Press._
+
+## License 📄
+
+This project is licensed under the [MIT License](./LICENSE).
 
 ## Acknowledgments 🎁
 
