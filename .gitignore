@@ -484,4 +484,7 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Claude Code worktrees
+.claude/worktrees/
 Update-DotNetTargetFramework.ps1
