@@ -17,19 +17,23 @@ public class TreeNode
 
 public class Solution
 {
-    private TreeNode prev = null;
-
     public bool IsValidBST(TreeNode root)
+    {
+        TreeNode prev = null;
+        return IsValidBST(root, ref prev);
+    }
+
+    private bool IsValidBST(TreeNode root, ref TreeNode prev)
     {
         if (root == null)
             return true;
 
-        if (!IsValidBST(root.left) || (prev != null && prev.val >= root.val))
+        if (!IsValidBST(root.left, ref prev) || (prev != null && prev.val >= root.val))
             return false;
 
         prev = root;
 
-        return IsValidBST(root.right);
+        return IsValidBST(root.right, ref prev);
     }
 }
 

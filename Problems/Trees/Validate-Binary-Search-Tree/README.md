@@ -51,19 +51,23 @@ For `root = [5,1,4,null,null,3,6]`:
 
 public class Solution
 {
-    private TreeNode prev = null;
-
     public bool IsValidBST(TreeNode root)
+    {
+        TreeNode prev = null;
+        return IsValidBST(root, ref prev);
+    }
+
+    private bool IsValidBST(TreeNode root, ref TreeNode prev)
     {
         if (root == null)
             return true;
 
-        if (!IsValidBST(root.left) || (prev != null && prev.val >= root.val))
+        if (!IsValidBST(root.left, ref prev) || (prev != null && prev.val >= root.val))
             return false;
 
         prev = root;
 
-        return IsValidBST(root.right);
+        return IsValidBST(root.right, ref prev);
     }
 }
 ```
@@ -71,6 +75,8 @@ public class Solution
 1. Left-root-right order guarantees increasing values in a valid BST.
 
 2. Strict `<` is enforced via `prev.val >= root.val` failing the check.
+
+3. `prev` is passed by `ref` through a private helper instead of being an instance field, so it can't leak state if the same `Solution` instance is reused across calls.
 
 ## Suggested practice 🎯
 

@@ -1,0 +1,28 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore
+        run: dotnet restore 73.sln
+
+      - name: Build
+        run: dotnet build 73.sln --no-restore --configuration Release
+
+      - name: Test
+        run: dotnet test 73.sln --no-build --configuration Release --verbosity normal

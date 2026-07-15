@@ -2,7 +2,7 @@
 
 // Using bottom-up approach - Time: O(n)
 
-class Solution
+public class Solution
 {
     public int Rob(int[] nums)
     {

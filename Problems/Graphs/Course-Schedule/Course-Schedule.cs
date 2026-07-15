@@ -36,7 +36,7 @@ public class Solution
 
             foreach (int v in graph[u])
             {
-                if (indegree[v]-- == 0) q.Enqueue(v);
+                if (--indegree[v] == 0) q.Enqueue(v);
             }
         }
 

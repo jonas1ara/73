@@ -2,7 +2,7 @@
 
 // Using memoization approach - Time: O(n)
 
-class Solution
+public class Solution
 {
     private int Rob(int[] nums, int start, int end)
     {

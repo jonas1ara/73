@@ -1,5 +1,7 @@
 # 73 - The best number 🤓
 
+[![Tests](https://github.com/jonas1ara/73/actions/workflows/tests.yml/badge.svg)](https://github.com/jonas1ara/73/actions/workflows/tests.yml)
+
 According to Sheldon Cooper **the best number is 73**, because 73 is the 21st prime number. Its mirror, 37, is the 12th prime number. 21 is the product of multiplying 7 by 3 and in binary, 73 is a palindrome: 1001001
 
 ![73](/Sources/Sheldon.gif)
@@ -65,6 +67,29 @@ sudo apt update && \
 **Note: To install on other linux versions or linux distributions, please check this [page](https://learn.microsoft.com/en-us/dotnet/core/install/linux).**
 
 If you are on Windows and use this repository with Visual Studio, you just have to change the solution to compile: open `73.sln`, pick the desired project in the Solution Explorer and set it as the startup project (or select it from the run configuration dropdown) to build and run it.
+
+## Running the tests 🧪
+
+Every problem has a matching `<Problem>.Tests` xUnit project, all registered in `73.sln`, and they also run automatically on every push/PR to `main` via the [`Tests` GitHub Actions workflow](.github/workflows/tests.yml/).
+
+**Run the full suite (all problems):**
+```bash
+dotnet test 73.sln
+```
+
+**Run only one problem's tests:**
+```bash
+dotnet test Problems/<Topic>/<Problem>.Tests/<Problem>.Tests.csproj
+```
+For example:
+```bash
+dotnet test Problems/Graphs/Course-Schedule.Tests/Course-Schedule.Tests.csproj
+```
+
+**Run from Visual Studio:**
+1. Open `73.sln`.
+2. Go to `Test` → `Test Explorer` (or press `Ctrl+E, T`).
+3. Click **Run All Tests** to run the whole solution, or right-click a specific test/project in Test Explorer and choose **Run** to run just that one.
 
 ## Index 📖
 
