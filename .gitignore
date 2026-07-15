@@ -484,3 +484,4 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+Update-DotNetTargetFramework.ps1
