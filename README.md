@@ -318,4 +318,4 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ## Acknowledgments 🎁
 
-_Written with ❤️ since [December 2022](https://github.com/jonas1ara/73/commit/810b3b7046bfd6ec3ab4e944d9a9c9cc6d6f884a) by [Jonas Lara](https://x.com/jonas1ara) for anyone who is interested — started in a time without AI, improved in the age of AI.
+_Written with ❤️ since [December 2022](https://github.com/jonas1ara/73/commit/810b3b7046bfd6ec3ab4e944d9a9c9cc6d6f884a) by [Jonas Lara](https://x.com/jonas1ara) for anyone who is interested — started in a time without AI, improved in the age of AI._
