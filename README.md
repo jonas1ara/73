@@ -1,4 +1,4 @@
-# 73 - The best number 🤓
+# 73 - The best number
 
 According to Sheldon Cooper **the best number is 73**, because 73 is the 21st prime number. Its mirror, 37, is the 12th prime number. 21 is the product of multiplying 7 by 3 and in binary, 73 is a palindrome: 1001001
 
@@ -14,13 +14,13 @@ _Sheldon Cooper (character in the famous series "The Big-Bang Theory")_
   <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
 </p>
 
-## What is this? 🚀
+## What is this?
 
-This is a repository that will take you by the hand in the 73 most useful LeetCode problems, well they are actually [76](https://leetcode.com/list/xi4ci4ig/), 😬 the algorithms are written in C# and F#, I wrote each program in the most optimal way and included the main function or method of the program to test on your machine, a README file with solution notes and for problems 252, 253, 269, 271 and 323 being Premium subscription problems, I included a README with the description of each problem. 🤓
+This is a repository that will take you by the hand in the 73 most useful LeetCode problems, well they are actually [76](https://leetcode.com/list/xi4ci4ig/), 😬 the algorithms are written in C# and F#, I wrote each program in the most optimal way and included the main function or method of the program to test on your machine, a README file with solution notes and for problems 252, 253, 269, 271 and 323 being Premium subscription problems, I included a README with the description of each problem.
 
 **No hurry, but no rest** 
 
-## Repository structure 📦
+## Repository structure
 
 The repository is divided into 4 folders:
 
@@ -51,9 +51,9 @@ The repository is divided into 4 folders:
 
 - **Problems:** Contains the folders for each topic, inside it has a folder per problem and inside each folder is the source code and the README that explains the problem, for example the `Two-Sum` folder contains the C# source code in `Two-Sum.cs` and the .NET project settings in `Two-Sum.csproj` **(only the last problem of each topic also includes an F# solution, e.g. `Word-Search.fsx`)** and finally the `README.md` file. Every problem's `README.md` also ends with a **Suggested practice** section linking 3 related LeetCode problems, so you can practice the same pattern
 
-- **Sources:** Contains the images and gifs used in the repository, such as Sheldon Cooper's 😁 gif
+- **Sources:** Contains the images and gifs used in the repository, such as Sheldon Cooper's gif
 
-## Index 📖
+## Index
 
 ### Arrays
 
@@ -184,7 +184,7 @@ The repository is divided into 4 folders:
 |0417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [C# - F#](https://github.com/jonas1ara/73/tree/main/Problems/Graphs/Pacific-Atlantic-Water-Flow)|Medium|
 
 <details>
-<summary><h2 style="display: inline;">Configuration 🔧</h2></summary>
+<summary><h2 style="display: inline;">Configuration</h2></summary>
 
 The focus of this repository is towards C#, so you can use it from Windows, Linux, Mac, Docker or even GitHub Codespaces, but it is intended to be used on Linux, **specifically an Ubuntu based distribution or Red Hat based distribution**, no matter if it is a complete distro or a WSL distro. All solutions are written in C#, and only the last problem of each topic also includes a solution in F#.
 
@@ -235,7 +235,7 @@ If you are on Windows and use this repository with Visual Studio, you just have 
 </details>
 
 <details>
-<summary><h2 style="display: inline;">Tests 🧪</h2></summary>
+<summary><h2 style="display: inline;">Tests</h2></summary>
 
 Every problem has a matching `<Problem>.Tests` xUnit project, all registered in `73.sln`, and they also run automatically on every push/PR to `main` via the [`Tests` GitHub Actions workflow](.github/workflows/tests.yml/).
 
@@ -275,14 +275,14 @@ dotnet test 73.sln --collect:"XPlat Code Coverage"
 
 </details>
 
-## Build with 🛠️
+## Build with
 
 - [C#](https://dotnet.microsoft.com/es-es/languages/csharp) and [F#](https://dotnet.microsoft.com/es-es/languages/fsharp)
 - [Windows](https://www.microsoft.com/en-us/windows)
 - [Ubuntu](https://ubuntu.com/) on [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 - [VS Code](https://code.visualstudio.com/) and [Visual Studio](https://visualstudio.microsoft.com/es/)
 
-## C# Conferences 📊
+## C# Conferences
 
 - [High Speed History of C#](https://www.youtube.com/watch?v=n7-9iXvx88I)
 - [Mono Edge - Miguel de Icaza](https://www.youtube.com/watch?v=uS_9nwdzfzM)
@@ -304,7 +304,7 @@ dotnet test 73.sln --collect:"XPlat Code Coverage"
 - [Performance tricks I learned from contributing to open source .NET packages - Daniel Marbach](https://www.youtube.com/watch?v=pGgsFW7kDKI)
 - [Real-world examples on optimizing .NET performance - Stefán Jökull Sigurðarson - NDC Oslo 2023](https://www.youtube.com/watch?v=545Nj0_BuzA)
 
-## References 📚
+## References
 
 _F# Docs - Get started, Tutorials, reference. https://fsharp.org/docs/_
 
@@ -312,10 +312,10 @@ _C# Docs - Get started, Tutorials, reference. https://learn.microsoft.com/en-us/
 
 _Cormen, T. H., Leiserson, C. E., Rivest, R. L. & Stein, C. (2009). [Introduction to Algorithms](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844) (3rd ed.). MIT Press._
 
-## License 📄
+## License
 
 This project is licensed under the [MIT License](./LICENSE).
 
-## Acknowledgments 🎁
+## Acknowledgments
 
 _Written with ❤️ since [December 2022](https://github.com/jonas1ara/73/commit/810b3b7046bfd6ec3ab4e944d9a9c9cc6d6f884a) by [Jonas Lara](https://x.com/jonas1ara) for anyone who is interested — started in a time without AI, improved in the age of AI._
