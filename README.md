@@ -79,10 +79,11 @@ dotnet tool update -g 73
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `73 <file.cs>` | Test your solution file (auto-detects problem by path, name, or AST method signature). | `73 two.cs` |
-| `73 test [problem]` | Run tests for a specific problem by name, slug, or number. | `73 test Two-Sum` |
+| `73 test [problem]` | Run tests for a specific problem by name, slug, or number. Use `--bench` to compare with reference. | `73 test Two-Sum --bench` |
+| `73 bench [problem]` | Benchmark and compare your solution against the optimal reference solution with scalability stress tests. | `73 bench Two-Sum` |
 | `73 new <problem>` | Generate a clean boilerplate file ready to code with LeetCode signatures. | `73 new two-sum` |
 | `73 list [category]` | List all 76 problems categorized by topic with difficulty and signatures. | `73 list trees` |
-| `73 info <problem>` | View problem description, examples, and constraints directly in console. | `73 info two-sum` |
+| `73 info <problem>` | View problem description, examples, constraints, and complexity analysis directly in console. | `73 info two-sum` |
 
 ## Index
 

@@ -32,4 +32,14 @@ public record Problem(
         "hard" => "red",
         _ => "white"
     };
+
+    public ComplexityInfo Complexity => ComplexityRegistry.GetComplexity(Number, Category);
+
+    public string TargetTimeComplexity => Complexity.Time;
+
+    public string TargetSpaceComplexity => Complexity.Space;
+
+    public string TargetComplexityDisplay => $"{TargetTimeComplexity} Time | {TargetSpaceComplexity} Space";
+
+    public string? ComplexityTradeOffNote => Complexity.TradeOffNote;
 }

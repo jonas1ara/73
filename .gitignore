@@ -491,4 +491,6 @@ install-cli.ps1
 
 # Visual Studio Code files for those working on multiple tools
 plan.md
+CLI_NOTES.md
+*.notes.md
 

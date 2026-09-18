@@ -1,5 +1,7 @@
 using System;
 using System.IO;
+using System.Linq;
+using System.Collections.Generic;
 using Spectre.Console;
 using LeetCode73.Core;
 using LeetCode73.Runner;
@@ -9,7 +11,7 @@ namespace LeetCode73.Commands;
 
 public static class TestCommand
 {
-    public static int Execute(string? target, int timeoutMs = 3000)
+    public static int Execute(string? target, int timeoutMs = 3000, bool benchmark = false, int iterations = 1000)
     {
         string? filePath = null;
         string? sourceCode = null;
@@ -39,15 +41,17 @@ public static class TestCommand
             // 4. Look for a solution file locally
             if (problem != null)
             {
-                var candidates = new[]
+                var cwd = Directory.GetCurrentDirectory();
+
+                // 4a. Check direct standard candidate names in current directory
+                var directCandidates = new[]
                 {
-                    Path.Combine(Directory.GetCurrentDirectory(), $"{problem.Slug}.cs"),
-                    Path.Combine(Directory.GetCurrentDirectory(), "Solution.cs"),
-                    Path.Combine(Directory.GetCurrentDirectory(), problem.SolutionFileName),
-                    Path.Combine(Directory.GetCurrentDirectory(), problem.RelativePath, problem.SolutionFileName)
+                    Path.Combine(cwd, $"{problem.Slug}.cs"),
+                    Path.Combine(cwd, "Solution.cs"),
+                    Path.Combine(cwd, problem.SolutionFileName)
                 };
 
-                foreach (var candidate in candidates)
+                foreach (var candidate in directCandidates)
                 {
                     if (File.Exists(candidate))
                     {
@@ -57,7 +61,24 @@ public static class TestCommand
                     }
                 }
 
-                // If still no local file found, check reference template/solution
+                // 4b. Scan current directory and user subdirectories for any matching solution
+                if (sourceCode == null && Directory.Exists(cwd))
+                {
+                    sourceCode = FindMatchingUserSource(cwd, problem, out filePath);
+                }
+
+                // 4c. Fallback: check if we are inside the repository and can point to the problem's own folder
+                if (sourceCode == null)
+                {
+                    var repoCandidate = Path.Combine(cwd, problem.RelativePath, problem.SolutionFileName);
+                    if (File.Exists(repoCandidate))
+                    {
+                        filePath = Path.GetFullPath(repoCandidate);
+                        sourceCode = File.ReadAllText(filePath);
+                    }
+                }
+
+                // 4d. Fallback: load reference template from embedded resources
                 if (sourceCode == null)
                 {
                     sourceCode = ResourceProvider.GetSolutionTemplate(problem);
@@ -89,6 +110,97 @@ public static class TestCommand
         // Render execution results
         ConsoleFormatter.RenderExecutionResult(result);
 
+        if (benchmark && result.OverallVerdict == TestVerdict.Accepted)
+        {
+            var refSource = ResourceProvider.GetSolutionTemplate(problem);
+            if (!string.IsNullOrWhiteSpace(refSource))
+            {
+                var benchReport = BenchmarkRunner.Run(
+                    problem,
+                    sourceCode,
+                    filePath ?? "Your Solution",
+                    refSource,
+                    problem.SolutionFileName,
+                    iterations);
+
+                ConsoleFormatter.RenderBenchmarkReport(benchReport);
+            }
+        }
+
         return result.OverallVerdict == TestVerdict.Accepted ? 0 : 1;
+    }
+
+    private static string? FindMatchingUserSource(string rootDir, Problem problem, out string? foundPath)
+    {
+        foundPath = null;
+
+        // 1. Check root directory top level
+        foreach (var file in Directory.GetFiles(rootDir, "*.cs", SearchOption.TopDirectoryOnly))
+        {
+            if (IsUserSolution(file, problem, out var content))
+            {
+                foundPath = Path.GetFullPath(file);
+                return content;
+            }
+        }
+
+        // 2. Check subdirectories excluding framework and repo resource folders
+        var ignoredDirs = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            "bin", "obj", ".git", ".vs", "Problems", "nupkg"
+        };
+
+        try
+        {
+            foreach (var subDir in Directory.GetDirectories(rootDir, "*", SearchOption.TopDirectoryOnly))
+            {
+                var dirName = Path.GetFileName(subDir);
+                if (dirName.StartsWith(".") || ignoredDirs.Contains(dirName))
+                    continue;
+
+                foreach (var file in Directory.GetFiles(subDir, "*.cs", SearchOption.AllDirectories))
+                {
+                    var parts = file.Split(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+                    if (parts.Any(p => ignoredDirs.Contains(p)))
+                        continue;
+
+                    if (IsUserSolution(file, problem, out var content))
+                    {
+                        foundPath = Path.GetFullPath(file);
+                        return content;
+                    }
+                }
+            }
+        }
+        catch
+        {
+            // Ignore filesystem access errors
+        }
+
+        return null;
+    }
+
+    private static bool IsUserSolution(string filePath, Problem problem, out string content)
+    {
+        content = string.Empty;
+        var fileName = Path.GetFileName(filePath);
+        if (fileName.StartsWith(".") ||
+            fileName.EndsWith(".Tests.cs", StringComparison.OrdinalIgnoreCase) ||
+            fileName.EndsWith(".g.cs", StringComparison.OrdinalIgnoreCase) ||
+            fileName.Equals("CommonHelpers.cs", StringComparison.OrdinalIgnoreCase))
+        {
+            return false;
+        }
+
+        try
+        {
+            content = File.ReadAllText(filePath);
+            var resolved = ProblemResolver.Resolve(filePath, content);
+            return resolved != null && resolved.Number == problem.Number;
+        }
+        catch
+        {
+            return false;
+        }
     }
 }

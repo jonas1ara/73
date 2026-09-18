@@ -453,4 +453,63 @@ global using Xunit;
         var filtered = lines.Where(l => !l.Contains("System.Reflection") && !l.Contains("System.RuntimeMethodHandle") && !l.Contains("RoslynRunner"));
         return string.Join(Environment.NewLine, filtered);
     }
+
+    public static (Assembly? Assembly, List<string> Errors) CompileSolutionOnly(string sourceCode, Problem problem)
+    {
+        var globalUsings = @"
+global using System;
+global using System.Collections;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Text;
+global using System.Threading.Tasks;
+";
+        var userTree = CSharpSyntaxTree.ParseText(sourceCode, path: "Solution.cs");
+        var userRoot = userTree.GetCompilationUnitRoot();
+        var declaredClasses = userRoot.DescendantNodes()
+            .OfType<ClassDeclarationSyntax>()
+            .Select(c => c.Identifier.Text)
+            .ToHashSet();
+
+        var helperSb = new StringBuilder();
+        if (!declaredClasses.Contains("ListNode") && sourceCode.Contains("ListNode"))
+            helperSb.AppendLine(CommonHelpers.ListNodeSource);
+        if (!declaredClasses.Contains("TreeNode") && sourceCode.Contains("TreeNode"))
+            helperSb.AppendLine(CommonHelpers.TreeNodeSource);
+        if (!declaredClasses.Contains("Node") && sourceCode.Contains("Node"))
+            helperSb.AppendLine(CommonHelpers.NodeSource);
+        if (!declaredClasses.Contains("Interval") && sourceCode.Contains("Interval"))
+            helperSb.AppendLine(CommonHelpers.IntervalSource);
+        if (!declaredClasses.Contains("TrieNode") && sourceCode.Contains("TrieNode"))
+            helperSb.AppendLine(CommonHelpers.TrieNodeSource);
+
+        var syntaxTrees = new List<SyntaxTree>
+        {
+            CSharpSyntaxTree.ParseText(globalUsings, path: "GlobalUsings.cs"),
+            userTree
+        };
+        if (helperSb.Length > 0)
+            syntaxTrees.Add(CSharpSyntaxTree.ParseText(helperSb.ToString(), path: "Helpers.cs"));
+
+        var compilation = CSharpCompilation.Create(
+            "LeetCode73_Sol_" + Guid.NewGuid().ToString("N"),
+            syntaxTrees,
+            _references.Value,
+            new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary, optimizationLevel: OptimizationLevel.Release));
+
+        using var ms = new MemoryStream();
+        var emitResult = compilation.Emit(ms);
+        if (!emitResult.Success)
+        {
+            var errors = emitResult.Diagnostics
+                .Where(d => d.Severity == DiagnosticSeverity.Error)
+                .Select(d => d.GetMessage())
+                .ToList();
+            return (null, errors);
+        }
+
+        ms.Seek(0, SeekOrigin.Begin);
+        var asm = Assembly.Load(ms.ToArray());
+        return (asm, new List<string>());
+    }
 }

@@ -20,12 +20,25 @@ class Program
         var testCmd = new Command("test", "Run tests for a specific problem");
         var testTargetArg = new Argument<string?>("problem", () => null, "Problem name, slug, number, or solution file");
         var timeoutOpt = new Option<int>(new[] { "--timeout", "-t" }, () => 3000, "Execution timeout in milliseconds per test");
+        var benchOpt = new Option<bool>(new[] { "--bench", "-b" }, () => false, "Run comparative benchmark against reference solution");
         testCmd.AddArgument(testTargetArg);
         testCmd.AddOption(timeoutOpt);
-        testCmd.SetHandler((target, timeout) =>
+        testCmd.AddOption(benchOpt);
+        testCmd.SetHandler((target, timeout, bench) =>
         {
-            Environment.ExitCode = TestCommand.Execute(target, timeout);
-        }, testTargetArg, timeoutOpt);
+            Environment.ExitCode = TestCommand.Execute(target, timeout, bench);
+        }, testTargetArg, timeoutOpt, benchOpt);
+
+        // Subcommand: bench [problem]
+        var benchCmd = new Command("bench", "Benchmark and compare your solution against the optimal reference solution");
+        var benchTargetArg = new Argument<string?>("problem", () => null, "Problem name, slug, number, or solution file");
+        var iterOpt = new Option<int>(new[] { "--iterations", "-i" }, () => 1000, "Number of benchmark iterations");
+        benchCmd.AddArgument(benchTargetArg);
+        benchCmd.AddOption(iterOpt);
+        benchCmd.SetHandler((target, iter) =>
+        {
+            Environment.ExitCode = BenchCommand.Execute(target, iter);
+        }, benchTargetArg, iterOpt);
 
         // Subcommand: new <problem>
         var newCmd = new Command("new", "Generate a clean boilerplate template with the exact LeetCode signature");
@@ -60,6 +73,7 @@ class Program
 
         // Add subcommands
         rootCommand.AddCommand(testCmd);
+        rootCommand.AddCommand(benchCmd);
         rootCommand.AddCommand(newCmd);
         rootCommand.AddCommand(listCmd);
         rootCommand.AddCommand(infoCmd);

@@ -19,14 +19,15 @@ public static class ConsoleFormatter
         var panel = new Panel(
             new Markup(
                 "[bold cyan]73 CLI[/] - The Sheldon Cooper LeetCode Companion\n" +
-                "[grey]Run and test LeetCode problems in C# instantly with zero-boilerplate.[/]\n\n" +
+                "[grey]Run, test, and benchmark LeetCode problems in C# instantly with zero-boilerplate.[/]\n\n" +
                 "[bold yellow]Commands:[/] \n" +
                 "  [green]73 <file.cs>[/]           Test a solution file\n" +
                 "  [green]73 test <problem>[/]       Run tests for a problem by name or number\n" +
+                "  [green]73 bench <problem>[/]      Benchmark your solution against the optimal reference\n" +
                 "  [green]73 new <problem>[/]        Generate a clean boilerplate solution\n" +
                 "  [green]73 list[/]                 List all 76 problems by category\n" +
-                "  [green]73 info <problem>[/]       Show problem description and constraints\n\n" +
-                "[grey]Example:[/] [cyan]73 two.cs[/] [grey]or[/] [cyan]73 test Two-Sum[/]"))
+                "  [green]73 info <problem>[/]       Show problem description, constraints, and complexity\n\n" +
+                "[grey]Example:[/] [cyan]73 two.cs[/] [grey]or[/] [cyan]73 bench two.cs[/]"))
             .Header("[bold white]Welcome[/]")
             .Border(BoxBorder.Rounded)
             .BorderColor(Color.Cyan1);
@@ -40,6 +41,7 @@ public static class ConsoleFormatter
         var grid = new Grid();
         grid.AddColumn();
         grid.AddRow(new Markup($"[bold]Problem:[/] [white]{problem.FormattedNumber} - {problem.Title}[/] {problem.DifficultyMarkup}"));
+        grid.AddRow(new Markup($"[bold]Target:[/]  [yellow]{problem.TargetComplexityDisplay}[/]"));
         if (!string.IsNullOrWhiteSpace(filePath))
         {
             grid.AddRow(new Markup($"[bold]File:[/]    [grey]{Path.GetFileName(filePath)}[/] [dim]({filePath})[/]"));
@@ -101,6 +103,45 @@ public static class ConsoleFormatter
 
         // Summary footer
         RenderSummaryFooter(result);
+    }
+
+    public static void RenderBenchmarkReport(BenchmarkReport report)
+    {
+        var table = new Table()
+            .Border(TableBorder.Rounded)
+            .Title($"[bold cyan]Benchmark & Scalability Comparison ({report.Iterations:N0} iterations)[/]")
+            .AddColumn(new TableColumn("[bold]Implementation[/]"))
+            .AddColumn(new TableColumn("[bold]Time Complexity[/]").Centered())
+            .AddColumn(new TableColumn("[bold]Space Complexity[/]").Centered())
+            .AddColumn(new TableColumn("[bold]Micro-Bench (avg)[/]").RightAligned())
+            .AddColumn(new TableColumn("[bold]Allocations[/]").RightAligned())
+            .AddColumn(new TableColumn("[bold]Stress Scale (N=10k+)[/]").RightAligned());
+
+        void AddRow(BenchmarkItemResult item, string nameMarkup)
+        {
+            var timeComp = $"[white]{item.TimeComplexity}[/]";
+            var spaceComp = $"[grey]{item.SpaceComplexity}[/]";
+            var microTime = item.Passed ? $"[white]{item.ElapsedMicroseconds:F2} μs[/]" : "[red]Error[/]";
+            var alloc = item.Passed ? $"[grey]{item.AllocatedBytes:N0} B[/]" : "[red]N/A[/]";
+            var scale = item.LargeScaleElapsedMs.HasValue
+                ? (item.LargeScaleElapsedMs.Value >= 0 ? $"[yellow]{item.LargeScaleElapsedMs.Value:F1} ms[/]" : "[red]Timeout/Error[/]")
+                : "[grey]N/A[/]";
+
+            table.AddRow(nameMarkup, timeComp, spaceComp, microTime, alloc, scale);
+        }
+
+        AddRow(report.UserResult, "[bold cyan]Your Solution[/]");
+        AddRow(report.ReferenceResult, "[bold green]Reference Solution[/]");
+
+        AnsiConsole.Write(table);
+        AnsiConsole.WriteLine();
+
+        var notePanel = new Panel(new Markup($"[bold yellow]Algorithmic Analysis & Scalability Insight:[/] \n[white]{Markup.Escape(report.SummaryNote)}[/]"))
+            .Border(BoxBorder.Rounded)
+            .BorderColor(Color.Yellow);
+
+        AnsiConsole.Write(notePanel);
+        AnsiConsole.WriteLine();
     }
 
     private static void RenderCompileErrors(TestExecutionResult result)
@@ -202,6 +243,7 @@ public static class ConsoleFormatter
             .AddColumn(new TableColumn("[bold]Title[/]"))
             .AddColumn(new TableColumn("[bold]Category[/]"))
             .AddColumn(new TableColumn("[bold]Difficulty[/]").Centered())
+            .AddColumn(new TableColumn("[bold]Target[/]").Centered())
             .AddColumn(new TableColumn("[bold]Expected Method / Class[/]"));
 
         foreach (var p in list.OrderBy(p => p.Number))
@@ -215,6 +257,7 @@ public static class ConsoleFormatter
                 $"[white]{p.Title}[/]",
                 $"[grey]{p.Category}[/]",
                 p.DifficultyMarkup,
+                $"[yellow]{p.TargetTimeComplexity}[/]",
                 methodOrClass);
         }
 
@@ -228,6 +271,7 @@ public static class ConsoleFormatter
         grid.AddColumn();
         grid.AddRow(new Markup($"[bold cyan]{problem.FormattedNumber} - {problem.Title}[/]"));
         grid.AddRow(new Markup($"[bold]Category:[/]   [white]{problem.Category}[/]  |  [bold]Difficulty:[/] {problem.DifficultyMarkup}"));
+        grid.AddRow(new Markup($"[bold]Target:[/]     [yellow]{problem.TargetComplexityDisplay}[/]"));
         grid.AddRow(new Markup($"[bold]Method:[/]     [yellow]{(problem.ExpectedClass == "Solution" ? problem.ExpectedMethod : problem.ExpectedClass)}[/]"));
         grid.AddRow(new Markup($"[bold]Template:[/]   [grey]73 new {problem.Slug.ToLowerInvariant()}[/]"));
 
@@ -238,6 +282,17 @@ public static class ConsoleFormatter
 
         AnsiConsole.Write(headerPanel);
         AnsiConsole.WriteLine();
+
+        if (!string.IsNullOrWhiteSpace(problem.ComplexityTradeOffNote))
+        {
+            var compPanel = new Panel(new Markup($"[bold yellow]Target Complexity:[/] [white]{problem.TargetComplexityDisplay}[/]\n\n[bold]Scalability & Trade-offs:[/] \n[grey]{Markup.Escape(problem.ComplexityTradeOffNote)}[/]"))
+                .Header("[bold yellow] Algorithmic Analysis [/]")
+                .Border(BoxBorder.Rounded)
+                .BorderColor(Color.Yellow);
+
+            AnsiConsole.Write(compPanel);
+            AnsiConsole.WriteLine();
+        }
 
         if (string.IsNullOrWhiteSpace(markdownContent))
         {
@@ -278,6 +333,7 @@ public static class ConsoleFormatter
             new Markup(
                 $"[green]Solution file created successfully:[/] [bold white]{targetPath}[/]\n\n" +
                 $"[bold]Problem:[/]   [cyan]{problem.FormattedNumber} - {problem.Title}[/] {problem.DifficultyMarkup}\n" +
+                $"[bold]Target:[/]    [yellow]{problem.TargetComplexityDisplay}[/]\n" +
                 $"[bold]Test with:[/] [bold yellow]73 {Path.GetFileName(targetPath)}[/]\n"))
             .Header("[bold green] Template Generated [/]")
             .Border(BoxBorder.Rounded)

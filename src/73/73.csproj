@@ -13,7 +13,7 @@
     <ToolCommandName>73</ToolCommandName>
     <PackageId>73</PackageId>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-    <Version>1.0.1</Version>
+    <Version>1.0.3</Version>
     <Authors>Jonas Lara</Authors>
     <Description>CLI tool to solve, test, and explore the 73 most useful LeetCode problems in C#.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
