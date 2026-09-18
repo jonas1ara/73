@@ -11,7 +11,7 @@ on:
         required: false
         type: string
       nuget_user:
-        description: 'NuGet.org username or organization (optional, defaults to jonas1ara)'
+        description: 'NuGet.org username or organization (optional, defaults to Jonas_1ara)'
         required: false
         type: string
 
@@ -52,7 +52,7 @@ jobs:
         id: login
         uses: NuGet/login@v1
         with:
-          user: ${{ inputs.nuget_user || vars.NUGET_USERNAME || 'jonas1ara' }}
+          user: ${{ inputs.nuget_user || vars.NUGET_USERNAME || 'Jonas_1ara' }}
 
       - name: Push to NuGet.org
         run: dotnet nuget push nupkg/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
