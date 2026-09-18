@@ -10,10 +10,17 @@ on:
         description: 'Version to publish (optional, e.g. 1.0.0)'
         required: false
         type: string
+      nuget_user:
+        description: 'NuGet.org username or organization (optional, defaults to jonas1ara)'
+        required: false
+        type: string
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: Checkout repository
@@ -41,5 +48,11 @@ jobs:
             dotnet pack src/73/73.csproj --configuration Release --no-build --output nupkg
           fi
 
+      - name: NuGet login (OIDC)
+        id: login
+        uses: NuGet/login@v1
+        with:
+          user: ${{ inputs.nuget_user || vars.NUGET_USERNAME || 'jonas1ara' }}
+
       - name: Push to NuGet.org
-        run: dotnet nuget push nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+        run: dotnet nuget push nupkg/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
