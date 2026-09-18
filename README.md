@@ -8,6 +8,7 @@ _Sheldon Cooper (character in the famous series "The Big-Bang Theory")_
 
 <p align="center">
   <a href="https://github.com/jonas1ara/73/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/jonas1ara/73/actions/workflows/tests.yml/badge.svg"></a>
+  <a href="https://www.nuget.org/packages/73"><img alt="NuGet" src="https://img.shields.io/nuget/v/73.svg"></a>
   <a href="https://dotnet.microsoft.com/en-us/languages/csharp"><img alt="C#" src="https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white"></a>
   <a href="https://dotnet.microsoft.com/en-us/languages/fsharp"><img alt="F#" src="https://img.shields.io/badge/F%23-378BBA?style=flat&logo=fsharp&logoColor=white"></a>
   <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0"><img alt=".NET 10" src="https://img.shields.io/badge/.NET-10.0-512BD4?style=flat&logo=dotnet&logoColor=white"></a>
@@ -59,15 +60,19 @@ The repository is divided into 4 folders:
 
 ### Installation
 
-Install `73` globally as a .NET tool using the included script:
-```powershell
-.\install-cli.ps1
-```
-Or manually via dotnet CLI:
+Install `73` globally as a .NET tool from [NuGet](https://www.nuget.org/packages/73):
+
 ```bash
-dotnet pack src/73 -c Release
-dotnet tool install -g --add-source ./src/73/nupkg 73
+dotnet tool install -g 73
 ```
+
+To update to the latest version:
+
+```bash
+dotnet tool update -g 73
+```
+
+> **Note for Windows PowerShell:** Because bare numbers are parsed as integer literals, invoke the tool as `73.exe` (e.g. `73.exe two.cs`) or `& 73`. In CMD, Git Bash, macOS, and Linux, you can run `73` directly.
 
 ### Commands
 
