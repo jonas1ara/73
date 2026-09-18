@@ -10,16 +10,16 @@ class Program
 {
     static async Task<int> Main(string[] args)
     {
-        var rootCommand = new RootCommand("73 CLI - Herramienta interactiva para resolver y probar problemas de LeetCode en C#");
+        var rootCommand = new RootCommand("73 CLI - Interactive tool to solve and test LeetCode problems in C#");
 
-        // Optional default argument for 73 <archivo.cs> or 73 <problema>
-        var targetArg = new Argument<string?>("target", () => null, "Archivo de solución (.cs) o identificador de problema a probar");
+        // Optional default argument for 73 <file.cs> or 73 <problem>
+        var targetArg = new Argument<string?>("target", () => null, "Solution file (.cs) or problem identifier to test");
         rootCommand.AddArgument(targetArg);
 
-        // Subcommand: test [problema]
-        var testCmd = new Command("test", "Ejecuta los tests de un problema específico");
-        var testTargetArg = new Argument<string?>("problema", () => null, "Nombre, slug, número o archivo del problema");
-        var timeoutOpt = new Option<int>(new[] { "--timeout", "-t" }, () => 3000, "Tiempo límite en milisegundos por test");
+        // Subcommand: test [problem]
+        var testCmd = new Command("test", "Run tests for a specific problem");
+        var testTargetArg = new Argument<string?>("problem", () => null, "Problem name, slug, number, or solution file");
+        var timeoutOpt = new Option<int>(new[] { "--timeout", "-t" }, () => 3000, "Execution timeout in milliseconds per test");
         testCmd.AddArgument(testTargetArg);
         testCmd.AddOption(timeoutOpt);
         testCmd.SetHandler((target, timeout) =>
@@ -27,11 +27,11 @@ class Program
             Environment.ExitCode = TestCommand.Execute(target, timeout);
         }, testTargetArg, timeoutOpt);
 
-        // Subcommand: new <problema>
-        var newCmd = new Command("new", "Crea una plantilla limpia para resolver un problema con la firma de LeetCode");
-        var newTargetArg = new Argument<string>("problema", "Nombre, slug o número del problema");
-        var outOpt = new Option<string?>(new[] { "--out", "-o" }, () => null, "Ruta o directorio de salida del archivo generado");
-        var forceOpt = new Option<bool>(new[] { "--force", "-f" }, () => false, "Sobrescribir si el archivo ya existe");
+        // Subcommand: new <problem>
+        var newCmd = new Command("new", "Generate a clean boilerplate template with the exact LeetCode signature");
+        var newTargetArg = new Argument<string>("problem", "Problem name, slug, or number");
+        var outOpt = new Option<string?>(new[] { "--out", "-o" }, () => null, "Output file path or directory for the generated file");
+        var forceOpt = new Option<bool>(new[] { "--force", "-f" }, () => false, "Overwrite existing file if present");
         newCmd.AddArgument(newTargetArg);
         newCmd.AddOption(outOpt);
         newCmd.AddOption(forceOpt);
@@ -40,18 +40,18 @@ class Program
             Environment.ExitCode = NewCommand.Execute(problem, outPath, force);
         }, newTargetArg, outOpt, forceOpt);
 
-        // Subcommand: list [categoria]
-        var listCmd = new Command("list", "Muestra la lista de los 76 problemas organizados por categoría");
-        var catArg = new Argument<string?>("categoria", () => null, "Filtrar por categoría (opcional)");
+        // Subcommand: list [category]
+        var listCmd = new Command("list", "Display the list of 76 problems organized by category");
+        var catArg = new Argument<string?>("category", () => null, "Filter by category (optional)");
         listCmd.AddArgument(catArg);
         listCmd.SetHandler((cat) =>
         {
             Environment.ExitCode = ListCommand.Execute(cat);
         }, catArg);
 
-        // Subcommand: info <problema>
-        var infoCmd = new Command("info", "Muestra la descripción, ejemplos y restricciones de un problema");
-        var infoTargetArg = new Argument<string>("problema", "Nombre, slug o número del problema");
+        // Subcommand: info <problem>
+        var infoCmd = new Command("info", "Display description, examples, and constraints for a problem");
+        var infoTargetArg = new Argument<string>("problem", "Problem name, slug, or number");
         infoCmd.AddArgument(infoTargetArg);
         infoCmd.SetHandler((problem) =>
         {
@@ -64,7 +64,7 @@ class Program
         rootCommand.AddCommand(listCmd);
         rootCommand.AddCommand(infoCmd);
 
-        // Root handler: 73 or 73 <archivo.cs>
+        // Root handler: 73 or 73 <file.cs>
         rootCommand.SetHandler((target) =>
         {
             if (string.IsNullOrWhiteSpace(target))

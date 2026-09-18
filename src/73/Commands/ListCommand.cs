@@ -23,8 +23,8 @@ public static class ListCommand
 
         if (matchingCategory == null)
         {
-            AnsiConsole.MarkupLine($"[bold red]Error:[/] Categoría no encontrada: '[yellow]{Markup.Escape(category)}[/]'.");
-            AnsiConsole.MarkupLine("[bold]Categorías válidas:[/] " + string.Join(", ", ProblemRegistry.GetCategories().Select(c => $"[cyan]{c}[/]")));
+            AnsiConsole.MarkupLine($"[bold red]Error:[/] Category not found: '[yellow]{Markup.Escape(category)}[/]'.");
+            AnsiConsole.MarkupLine("[bold]Valid categories:[/] " + string.Join(", ", ProblemRegistry.GetCategories().Select(c => $"[cyan]{c}[/]")));
             return 1;
         }
 

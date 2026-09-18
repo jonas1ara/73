@@ -19,15 +19,15 @@ public static class ConsoleFormatter
         var panel = new Panel(
             new Markup(
                 "[bold cyan]73 CLI[/] - The Sheldon Cooper LeetCode Companion\n" +
-                "[grey]Ejecuta y prueba problemas de LeetCode en C# instantáneamente con zero-boilerplate.[/]\n\n" +
-                "[bold yellow]Comandos principales:[/] \n" +
-                "  [green]73 <archivo.cs>[/]        Prueba un archivo de solución\n" +
-                "  [green]73 test <problema>[/]      Prueba un problema por nombre o número\n" +
-                "  [green]73 new <problema>[/]       Genera una plantilla limpia de solución\n" +
-                "  [green]73 list[/]                 Lista los 76 problemas por categoría\n" +
-                "  [green]73 info <problema>[/]      Muestra la descripción y restricciones del problema\n\n" +
-                "[grey]Ejemplo:[/] [cyan]73 two.cs[/] [grey]o[/] [cyan]73 test Two-Sum[/]"))
-            .Header("[bold white]Bienvenido[/]")
+                "[grey]Run and test LeetCode problems in C# instantly with zero-boilerplate.[/]\n\n" +
+                "[bold yellow]Commands:[/] \n" +
+                "  [green]73 <file.cs>[/]           Test a solution file\n" +
+                "  [green]73 test <problem>[/]       Run tests for a problem by name or number\n" +
+                "  [green]73 new <problem>[/]        Generate a clean boilerplate solution\n" +
+                "  [green]73 list[/]                 List all 76 problems by category\n" +
+                "  [green]73 info <problem>[/]       Show problem description and constraints\n\n" +
+                "[grey]Example:[/] [cyan]73 two.cs[/] [grey]or[/] [cyan]73 test Two-Sum[/]"))
+            .Header("[bold white]Welcome[/]")
             .Border(BoxBorder.Rounded)
             .BorderColor(Color.Cyan1);
 
@@ -39,14 +39,14 @@ public static class ConsoleFormatter
     {
         var grid = new Grid();
         grid.AddColumn();
-        grid.AddRow(new Markup($"[bold]Problema:[/] [white]{problem.FormattedNumber} - {problem.Title}[/] {problem.DifficultyMarkup}"));
+        grid.AddRow(new Markup($"[bold]Problem:[/] [white]{problem.FormattedNumber} - {problem.Title}[/] {problem.DifficultyMarkup}"));
         if (!string.IsNullOrWhiteSpace(filePath))
         {
-            grid.AddRow(new Markup($"[bold]Archivo:[/]  [grey]{Path.GetFileName(filePath)}[/] [dim]({filePath})[/]"));
+            grid.AddRow(new Markup($"[bold]File:[/]    [grey]{Path.GetFileName(filePath)}[/] [dim]({filePath})[/]"));
         }
         else
         {
-            grid.AddRow(new Markup($"[bold]Archivo:[/]  [grey]Solución de referencia ({problem.SolutionFileName})[/]"));
+            grid.AddRow(new Markup($"[bold]File:[/]    [grey]Reference solution ({problem.SolutionFileName})[/]"));
         }
 
         var panel = new Panel(grid)
@@ -66,11 +66,11 @@ public static class ConsoleFormatter
             return;
         }
 
-        AnsiConsole.MarkupLine($"  [green]✔ Compilación exitosa en {result.CompilationMs:F0}ms[/]\n");
+        AnsiConsole.MarkupLine($"  [green]Compilation successful in {result.CompilationMs:F0}ms[/]\n");
 
         foreach (var tc in result.TestCases)
         {
-            var icon = tc.Passed ? "[green]✔ PASSED[/]" : $"[red]✖ {tc.Verdict}[/]";
+            var icon = tc.Passed ? "[green]PASS[/]" : $"[red]{tc.Verdict}[/]";
             var time = $"[grey]({tc.ElapsedMs:F1}ms)[/]";
 
             if (tc.Passed)
@@ -105,14 +105,14 @@ public static class ConsoleFormatter
 
     private static void RenderCompileErrors(TestExecutionResult result)
     {
-        AnsiConsole.MarkupLine("  [yellow]⚠ Falló la compilación:[/]\n");
+        AnsiConsole.MarkupLine("  [yellow]Compilation failed:[/]\n");
 
         var table = new Table()
             .Border(TableBorder.Rounded)
             .BorderColor(Color.Yellow)
-            .AddColumn(new TableColumn("[bold]Línea:Col[/]").Centered())
-            .AddColumn(new TableColumn("[bold]Código[/]").Centered())
-            .AddColumn(new TableColumn("[bold]Mensaje[/]"));
+            .AddColumn(new TableColumn("[bold]Line:Col[/]").Centered())
+            .AddColumn(new TableColumn("[bold]Code[/]").Centered())
+            .AddColumn(new TableColumn("[bold]Message[/]"));
 
         foreach (var diag in result.CompilationDiagnostics)
         {
@@ -125,7 +125,7 @@ public static class ConsoleFormatter
         AnsiConsole.Write(table);
         AnsiConsole.WriteLine();
 
-        var panel = new Panel(new Markup("[bold red]ESTADO:  ⚠ COMPILE ERROR[/]\n[grey]Por favor corrige los errores sintácticos indicados arriba.[/]"))
+        var panel = new Panel(new Markup("[bold red]STATUS:  COMPILE ERROR[/]\n[grey]Please fix the compilation errors listed above.[/]"))
             .Border(BoxBorder.Square)
             .BorderColor(Color.Red);
         AnsiConsole.Write(panel);
@@ -136,11 +136,11 @@ public static class ConsoleFormatter
         var table = new Table()
             .Border(TableBorder.Rounded)
             .BorderColor(Color.Red)
-            .Title("[bold red]Detalle de Errores[/]")
-            .AddColumn(new TableColumn("[bold]Caso[/]").Centered())
-            .AddColumn(new TableColumn("[bold]Entrada / Prueba[/]"))
-            .AddColumn(new TableColumn("[bold]Esperado[/]"))
-            .AddColumn(new TableColumn("[bold]Obtenido[/]"));
+            .Title("[bold red]Failure Details[/]")
+            .AddColumn(new TableColumn("[bold]Case[/]").Centered())
+            .AddColumn(new TableColumn("[bold]Input / Test[/]"))
+            .AddColumn(new TableColumn("[bold]Expected[/]"))
+            .AddColumn(new TableColumn("[bold]Actual[/]"));
 
         foreach (var f in failures)
         {
@@ -165,20 +165,20 @@ public static class ConsoleFormatter
 
         var (statusMarkup, borderColor) = result.OverallVerdict switch
         {
-            TestVerdict.Accepted => ("[bold green]✔ ACCEPTED[/]", Color.Green),
-            TestVerdict.WrongAnswer => ("[bold red]✖ WRONG ANSWER[/]", Color.Red),
-            TestVerdict.TimeLimitExceeded => ("[bold yellow]⏱ TIME LIMIT EXCEEDED[/]", Color.Yellow),
-            TestVerdict.RuntimeError => ("[bold red]✖ RUNTIME ERROR[/]", Color.Red),
-            _ => ("[bold yellow]⚠ COMPILE ERROR[/]", Color.Yellow)
+            TestVerdict.Accepted => ("[bold green]ACCEPTED[/]", Color.Green),
+            TestVerdict.WrongAnswer => ("[bold red]WRONG ANSWER[/]", Color.Red),
+            TestVerdict.TimeLimitExceeded => ("[bold yellow]TIME LIMIT EXCEEDED[/]", Color.Yellow),
+            TestVerdict.RuntimeError => ("[bold red]RUNTIME ERROR[/]", Color.Red),
+            _ => ("[bold yellow]COMPILE ERROR[/]", Color.Yellow)
         };
 
         var grid = new Grid();
         grid.AddColumn(new GridColumn().Width(12));
         grid.AddColumn();
 
-        grid.AddRow("[bold]ESTADO:[/]", statusMarkup);
-        grid.AddRow("[bold]TIEMPO:[/]", $"[white]{result.TotalExecutionMs:F1} ms total[/] [grey]({result.CompilationMs:F0} ms compilación)[/]");
-        grid.AddRow("[bold]CASOS:[/]", $"[white]{result.PassedCount}/{result.TotalCount} pasados[/]");
+        grid.AddRow("[bold]STATUS:[/]", statusMarkup);
+        grid.AddRow("[bold]TIME:[/]", $"[white]{result.TotalExecutionMs:F1} ms total[/] [grey]({result.CompilationMs:F0} ms compilation)[/]");
+        grid.AddRow("[bold]TESTS:[/]", $"[white]{result.PassedCount}/{result.TotalCount} passed[/]");
 
         var panel = new Panel(grid)
             .Border(BoxBorder.Rounded)
@@ -192,17 +192,17 @@ public static class ConsoleFormatter
     {
         var list = problems.ToList();
         var title = string.IsNullOrWhiteSpace(categoryFilter)
-            ? "Catálogo de los 76 Problemas de LeetCode"
-            : $"Problemas en Categoría: {categoryFilter}";
+            ? "Catalog of 76 LeetCode Problems"
+            : $"Problems in Category: {categoryFilter}";
 
         var table = new Table()
             .Border(TableBorder.Rounded)
             .Title($"[bold cyan]{title}[/]")
-            .AddColumn(new TableColumn("[bold]# [/]").Centered())
-            .AddColumn(new TableColumn("[bold]Título[/]"))
-            .AddColumn(new TableColumn("[bold]Categoría[/]"))
-            .AddColumn(new TableColumn("[bold]Dificultad[/]").Centered())
-            .AddColumn(new TableColumn("[bold]Método / Clase Esperada[/]"));
+            .AddColumn(new TableColumn("[bold]#[/]").Centered())
+            .AddColumn(new TableColumn("[bold]Title[/]"))
+            .AddColumn(new TableColumn("[bold]Category[/]"))
+            .AddColumn(new TableColumn("[bold]Difficulty[/]").Centered())
+            .AddColumn(new TableColumn("[bold]Expected Method / Class[/]"));
 
         foreach (var p in list.OrderBy(p => p.Number))
         {
@@ -219,7 +219,7 @@ public static class ConsoleFormatter
         }
 
         AnsiConsole.Write(table);
-        AnsiConsole.MarkupLine($"\n[grey]Total de problemas: [white]{list.Count}[/][/]\n");
+        AnsiConsole.MarkupLine($"\n[grey]Total problems: [white]{list.Count}[/][/]\n");
     }
 
     public static void RenderProblemInfo(Problem problem, string? markdownContent)
@@ -227,12 +227,12 @@ public static class ConsoleFormatter
         var grid = new Grid();
         grid.AddColumn();
         grid.AddRow(new Markup($"[bold cyan]{problem.FormattedNumber} - {problem.Title}[/]"));
-        grid.AddRow(new Markup($"[bold]Categoría:[/]  [white]{problem.Category}[/]  |  [bold]Dificultad:[/] {problem.DifficultyMarkup}"));
-        grid.AddRow(new Markup($"[bold]Método:[/]     [yellow]{(problem.ExpectedClass == "Solution" ? problem.ExpectedMethod : problem.ExpectedClass)}[/]"));
-        grid.AddRow(new Markup($"[bold]Plantilla:[/]  [grey]73 new {problem.Slug.ToLowerInvariant()}[/]"));
+        grid.AddRow(new Markup($"[bold]Category:[/]   [white]{problem.Category}[/]  |  [bold]Difficulty:[/] {problem.DifficultyMarkup}"));
+        grid.AddRow(new Markup($"[bold]Method:[/]     [yellow]{(problem.ExpectedClass == "Solution" ? problem.ExpectedMethod : problem.ExpectedClass)}[/]"));
+        grid.AddRow(new Markup($"[bold]Template:[/]   [grey]73 new {problem.Slug.ToLowerInvariant()}[/]"));
 
         var headerPanel = new Panel(grid)
-            .Header("[bold white]Información del Problema[/]")
+            .Header("[bold white]Problem Information[/]")
             .Border(BoxBorder.Double)
             .BorderColor(Color.Cyan1);
 
@@ -241,7 +241,7 @@ public static class ConsoleFormatter
 
         if (string.IsNullOrWhiteSpace(markdownContent))
         {
-            AnsiConsole.MarkupLine("[grey]No se encontró descripción detallada para este problema.[/]");
+            AnsiConsole.MarkupLine("[grey]No detailed description found for this problem.[/]");
             return;
         }
 
@@ -276,10 +276,10 @@ public static class ConsoleFormatter
     {
         var panel = new Panel(
             new Markup(
-                $"[green]✔ Archivo de solución creado exitosamente:[/] [bold white]{targetPath}[/]\n\n" +
-                $"[bold]Problema:[/]  [cyan]{problem.FormattedNumber} - {problem.Title}[/] {problem.DifficultyMarkup}\n" +
-                $"[bold]Prueba con:[/] [bold yellow]73 {Path.GetFileName(targetPath)}[/]\n"))
-            .Header("[bold green] Plantilla Generada [/]")
+                $"[green]Solution file created successfully:[/] [bold white]{targetPath}[/]\n\n" +
+                $"[bold]Problem:[/]   [cyan]{problem.FormattedNumber} - {problem.Title}[/] {problem.DifficultyMarkup}\n" +
+                $"[bold]Test with:[/] [bold yellow]73 {Path.GetFileName(targetPath)}[/]\n"))
+            .Header("[bold green] Template Generated [/]")
             .Border(BoxBorder.Rounded)
             .BorderColor(Color.Green);
 

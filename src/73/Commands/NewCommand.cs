@@ -13,8 +13,8 @@ public static class NewCommand
         var problem = ProblemResolver.Resolve(problemName);
         if (problem == null)
         {
-            AnsiConsole.MarkupLine($"[bold red]Error:[/] No se encontró el problema '[yellow]{Markup.Escape(problemName)}[/]'.");
-            AnsiConsole.MarkupLine("[grey]Ejecuta [cyan]73 list[/] para ver todos los problemas disponibles.[/]");
+            AnsiConsole.MarkupLine($"[bold red]Error:[/] Problem not found: '[yellow]{Markup.Escape(problemName)}[/]'.");
+            AnsiConsole.MarkupLine("[grey]Run [cyan]73 list[/] to view all available problems.[/]");
             return 1;
         }
 
@@ -39,8 +39,8 @@ public static class NewCommand
 
         if (File.Exists(targetPath) && !force)
         {
-            AnsiConsole.MarkupLine($"[bold yellow]Aviso:[/] El archivo ya existe: [white]{targetPath}[/]");
-            AnsiConsole.MarkupLine("[grey]Usa [cyan]--force[/] si deseas sobrescribirlo.[/]");
+            AnsiConsole.MarkupLine($"[bold yellow]Warning:[/] File already exists: [white]{targetPath}[/]");
+            AnsiConsole.MarkupLine("[grey]Use [cyan]--force[/] to overwrite it.[/]");
             return 1;
         }
 

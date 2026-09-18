@@ -67,16 +67,16 @@ public static class TestCommand
 
         if (problem == null)
         {
-            AnsiConsole.MarkupLine($"[bold red]Error:[/] No se pudo identificar el problema correspondiente a '[yellow]{Markup.Escape(target ?? "")}[/]'.");
-            AnsiConsole.MarkupLine("[grey]Prueba pasando un archivo .cs válido (ej. [cyan]73 two.cs[/]), o el nombre de un problema (ej. [cyan]73 test Two-Sum[/]).[/]");
-            AnsiConsole.MarkupLine("[grey]Ejecuta [cyan]73 list[/] para ver los 76 problemas disponibles.[/]");
+            AnsiConsole.MarkupLine($"[bold red]Error:[/] Could not identify problem matching '[yellow]{Markup.Escape(target ?? "")}[/]'.");
+            AnsiConsole.MarkupLine("[grey]Try providing a valid .cs file (e.g. [cyan]73 two.cs[/]), or problem identifier (e.g. [cyan]73 test Two-Sum[/]).[/]");
+            AnsiConsole.MarkupLine("[grey]Run [cyan]73 list[/] to view all 76 available problems.[/]");
             return 1;
         }
 
         if (string.IsNullOrWhiteSpace(sourceCode))
         {
-            AnsiConsole.MarkupLine($"[bold red]Error:[/] No se encontró código de solución para el problema [cyan]{problem.Title}[/].");
-            AnsiConsole.MarkupLine($"[grey]Crea uno ejecutando: [cyan]73 new {problem.Slug.ToLowerInvariant()}[/][/]");
+            AnsiConsole.MarkupLine($"[bold red]Error:[/] No solution code found for problem [cyan]{problem.Title}[/].");
+            AnsiConsole.MarkupLine($"[grey]Create one by running: [cyan]73 new {problem.Slug.ToLowerInvariant()}[/][/]");
             return 1;
         }
 
