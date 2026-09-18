@@ -485,3 +485,9 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 
+# PowerShell script for installing CLI
+install-cli.ps1
+
+# Visual Studio Code files for those working on multiple tools
+plan.md
+

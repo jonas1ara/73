@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>LeetCode73</RootNamespace>
+    <AssemblyName>73</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- Tool Packaging -->
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>73</ToolCommandName>
+    <PackageId>73</PackageId>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <Version>1.0.0</Version>
+    <Authors>Jonas Lara</Authors>
+    <Description>CLI tool to solve, test, and explore the 73 most useful LeetCode problems in C#.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/jonas1ara/73</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/jonas1ara/73</PackageProjectUrl>
+    <PackageTags>leetcode;csharp;cli;dotnet-tool;algorithms</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="0.49.1" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0" />
+    <PackageReference Include="xunit.assert" Version="2.9.3" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.9.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="../../Problems/**/README.md" LinkBase="Embedded/Problems" />
+    <EmbeddedResource Include="../../Problems/**/*.Tests/*Tests.cs" LinkBase="Embedded/Tests" />
+    <EmbeddedResource Include="../../Problems/**/*.cs" Exclude="../../Problems/**/obj/**;../../Problems/**/bin/**;../../Problems/**/*.Tests/**" LinkBase="Embedded/Solutions" />
+  </ItemGroup>
+
+</Project>

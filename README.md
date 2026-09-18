@@ -53,6 +53,32 @@ The repository is divided into 4 folders:
 
 - **Sources:** Contains the images and gifs used in the repository, such as Sheldon Cooper's gif
 
+## 73 CLI - Interactive LeetCode Tool for C#
+
+`73` is a fast, interactive command-line tool designed to solve and test LeetCode problems locally in C# with **zero boilerplate** and immediate feedback via in-memory Roslyn compilation and rich `Spectre.Console` output.
+
+### Installation
+
+Install `73` globally as a .NET tool using the included script:
+```powershell
+.\install-cli.ps1
+```
+Or manually via dotnet CLI:
+```bash
+dotnet pack src/73 -c Release
+dotnet tool install -g --add-source ./src/73/nupkg 73
+```
+
+### Commands
+
+| Command | Description | Example |
+| :--- | :--- | :--- |
+| `73 <file.cs>` | Test your solution file (auto-detects problem by path, name, or AST method signature). | `73 two.cs` |
+| `73 test [problem]` | Run tests for a specific problem by name, slug, or number. | `73 test Two-Sum` |
+| `73 new <problem>` | Generate a clean boilerplate file ready to code with LeetCode signatures. | `73 new two-sum` |
+| `73 list [category]` | List all 76 problems categorized by topic with difficulty and signatures. | `73 list trees` |
+| `73 info <problem>` | View problem description, examples, and constraints directly in console. | `73 info two-sum` |
+
 ## Index
 
 ### Arrays
